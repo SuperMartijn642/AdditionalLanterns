@@ -3,19 +3,20 @@ package com.supermartijn642.additionallanterns.data;
 import com.supermartijn642.additionallanterns.LanternColor;
 import com.supermartijn642.additionallanterns.LanternMaterial;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.model.generators.BlockModelBuilder;
 import net.minecraftforge.client.model.generators.BlockModelProvider;
-import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
 
 /**
  * Created 7/5/2021 by SuperMartijn642
  */
-public class LanternBlockModelProvider extends BlockModelProvider {
+public class LanternBlockModelProvider {
 
-    public LanternBlockModelProvider(GatherDataEvent e){
-        super(e.getGenerator(), "additionallanterns", e.getExistingFileHelper());
+    private final BlockModelProvider blockModels;
+
+    public LanternBlockModelProvider(BlockModelProvider blockModels){
+        this.blockModels = blockModels;
     }
 
-    @Override
     protected void registerModels(){
         for(LanternMaterial material : LanternMaterial.values())
             this.addModels(material);
@@ -98,8 +99,14 @@ public class LanternBlockModelProvider extends BlockModelProvider {
     }
 
     public static ResourceLocation getChainMaterialTexture(LanternMaterial material){
-        if(material == LanternMaterial.NORMAL)
-            return new ResourceLocation("minecraft", "block/chain");
         return new ResourceLocation("additionallanterns", "block/materials/" + material.getSuffix() + "_chain");
+    }
+
+    private BlockModelBuilder withExistingParent(String name, String parent){
+        return this.blockModels.withExistingParent(name, parent);
+    }
+
+    private BlockModelBuilder withExistingParent(String name, ResourceLocation parent){
+        return this.blockModels.withExistingParent(name, parent);
     }
 }

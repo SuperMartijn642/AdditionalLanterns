@@ -1,8 +1,10 @@
 package com.supermartijn642.additionallanterns;
 
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
@@ -19,9 +21,9 @@ import java.util.Map;
  */
 public enum LanternMaterial {
 
-    NORMAL(true, false, "", null, null, null, null, 0),
+    NORMAL(true, true, "", null, null, () -> Items.IRON_INGOT, () -> Items.IRON_NUGGET, 0),
     OBSIDIAN(true, true, "Obsidian", () -> Items.OBSIDIAN, null, () -> Items.OBSIDIAN, () -> Items.OBSIDIAN, 8),
-    BASALT(true, true, "Basalt", () -> Items.BASALT, null, () -> Items.BASALT, () -> Items.BASALT, 8),
+    //    BASALT(true, true, "Basalt", () -> Items.BASALT, null, () -> Items.BASALT, () -> Items.BASALT, 8),
     ANDESITE(true, true, "Andesite", () -> Items.ANDESITE, null, () -> Items.ANDESITE, () -> Items.ANDESITE, 8),
     DIORITE(true, true, "Diorite", () -> Items.DIORITE, null, () -> Items.DIORITE, () -> Items.DIORITE, 8),
     GRANITE(true, true, "Granite", () -> Items.GRANITE, null, () -> Items.GRANITE, () -> Items.GRANITE, 8),
@@ -32,11 +34,11 @@ public enum LanternMaterial {
     QUARTZ(true, true, "Quartz", () -> Items.QUARTZ, () -> Items.QUARTZ, () -> Items.QUARTZ_BLOCK, () -> Items.QUARTZ, 4),
     PRISMARINE(true, true, "Prismarine", () -> Items.PRISMARINE_SHARD, () -> Items.PRISMARINE_SHARD, () -> Items.PRISMARINE_BRICKS, () -> Items.PRISMARINE_SHARD, 6),
     DARK_PRISMARINE(true, true, "Dark Prismarine", () -> Items.DARK_PRISMARINE, null, () -> Items.DARK_PRISMARINE, () -> Items.PRISMARINE_SHARD, 6),
-    BLACKSTONE(true, true, "Blackstone", () -> Items.BLACKSTONE, null, () -> Items.BLACKSTONE, () -> Items.BLACKSTONE, 4),
+    //    BLACKSTONE(true, true, "Blackstone", () -> Items.BLACKSTONE, null, () -> Items.BLACKSTONE, () -> Items.BLACKSTONE, 4),
     NORMAL_NETHER_BRICKS(true, true, "Nether Brick", () -> Items.NETHER_BRICK, null, () -> Items.NETHER_BRICKS, () -> Items.NETHER_BRICK, 4),
     RED_NETHER_BRICKS(true, true, "Red Nether Brick", () -> Items.RED_NETHER_BRICKS, null, () -> Items.RED_NETHER_BRICKS, () -> Items.NETHER_BRICK, 4),
-    CRIMSON(true, true, "Crimson", () -> Items.CRIMSON_PLANKS, null, () -> Items.CRIMSON_PLANKS, () -> Items.CRIMSON_PLANKS, 6),
-    WARPED(true, true, "Warped", () -> Items.WARPED_PLANKS, null, () -> Items.WARPED_PLANKS, () -> Items.WARPED_PLANKS, 6),
+    //    CRIMSON(true, true, "Crimson", () -> Items.CRIMSON_PLANKS, null, () -> Items.CRIMSON_PLANKS, () -> Items.CRIMSON_PLANKS, 6),
+    //    WARPED(true, true, "Warped", () -> Items.WARPED_PLANKS, null, () -> Items.WARPED_PLANKS, () -> Items.WARPED_PLANKS, 6),
     PURPUR(true, true, "Purpur", () -> Items.POPPED_CHORUS_FRUIT, () -> Items.POPPED_CHORUS_FRUIT, () -> Items.PURPUR_BLOCK, () -> Items.POPPED_CHORUS_FRUIT, 4),
     BRICKS(true, true, "Brick", () -> Items.BRICK, () -> Items.BRICK, () -> Items.BRICKS, () -> Items.BRICK, 4);
 
@@ -82,12 +84,12 @@ public enum LanternMaterial {
         return this.name().toLowerCase(Locale.ROOT);
     }
 
-    public AbstractBlock.Properties getLanternBlockProperties(){
-        return AbstractBlock.Properties.copy(Blocks.LANTERN).lightLevel(state -> LanternBlock.emitsLight(state) ? 15 : 0);
+    public Block.Properties getLanternBlockProperties(){
+        return Block.Properties.copy(Blocks.LANTERN);
     }
 
-    public AbstractBlock.Properties getChainBlockProperties(){
-        return AbstractBlock.Properties.copy(Blocks.CHAIN);
+    public Block.Properties getChainBlockProperties(){
+        return Block.Properties.of(Material.METAL, MaterialColor.NONE).strength(5.0F, 6.0F).sound(SoundType.METAL).noOcclusion();
     }
 
     public void registerBlocks(IForgeRegistry<Block> registry){

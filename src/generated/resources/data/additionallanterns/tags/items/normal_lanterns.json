@@ -1,22 +1,22 @@
 {
   "replace": false,
   "values": [
-    "additionallanterns:lime_normal_lantern",
     "additionallanterns:orange_normal_lantern",
-    "additionallanterns:pink_normal_lantern",
     "additionallanterns:black_normal_lantern",
-    "additionallanterns:light_blue_normal_lantern",
-    "additionallanterns:gray_normal_lantern",
-    "additionallanterns:red_normal_lantern",
-    "additionallanterns:magenta_normal_lantern",
-    "additionallanterns:yellow_normal_lantern",
-    "additionallanterns:cyan_normal_lantern",
     "additionallanterns:brown_normal_lantern",
-    "minecraft:lantern",
-    "additionallanterns:white_normal_lantern",
-    "additionallanterns:blue_normal_lantern",
-    "additionallanterns:purple_normal_lantern",
     "additionallanterns:green_normal_lantern",
-    "additionallanterns:light_gray_normal_lantern"
+    "additionallanterns:light_gray_normal_lantern",
+    "additionallanterns:gray_normal_lantern",
+    "additionallanterns:light_blue_normal_lantern",
+    "additionallanterns:purple_normal_lantern",
+    "additionallanterns:lime_normal_lantern",
+    "additionallanterns:pink_normal_lantern",
+    "additionallanterns:yellow_normal_lantern",
+    "additionallanterns:blue_normal_lantern",
+    "minecraft:lantern",
+    "additionallanterns:magenta_normal_lantern",
+    "additionallanterns:cyan_normal_lantern",
+    "additionallanterns:red_normal_lantern",
+    "additionallanterns:white_normal_lantern"
   ]
 }

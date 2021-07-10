@@ -3,19 +3,20 @@ package com.supermartijn642.additionallanterns.data;
 import com.supermartijn642.additionallanterns.LanternColor;
 import com.supermartijn642.additionallanterns.LanternMaterial;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.model.generators.ItemModelProvider;
-import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
+import net.minecraftforge.client.model.generators.BlockModelBuilder;
+import net.minecraftforge.client.model.generators.BlockModelProvider;
 
 /**
  * Created 7/5/2021 by SuperMartijn642
  */
-public class LanternItemModelProvider extends ItemModelProvider {
+public class LanternItemModelProvider {
 
-    public LanternItemModelProvider(GatherDataEvent e){
-        super(e.getGenerator(), "additionallanterns", e.getExistingFileHelper());
+    private final BlockModelProvider itemModels;
+
+    public LanternItemModelProvider(BlockModelProvider itemModels){
+        this.itemModels = itemModels;
     }
 
-    @Override
     protected void registerModels(){
         for(LanternMaterial material : LanternMaterial.values())
             this.addModels(material);
@@ -32,6 +33,7 @@ public class LanternItemModelProvider extends ItemModelProvider {
     }
 
     public void addModel(LanternMaterial material, LanternColor color){
+        System.out.println("item model material: " + material + " color: " + color);
         this.withExistingParent(getModelLocation(material, color), getParentModelLocation(material, color));
     }
 
@@ -54,12 +56,18 @@ public class LanternItemModelProvider extends ItemModelProvider {
     }
 
     public static String getChainModelLocation(LanternMaterial material){
-        if(material == LanternMaterial.NORMAL)
-            return "minecraft:item/chain";
         return "item/" + material.getSuffix() + "_chain";
     }
 
     public static ResourceLocation getChainParentModelLocation(LanternMaterial material){
         return new ResourceLocation("additionallanterns", "block/" + material.getSuffix() + "_chain");
+    }
+
+    private BlockModelBuilder withExistingParent(String name, String parent){
+        return this.itemModels.withExistingParent(name, parent);
+    }
+
+    private BlockModelBuilder withExistingParent(String name, ResourceLocation parent){
+        return this.itemModels.withExistingParent(name, parent);
     }
 }

@@ -1,22 +1,22 @@
 {
   "replace": false,
   "values": [
-    "additionallanterns:light_blue_red_nether_bricks_lantern",
-    "additionallanterns:green_red_nether_bricks_lantern",
     "additionallanterns:light_gray_red_nether_bricks_lantern",
-    "additionallanterns:purple_red_nether_bricks_lantern",
-    "additionallanterns:red_nether_bricks_lantern",
-    "additionallanterns:yellow_red_nether_bricks_lantern",
     "additionallanterns:brown_red_nether_bricks_lantern",
-    "additionallanterns:white_red_nether_bricks_lantern",
-    "additionallanterns:red_red_nether_bricks_lantern",
-    "additionallanterns:orange_red_nether_bricks_lantern",
-    "additionallanterns:pink_red_nether_bricks_lantern",
-    "additionallanterns:black_red_nether_bricks_lantern",
-    "additionallanterns:gray_red_nether_bricks_lantern",
+    "additionallanterns:green_red_nether_bricks_lantern",
     "additionallanterns:lime_red_nether_bricks_lantern",
-    "additionallanterns:blue_red_nether_bricks_lantern",
+    "additionallanterns:red_nether_bricks_lantern",
+    "additionallanterns:orange_red_nether_bricks_lantern",
+    "additionallanterns:light_blue_red_nether_bricks_lantern",
+    "additionallanterns:black_red_nether_bricks_lantern",
+    "additionallanterns:white_red_nether_bricks_lantern",
+    "additionallanterns:purple_red_nether_bricks_lantern",
+    "additionallanterns:pink_red_nether_bricks_lantern",
+    "additionallanterns:gray_red_nether_bricks_lantern",
+    "additionallanterns:cyan_red_nether_bricks_lantern",
+    "additionallanterns:red_red_nether_bricks_lantern",
+    "additionallanterns:yellow_red_nether_bricks_lantern",
     "additionallanterns:magenta_red_nether_bricks_lantern",
-    "additionallanterns:cyan_red_nether_bricks_lantern"
+    "additionallanterns:blue_red_nether_bricks_lantern"
   ]
 }

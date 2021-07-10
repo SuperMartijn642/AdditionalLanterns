@@ -24,7 +24,7 @@ public class LanternLanguageProvider extends LanguageProvider {
                     this.add(material.getLanternBlock(color), material == LanternMaterial.NORMAL ? color.englishTranslation + " Lantern" : color.englishTranslation + " " + material.englishTranslation + " Lantern");
             }
             if(material.hasChains)
-                this.add(material.getChainBlock(), material.englishTranslation + " Chain");
+                this.add(material.getChainBlock(), material.englishTranslation.isEmpty() ? "Chain" : material.englishTranslation + " Chain");
         }
     }
 }

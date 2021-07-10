@@ -8,17 +8,26 @@ import net.minecraft.data.ShapedRecipeBuilder;
 import net.minecraft.data.ShapelessRecipeBuilder;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
-import net.minecraft.tags.ITag;
-import net.minecraft.tags.TagCollectionManager;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.Tag;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
 
+import java.util.EnumMap;
+import java.util.Map;
 import java.util.function.Consumer;
 
 /**
  * Created 7/6/2021 by SuperMartijn642
  */
 public class LanternRecipeProvider extends RecipeProvider {
+
+    public static final Map<LanternMaterial,Tag<Item>> LANTERNS_TAGS = new EnumMap<>(LanternMaterial.class);
+
+    static{
+        for(LanternMaterial material : LanternMaterial.values())
+            LANTERNS_TAGS.put(material, new ItemTags.Wrapper(new ResourceLocation("additionallanterns", material.getSuffix() + "_lanterns")));
+    }
 
     public LanternRecipeProvider(GatherDataEvent e){
         super(e.getGenerator());
@@ -27,21 +36,21 @@ public class LanternRecipeProvider extends RecipeProvider {
     @Override
     protected void buildShapelessRecipes(Consumer<IFinishedRecipe> recipeConsumer){
         for(LanternMaterial material : LanternMaterial.values())
-            addMaterialRecipes(material, recipeConsumer);
+            this.addMaterialRecipes(material, recipeConsumer);
     }
 
-    private static void addMaterialRecipes(LanternMaterial material, Consumer<IFinishedRecipe> recipeConsumer){
-        addLanternRecipe(material, recipeConsumer);
+    private void addMaterialRecipes(LanternMaterial material, Consumer<IFinishedRecipe> recipeConsumer){
+        this.addLanternRecipe(material, recipeConsumer);
         if(material.canBeColored){
-            addColorRecipe(material, null, recipeConsumer);
+            this.addColorRecipe(material, null, recipeConsumer);
             for(LanternColor color : LanternColor.values())
-                addColorRecipe(material, color, recipeConsumer);
+                this.addColorRecipe(material, color, recipeConsumer);
         }
         if(material.hasChains)
-            addChainRecipe(material, recipeConsumer);
+            this.addChainRecipe(material, recipeConsumer);
     }
 
-    private static void addLanternRecipe(LanternMaterial material, Consumer<IFinishedRecipe> recipeConsumer){
+    private void addLanternRecipe(LanternMaterial material, Consumer<IFinishedRecipe> recipeConsumer){
         if(material.primaryLanternIngredient == null && material.secondaryLanternIngredient == null)
             return;
 
@@ -50,14 +59,14 @@ public class LanternRecipeProvider extends RecipeProvider {
                 .pattern("B B").pattern(" C ").pattern("B B")
                 .define('B', material.secondaryLanternIngredient)
                 .define('C', () -> Items.TORCH)
-                .unlockedBy("has_torch", has(() -> Items.TORCH))
+                .unlocks("has_torch", this.has(() -> Items.TORCH))
                 .save(recipeConsumer);
         else if(material.secondaryLanternIngredient == null)
             ShapedRecipeBuilder.shaped(material.getLanternBlock())
                 .pattern(" A ").pattern("ACA").pattern(" A ")
                 .define('A', material.primaryLanternIngredient)
                 .define('C', () -> Items.TORCH)
-                .unlockedBy("has_torch", has(() -> Items.TORCH))
+                .unlocks("has_torch", this.has(() -> Items.TORCH))
                 .save(recipeConsumer);
         else
             ShapedRecipeBuilder.shaped(material.getLanternBlock())
@@ -65,33 +74,33 @@ public class LanternRecipeProvider extends RecipeProvider {
                 .define('A', material.primaryLanternIngredient)
                 .define('B', material.secondaryLanternIngredient)
                 .define('C', () -> Items.TORCH)
-                .unlockedBy("has_torch", has(() -> Items.TORCH))
+                .unlocks("has_torch", this.has(() -> Items.TORCH))
                 .save(recipeConsumer);
     }
 
-    private static void addColorRecipe(LanternMaterial material, LanternColor color, Consumer<IFinishedRecipe> recipeConsumer){
+    private void addColorRecipe(LanternMaterial material, LanternColor color, Consumer<IFinishedRecipe> recipeConsumer){
         if(color == null)
             ShapelessRecipeBuilder.shapeless(material.getLanternBlock())
                 .requires(getMaterialLanternTag(material))
-                .unlockedBy("has_lantern", has(getMaterialLanternTag(material)))
+                .unlocks("has_lantern", this.has(getMaterialLanternTag(material)))
                 .save(recipeConsumer, new ResourceLocation("additionallanterns", material.getSuffix() + "_lantern_colorless"));
         else
             ShapelessRecipeBuilder.shapeless(material.getLanternBlock(color))
                 .requires(getMaterialLanternTag(material))
                 .requires(getColorDyeTag(color))
-                .unlockedBy("has_lantern", has(getMaterialLanternTag(material)))
+                .unlocks("has_lantern", this.has(getMaterialLanternTag(material)))
                 .save(recipeConsumer, new ResourceLocation("additionallanterns", material.getSuffix() + "_lantern_" + color.getSuffix()));
     }
 
-    private static ITag<Item> getMaterialLanternTag(LanternMaterial material){
-        return TagCollectionManager.getInstance().getItems().getTag(new ResourceLocation("additionallanterns", material.getSuffix() + "_lanterns"));
+    private static Tag<Item> getMaterialLanternTag(LanternMaterial material){
+        return LANTERNS_TAGS.get(material);
     }
 
-    private static ITag<Item> getColorDyeTag(LanternColor color){
+    private static Tag<Item> getColorDyeTag(LanternColor color){
         return color.dyeColor.getTag();
     }
 
-    private static void addChainRecipe(LanternMaterial material, Consumer<IFinishedRecipe> recipeConsumer){
+    private void addChainRecipe(LanternMaterial material, Consumer<IFinishedRecipe> recipeConsumer){
         if(material.primaryChainIngredient == null && material.secondaryChainIngredient == null)
             return;
 
@@ -99,20 +108,20 @@ public class LanternRecipeProvider extends RecipeProvider {
             ShapedRecipeBuilder.shaped(material.getChainBlock(), material.chainRecipeCount)
                 .pattern("B").pattern(" ").pattern("B")
                 .define('B', material.secondaryChainIngredient)
-                .unlockedBy("has_secondary", has(material.secondaryChainIngredient))
+                .unlocks("has_secondary", this.has(material.secondaryChainIngredient))
                 .save(recipeConsumer);
         else if(material.secondaryChainIngredient == null)
             ShapedRecipeBuilder.shaped(material.getChainBlock(), material.chainRecipeCount)
                 .pattern("A")
                 .define('A', material.primaryChainIngredient)
-                .unlockedBy("has_primary", has(material.primaryChainIngredient))
+                .unlocks("has_primary", this.has(material.primaryChainIngredient))
                 .save(recipeConsumer);
         else
             ShapedRecipeBuilder.shaped(material.getChainBlock(), material.chainRecipeCount)
                 .pattern("B").pattern("A").pattern("B")
                 .define('A', material.primaryChainIngredient)
                 .define('B', material.secondaryChainIngredient)
-                .unlockedBy("has_primary", has(material.primaryChainIngredient))
+                .unlocks("has_primary", this.has(material.primaryChainIngredient))
                 .save(recipeConsumer);
     }
 }

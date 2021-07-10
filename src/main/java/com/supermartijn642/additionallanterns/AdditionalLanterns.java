@@ -43,8 +43,6 @@ public class AdditionalLanterns {
 
         @SubscribeEvent
         public static void onGatherData(GatherDataEvent e){
-            e.getGenerator().addProvider(new LanternBlockModelProvider(e));
-            e.getGenerator().addProvider(new LanternItemModelProvider(e));
             e.getGenerator().addProvider(new LanternBlockStateProvider(e));
             e.getGenerator().addProvider(new LanternLanguageProvider(e));
             e.getGenerator().addProvider(new LanternLootTableProvider(e));

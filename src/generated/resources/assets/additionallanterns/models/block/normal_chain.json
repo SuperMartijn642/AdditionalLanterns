@@ -1,6 +1,6 @@
 {
   "parent": "additionallanterns:block/chain",
   "textures": {
-    "chain": "minecraft:block/chain"
+    "chain": "additionallanterns:block/materials/normal_chain"
   }
 }

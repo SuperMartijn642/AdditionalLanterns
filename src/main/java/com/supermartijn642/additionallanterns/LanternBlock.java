@@ -8,6 +8,7 @@ import net.minecraft.item.DyeItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.StateContainer;
+import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
@@ -23,6 +24,7 @@ public class LanternBlock extends net.minecraft.block.LanternBlock {
 
     public static final BooleanProperty ON = BooleanProperty.create("on");
     public static final BooleanProperty REDSTONE = BooleanProperty.create("redstone");
+    public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
     public final LanternMaterial material;
     public final LanternColor color;
@@ -48,7 +50,7 @@ public class LanternBlock extends net.minecraft.block.LanternBlock {
             world.setBlock(pos, newState, 1 | 2);
         }else
             world.setBlock(pos, state.setValue(ON, !state.getValue(ON)), 1 | 2);
-        return ActionResultType.sidedSuccess(world.isClientSide);
+        return world.isClientSide ? ActionResultType.SUCCESS : ActionResultType.CONSUME;
     }
 
     @Override
@@ -71,7 +73,8 @@ public class LanternBlock extends net.minecraft.block.LanternBlock {
         }
     }
 
-    public static boolean emitsLight(BlockState state){
-        return state.getValue(REDSTONE) != state.getValue(ON);
+    @Override
+    public int getLightEmission(BlockState state){
+        return state.getValue(REDSTONE) != state.getValue(ON) ? 15 : 0;
     }
 }

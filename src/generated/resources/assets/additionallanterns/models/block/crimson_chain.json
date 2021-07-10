@@ -1,6 +1,0 @@
-{
-  "parent": "additionallanterns:block/chain",
-  "textures": {
-    "chain": "additionallanterns:block/materials/crimson_chain"
-  }
-}
