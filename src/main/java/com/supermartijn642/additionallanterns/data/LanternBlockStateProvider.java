@@ -22,8 +22,8 @@ public class LanternBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels(){
-        new LanternBlockModelProvider(this.models()).registerModels();
-        new LanternItemModelProvider(this.models()).registerModels();
+        new LanternBlockModelProvider(this.models()::withExistingParent, this.models()::withExistingParent).registerModels();
+        new LanternItemModelProvider(this.models()::withExistingParent, this.models()::withExistingParent).registerModels();
         for(LanternMaterial material : LanternMaterial.values())
             this.addStates(material);
     }
