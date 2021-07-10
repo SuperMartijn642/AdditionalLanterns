@@ -89,7 +89,7 @@ public enum LanternMaterial {
     }
 
     public Block.Properties getChainBlockProperties(){
-        return Block.Properties.of(Material.METAL, MaterialColor.NONE).strength(5.0F, 6.0F).sound(SoundType.METAL).noOcclusion();
+        return Block.Properties.of(Material.METAL, MaterialColor.NONE).strength(5.0F, 6.0F).sound(SoundType.METAL);
     }
 
     public void registerBlocks(IForgeRegistry<Block> registry){

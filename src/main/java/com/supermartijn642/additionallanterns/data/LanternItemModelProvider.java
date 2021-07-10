@@ -4,17 +4,20 @@ import com.supermartijn642.additionallanterns.LanternColor;
 import com.supermartijn642.additionallanterns.LanternMaterial;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.generators.BlockModelBuilder;
-import net.minecraftforge.client.model.generators.BlockModelProvider;
+
+import java.util.function.BiFunction;
 
 /**
  * Created 7/5/2021 by SuperMartijn642
  */
 public class LanternItemModelProvider {
 
-    private final BlockModelProvider itemModels;
+    private final BiFunction<String,String,BlockModelBuilder> stringToBuilder;
+    private final BiFunction<String,ResourceLocation,BlockModelBuilder> locationToBuilder;
 
-    public LanternItemModelProvider(BlockModelProvider itemModels){
-        this.itemModels = itemModels;
+    public LanternItemModelProvider(BiFunction<String,String,BlockModelBuilder> stringToBuilder, BiFunction<String,ResourceLocation,BlockModelBuilder> locationToBuilder){
+        this.stringToBuilder = stringToBuilder;
+        this.locationToBuilder = locationToBuilder;
     }
 
     protected void registerModels(){
@@ -33,7 +36,6 @@ public class LanternItemModelProvider {
     }
 
     public void addModel(LanternMaterial material, LanternColor color){
-        System.out.println("item model material: " + material + " color: " + color);
         this.withExistingParent(getModelLocation(material, color), getParentModelLocation(material, color));
     }
 
@@ -64,10 +66,10 @@ public class LanternItemModelProvider {
     }
 
     private BlockModelBuilder withExistingParent(String name, String parent){
-        return this.itemModels.withExistingParent(name, parent);
+        return this.stringToBuilder.apply(name, parent);
     }
 
     private BlockModelBuilder withExistingParent(String name, ResourceLocation parent){
-        return this.itemModels.withExistingParent(name, parent);
+        return this.locationToBuilder.apply(name, parent);
     }
 }

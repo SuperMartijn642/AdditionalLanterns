@@ -22,8 +22,8 @@ public class LanternBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels(){
-        new LanternBlockModelProvider(this.models()).registerModels();
-        new LanternItemModelProvider(this.models()).registerModels();
+        new LanternBlockModelProvider(this::withExistingParent, this::withExistingParent).registerModels();
+        new LanternItemModelProvider(this::withExistingParent, this::withExistingParent).registerModels();
         for(LanternMaterial material : LanternMaterial.values())
             this.addStates(material);
     }
@@ -40,7 +40,7 @@ public class LanternBlockStateProvider extends BlockStateProvider {
 
     public void addState(LanternMaterial material, LanternColor color){
         this.getVariantBuilder(material.getLanternBlock(color)).forAllStatesExcept(
-            state -> new ConfiguredModel[]{new ConfiguredModel(this.models().getExistingFile(getModelLocation(material, color, state.getValue(BlockStateProperties.HANGING), state.getValue(LanternBlock.ON), state.getValue(LanternBlock.REDSTONE))))},
+            state -> new ConfiguredModel[]{new ConfiguredModel(this.getExistingFile(getModelLocation(material, color, state.getValue(BlockStateProperties.HANGING), state.getValue(LanternBlock.ON), state.getValue(LanternBlock.REDSTONE))))},
             BlockStateProperties.WATERLOGGED
         );
     }
@@ -49,7 +49,7 @@ public class LanternBlockStateProvider extends BlockStateProvider {
         this.getVariantBuilder(material.getChainBlock()).forAllStatesExcept(
             state -> {
                 Direction.Axis axis = state.getValue(BlockStateProperties.AXIS);
-                ConfiguredModel model = new ConfiguredModel(this.models().getExistingFile(getChainModelLocation(material)),
+                ConfiguredModel model = new ConfiguredModel(this.getExistingFile(getChainModelLocation(material)),
                     axis == Direction.Axis.X || axis == Direction.Axis.Z ? 90 : 0, axis == Direction.Axis.X ? 90 : 0, false);
                 return new ConfiguredModel[]{model};
             },

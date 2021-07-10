@@ -4,17 +4,20 @@ import com.supermartijn642.additionallanterns.LanternColor;
 import com.supermartijn642.additionallanterns.LanternMaterial;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.generators.BlockModelBuilder;
-import net.minecraftforge.client.model.generators.BlockModelProvider;
+
+import java.util.function.BiFunction;
 
 /**
  * Created 7/5/2021 by SuperMartijn642
  */
 public class LanternBlockModelProvider {
 
-    private final BlockModelProvider blockModels;
+    private final BiFunction<String,String,BlockModelBuilder> stringToBuilder;
+    private final BiFunction<String,ResourceLocation,BlockModelBuilder> locationToBuilder;
 
-    public LanternBlockModelProvider(BlockModelProvider blockModels){
-        this.blockModels = blockModels;
+    public LanternBlockModelProvider(BiFunction<String,String,BlockModelBuilder> stringToBuilder, BiFunction<String,ResourceLocation,BlockModelBuilder> locationToBuilder){
+        this.stringToBuilder = stringToBuilder;
+        this.locationToBuilder = locationToBuilder;
     }
 
     protected void registerModels(){
@@ -103,10 +106,10 @@ public class LanternBlockModelProvider {
     }
 
     private BlockModelBuilder withExistingParent(String name, String parent){
-        return this.blockModels.withExistingParent(name, parent);
+        return this.stringToBuilder.apply(name, parent);
     }
 
     private BlockModelBuilder withExistingParent(String name, ResourceLocation parent){
-        return this.blockModels.withExistingParent(name, parent);
+        return this.locationToBuilder.apply(name, parent);
     }
 }

@@ -61,7 +61,7 @@ public class LanternLootTableProvider extends LootTableProvider {
     }
 
     @Override
-    protected void validate(Map<ResourceLocation,LootTable> map, ValidationTracker validationtracker){
-        map.forEach((a, b) -> LootTableManager.validate(validationtracker, a, b));
+    protected void validate(Map<ResourceLocation,LootTable> map, ValidationResults validationtracker){
+        map.forEach((a, b) -> LootTableManager.validate(validationtracker, a, b, map::get));
     }
 }

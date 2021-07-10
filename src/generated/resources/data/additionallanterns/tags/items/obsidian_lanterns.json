@@ -1,22 +1,22 @@
 {
   "replace": false,
   "values": [
-    "additionallanterns:pink_obsidian_lantern",
-    "additionallanterns:orange_obsidian_lantern",
-    "additionallanterns:light_gray_obsidian_lantern",
-    "additionallanterns:obsidian_lantern",
+    "additionallanterns:blue_obsidian_lantern",
     "additionallanterns:light_blue_obsidian_lantern",
+    "additionallanterns:white_obsidian_lantern",
+    "additionallanterns:lime_obsidian_lantern",
+    "additionallanterns:orange_obsidian_lantern",
+    "additionallanterns:gray_obsidian_lantern",
+    "additionallanterns:obsidian_lantern",
+    "additionallanterns:light_gray_obsidian_lantern",
     "additionallanterns:cyan_obsidian_lantern",
     "additionallanterns:magenta_obsidian_lantern",
-    "additionallanterns:brown_obsidian_lantern",
-    "additionallanterns:white_obsidian_lantern",
-    "additionallanterns:yellow_obsidian_lantern",
     "additionallanterns:red_obsidian_lantern",
-    "additionallanterns:black_obsidian_lantern",
     "additionallanterns:green_obsidian_lantern",
+    "additionallanterns:black_obsidian_lantern",
+    "additionallanterns:brown_obsidian_lantern",
     "additionallanterns:purple_obsidian_lantern",
-    "additionallanterns:gray_obsidian_lantern",
-    "additionallanterns:blue_obsidian_lantern",
-    "additionallanterns:lime_obsidian_lantern"
+    "additionallanterns:pink_obsidian_lantern",
+    "additionallanterns:yellow_obsidian_lantern"
   ]
 }
