@@ -1,0 +1,6 @@
+{
+  "parent": "additionallanterns:block/chain",
+  "textures": {
+    "chain": "additionallanterns:block/materials/normal_sandstone_chain"
+  }
+}

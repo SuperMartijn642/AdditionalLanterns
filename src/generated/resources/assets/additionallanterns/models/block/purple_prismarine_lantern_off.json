@@ -1,0 +1,7 @@
+{
+  "parent": "additionallanterns:block/lantern",
+  "textures": {
+    "material": "additionallanterns:block/materials/prismarine_lantern",
+    "color": "additionallanterns:block/colors/purple_lantern_off"
+  }
+}

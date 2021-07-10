@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "additionallanterns:crimson_lantern_brown"
+    ]
+  },
+  "criteria": {
+    "has_lantern": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "additionallanterns:crimson_lanterns"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "additionallanterns:crimson_lantern_brown"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_lantern",
+      "has_the_recipe"
+    ]
+  ]
+}

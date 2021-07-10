@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "additionallanterns:granite_lantern_light_gray"
+    ]
+  },
+  "criteria": {
+    "has_lantern": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "additionallanterns:granite_lanterns"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "additionallanterns:granite_lantern_light_gray"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_lantern",
+      "has_the_recipe"
+    ]
+  ]
+}

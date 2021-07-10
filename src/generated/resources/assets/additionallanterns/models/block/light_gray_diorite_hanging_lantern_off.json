@@ -1,0 +1,7 @@
+{
+  "parent": "additionallanterns:block/hanging_lantern",
+  "textures": {
+    "material": "additionallanterns:block/materials/diorite_lantern",
+    "color": "additionallanterns:block/colors/light_gray_lantern_off"
+  }
+}

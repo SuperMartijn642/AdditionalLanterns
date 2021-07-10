@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "additionallanterns:andesite_lantern_black"
+    ]
+  },
+  "criteria": {
+    "has_lantern": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "additionallanterns:andesite_lanterns"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "additionallanterns:andesite_lantern_black"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_lantern",
+      "has_the_recipe"
+    ]
+  ]
+}

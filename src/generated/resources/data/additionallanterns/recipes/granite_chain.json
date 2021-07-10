@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "B",
+    "A",
+    "B"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:granite"
+    },
+    "B": {
+      "item": "minecraft:granite"
+    }
+  },
+  "result": {
+    "item": "additionallanterns:granite_chain",
+    "count": 8
+  }
+}

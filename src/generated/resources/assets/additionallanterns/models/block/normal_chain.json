@@ -1,0 +1,6 @@
+{
+  "parent": "additionallanterns:block/chain",
+  "textures": {
+    "chain": "minecraft:block/chain"
+  }
+}

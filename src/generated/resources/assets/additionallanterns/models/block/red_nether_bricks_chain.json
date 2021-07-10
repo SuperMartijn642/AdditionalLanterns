@@ -1,0 +1,6 @@
+{
+  "parent": "additionallanterns:block/chain",
+  "textures": {
+    "chain": "additionallanterns:block/materials/red_nether_bricks_chain"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "additionallanterns:yellow_crimson_lantern",
+    "additionallanterns:orange_crimson_lantern",
+    "additionallanterns:cyan_crimson_lantern",
+    "additionallanterns:pink_crimson_lantern",
+    "additionallanterns:lime_crimson_lantern",
+    "additionallanterns:gray_crimson_lantern",
+    "additionallanterns:red_crimson_lantern",
+    "additionallanterns:crimson_lantern",
+    "additionallanterns:purple_crimson_lantern",
+    "additionallanterns:brown_crimson_lantern",
+    "additionallanterns:blue_crimson_lantern",
+    "additionallanterns:green_crimson_lantern",
+    "additionallanterns:light_blue_crimson_lantern",
+    "additionallanterns:white_crimson_lantern",
+    "additionallanterns:magenta_crimson_lantern",
+    "additionallanterns:light_gray_crimson_lantern",
+    "additionallanterns:black_crimson_lantern"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "additionallanterns:bricks_lanterns"
+    }
+  ],
+  "result": {
+    "item": "additionallanterns:bricks_lantern"
+  }
+}

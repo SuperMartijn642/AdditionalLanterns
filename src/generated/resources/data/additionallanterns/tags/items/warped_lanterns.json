@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "additionallanterns:cyan_warped_lantern",
+    "additionallanterns:red_warped_lantern",
+    "additionallanterns:purple_warped_lantern",
+    "additionallanterns:warped_lantern",
+    "additionallanterns:blue_warped_lantern",
+    "additionallanterns:yellow_warped_lantern",
+    "additionallanterns:light_blue_warped_lantern",
+    "additionallanterns:gray_warped_lantern",
+    "additionallanterns:black_warped_lantern",
+    "additionallanterns:pink_warped_lantern",
+    "additionallanterns:light_gray_warped_lantern",
+    "additionallanterns:brown_warped_lantern",
+    "additionallanterns:orange_warped_lantern",
+    "additionallanterns:white_warped_lantern",
+    "additionallanterns:magenta_warped_lantern",
+    "additionallanterns:lime_warped_lantern",
+    "additionallanterns:green_warped_lantern"
+  ]
+}

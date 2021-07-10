@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "additionallanterns:diorite_chain"
+    ]
+  },
+  "criteria": {
+    "has_primary": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:diorite"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "additionallanterns:diorite_chain"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_primary",
+      "has_the_recipe"
+    ]
+  ]
+}
