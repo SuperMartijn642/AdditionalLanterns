@@ -52,6 +52,7 @@ public class LanternBlock extends net.minecraft.block.LanternBlock implements IW
             newState = newState.setValue(WATERLOGGED, state.getValue(WATERLOGGED));
             newState = newState.setValue(HANGING, state.getValue(HANGING));
             newState = newState.setValue(ON, state.getValue(ON));
+            newState = newState.setValue(REDSTONE, state.getValue(REDSTONE));
             world.setBlock(pos, newState, 1 | 2);
         }else
             world.setBlock(pos, state.setValue(ON, !state.getValue(ON)), 1 | 2);
