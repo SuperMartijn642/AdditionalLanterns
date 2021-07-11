@@ -1,0 +1,21 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "B",
+    "A",
+    "B"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:prismarine",
+      "data": 2
+    },
+    "B": {
+      "item": "minecraft:prismarine_shard"
+    }
+  },
+  "result": {
+    "item": "additionallanterns:dark_prismarine_chain",
+    "count": 6
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "bricks_lanterns"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "dyePink"
+    }
+  ],
+  "result": {
+    "item": "additionallanterns:pink_bricks_lantern"
+  }
+}

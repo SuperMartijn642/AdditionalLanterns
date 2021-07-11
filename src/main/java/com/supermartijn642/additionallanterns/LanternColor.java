@@ -1,6 +1,6 @@
 package com.supermartijn642.additionallanterns;
 
-import net.minecraft.item.DyeColor;
+import net.minecraft.item.EnumDyeColor;
 
 import java.util.Locale;
 
@@ -9,36 +9,34 @@ import java.util.Locale;
  */
 public enum LanternColor {
 
-    WHITE(DyeColor.WHITE, "White"),
-    ORANGE(DyeColor.ORANGE, "Orange"),
-    MAGENTA(DyeColor.MAGENTA, "Magenta"),
-    LIGHT_BLUE(DyeColor.LIGHT_BLUE, "Light Blue"),
-    YELLOW(DyeColor.YELLOW, "Yellow"),
-    LIME(DyeColor.LIME, "Lime"),
-    PINK(DyeColor.PINK, "Pink"),
-    GRAY(DyeColor.GRAY, "Gray"),
-    LIGHT_GRAY(DyeColor.LIGHT_GRAY, "Light Gray"),
-    CYAN(DyeColor.CYAN, "Cyan"),
-    PURPLE(DyeColor.PURPLE, "Purple"),
-    BLUE(DyeColor.BLUE, "Blue"),
-    BROWN(DyeColor.BROWN, "Brown"),
-    GREEN(DyeColor.GREEN, "Green"),
-    RED(DyeColor.RED, "Red"),
-    BLACK(DyeColor.BLACK, "Black");
+    WHITE(EnumDyeColor.WHITE),
+    ORANGE(EnumDyeColor.ORANGE),
+    MAGENTA(EnumDyeColor.MAGENTA),
+    LIGHT_BLUE(EnumDyeColor.LIGHT_BLUE),
+    YELLOW(EnumDyeColor.YELLOW),
+    LIME(EnumDyeColor.LIME),
+    PINK(EnumDyeColor.PINK),
+    GRAY(EnumDyeColor.GRAY),
+    LIGHT_GRAY(EnumDyeColor.SILVER),
+    CYAN(EnumDyeColor.CYAN),
+    PURPLE(EnumDyeColor.PURPLE),
+    BLUE(EnumDyeColor.BLUE),
+    BROWN(EnumDyeColor.BROWN),
+    GREEN(EnumDyeColor.GREEN),
+    RED(EnumDyeColor.RED),
+    BLACK(EnumDyeColor.BLACK);
 
-    public final DyeColor dyeColor;
-    public final String englishTranslation;
+    public final EnumDyeColor dyeColor;
 
-    LanternColor(DyeColor dyeColor, String englishTranslation){
+    LanternColor(EnumDyeColor dyeColor){
         this.dyeColor = dyeColor;
-        this.englishTranslation = englishTranslation;
     }
 
     public String getSuffix(){
         return this.name().toLowerCase(Locale.ROOT);
     }
 
-    public static LanternColor fromDyeColor(DyeColor dyeColor){
+    public static LanternColor fromDyeColor(EnumDyeColor dyeColor){
         for(LanternColor lanternColor : values())
             if(lanternColor.dyeColor == dyeColor)
                 return lanternColor;

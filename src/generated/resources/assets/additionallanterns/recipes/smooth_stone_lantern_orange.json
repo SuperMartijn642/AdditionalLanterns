@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "smooth_stone_lanterns"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "dyeOrange"
+    }
+  ],
+  "result": {
+    "item": "additionallanterns:orange_smooth_stone_lantern"
+  }
+}

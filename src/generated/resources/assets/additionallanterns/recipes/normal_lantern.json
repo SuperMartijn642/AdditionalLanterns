@@ -1,0 +1,20 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "AAA",
+    "ACA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "type": "forge:ore_dict",
+      "ore": "nuggetIron"
+    },
+    "C": {
+      "item": "minecraft:torch"
+    }
+  },
+  "result": {
+    "item": "additionallanterns:normal_lantern"
+  }
+}

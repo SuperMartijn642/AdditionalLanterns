@@ -1,0 +1,20 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "B",
+    "A",
+    "B"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:obsidian"
+    },
+    "B": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "result": {
+    "item": "additionallanterns:obsidian_chain",
+    "count": 8
+  }
+}

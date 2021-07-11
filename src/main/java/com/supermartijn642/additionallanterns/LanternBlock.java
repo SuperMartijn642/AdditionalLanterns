@@ -1,100 +1,173 @@
 package com.supermartijn642.additionallanterns;
 
+import com.supermartijn642.core.block.BaseBlock;
+import com.supermartijn642.core.block.BlockShape;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.IWaterLoggable;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.fluid.Fluids;
-import net.minecraft.fluid.IFluidState;
-import net.minecraft.item.BlockItemUseContext;
-import net.minecraft.item.DyeItem;
+import net.minecraft.block.properties.PropertyBool;
+import net.minecraft.block.state.BlockFaceShape;
+import net.minecraft.block.state.BlockStateContainer;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.EnumDyeColor;
+import net.minecraft.item.ItemDye;
 import net.minecraft.item.ItemStack;
-import net.minecraft.state.BooleanProperty;
-import net.minecraft.state.StateContainer;
-import net.minecraft.state.properties.BlockStateProperties;
-import net.minecraft.util.Direction;
-import net.minecraft.util.Hand;
+import net.minecraft.util.BlockRenderLayer;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.BlockRayTraceResult;
-import net.minecraft.world.IWorld;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-
-import javax.annotation.Nullable;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 /**
  * Created 7/5/2021 by SuperMartijn642
  */
-public class LanternBlock extends net.minecraft.block.LanternBlock implements IWaterLoggable {
+public class LanternBlock extends BaseBlock {
 
-    public static final BooleanProperty ON = BooleanProperty.create("on");
-    public static final BooleanProperty REDSTONE = BooleanProperty.create("redstone");
-    public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
+    protected static final BlockShape AABB = BlockShape.or(BlockShape.createBlockShape(5, 0, 5, 11, 7, 11), BlockShape.createBlockShape(6, 7, 6, 10, 9, 10));
+    protected static final BlockShape HANGING_AABB = BlockShape.or(BlockShape.createBlockShape(5, 1, 5, 11, 8, 11), BlockShape.createBlockShape(6, 8, 6, 10, 10, 10));
+
+    public static final PropertyBool ON = PropertyBool.create("on");
+    public static final PropertyBool REDSTONE = PropertyBool.create("redstone");
+    public static final PropertyBool HANGING = PropertyBool.create("hanging");
 
     public final LanternMaterial material;
     public final LanternColor color;
 
     public LanternBlock(LanternMaterial material, LanternColor color){
-        super(material.getLanternBlockProperties());
-        this.setRegistryName(color == null ? material.getSuffix() + "_lantern" : color.getSuffix() + "_" + material.getSuffix() + "_lantern");
+        super(color == null ? material.getSuffix() + "_lantern" : color.getSuffix() + "_" + material.getSuffix() + "_lantern", false, material.getLanternBlockProperties());
         this.material = material;
         this.color = color;
 
-        this.registerDefaultState(this.defaultBlockState().setValue(ON, true).setValue(REDSTONE, false).setValue(WATERLOGGED, false));
+        this.setCreativeTab(AdditionalLanterns.GROUP);
+
+        this.setDefaultState(this.getDefaultState().withProperty(ON, true).withProperty(REDSTONE, false).withProperty(HANGING, false));
     }
 
     @Override
-    public boolean use(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockRayTraceResult rayTraceResult){
-        ItemStack stack = player.getItemInHand(hand);
-        if(this.material.canBeColored && stack.getItem() instanceof DyeItem){
-            LanternColor color = LanternColor.fromDyeColor(((DyeItem)stack.getItem()).getDyeColor());
-            BlockState newState = this.material.getLanternBlock(color).defaultBlockState();
-            newState = newState.setValue(WATERLOGGED, state.getValue(WATERLOGGED));
-            newState = newState.setValue(HANGING, state.getValue(HANGING));
-            newState = newState.setValue(ON, state.getValue(ON));
-            world.setBlock(pos, newState, 1 | 2);
+    public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ){
+        ItemStack stack = player.getHeldItem(hand);
+        if(this.material.canBeColored && stack.getItem() instanceof ItemDye){
+            LanternColor color = LanternColor.fromDyeColor(EnumDyeColor.byDyeDamage(stack.getMetadata()));
+            IBlockState newState = this.material.getLanternBlock(color).getDefaultState();
+            newState = newState.withProperty(ON, state.getValue(ON));
+            newState = newState.withProperty(REDSTONE, state.getValue(REDSTONE));
+            newState = newState.withProperty(HANGING, state.getValue(HANGING));
+            world.setBlockState(pos, newState, 1 | 2);
         }else
-            world.setBlock(pos, state.setValue(ON, !state.getValue(ON)), 1 | 2);
+            world.setBlockState(pos, state.withProperty(ON, !state.getValue(ON)), 1 | 2);
         return true;
     }
 
     @Override
-    protected void createBlockStateDefinition(StateContainer.Builder<Block,BlockState> builder){
-        super.createBlockStateDefinition(builder);
-        builder.add(ON, REDSTONE, WATERLOGGED);
-    }
-
-    @Nullable
-    public BlockState getStateForPlacement(BlockItemUseContext context){
-        BlockState state = super.getStateForPlacement(context);
-        IFluidState fluidState = context.getLevel().getFluidState(context.getClickedPos());
-        return state == null ? null :
-            state
-                .setValue(REDSTONE, context.getLevel().hasNeighborSignal(context.getClickedPos()))
-                .setValue(WATERLOGGED, fluidState.getType() == Fluids.WATER);
+    protected BlockStateContainer createBlockState(){
+        return new BlockStateContainer(this, ON, REDSTONE, HANGING);
     }
 
     @Override
-    public BlockState updateShape(BlockState state, Direction direction, BlockState state2, IWorld world, BlockPos pos, BlockPos pos2){
-        if(state.getValue(WATERLOGGED))
-            world.getLiquidTicks().scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(world));
-        return super.updateShape(state, direction, state2, world, pos, pos2);
+    public IBlockState getStateForPlacement(World world, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer, EnumHand hand){
+        IBlockState state = this.getDefaultState()
+            .withProperty(REDSTONE, world.isBlockPowered(pos))
+            .withProperty(HANGING, facing == EnumFacing.UP);
+        if(canSurvive(world, pos, state))
+            return state;
+
+        state = state.cycleProperty(HANGING);
+        if(canSurvive(world, pos, state))
+            return state;
+
+        return Blocks.AIR.getDefaultState();
+    }
+
+    private static boolean canSurvive(World world, BlockPos pos, IBlockState state){
+        EnumFacing direction = state.getValue(HANGING) ? EnumFacing.UP : EnumFacing.DOWN;
+        BlockFaceShape shape = world.getBlockState(pos.offset(direction)).getBlockFaceShape(world, pos.offset(direction), direction.getOpposite());
+        return shape == BlockFaceShape.CENTER || shape == BlockFaceShape.CENTER_BIG || shape == BlockFaceShape.CENTER_SMALL ||
+            shape == BlockFaceShape.MIDDLE_POLE || shape == BlockFaceShape.MIDDLE_POLE_THICK || shape == BlockFaceShape.MIDDLE_POLE_THIN ||
+            shape == BlockFaceShape.SOLID;
     }
 
     @Override
-    public IFluidState getFluidState(BlockState state){
-        return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
+    public boolean canPlaceBlockAt(World world, BlockPos pos){
+        return world.getBlockState(pos).getBlock().isReplaceable(world, pos) &&
+            (canSurvive(world, pos, this.getDefaultState().withProperty(HANGING, false)) ||
+                canSurvive(world, pos, this.getDefaultState().withProperty(HANGING, true)));
     }
 
-    public void neighborChanged(BlockState state, World world, BlockPos pos, Block block, BlockPos neighborPos, boolean p_220069_6_){
-        if(!world.isClientSide){
-            boolean redstone = state.getValue(REDSTONE);
-            if(redstone != world.hasNeighborSignal(pos))
-                world.setBlock(pos, state.setValue(REDSTONE, !redstone), 1 | 2 | 4);
+    @Override
+    public void onBlockAdded(World world, BlockPos pos, IBlockState state){
+        if(state.getBlock() == this && !canSurvive(world, pos, state)){
+            if(world.getBlockState(pos).getBlock() == this){
+                this.dropBlockAsItem(world, pos, state, 0);
+                world.setBlockToAir(pos);
+            }
         }
     }
 
     @Override
-    public int getLightEmission(BlockState state){
-        return state.getValue(REDSTONE) != state.getValue(ON) ? 15 : 0;
+    public void neighborChanged(IBlockState state, World world, BlockPos pos, Block block, BlockPos fromPos){
+        if(state.getBlock() == this && !world.isRemote){
+            if(!canSurvive(world, pos, state)){
+                this.dropBlockAsItem(world, pos, state, 0);
+                world.setBlockToAir(pos);
+            }else{
+                boolean redstone = state.getValue(REDSTONE);
+                if(redstone != world.isBlockPowered(pos))
+                    world.setBlockState(pos, state.withProperty(REDSTONE, !redstone), 1 | 2 | 4);
+            }
+        }
+    }
+
+    public static boolean emitsLight(IBlockState state){
+        return state.getValue(REDSTONE) != state.getValue(ON);
+    }
+
+    @Override
+    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos){
+        return state.getValue(HANGING) ? HANGING_AABB.simplify() : AABB.simplify();
+    }
+
+    @Override
+    public BlockFaceShape getBlockFaceShape(IBlockAccess worldIn, IBlockState state, BlockPos pos, EnumFacing face){
+        return state.getValue(HANGING) ?
+            face == EnumFacing.UP ? BlockFaceShape.MIDDLE_POLE_THIN : BlockFaceShape.UNDEFINED :
+            face == EnumFacing.DOWN ? BlockFaceShape.CENTER : BlockFaceShape.UNDEFINED;
+    }
+
+    @SideOnly(Side.CLIENT)
+    public BlockRenderLayer getBlockLayer(){
+        return BlockRenderLayer.CUTOUT;
+    }
+
+    public boolean isOpaqueCube(IBlockState state){
+        return false;
+    }
+
+    public boolean isFullCube(IBlockState state){
+        return false;
+    }
+
+    @Override
+    public int getMetaFromState(IBlockState state){
+        int meta = 0;
+        if(state.getValue(ON))
+            meta |= 1;
+        if(state.getValue(REDSTONE))
+            meta |= 2;
+        if(state.getValue(HANGING))
+            meta |= 4;
+        return meta;
+    }
+
+    @Override
+    public IBlockState getStateFromMeta(int meta){
+        return this.getDefaultState()
+            .withProperty(ON, (meta & 1) != 0)
+            .withProperty(REDSTONE, (meta & 2) != 0)
+            .withProperty(HANGING, (meta & 4) != 0);
     }
 }

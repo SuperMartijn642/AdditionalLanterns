@@ -1,0 +1,18 @@
+[
+  {
+    "modid": "additionallanterns",
+    "name": "Additional Lanterns",
+    "description": "Additional Lanterns adds many new lanterns with different colors and materials!",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": [
+      "SuperMartijn642"
+    ],
+    "credits": "",
+    "logoFile": "additionallanterns.png",
+    "screenshots": [],
+    "dependencies": []
+  }
+]

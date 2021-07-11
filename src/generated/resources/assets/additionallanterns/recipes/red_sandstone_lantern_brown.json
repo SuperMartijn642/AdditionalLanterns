@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "red_sandstone_lanterns"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "dyeBrown"
+    }
+  ],
+  "result": {
+    "item": "additionallanterns:brown_red_sandstone_lantern"
+  }
+}

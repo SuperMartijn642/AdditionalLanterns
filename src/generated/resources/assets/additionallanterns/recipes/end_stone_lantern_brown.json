@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "end_stone_lanterns"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "dyeBrown"
+    }
+  ],
+  "result": {
+    "item": "additionallanterns:brown_end_stone_lantern"
+  }
+}

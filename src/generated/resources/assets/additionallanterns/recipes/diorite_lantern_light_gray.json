@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "diorite_lanterns"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "dyeLightGray"
+    }
+  ],
+  "result": {
+    "item": "additionallanterns:light_gray_diorite_lantern"
+  }
+}

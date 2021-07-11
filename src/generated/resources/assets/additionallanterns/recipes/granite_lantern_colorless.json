@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "granite_lanterns"
+    }
+  ],
+  "result": {
+    "item": "additionallanterns:granite_lantern"
+  }
+}

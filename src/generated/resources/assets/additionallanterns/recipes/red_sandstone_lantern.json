@@ -1,0 +1,20 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    " A ",
+    "ACA",
+    " A "
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:red_sandstone",
+      "data": 0
+    },
+    "C": {
+      "item": "minecraft:torch"
+    }
+  },
+  "result": {
+    "item": "additionallanterns:red_sandstone_lantern"
+  }
+}

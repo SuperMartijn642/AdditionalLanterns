@@ -1,0 +1,20 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "B",
+    "A",
+    "B"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:red_nether_brick"
+    },
+    "B": {
+      "item": "minecraft:netherbrick"
+    }
+  },
+  "result": {
+    "item": "additionallanterns:red_nether_bricks_chain",
+    "count": 4
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "B",
+    "A",
+    "B"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:stone",
+      "data": 0
+    },
+    "B": {
+      "item": "minecraft:stone",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "additionallanterns:smooth_stone_chain",
+    "count": 8
+  }
+}

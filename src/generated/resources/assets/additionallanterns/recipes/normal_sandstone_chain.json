@@ -1,0 +1,22 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "B",
+    "A",
+    "B"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:sandstone",
+      "data": 0
+    },
+    "B": {
+      "item": "minecraft:sandstone",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "additionallanterns:normal_sandstone_chain",
+    "count": 8
+  }
+}

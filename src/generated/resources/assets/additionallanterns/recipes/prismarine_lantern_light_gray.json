@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "prismarine_lanterns"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "dyeLightGray"
+    }
+  ],
+  "result": {
+    "item": "additionallanterns:light_gray_prismarine_lantern"
+  }
+}

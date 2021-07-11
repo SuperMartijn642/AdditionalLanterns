@@ -1,15 +1,15 @@
 {
   "variants": {
     "axis=x": {
-      "model": "additionallanterns:block/normal_nether_bricks_chain",
+      "model": "additionallanterns:normal_nether_bricks_chain",
       "x": 90,
       "y": 90
     },
     "axis=y": {
-      "model": "additionallanterns:block/normal_nether_bricks_chain"
+      "model": "additionallanterns:normal_nether_bricks_chain"
     },
     "axis=z": {
-      "model": "additionallanterns:block/normal_nether_bricks_chain",
+      "model": "additionallanterns:normal_nether_bricks_chain",
       "x": 90
     }
   }

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "obsidian_lanterns"
+    }
+  ],
+  "result": {
+    "item": "additionallanterns:obsidian_lantern"
+  }
+}

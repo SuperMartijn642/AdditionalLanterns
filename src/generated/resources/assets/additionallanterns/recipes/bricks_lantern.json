@@ -1,0 +1,22 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "BAB",
+    "ACA",
+    "BAB"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:brick"
+    },
+    "B": {
+      "item": "minecraft:brick"
+    },
+    "C": {
+      "item": "minecraft:torch"
+    }
+  },
+  "result": {
+    "item": "additionallanterns:bricks_lantern"
+  }
+}
