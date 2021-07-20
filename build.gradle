@@ -55,6 +55,9 @@ minecraft {
 //sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
+    flatDir {
+        dirs 'libs'
+    }
     maven {
         url "https://www.cursemaven.com"
     }
@@ -64,17 +67,17 @@ dependencies {
     minecraft 'net.minecraftforge:forge:1.12.2-14.23.5.2855'
 
     // Core lib
-    compile fg.deobf('curse.maven:supermartijn642s-core-lib-454372:3357859')
+    compile fg.deobf('com.supermartijn642.core:supermartijn642corelib:1.0.10-dev-mc1.12')//fg.deobf('curse.maven:supermartijn642s-core-lib-454372:3357859')
 //    // Config lib
 //    compile fg.deobf('curse.maven:supermartijn642s-config-lib-438332:3357667')
 
     // Just Enough Items
-    runtimeOnly fg.deobf('curse.maven:jei-238222:3043174')
+//    runtimeOnly fg.deobf('curse.maven:jei-238222:3043174')
 }
 
 sourceSets {
     main {
         resources {srcDir 'src/generated/resources'}
-//        output.resourcesDir = output.classesDir
+        output.resourcesDir = output.classesDir
     }
 }
