@@ -4,12 +4,12 @@ package com.supermartijn642.additionallanterns.data;
 import com.supermartijn642.additionallanterns.LanternBlock;
 import com.supermartijn642.additionallanterns.LanternColor;
 import com.supermartijn642.additionallanterns.LanternMaterial;
-import net.minecraft.state.properties.BlockStateProperties;
-import net.minecraft.util.Direction;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.core.Direction;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
-import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
+import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
 /**
  * Created 7/5/2021 by SuperMartijn642

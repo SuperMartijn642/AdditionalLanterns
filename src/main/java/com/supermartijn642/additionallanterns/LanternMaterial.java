@@ -1,13 +1,13 @@
 package com.supermartijn642.additionallanterns;
 
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.Items;
-import net.minecraft.util.IItemProvider;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.registries.IForgeRegistry;
 
 import java.util.EnumMap;
@@ -49,11 +49,11 @@ public enum LanternMaterial {
     private final Map<LanternColor,Item> coloredLanternItems = new EnumMap<>(LanternColor.class);
     private Item chainItem;
     public final String englishTranslation;
-    public final IItemProvider primaryLanternIngredient, secondaryLanternIngredient;
-    public final IItemProvider primaryChainIngredient, secondaryChainIngredient;
+    public final ItemLike primaryLanternIngredient, secondaryLanternIngredient;
+    public final ItemLike primaryChainIngredient, secondaryChainIngredient;
     public final int chainRecipeCount;
 
-    LanternMaterial(boolean canBeColored, boolean hasChains, String englishTranslation, IItemProvider primaryLanternIngredient, IItemProvider secondaryLanternIngredient, IItemProvider primaryChainIngredient, IItemProvider secondaryChainIngredient, int chainRecipeCount){
+    LanternMaterial(boolean canBeColored, boolean hasChains, String englishTranslation, ItemLike primaryLanternIngredient, ItemLike secondaryLanternIngredient, ItemLike primaryChainIngredient, ItemLike secondaryChainIngredient, int chainRecipeCount){
         this.canBeColored = canBeColored;
         this.hasChains = hasChains;
         this.englishTranslation = englishTranslation;
@@ -82,12 +82,12 @@ public enum LanternMaterial {
         return this.name().toLowerCase(Locale.ROOT);
     }
 
-    public AbstractBlock.Properties getLanternBlockProperties(){
-        return AbstractBlock.Properties.copy(Blocks.LANTERN).lightLevel(state -> LanternBlock.emitsLight(state) ? 15 : 0);
+    public BlockBehaviour.Properties getLanternBlockProperties(){
+        return BlockBehaviour.Properties.copy(Blocks.LANTERN).lightLevel(state -> LanternBlock.emitsLight(state) ? 15 : 0);
     }
 
-    public AbstractBlock.Properties getChainBlockProperties(){
-        return AbstractBlock.Properties.copy(Blocks.CHAIN);
+    public BlockBehaviour.Properties getChainBlockProperties(){
+        return BlockBehaviour.Properties.copy(Blocks.CHAIN);
     }
 
     public void registerBlocks(IForgeRegistry<Block> registry){

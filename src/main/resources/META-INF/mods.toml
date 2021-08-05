@@ -48,13 +48,13 @@ description='''Additional Lanterns adds many new lanterns with different colors 
 [[dependencies.additionallanterns]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16,1.17)"
+    versionRange="[1.17,1.18)"
     ordering="NONE"
     side="BOTH"
 # Here's another dependency
 [[dependencies.additionallanterns]]
     modId="supermartijn642corelib"
     mandatory=true
-    versionRange="[1.0.9,1.1.0)"
+    versionRange="[1.0.12,1.1.0)"
     ordering="NONE"
     side="BOTH"

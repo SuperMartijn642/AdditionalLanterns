@@ -4,13 +4,17 @@ import com.google.common.collect.ImmutableList;
 import com.mojang.datafixers.util.Pair;
 import com.supermartijn642.additionallanterns.LanternColor;
 import com.supermartijn642.additionallanterns.LanternMaterial;
-import net.minecraft.block.Block;
-import net.minecraft.data.LootTableProvider;
-import net.minecraft.data.loot.BlockLootTables;
-import net.minecraft.item.Items;
-import net.minecraft.loot.*;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
+import net.minecraft.data.loot.BlockLoot;
+import net.minecraft.data.loot.LootTableProvider;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.LootTables;
+import net.minecraft.world.level.storage.loot.ValidationContext;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParamSet;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
+import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.List;
@@ -30,8 +34,8 @@ public class LanternLootTableProvider extends LootTableProvider {
     }
 
     @Override
-    protected List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation,LootTable.Builder>>>,LootParameterSet>> getTables(){
-        BlockLootTables lootTables = new BlockLootTables() {
+    protected List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation,LootTable.Builder>>>,LootContextParamSet>> getTables(){
+        BlockLoot lootTables = new BlockLoot() {
             @Override
             protected Iterable<Block> getKnownBlocks(){
                 return ForgeRegistries.BLOCKS.getValues().stream().filter(block -> block.getRegistryName().getNamespace().equals("additionallanterns")).collect(Collectors.toList());
@@ -57,11 +61,11 @@ public class LanternLootTableProvider extends LootTableProvider {
         };
 
 
-        return ImmutableList.of(Pair.of(() -> lootTables, LootParameterSets.BLOCK));
+        return ImmutableList.of(Pair.of(() -> lootTables, LootContextParamSets.BLOCK));
     }
 
     @Override
-    protected void validate(Map<ResourceLocation,LootTable> map, ValidationTracker validationtracker){
-        map.forEach((a, b) -> LootTableManager.validate(validationtracker, a, b));
+    protected void validate(Map<ResourceLocation,LootTable> map, ValidationContext validationtracker){
+        map.forEach((a, b) -> LootTables.validate(validationtracker, a, b));
     }
 }

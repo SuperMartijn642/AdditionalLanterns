@@ -2,16 +2,16 @@ package com.supermartijn642.additionallanterns.data;
 
 import com.supermartijn642.additionallanterns.LanternColor;
 import com.supermartijn642.additionallanterns.LanternMaterial;
-import net.minecraft.data.IFinishedRecipe;
-import net.minecraft.data.RecipeProvider;
-import net.minecraft.data.ShapedRecipeBuilder;
-import net.minecraft.data.ShapelessRecipeBuilder;
-import net.minecraft.item.Item;
-import net.minecraft.item.Items;
-import net.minecraft.tags.ITag;
-import net.minecraft.tags.TagCollectionManager;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
+import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.data.recipes.ShapelessRecipeBuilder;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.Tag;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
+import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
 import java.util.function.Consumer;
 
@@ -25,12 +25,12 @@ public class LanternRecipeProvider extends RecipeProvider {
     }
 
     @Override
-    protected void buildShapelessRecipes(Consumer<IFinishedRecipe> recipeConsumer){
+    protected void buildCraftingRecipes(Consumer<FinishedRecipe> recipeConsumer){
         for(LanternMaterial material : LanternMaterial.values())
             addMaterialRecipes(material, recipeConsumer);
     }
 
-    private static void addMaterialRecipes(LanternMaterial material, Consumer<IFinishedRecipe> recipeConsumer){
+    private static void addMaterialRecipes(LanternMaterial material, Consumer<FinishedRecipe> recipeConsumer){
         addLanternRecipe(material, recipeConsumer);
         if(material.canBeColored){
             addColorRecipe(material, null, recipeConsumer);
@@ -41,7 +41,7 @@ public class LanternRecipeProvider extends RecipeProvider {
             addChainRecipe(material, recipeConsumer);
     }
 
-    private static void addLanternRecipe(LanternMaterial material, Consumer<IFinishedRecipe> recipeConsumer){
+    private static void addLanternRecipe(LanternMaterial material, Consumer<FinishedRecipe> recipeConsumer){
         if(material.primaryLanternIngredient == null && material.secondaryLanternIngredient == null)
             return;
 
@@ -69,7 +69,7 @@ public class LanternRecipeProvider extends RecipeProvider {
                 .save(recipeConsumer);
     }
 
-    private static void addColorRecipe(LanternMaterial material, LanternColor color, Consumer<IFinishedRecipe> recipeConsumer){
+    private static void addColorRecipe(LanternMaterial material, LanternColor color, Consumer<FinishedRecipe> recipeConsumer){
         if(color == null)
             ShapelessRecipeBuilder.shapeless(material.getLanternBlock())
                 .requires(getMaterialLanternTag(material))
@@ -83,15 +83,15 @@ public class LanternRecipeProvider extends RecipeProvider {
                 .save(recipeConsumer, new ResourceLocation("additionallanterns", material.getSuffix() + "_lantern_" + color.getSuffix()));
     }
 
-    private static ITag<Item> getMaterialLanternTag(LanternMaterial material){
-        return TagCollectionManager.getInstance().getItems().getTag(new ResourceLocation("additionallanterns", material.getSuffix() + "_lanterns"));
+    private static Tag<Item> getMaterialLanternTag(LanternMaterial material){
+        return ItemTags.createOptional(new ResourceLocation("additionallanterns", material.getSuffix() + "_lanterns"));
     }
 
-    private static ITag<Item> getColorDyeTag(LanternColor color){
+    private static Tag<Item> getColorDyeTag(LanternColor color){
         return color.dyeColor.getTag();
     }
 
-    private static void addChainRecipe(LanternMaterial material, Consumer<IFinishedRecipe> recipeConsumer){
+    private static void addChainRecipe(LanternMaterial material, Consumer<FinishedRecipe> recipeConsumer){
         if(material.primaryChainIngredient == null && material.secondaryChainIngredient == null)
             return;
 

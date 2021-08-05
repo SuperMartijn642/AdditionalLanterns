@@ -1,14 +1,14 @@
 package com.supermartijn642.additionallanterns;
 
 import com.supermartijn642.additionallanterns.data.*;
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
+import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
 /**
  * Created 7/7/2020 by SuperMartijn642
@@ -16,7 +16,7 @@ import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
 @Mod("additionallanterns")
 public class AdditionalLanterns {
 
-    public static final ItemGroup GROUP = new ItemGroup("additionallanterns") {
+    public static final CreativeModeTab GROUP = new CreativeModeTab("additionallanterns") {
         @Override
         public ItemStack makeIcon(){
             return new ItemStack(LanternMaterial.NORMAL.getLanternBlock());
@@ -49,6 +49,7 @@ public class AdditionalLanterns {
             e.getGenerator().addProvider(new LanternLanguageProvider(e));
             e.getGenerator().addProvider(new LanternLootTableProvider(e));
             e.getGenerator().addProvider(new LanternTagsProvider(e));
+            e.getGenerator().addProvider(new LanternBlockTagsProvider(e));
             e.getGenerator().addProvider(new LanternRecipeProvider(e));
         }
     }

@@ -2,12 +2,12 @@ package com.supermartijn642.additionallanterns.data;
 
 import com.supermartijn642.additionallanterns.LanternColor;
 import com.supermartijn642.additionallanterns.LanternMaterial;
-import net.minecraft.data.BlockTagsProvider;
-import net.minecraft.data.ItemTagsProvider;
-import net.minecraft.data.TagsProvider;
-import net.minecraft.item.Item;
+import net.minecraft.data.tags.BlockTagsProvider;
+import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.tags.ItemTags;
-import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
+import net.minecraft.world.item.Item;
+import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -35,7 +35,7 @@ public class LanternTagsProvider extends ItemTagsProvider {
             for(LanternColor color : LanternColor.values())
                 lanterns.add(Item.byBlock(material.getLanternBlock(color)));
         }
-        TagsProvider.Builder<Item> builder = this.tag(ItemTags.bind("additionallanterns:" + material.getSuffix() + "_lanterns"));
+        TagsProvider.TagAppender<Item> builder = this.tag(ItemTags.bind("additionallanterns:" + material.getSuffix() + "_lanterns"));
         lanterns.forEach(builder::add);
     }
 }
