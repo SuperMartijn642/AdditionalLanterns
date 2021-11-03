@@ -21,8 +21,7 @@ public class LanternBlockTagsProvider extends BlockTagsProvider {
     protected void addTags(){
         TagsProvider.TagAppender<Block> pickaxeTag = this.tag(BlockTags.MINEABLE_WITH_PICKAXE);
         for(LanternMaterial material : LanternMaterial.values()){
-            if(material != LanternMaterial.NORMAL)
-                pickaxeTag.add(material.getLanternBlock());
+            pickaxeTag.add(material.getLanternBlock());
             if(material.canBeColored){
                 for(LanternColor color : LanternColor.values())
                     pickaxeTag.add(material.getLanternBlock(color));

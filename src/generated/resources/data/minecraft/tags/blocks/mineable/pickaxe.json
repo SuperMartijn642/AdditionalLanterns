@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "additionallanterns:normal_lantern",
     "additionallanterns:white_normal_lantern",
     "additionallanterns:orange_normal_lantern",
     "additionallanterns:magenta_normal_lantern",
