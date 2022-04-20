@@ -16,8 +16,8 @@ public class AdditionalLanterns {
 
     public static final String MODID = "additionallanterns";
     public static final String NAME = "Additional Lanterns";
-    public static final String VERSION = "1.0.0";
-    public static final String DEPENDENCIES = "required-after:supermartijn642corelib@[1.0.9,)";
+    public static final String VERSION = "1.0.1";
+    public static final String DEPENDENCIES = "required-after:supermartijn642corelib@[1.0.16,)";
 
     public static final CreativeTabs GROUP = new CreativeTabs("additionallanterns") {
         @Override
