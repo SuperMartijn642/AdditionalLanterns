@@ -5,6 +5,7 @@ import com.supermartijn642.additionallanterns.LanternMaterial;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.data.tags.TagsProvider;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
@@ -35,7 +36,7 @@ public class LanternTagsProvider extends ItemTagsProvider {
             for(LanternColor color : LanternColor.values())
                 lanterns.add(Item.byBlock(material.getLanternBlock(color)));
         }
-        TagsProvider.TagAppender<Item> builder = this.tag(ItemTags.bind("additionallanterns:" + material.getSuffix() + "_lanterns"));
+        TagsProvider.TagAppender<Item> builder = this.tag(ItemTags.create(new ResourceLocation("additionallanterns", material.getSuffix() + "_lanterns")));
         lanterns.forEach(builder::add);
     }
 }

@@ -8,7 +8,7 @@ import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.tags.Tag;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
@@ -83,11 +83,11 @@ public class LanternRecipeProvider extends RecipeProvider {
                 .save(recipeConsumer, new ResourceLocation("additionallanterns", material.getSuffix() + "_lantern_" + color.getSuffix()));
     }
 
-    private static Tag<Item> getMaterialLanternTag(LanternMaterial material){
-        return ItemTags.createOptional(new ResourceLocation("additionallanterns", material.getSuffix() + "_lanterns"));
+    private static TagKey<Item> getMaterialLanternTag(LanternMaterial material){
+        return ItemTags.create(new ResourceLocation("additionallanterns", material.getSuffix() + "_lanterns"));
     }
 
-    private static Tag<Item> getColorDyeTag(LanternColor color){
+    private static TagKey<Item> getColorDyeTag(LanternColor color){
         return color.dyeColor.getTag();
     }
 
