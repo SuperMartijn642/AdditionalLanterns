@@ -1,10 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "B",
-    "A",
-    "B"
-  ],
   "key": {
     "A": {
       "item": "minecraft:sandstone"
@@ -13,8 +8,13 @@
       "item": "minecraft:sandstone"
     }
   },
+  "pattern": [
+    "B",
+    "A",
+    "B"
+  ],
   "result": {
-    "item": "additionallanterns:normal_sandstone_chain",
-    "count": 8
+    "count": 8,
+    "item": "additionallanterns:normal_sandstone_chain"
   }
 }

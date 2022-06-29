@@ -5,10 +5,14 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.IForgeRegistry;
+import net.minecraftforge.registries.RegisterEvent;
+
+import java.util.Objects;
 
 /**
  * Created 7/7/2020 by SuperMartijn642
@@ -30,27 +34,33 @@ public class AdditionalLanterns {
     public static class ModEvents {
 
         @SubscribeEvent
-        public static void onBlockRegistry(RegistryEvent.Register<Block> e){
-            for(LanternMaterial material : LanternMaterial.values())
-                material.registerBlocks(e.getRegistry());
+        public static void onRegisterEvent(RegisterEvent e){
+            if(e.getRegistryKey().equals(ForgeRegistries.Keys.BLOCKS))
+                onBlockRegistry(Objects.requireNonNull(e.getForgeRegistry()));
+            else if(e.getRegistryKey().equals(ForgeRegistries.Keys.ITEMS))
+                onItemRegistry(Objects.requireNonNull(e.getForgeRegistry()));
         }
 
-        @SubscribeEvent
-        public static void onItemRegistry(RegistryEvent.Register<Item> e){
+        public static void onBlockRegistry(IForgeRegistry<Block> registry){
             for(LanternMaterial material : LanternMaterial.values())
-                material.registerItems(e.getRegistry());
+                material.registerBlocks(registry);
+        }
+
+        public static void onItemRegistry(IForgeRegistry<Item> registry){
+            for(LanternMaterial material : LanternMaterial.values())
+                material.registerItems(registry);
         }
 
         @SubscribeEvent
         public static void onGatherData(GatherDataEvent e){
-            e.getGenerator().addProvider(new LanternBlockModelProvider(e));
-            e.getGenerator().addProvider(new LanternItemModelProvider(e));
-            e.getGenerator().addProvider(new LanternBlockStateProvider(e));
-            e.getGenerator().addProvider(new LanternLanguageProvider(e));
-            e.getGenerator().addProvider(new LanternLootTableProvider(e));
-            e.getGenerator().addProvider(new LanternTagsProvider(e));
-            e.getGenerator().addProvider(new LanternBlockTagsProvider(e));
-            e.getGenerator().addProvider(new LanternRecipeProvider(e));
+            e.getGenerator().addProvider(e.includeClient(), new LanternBlockModelProvider(e));
+            e.getGenerator().addProvider(e.includeClient(), new LanternItemModelProvider(e));
+            e.getGenerator().addProvider(e.includeClient(), new LanternBlockStateProvider(e));
+            e.getGenerator().addProvider(e.includeClient(), new LanternLanguageProvider(e));
+            e.getGenerator().addProvider(e.includeServer(), new LanternLootTableProvider(e));
+            e.getGenerator().addProvider(e.includeServer(), new LanternTagsProvider(e));
+            e.getGenerator().addProvider(e.includeServer(), new LanternBlockTagsProvider(e));
+            e.getGenerator().addProvider(e.includeServer(), new LanternRecipeProvider(e));
         }
     }
 

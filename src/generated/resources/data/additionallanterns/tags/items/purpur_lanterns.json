@@ -1,22 +1,21 @@
 {
-  "replace": false,
   "values": [
-    "additionallanterns:white_purpur_lantern",
-    "additionallanterns:pink_purpur_lantern",
-    "additionallanterns:blue_purpur_lantern",
-    "additionallanterns:orange_purpur_lantern",
     "additionallanterns:light_blue_purpur_lantern",
-    "additionallanterns:brown_purpur_lantern",
     "additionallanterns:purple_purpur_lantern",
     "additionallanterns:gray_purpur_lantern",
+    "additionallanterns:red_purpur_lantern",
+    "additionallanterns:light_gray_purpur_lantern",
+    "additionallanterns:blue_purpur_lantern",
     "additionallanterns:purpur_lantern",
     "additionallanterns:magenta_purpur_lantern",
-    "additionallanterns:red_purpur_lantern",
-    "additionallanterns:lime_purpur_lantern",
-    "additionallanterns:green_purpur_lantern",
-    "additionallanterns:cyan_purpur_lantern",
     "additionallanterns:yellow_purpur_lantern",
+    "additionallanterns:white_purpur_lantern",
+    "additionallanterns:green_purpur_lantern",
+    "additionallanterns:orange_purpur_lantern",
+    "additionallanterns:pink_purpur_lantern",
     "additionallanterns:black_purpur_lantern",
-    "additionallanterns:light_gray_purpur_lantern"
+    "additionallanterns:brown_purpur_lantern",
+    "additionallanterns:cyan_purpur_lantern",
+    "additionallanterns:lime_purpur_lantern"
   ]
 }

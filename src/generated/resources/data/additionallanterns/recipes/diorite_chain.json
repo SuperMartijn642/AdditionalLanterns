@@ -1,10 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "B",
-    "A",
-    "B"
-  ],
   "key": {
     "A": {
       "item": "minecraft:diorite"
@@ -13,8 +8,13 @@
       "item": "minecraft:diorite"
     }
   },
+  "pattern": [
+    "B",
+    "A",
+    "B"
+  ],
   "result": {
-    "item": "additionallanterns:diorite_chain",
-    "count": 8
+    "count": 8,
+    "item": "additionallanterns:diorite_chain"
   }
 }

@@ -1,10 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "B",
-    "A",
-    "B"
-  ],
   "key": {
     "A": {
       "item": "minecraft:bricks"
@@ -13,8 +8,13 @@
       "item": "minecraft:brick"
     }
   },
+  "pattern": [
+    "B",
+    "A",
+    "B"
+  ],
   "result": {
-    "item": "additionallanterns:bricks_chain",
-    "count": 4
+    "count": 4,
+    "item": "additionallanterns:bricks_chain"
   }
 }

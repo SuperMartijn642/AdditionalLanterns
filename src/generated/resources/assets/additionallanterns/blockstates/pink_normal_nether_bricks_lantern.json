@@ -3,23 +3,23 @@
     "hanging=false,on=false,redstone=false": {
       "model": "additionallanterns:block/pink_normal_nether_bricks_lantern_off"
     },
-    "hanging=true,on=false,redstone=false": {
-      "model": "additionallanterns:block/pink_normal_nether_bricks_hanging_lantern_off"
+    "hanging=false,on=false,redstone=true": {
+      "model": "additionallanterns:block/pink_normal_nether_bricks_lantern"
     },
     "hanging=false,on=true,redstone=false": {
       "model": "additionallanterns:block/pink_normal_nether_bricks_lantern"
     },
-    "hanging=true,on=true,redstone=false": {
-      "model": "additionallanterns:block/pink_normal_nether_bricks_hanging_lantern"
+    "hanging=false,on=true,redstone=true": {
+      "model": "additionallanterns:block/pink_normal_nether_bricks_lantern_off"
     },
-    "hanging=false,on=false,redstone=true": {
-      "model": "additionallanterns:block/pink_normal_nether_bricks_lantern"
+    "hanging=true,on=false,redstone=false": {
+      "model": "additionallanterns:block/pink_normal_nether_bricks_hanging_lantern_off"
     },
     "hanging=true,on=false,redstone=true": {
       "model": "additionallanterns:block/pink_normal_nether_bricks_hanging_lantern"
     },
-    "hanging=false,on=true,redstone=true": {
-      "model": "additionallanterns:block/pink_normal_nether_bricks_lantern_off"
+    "hanging=true,on=true,redstone=false": {
+      "model": "additionallanterns:block/pink_normal_nether_bricks_hanging_lantern"
     },
     "hanging=true,on=true,redstone=true": {
       "model": "additionallanterns:block/pink_normal_nether_bricks_hanging_lantern_off"

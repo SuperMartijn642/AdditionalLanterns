@@ -1,7 +1,7 @@
 {
   "parent": "additionallanterns:block/hanging_lantern",
   "textures": {
-    "material": "additionallanterns:block/materials/normal_lantern",
-    "color": "additionallanterns:block/colors/white_lantern_off"
+    "color": "additionallanterns:block/colors/white_lantern_off",
+    "material": "additionallanterns:block/materials/normal_lantern"
   }
 }

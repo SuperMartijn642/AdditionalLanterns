@@ -1,10 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "B",
-    "A",
-    "B"
-  ],
   "key": {
     "A": {
       "item": "minecraft:purpur_block"
@@ -13,8 +8,13 @@
       "item": "minecraft:popped_chorus_fruit"
     }
   },
+  "pattern": [
+    "B",
+    "A",
+    "B"
+  ],
   "result": {
-    "item": "additionallanterns:purpur_chain",
-    "count": 4
+    "count": 4,
+    "item": "additionallanterns:purpur_chain"
   }
 }

@@ -1,10 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "B",
-    "A",
-    "B"
-  ],
   "key": {
     "A": {
       "item": "minecraft:smooth_stone"
@@ -13,8 +8,13 @@
       "item": "minecraft:smooth_stone"
     }
   },
+  "pattern": [
+    "B",
+    "A",
+    "B"
+  ],
   "result": {
-    "item": "additionallanterns:smooth_stone_chain",
-    "count": 8
+    "count": 8,
+    "item": "additionallanterns:smooth_stone_chain"
   }
 }

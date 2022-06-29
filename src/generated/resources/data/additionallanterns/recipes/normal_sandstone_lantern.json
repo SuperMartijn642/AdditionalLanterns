@@ -1,10 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    " A ",
-    "ACA",
-    " A "
-  ],
   "key": {
     "A": {
       "item": "minecraft:sandstone"
@@ -13,6 +8,11 @@
       "item": "minecraft:torch"
     }
   },
+  "pattern": [
+    " A ",
+    "ACA",
+    " A "
+  ],
   "result": {
     "item": "additionallanterns:normal_sandstone_lantern"
   }

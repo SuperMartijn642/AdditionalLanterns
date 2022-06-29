@@ -1,7 +1,7 @@
 {
   "parent": "additionallanterns:block/lantern",
   "textures": {
-    "material": "additionallanterns:block/materials/normal_sandstone_lantern",
-    "color": "additionallanterns:block/colors/cyan_lantern"
+    "color": "additionallanterns:block/colors/cyan_lantern",
+    "material": "additionallanterns:block/materials/normal_sandstone_lantern"
   }
 }
