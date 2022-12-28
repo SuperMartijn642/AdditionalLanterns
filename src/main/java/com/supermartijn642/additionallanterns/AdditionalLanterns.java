@@ -1,48 +1,42 @@
 package com.supermartijn642.additionallanterns;
 
-import net.minecraft.block.Block;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.event.RegistryEvent;
+import com.supermartijn642.additionallanterns.data.*;
+import com.supermartijn642.core.CommonUtils;
+import com.supermartijn642.core.item.CreativeItemGroup;
+import com.supermartijn642.core.registry.GeneratorRegistrationHandler;
+import com.supermartijn642.core.registry.RegistrationHandler;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 /**
  * Created 7/7/2020 by SuperMartijn642
  */
-@Mod(modid = AdditionalLanterns.MODID, name = AdditionalLanterns.NAME, version = AdditionalLanterns.VERSION, dependencies = AdditionalLanterns.DEPENDENCIES)
+@Mod(modid = "@mod_id@", name = "@mod_name@", version = "@mod_version@", dependencies = "required-after:forge@@forge_dependency@;required-after:supermartijn642corelib@@core_library_dependency@")
 public class AdditionalLanterns {
 
-    public static final String MODID = "additionallanterns";
-    public static final String NAME = "Additional Lanterns";
-    public static final String VERSION = "1.0.1";
-    public static final String DEPENDENCIES = "required-after:supermartijn642corelib@[1.0.16,)";
-
-    public static final CreativeTabs GROUP = new CreativeTabs("additionallanterns") {
-        @Override
-        public ItemStack getTabIconItem(){
-            return new ItemStack(LanternMaterial.NORMAL.getLanternBlock());
-        }
-    };
+    public static final CreativeItemGroup GROUP = CreativeItemGroup.create("additionallanterns", () -> LanternMaterial.NORMAL.getLanternBlock());
 
     public AdditionalLanterns(){
+        register();
+        if(CommonUtils.getEnvironmentSide().isClient())
+            AdditionalLanternsClient.register();
+        registerGenerators();
     }
 
-    @Mod.EventBusSubscriber
-    public static class ModEvents {
-
-        @SubscribeEvent
-        public static void onBlockRegistry(RegistryEvent.Register<Block> e){
-            for(LanternMaterial material : LanternMaterial.values())
-                material.registerBlocks(e.getRegistry());
-        }
-
-        @SubscribeEvent
-        public static void onItemRegistry(RegistryEvent.Register<Item> e){
-            for(LanternMaterial material : LanternMaterial.values())
-                material.registerItems(e.getRegistry());
+    private static void register(){
+        RegistrationHandler handler = RegistrationHandler.get("additionallanterns");
+        for(LanternMaterial material : LanternMaterial.values()){
+            handler.registerBlockCallback(material::registerBlocks);
+            handler.registerItemCallback(material::registerItems);
         }
     }
 
+    private static void registerGenerators(){
+        GeneratorRegistrationHandler handler = GeneratorRegistrationHandler.get("additionallanterns");
+        handler.addGenerator(LanternBlockModelGenerator::new);
+        handler.addGenerator(LanternItemModelGenerator::new);
+        handler.addGenerator(LanternBlockStateGenerator::new);
+        handler.addGenerator(LanternLanguageGenerator::new);
+        handler.addGenerator(LanternLootTableGenerator::new);
+        handler.addGenerator(LanternRecipeGenerator::new);
+    }
 }

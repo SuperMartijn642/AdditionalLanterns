@@ -6,12 +6,18 @@
     "B"
   ],
   "key": {
-    "A": {
-      "item": "minecraft:iron_ingot"
-    },
-    "B": {
-      "item": "minecraft:iron_nugget"
-    }
+    "A": [
+      {
+        "type": "minecraft:item",
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "B": [
+      {
+        "type": "minecraft:item",
+        "item": "minecraft:iron_nugget"
+      }
+    ]
   },
   "result": {
     "item": "additionallanterns:normal_chain"

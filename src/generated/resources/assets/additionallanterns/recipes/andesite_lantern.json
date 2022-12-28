@@ -6,13 +6,19 @@
     " A "
   ],
   "key": {
-    "A": {
-      "item": "minecraft:stone",
-      "data": 5
-    },
-    "C": {
-      "item": "minecraft:torch"
-    }
+    "A": [
+      {
+        "type": "minecraft:item",
+        "item": "minecraft:stone",
+        "data": 0
+      }
+    ],
+    "C": [
+      {
+        "type": "minecraft:item",
+        "item": "minecraft:torch"
+      }
+    ]
   },
   "result": {
     "item": "additionallanterns:andesite_lantern"

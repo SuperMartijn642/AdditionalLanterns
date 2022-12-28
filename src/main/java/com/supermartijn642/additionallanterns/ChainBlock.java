@@ -32,8 +32,6 @@ public class ChainBlock extends BlockRotatedPillar {
 
     public ChainBlock(LanternMaterial material){
         super(Material.IRON, MapColor.AIR);
-        this.setRegistryName(material.getSuffix() + "_chain");
-        this.setUnlocalizedName("additionallanterns." + material.getSuffix() + "_chain");
         this.material = material;
 
         this.setHardness(5);
@@ -45,7 +43,7 @@ public class ChainBlock extends BlockRotatedPillar {
     }
 
     @Override
-    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos){
+    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess level, BlockPos pos){
         return state.getValue(AXIS) == EnumFacing.Axis.X ? X_AXIS_AABB.simplify() :
             state.getValue(AXIS) == EnumFacing.Axis.Y ? Y_AXIS_AABB.simplify() :
                 Z_AXIS_AABB.simplify();

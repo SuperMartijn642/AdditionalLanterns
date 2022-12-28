@@ -6,14 +6,20 @@
     "B"
   ],
   "key": {
-    "A": {
-      "item": "minecraft:red_sandstone",
-      "data": 0
-    },
-    "B": {
-      "item": "minecraft:red_sandstone",
-      "data": 0
-    }
+    "A": [
+      {
+        "type": "minecraft:item",
+        "item": "minecraft:red_sandstone",
+        "data": 0
+      }
+    ],
+    "B": [
+      {
+        "type": "minecraft:item",
+        "item": "minecraft:red_sandstone",
+        "data": 0
+      }
+    ]
   },
   "result": {
     "item": "additionallanterns:red_sandstone_chain",

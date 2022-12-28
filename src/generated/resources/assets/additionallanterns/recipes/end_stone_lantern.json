@@ -6,12 +6,18 @@
     " A "
   ],
   "key": {
-    "A": {
-      "item": "minecraft:end_stone"
-    },
-    "C": {
-      "item": "minecraft:torch"
-    }
+    "A": [
+      {
+        "type": "minecraft:item",
+        "item": "minecraft:end_stone"
+      }
+    ],
+    "C": [
+      {
+        "type": "minecraft:item",
+        "item": "minecraft:torch"
+      }
+    ]
   },
   "result": {
     "item": "additionallanterns:end_stone_lantern"

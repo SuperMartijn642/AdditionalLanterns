@@ -6,12 +6,18 @@
     "B"
   ],
   "key": {
-    "A": {
-      "item": "minecraft:obsidian"
-    },
-    "B": {
-      "item": "minecraft:obsidian"
-    }
+    "A": [
+      {
+        "type": "minecraft:item",
+        "item": "minecraft:obsidian"
+      }
+    ],
+    "B": [
+      {
+        "type": "minecraft:item",
+        "item": "minecraft:obsidian"
+      }
+    ]
   },
   "result": {
     "item": "additionallanterns:obsidian_chain",

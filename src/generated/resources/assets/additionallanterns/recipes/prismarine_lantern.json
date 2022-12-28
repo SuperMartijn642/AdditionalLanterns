@@ -6,15 +6,24 @@
     "BAB"
   ],
   "key": {
-    "A": {
-      "item": "minecraft:prismarine_shard"
-    },
-    "B": {
-      "item": "minecraft:prismarine_shard"
-    },
-    "C": {
-      "item": "minecraft:torch"
-    }
+    "A": [
+      {
+        "type": "minecraft:item",
+        "item": "minecraft:prismarine_shard"
+      }
+    ],
+    "B": [
+      {
+        "type": "minecraft:item",
+        "item": "minecraft:prismarine_shard"
+      }
+    ],
+    "C": [
+      {
+        "type": "minecraft:item",
+        "item": "minecraft:torch"
+      }
+    ]
   },
   "result": {
     "item": "additionallanterns:prismarine_lantern"

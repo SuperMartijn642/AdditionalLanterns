@@ -1,32 +1,48 @@
 {
   "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "additionallanterns:normal_chain"
-    ]
+  "display": {
+    "icon": {
+      "item": "additionallanterns:normal_chain"
+    },
+    "title": {
+      "translate": "additionallanterns.advancement.recipes/additionallanterns/normal_chain.title"
+    },
+    "description": {
+      "translate": "additionallanterns.advancement.recipes/additionallanterns/normal_chain.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
   },
   "criteria": {
-    "has_primary": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:iron_ingot"
-          }
-        ]
-      }
-    },
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
         "recipe": "additionallanterns:normal_chain"
       }
+    },
+    "recipe_condition": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:iron_ingot",
+            "data": 0
+          }
+        ]
+      }
     }
   },
   "requirements": [
     [
-      "has_primary",
-      "has_the_recipe"
+      "has_the_recipe",
+      "recipe_condition"
     ]
-  ]
+  ],
+  "rewards": {
+    "recipes": [
+      "additionallanterns:normal_chain"
+    ]
+  }
 }

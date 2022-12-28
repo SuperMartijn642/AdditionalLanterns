@@ -6,13 +6,19 @@
     "B"
   ],
   "key": {
-    "A": {
-      "item": "minecraft:quartz_block",
-      "data": 0
-    },
-    "B": {
-      "item": "minecraft:quartz"
-    }
+    "A": [
+      {
+        "type": "minecraft:item",
+        "item": "minecraft:quartz_block",
+        "data": 0
+      }
+    ],
+    "B": [
+      {
+        "type": "minecraft:item",
+        "item": "minecraft:quartz"
+      }
+    ]
   },
   "result": {
     "item": "additionallanterns:quartz_chain",

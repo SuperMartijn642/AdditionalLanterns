@@ -13,15 +13,13 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.ItemDye;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
 /**
  * Created 7/5/2021 by SuperMartijn642
@@ -39,17 +37,15 @@ public class LanternBlock extends BaseBlock {
     public final LanternColor color;
 
     public LanternBlock(LanternMaterial material, LanternColor color){
-        super(color == null ? material.getSuffix() + "_lantern" : color.getSuffix() + "_" + material.getSuffix() + "_lantern", false, material.getLanternBlockProperties());
+        super(false, material.getLanternBlockProperties());
         this.material = material;
         this.color = color;
-
-        this.setCreativeTab(AdditionalLanterns.GROUP);
 
         this.setDefaultState(this.getDefaultState().withProperty(ON, true).withProperty(REDSTONE, false).withProperty(HANGING, false));
     }
 
     @Override
-    public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ){
+    protected InteractionFeedback interact(IBlockState state, World level, BlockPos pos, EntityPlayer player, EnumHand hand, EnumFacing hitSide, Vec3d hitLocation){
         ItemStack stack = player.getHeldItem(hand);
         if(this.material.canBeColored && stack.getItem() instanceof ItemDye){
             LanternColor color = LanternColor.fromDyeColor(EnumDyeColor.byDyeDamage(stack.getMetadata()));
@@ -57,10 +53,10 @@ public class LanternBlock extends BaseBlock {
             newState = newState.withProperty(ON, state.getValue(ON));
             newState = newState.withProperty(REDSTONE, state.getValue(REDSTONE));
             newState = newState.withProperty(HANGING, state.getValue(HANGING));
-            world.setBlockState(pos, newState, 1 | 2);
+            level.setBlockState(pos, newState, 1 | 2);
         }else
-            world.setBlockState(pos, state.withProperty(ON, !state.getValue(ON)), 1 | 2);
-        return true;
+            level.setBlockState(pos, state.withProperty(ON, !state.getValue(ON)), 1 | 2);
+        return InteractionFeedback.SUCCESS;
     }
 
     @Override
@@ -69,55 +65,55 @@ public class LanternBlock extends BaseBlock {
     }
 
     @Override
-    public IBlockState getStateForPlacement(World world, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer, EnumHand hand){
+    public IBlockState getStateForPlacement(World level, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer, EnumHand hand){
         IBlockState state = this.getDefaultState()
-            .withProperty(REDSTONE, world.isBlockPowered(pos))
+            .withProperty(REDSTONE, level.isBlockPowered(pos))
             .withProperty(HANGING, facing == EnumFacing.UP);
-        if(canSurvive(world, pos, state))
+        if(canSurvive(level, pos, state))
             return state;
 
         state = state.cycleProperty(HANGING);
-        if(canSurvive(world, pos, state))
+        if(canSurvive(level, pos, state))
             return state;
 
         return Blocks.AIR.getDefaultState();
     }
 
-    private static boolean canSurvive(World world, BlockPos pos, IBlockState state){
+    private static boolean canSurvive(World level, BlockPos pos, IBlockState state){
         EnumFacing direction = state.getValue(HANGING) ? EnumFacing.UP : EnumFacing.DOWN;
-        BlockFaceShape shape = world.getBlockState(pos.offset(direction)).getBlockFaceShape(world, pos.offset(direction), direction.getOpposite());
+        BlockFaceShape shape = level.getBlockState(pos.offset(direction)).getBlockFaceShape(level, pos.offset(direction), direction.getOpposite());
         return shape == BlockFaceShape.CENTER || shape == BlockFaceShape.CENTER_BIG || shape == BlockFaceShape.CENTER_SMALL ||
             shape == BlockFaceShape.MIDDLE_POLE || shape == BlockFaceShape.MIDDLE_POLE_THICK || shape == BlockFaceShape.MIDDLE_POLE_THIN ||
             shape == BlockFaceShape.SOLID;
     }
 
     @Override
-    public boolean canPlaceBlockAt(World world, BlockPos pos){
-        return world.getBlockState(pos).getBlock().isReplaceable(world, pos) &&
-            (canSurvive(world, pos, this.getDefaultState().withProperty(HANGING, false)) ||
-                canSurvive(world, pos, this.getDefaultState().withProperty(HANGING, true)));
+    public boolean canPlaceBlockAt(World level, BlockPos pos){
+        return level.getBlockState(pos).getBlock().isReplaceable(level, pos) &&
+            (canSurvive(level, pos, this.getDefaultState().withProperty(HANGING, false)) ||
+                canSurvive(level, pos, this.getDefaultState().withProperty(HANGING, true)));
     }
 
     @Override
-    public void onBlockAdded(World world, BlockPos pos, IBlockState state){
-        if(state.getBlock() == this && !canSurvive(world, pos, state)){
-            if(world.getBlockState(pos).getBlock() == this){
-                this.dropBlockAsItem(world, pos, state, 0);
-                world.setBlockToAir(pos);
+    public void onBlockAdded(World level, BlockPos pos, IBlockState state){
+        if(state.getBlock() == this && !canSurvive(level, pos, state)){
+            if(level.getBlockState(pos).getBlock() == this){
+                this.dropBlockAsItem(level, pos, state, 0);
+                level.setBlockToAir(pos);
             }
         }
     }
 
     @Override
-    public void neighborChanged(IBlockState state, World world, BlockPos pos, Block block, BlockPos fromPos){
-        if(state.getBlock() == this && !world.isRemote){
-            if(!canSurvive(world, pos, state)){
-                this.dropBlockAsItem(world, pos, state, 0);
-                world.setBlockToAir(pos);
+    public void neighborChanged(IBlockState state, World level, BlockPos pos, Block block, BlockPos fromPos){
+        if(state.getBlock() == this && !level.isRemote){
+            if(!canSurvive(level, pos, state)){
+                this.dropBlockAsItem(level, pos, state, 0);
+                level.setBlockToAir(pos);
             }else{
                 boolean redstone = state.getValue(REDSTONE);
-                if(redstone != world.isBlockPowered(pos))
-                    world.setBlockState(pos, state.withProperty(REDSTONE, !redstone), 1 | 2 | 4);
+                if(redstone != level.isBlockPowered(pos))
+                    level.setBlockState(pos, state.withProperty(REDSTONE, !redstone), 1 | 2 | 4);
             }
         }
     }
@@ -136,11 +132,6 @@ public class LanternBlock extends BaseBlock {
         return state.getValue(HANGING) ?
             face == EnumFacing.UP ? BlockFaceShape.MIDDLE_POLE_THIN : BlockFaceShape.UNDEFINED :
             face == EnumFacing.DOWN ? BlockFaceShape.CENTER : BlockFaceShape.UNDEFINED;
-    }
-
-    @SideOnly(Side.CLIENT)
-    public BlockRenderLayer getBlockLayer(){
-        return BlockRenderLayer.CUTOUT;
     }
 
     public boolean isOpaqueCube(IBlockState state){

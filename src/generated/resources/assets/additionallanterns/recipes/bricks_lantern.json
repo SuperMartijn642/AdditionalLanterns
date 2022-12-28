@@ -6,15 +6,24 @@
     "BAB"
   ],
   "key": {
-    "A": {
-      "item": "minecraft:brick"
-    },
-    "B": {
-      "item": "minecraft:brick"
-    },
-    "C": {
-      "item": "minecraft:torch"
-    }
+    "A": [
+      {
+        "type": "minecraft:item",
+        "item": "minecraft:brick"
+      }
+    ],
+    "B": [
+      {
+        "type": "minecraft:item",
+        "item": "minecraft:brick"
+      }
+    ],
+    "C": [
+      {
+        "type": "minecraft:item",
+        "item": "minecraft:torch"
+      }
+    ]
   },
   "result": {
     "item": "additionallanterns:bricks_lantern"

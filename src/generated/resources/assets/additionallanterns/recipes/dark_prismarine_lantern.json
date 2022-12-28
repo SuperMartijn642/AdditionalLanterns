@@ -6,13 +6,19 @@
     " A "
   ],
   "key": {
-    "A": {
-      "item": "minecraft:prismarine",
-      "data": 2
-    },
-    "C": {
-      "item": "minecraft:torch"
-    }
+    "A": [
+      {
+        "type": "minecraft:item",
+        "item": "minecraft:prismarine",
+        "data": 0
+      }
+    ],
+    "C": [
+      {
+        "type": "minecraft:item",
+        "item": "minecraft:torch"
+      }
+    ]
   },
   "result": {
     "item": "additionallanterns:dark_prismarine_lantern"

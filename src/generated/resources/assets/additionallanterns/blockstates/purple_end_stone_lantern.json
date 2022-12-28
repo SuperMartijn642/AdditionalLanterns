@@ -1,10 +1,19 @@
 {
   "variants": {
+    "hanging=true,on=false,redstone=true": {
+      "model": "additionallanterns:purple_end_stone_hanging_lantern"
+    },
     "hanging=false,on=false,redstone=false": {
       "model": "additionallanterns:purple_end_stone_lantern_off"
     },
-    "hanging=true,on=false,redstone=false": {
+    "hanging=true,on=true,redstone=true": {
       "model": "additionallanterns:purple_end_stone_hanging_lantern_off"
+    },
+    "hanging=false,on=false,redstone=true": {
+      "model": "additionallanterns:purple_end_stone_lantern"
+    },
+    "hanging=false,on=true,redstone=true": {
+      "model": "additionallanterns:purple_end_stone_lantern_off"
     },
     "hanging=false,on=true,redstone=false": {
       "model": "additionallanterns:purple_end_stone_lantern"
@@ -12,16 +21,7 @@
     "hanging=true,on=true,redstone=false": {
       "model": "additionallanterns:purple_end_stone_hanging_lantern"
     },
-    "hanging=false,on=false,redstone=true": {
-      "model": "additionallanterns:purple_end_stone_lantern"
-    },
-    "hanging=true,on=false,redstone=true": {
-      "model": "additionallanterns:purple_end_stone_hanging_lantern"
-    },
-    "hanging=false,on=true,redstone=true": {
-      "model": "additionallanterns:purple_end_stone_lantern_off"
-    },
-    "hanging=true,on=true,redstone=true": {
+    "hanging=true,on=false,redstone=false": {
       "model": "additionallanterns:purple_end_stone_hanging_lantern_off"
     }
   }

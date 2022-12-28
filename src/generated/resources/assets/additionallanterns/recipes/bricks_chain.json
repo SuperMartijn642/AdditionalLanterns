@@ -6,12 +6,18 @@
     "B"
   ],
   "key": {
-    "A": {
-      "item": "minecraft:brick_block"
-    },
-    "B": {
-      "item": "minecraft:brick"
-    }
+    "A": [
+      {
+        "type": "minecraft:item",
+        "item": "minecraft:brick_block"
+      }
+    ],
+    "B": [
+      {
+        "type": "minecraft:item",
+        "item": "minecraft:brick"
+      }
+    ]
   },
   "result": {
     "item": "additionallanterns:bricks_chain",

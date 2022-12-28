@@ -9,27 +9,29 @@ import java.util.Locale;
  */
 public enum LanternColor {
 
-    WHITE(EnumDyeColor.WHITE),
-    ORANGE(EnumDyeColor.ORANGE),
-    MAGENTA(EnumDyeColor.MAGENTA),
-    LIGHT_BLUE(EnumDyeColor.LIGHT_BLUE),
-    YELLOW(EnumDyeColor.YELLOW),
-    LIME(EnumDyeColor.LIME),
-    PINK(EnumDyeColor.PINK),
-    GRAY(EnumDyeColor.GRAY),
-    LIGHT_GRAY(EnumDyeColor.SILVER),
-    CYAN(EnumDyeColor.CYAN),
-    PURPLE(EnumDyeColor.PURPLE),
-    BLUE(EnumDyeColor.BLUE),
-    BROWN(EnumDyeColor.BROWN),
-    GREEN(EnumDyeColor.GREEN),
-    RED(EnumDyeColor.RED),
-    BLACK(EnumDyeColor.BLACK);
+    WHITE(EnumDyeColor.WHITE, "White"),
+    ORANGE(EnumDyeColor.ORANGE, "Orange"),
+    MAGENTA(EnumDyeColor.MAGENTA, "Magenta"),
+    LIGHT_BLUE(EnumDyeColor.LIGHT_BLUE, "Light Blue"),
+    YELLOW(EnumDyeColor.YELLOW, "Yellow"),
+    LIME(EnumDyeColor.LIME, "Lime"),
+    PINK(EnumDyeColor.PINK, "Pink"),
+    GRAY(EnumDyeColor.GRAY, "Gray"),
+    LIGHT_GRAY(EnumDyeColor.SILVER, "Light Gray"),
+    CYAN(EnumDyeColor.CYAN, "Cyan"),
+    PURPLE(EnumDyeColor.PURPLE, "Purple"),
+    BLUE(EnumDyeColor.BLUE, "Blue"),
+    BROWN(EnumDyeColor.BROWN, "Brown"),
+    GREEN(EnumDyeColor.GREEN, "Green"),
+    RED(EnumDyeColor.RED, "Red"),
+    BLACK(EnumDyeColor.BLACK, "Black");
 
     public final EnumDyeColor dyeColor;
+    public final String englishTranslation;
 
-    LanternColor(EnumDyeColor dyeColor){
+    LanternColor(EnumDyeColor dyeColor, String englishTranslation){
         this.dyeColor = dyeColor;
+        this.englishTranslation = englishTranslation;
     }
 
     public String getSuffix(){
@@ -42,5 +44,4 @@ public enum LanternColor {
                 return lanternColor;
         return null;
     }
-
 }

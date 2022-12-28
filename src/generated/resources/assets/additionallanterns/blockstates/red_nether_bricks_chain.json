@@ -1,12 +1,12 @@
 {
   "variants": {
+    "axis=y": {
+      "model": "additionallanterns:red_nether_bricks_chain"
+    },
     "axis=x": {
       "model": "additionallanterns:red_nether_bricks_chain",
       "x": 90,
       "y": 90
-    },
-    "axis=y": {
-      "model": "additionallanterns:red_nether_bricks_chain"
     },
     "axis=z": {
       "model": "additionallanterns:red_nether_bricks_chain",

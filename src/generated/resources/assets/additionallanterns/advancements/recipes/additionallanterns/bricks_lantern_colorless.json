@@ -1,32 +1,45 @@
 {
   "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "additionallanterns:bricks_lantern_colorless"
-    ]
+  "display": {
+    "icon": {
+      "item": "additionallanterns:bricks_lantern"
+    },
+    "title": {
+      "translate": "additionallanterns.advancement.recipes/additionallanterns/bricks_lantern_colorless.title"
+    },
+    "description": {
+      "translate": "additionallanterns.advancement.recipes/additionallanterns/bricks_lantern_colorless.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
   },
   "criteria": {
-    "has_lantern": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "tag": "additionallanterns:bricks_lanterns"
-          }
-        ]
-      }
-    },
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
         "recipe": "additionallanterns:bricks_lantern_colorless"
       }
+    },
+    "recipe_condition": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          null
+        ]
+      }
     }
   },
   "requirements": [
     [
-      "has_lantern",
-      "has_the_recipe"
+      "has_the_recipe",
+      "recipe_condition"
     ]
-  ]
+  ],
+  "rewards": {
+    "recipes": [
+      "additionallanterns:bricks_lantern_colorless"
+    ]
+  }
 }

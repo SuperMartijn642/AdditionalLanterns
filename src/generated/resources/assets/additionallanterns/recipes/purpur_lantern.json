@@ -6,15 +6,24 @@
     "BAB"
   ],
   "key": {
-    "A": {
-      "item": "minecraft:chorus_fruit_popped"
-    },
-    "B": {
-      "item": "minecraft:chorus_fruit_popped"
-    },
-    "C": {
-      "item": "minecraft:torch"
-    }
+    "A": [
+      {
+        "type": "minecraft:item",
+        "item": "minecraft:chorus_fruit_popped"
+      }
+    ],
+    "B": [
+      {
+        "type": "minecraft:item",
+        "item": "minecraft:chorus_fruit_popped"
+      }
+    ],
+    "C": [
+      {
+        "type": "minecraft:item",
+        "item": "minecraft:torch"
+      }
+    ]
   },
   "result": {
     "item": "additionallanterns:purpur_lantern"
