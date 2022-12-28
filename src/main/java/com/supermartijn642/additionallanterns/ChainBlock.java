@@ -9,7 +9,6 @@ public class ChainBlock extends net.minecraft.world.level.block.ChainBlock {
 
     public ChainBlock(LanternMaterial material){
         super(material.getChainBlockProperties());
-        this.setRegistryName(material.getSuffix() + "_chain");
         this.material = material;
     }
 }

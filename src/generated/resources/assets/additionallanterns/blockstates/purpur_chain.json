@@ -1,16 +1,16 @@
 {
   "variants": {
-    "axis=x": {
+    "axis=z": {
       "model": "additionallanterns:block/purpur_chain",
-      "x": 90,
-      "y": 90
+      "x": 90
     },
     "axis=y": {
       "model": "additionallanterns:block/purpur_chain"
     },
-    "axis=z": {
+    "axis=x": {
       "model": "additionallanterns:block/purpur_chain",
-      "x": 90
+      "x": 90,
+      "y": 90
     }
   }
 }
