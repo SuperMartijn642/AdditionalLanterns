@@ -2,25 +2,21 @@ package com.supermartijn642.additionallanterns.data;
 
 import com.supermartijn642.additionallanterns.LanternColor;
 import com.supermartijn642.additionallanterns.LanternMaterial;
+import com.supermartijn642.core.generator.ModelGenerator;
+import com.supermartijn642.core.generator.ResourceCache;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.model.generators.BlockModelBuilder;
-
-import java.util.function.BiFunction;
 
 /**
  * Created 7/5/2021 by SuperMartijn642
  */
-public class LanternBlockModelProvider {
+public class LanternBlockModelGenerator extends ModelGenerator {
 
-    private final BiFunction<String,String,BlockModelBuilder> stringToBuilder;
-    private final BiFunction<String,ResourceLocation,BlockModelBuilder> locationToBuilder;
-
-    public LanternBlockModelProvider(BiFunction<String,String,BlockModelBuilder> stringToBuilder, BiFunction<String,ResourceLocation,BlockModelBuilder> locationToBuilder){
-        this.stringToBuilder = stringToBuilder;
-        this.locationToBuilder = locationToBuilder;
+    public LanternBlockModelGenerator(ResourceCache cache){
+        super("additionallanterns", cache);
     }
 
-    protected void registerModels(){
+    @Override
+    public void generate(){
         for(LanternMaterial material : LanternMaterial.values())
             this.addModels(material);
     }
@@ -36,22 +32,27 @@ public class LanternBlockModelProvider {
     }
 
     public void addModel(LanternMaterial material, LanternColor color){
-        this.withExistingParent(getModelLocation(material, color, false, false), getModelLocation(false))
+        this.model(getModelLocation(material, color, false, false))
+            .parent(getModelLocation(false))
             .texture("material", getMaterialTexture(material))
             .texture("color", getColorTexture(color, false));
-        this.withExistingParent(getModelLocation(material, color, false, true), getModelLocation(false))
+        this.model(getModelLocation(material, color, false, true))
+            .parent(getModelLocation(false))
             .texture("material", getMaterialTexture(material))
             .texture("color", getColorTexture(color, true));
-        this.withExistingParent(getModelLocation(material, color, true, false), getModelLocation(true))
+        this.model(getModelLocation(material, color, true, false))
+            .parent(getModelLocation(true))
             .texture("material", getMaterialTexture(material))
             .texture("color", getColorTexture(color, false));
-        this.withExistingParent(getModelLocation(material, color, true, true), getModelLocation(true))
+        this.model(getModelLocation(material, color, true, true))
+            .parent(getModelLocation(true))
             .texture("material", getMaterialTexture(material))
             .texture("color", getColorTexture(color, true));
     }
 
     public void addChainModel(LanternMaterial material){
-        this.withExistingParent(getChainModelLocation(material), getChainModelLocation())
+        this.model(getChainModelLocation(material))
+            .parent(getChainModelLocation())
             .texture("chain", getChainMaterialTexture(material));
     }
 
@@ -103,13 +104,5 @@ public class LanternBlockModelProvider {
 
     public static ResourceLocation getChainMaterialTexture(LanternMaterial material){
         return new ResourceLocation("additionallanterns", "block/materials/" + material.getSuffix() + "_chain");
-    }
-
-    private BlockModelBuilder withExistingParent(String name, String parent){
-        return this.stringToBuilder.apply(name, parent);
-    }
-
-    private BlockModelBuilder withExistingParent(String name, ResourceLocation parent){
-        return this.locationToBuilder.apply(name, parent);
     }
 }

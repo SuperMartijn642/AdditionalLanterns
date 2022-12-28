@@ -35,14 +35,13 @@ public class ChainBlock extends RotatedPillarBlock implements IWaterLoggable {
 
     public ChainBlock(LanternMaterial material){
         super(material.getChainBlockProperties());
-        this.setRegistryName(material.getSuffix() + "_chain");
         this.material = material;
 
         this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.FALSE).setValue(AXIS, Direction.Axis.Y));
     }
 
     @Override
-    public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context){
+    public VoxelShape getShape(BlockState state, IBlockReader level, BlockPos pos, ISelectionContext context){
         switch(state.getValue(AXIS)){
             case X:
             default:
@@ -63,10 +62,10 @@ public class ChainBlock extends RotatedPillarBlock implements IWaterLoggable {
     }
 
     @Override
-    public BlockState updateShape(BlockState state, Direction direction, BlockState state2, IWorld world, BlockPos pos, BlockPos pos2){
+    public BlockState updateShape(BlockState state, Direction direction, BlockState state2, IWorld level, BlockPos pos, BlockPos pos2){
         if(state.getValue(WATERLOGGED))
-            world.getLiquidTicks().scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(world));
-        return super.updateShape(state, direction, state2, world, pos, pos2);
+            level.getLiquidTicks().scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
+        return super.updateShape(state, direction, state2, level, pos, pos2);
     }
 
     @Override
@@ -80,7 +79,7 @@ public class ChainBlock extends RotatedPillarBlock implements IWaterLoggable {
     }
 
     @Override
-    public boolean isPathfindable(BlockState state, IBlockReader world, BlockPos pos, PathType pathType){
+    public boolean isPathfindable(BlockState state, IBlockReader level, BlockPos pos, PathType pathType){
         return false;
     }
 

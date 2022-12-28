@@ -1,28 +1,28 @@
 {
   "variants": {
-    "hanging=false,on=false,redstone=false": {
-      "model": "additionallanterns:block/light_gray_normal_nether_bricks_lantern_off"
-    },
-    "hanging=true,on=false,redstone=false": {
-      "model": "additionallanterns:block/light_gray_normal_nether_bricks_hanging_lantern_off"
-    },
-    "hanging=false,on=true,redstone=false": {
-      "model": "additionallanterns:block/light_gray_normal_nether_bricks_lantern"
-    },
-    "hanging=true,on=true,redstone=false": {
+    "redstone\u003dtrue,hanging\u003dtrue,on\u003dfalse": {
       "model": "additionallanterns:block/light_gray_normal_nether_bricks_hanging_lantern"
     },
-    "hanging=false,on=false,redstone=true": {
+    "redstone\u003dtrue,hanging\u003dfalse,on\u003dfalse": {
       "model": "additionallanterns:block/light_gray_normal_nether_bricks_lantern"
     },
-    "hanging=true,on=false,redstone=true": {
-      "model": "additionallanterns:block/light_gray_normal_nether_bricks_hanging_lantern"
-    },
-    "hanging=false,on=true,redstone=true": {
+    "redstone\u003dtrue,hanging\u003dfalse,on\u003dtrue": {
       "model": "additionallanterns:block/light_gray_normal_nether_bricks_lantern_off"
     },
-    "hanging=true,on=true,redstone=true": {
+    "redstone\u003dfalse,hanging\u003dfalse,on\u003dfalse": {
+      "model": "additionallanterns:block/light_gray_normal_nether_bricks_lantern_off"
+    },
+    "redstone\u003dtrue,hanging\u003dtrue,on\u003dtrue": {
       "model": "additionallanterns:block/light_gray_normal_nether_bricks_hanging_lantern_off"
+    },
+    "redstone\u003dfalse,hanging\u003dtrue,on\u003dfalse": {
+      "model": "additionallanterns:block/light_gray_normal_nether_bricks_hanging_lantern_off"
+    },
+    "redstone\u003dfalse,hanging\u003dtrue,on\u003dtrue": {
+      "model": "additionallanterns:block/light_gray_normal_nether_bricks_hanging_lantern"
+    },
+    "redstone\u003dfalse,hanging\u003dfalse,on\u003dtrue": {
+      "model": "additionallanterns:block/light_gray_normal_nether_bricks_lantern"
     }
   }
 }

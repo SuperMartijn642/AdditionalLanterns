@@ -2,6 +2,6 @@
   "parent": "additionallanterns:block/lantern",
   "textures": {
     "material": "additionallanterns:block/materials/end_stone_lantern",
-    "color": "block/lantern"
+    "color": "minecraft:block/lantern"
   }
 }

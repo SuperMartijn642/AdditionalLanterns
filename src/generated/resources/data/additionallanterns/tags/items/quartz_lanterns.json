@@ -1,22 +1,22 @@
 {
   "replace": false,
   "values": [
-    "additionallanterns:black_quartz_lantern",
-    "additionallanterns:blue_quartz_lantern",
-    "additionallanterns:lime_quartz_lantern",
-    "additionallanterns:white_quartz_lantern",
-    "additionallanterns:green_quartz_lantern",
-    "additionallanterns:purple_quartz_lantern",
-    "additionallanterns:yellow_quartz_lantern",
-    "additionallanterns:brown_quartz_lantern",
-    "additionallanterns:gray_quartz_lantern",
-    "additionallanterns:light_blue_quartz_lantern",
-    "additionallanterns:red_quartz_lantern",
-    "additionallanterns:quartz_lantern",
-    "additionallanterns:light_gray_quartz_lantern",
     "additionallanterns:magenta_quartz_lantern",
-    "additionallanterns:pink_quartz_lantern",
     "additionallanterns:cyan_quartz_lantern",
-    "additionallanterns:orange_quartz_lantern"
+    "additionallanterns:yellow_quartz_lantern",
+    "additionallanterns:red_quartz_lantern",
+    "additionallanterns:white_quartz_lantern",
+    "additionallanterns:light_gray_quartz_lantern",
+    "additionallanterns:pink_quartz_lantern",
+    "additionallanterns:quartz_lantern",
+    "additionallanterns:orange_quartz_lantern",
+    "additionallanterns:blue_quartz_lantern",
+    "additionallanterns:green_quartz_lantern",
+    "additionallanterns:light_blue_quartz_lantern",
+    "additionallanterns:gray_quartz_lantern",
+    "additionallanterns:brown_quartz_lantern",
+    "additionallanterns:lime_quartz_lantern",
+    "additionallanterns:black_quartz_lantern",
+    "additionallanterns:purple_quartz_lantern"
   ]
 }

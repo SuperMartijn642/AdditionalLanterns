@@ -1,16 +1,16 @@
 {
   "variants": {
-    "axis=x": {
+    "axis\u003dz": {
+      "model": "additionallanterns:block/normal_chain",
+      "x": 90
+    },
+    "axis\u003dx": {
       "model": "additionallanterns:block/normal_chain",
       "x": 90,
       "y": 90
     },
-    "axis=y": {
+    "axis\u003dy": {
       "model": "additionallanterns:block/normal_chain"
-    },
-    "axis=z": {
-      "model": "additionallanterns:block/normal_chain",
-      "x": 90
     }
   }
 }

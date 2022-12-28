@@ -1,16 +1,16 @@
 package com.supermartijn642.additionallanterns;
 
+import com.supermartijn642.core.item.BaseBlockItem;
+import com.supermartijn642.core.item.ItemProperties;
+import com.supermartijn642.core.registry.RegistrationHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
-import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.util.IItemProvider;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.registries.IForgeRegistry;
 
 import java.util.EnumMap;
 import java.util.Locale;
@@ -21,7 +21,7 @@ import java.util.Map;
  */
 public enum LanternMaterial {
 
-    NORMAL(true, true, "", null, null, () -> Items.IRON_INGOT, () -> Items.IRON_NUGGET, 0),
+    NORMAL(true, true, "", null, null, () -> Items.IRON_INGOT, () -> Items.IRON_NUGGET, 1),
     OBSIDIAN(true, true, "Obsidian", () -> Items.OBSIDIAN, null, () -> Items.OBSIDIAN, () -> Items.OBSIDIAN, 8),
     //    BASALT(true, true, "Basalt", () -> Items.BASALT, null, () -> Items.BASALT, () -> Items.BASALT, 8),
     ANDESITE(true, true, "Andesite", () -> Items.ANDESITE, null, () -> Items.ANDESITE, () -> Items.ANDESITE, 8),
@@ -92,47 +92,51 @@ public enum LanternMaterial {
         return Block.Properties.of(Material.METAL, MaterialColor.NONE).strength(5.0F, 6.0F).sound(SoundType.METAL);
     }
 
-    public void registerBlocks(IForgeRegistry<Block> registry){
+    public void registerBlocks(RegistrationHandler.Helper<Block> helper){
         if(this.lanternBlock != null)
             throw new IllegalStateException("Blocks have already been registered!");
 
         this.lanternBlock = new LanternBlock(this, null);
+        helper.register(this.getSuffix() + "_lantern", this.lanternBlock);
         if(this.canBeColored){
-            for(LanternColor color : LanternColor.values())
-                this.coloredLanternBlocks.put(color, new LanternBlock(this, color));
+            for(LanternColor color : LanternColor.values()){
+                LanternBlock block = new LanternBlock(this, color);
+                this.coloredLanternBlocks.put(color, block);
+                helper.register(color.getSuffix() + "_" + this.getSuffix() + "_lantern", block);
+            }
         }
-        registry.register(this.lanternBlock);
-        this.coloredLanternBlocks.values().forEach(registry::register);
 
         if(this.hasChains){
             this.chainBlock = new ChainBlock(this);
-            registry.register(this.chainBlock);
+            helper.register(this.getSuffix() + "_chain", this.chainBlock);
         }
     }
 
-    public void registerItems(IForgeRegistry<Item> registry){
+    public void registerItems(RegistrationHandler.Helper<Item> helper){
         if(this.lanternItem != null)
             throw new IllegalStateException("Items have already been registered!");
         if(this.lanternBlock == null)
             throw new IllegalStateException("Blocks must be registered before registering items!");
 
-        if(this == NORMAL) // hide the uncolored normal one
-            this.lanternItem = new BlockItem(this.lanternBlock, new Item.Properties().tab(AdditionalLanterns.GROUP)).setRegistryName(new ResourceLocation("minecraft", "lantern"));
-        else
-            this.lanternItem = new BlockItem(this.lanternBlock, new Item.Properties().tab(AdditionalLanterns.GROUP)).setRegistryName(this.lanternBlock.getRegistryName());
+        if(this == NORMAL){ // hide the uncolored normal one
+            this.lanternItem = new BaseBlockItem(this.lanternBlock, ItemProperties.create().group(AdditionalLanterns.GROUP));
+            helper.registerOverride("minecraft", "lantern", this.lanternItem);
+        }else{
+            this.lanternItem = new BaseBlockItem(this.lanternBlock, ItemProperties.create().group(AdditionalLanterns.GROUP));
+            helper.register(this.getSuffix() + "_lantern", this.lanternItem);
+        }
         if(this.canBeColored){
             for(LanternColor color : LanternColor.values()){
                 LanternBlock block = this.coloredLanternBlocks.get(color);
-                this.coloredLanternItems.put(color, new BlockItem(block, new Item.Properties().tab(AdditionalLanterns.GROUP)).setRegistryName(block.getRegistryName()));
+                BaseBlockItem item = new BaseBlockItem(block, ItemProperties.create().group(AdditionalLanterns.GROUP));
+                this.coloredLanternItems.put(color, item);
+                helper.register(color.getSuffix() + "_" + this.getSuffix() + "_lantern", item);
             }
         }
-        registry.register(this.lanternItem);
-        this.coloredLanternItems.values().forEach(registry::register);
 
         if(this.hasChains){
-            this.chainItem = new BlockItem(this.chainBlock, new Item.Properties().tab(AdditionalLanterns.GROUP)).setRegistryName(this.chainBlock.getRegistryName());
-            registry.register(this.chainItem);
+            this.chainItem = new BaseBlockItem(this.chainBlock, ItemProperties.create().group(AdditionalLanterns.GROUP));
+            helper.register(this.getSuffix() + "_chain", this.chainItem);
         }
     }
-
 }
