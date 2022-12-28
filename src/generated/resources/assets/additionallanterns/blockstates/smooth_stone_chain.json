@@ -5,12 +5,12 @@
       "x": 90,
       "y": 90
     },
-    "axis=y": {
-      "model": "additionallanterns:block/smooth_stone_chain"
-    },
     "axis=z": {
       "model": "additionallanterns:block/smooth_stone_chain",
       "x": 90
+    },
+    "axis=y": {
+      "model": "additionallanterns:block/smooth_stone_chain"
     }
   }
 }

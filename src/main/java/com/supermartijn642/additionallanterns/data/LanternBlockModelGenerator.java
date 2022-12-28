@@ -2,21 +2,21 @@ package com.supermartijn642.additionallanterns.data;
 
 import com.supermartijn642.additionallanterns.LanternColor;
 import com.supermartijn642.additionallanterns.LanternMaterial;
+import com.supermartijn642.core.generator.ModelGenerator;
+import com.supermartijn642.core.generator.ResourceCache;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.model.generators.BlockModelProvider;
-import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
 
 /**
  * Created 7/5/2021 by SuperMartijn642
  */
-public class LanternBlockModelProvider extends BlockModelProvider {
+public class LanternBlockModelGenerator extends ModelGenerator {
 
-    public LanternBlockModelProvider(GatherDataEvent e){
-        super(e.getGenerator(), "additionallanterns", e.getExistingFileHelper());
+    public LanternBlockModelGenerator(ResourceCache cache){
+        super("additionallanterns", cache);
     }
 
     @Override
-    protected void registerModels(){
+    public void generate(){
         for(LanternMaterial material : LanternMaterial.values())
             this.addModels(material);
     }
@@ -32,22 +32,27 @@ public class LanternBlockModelProvider extends BlockModelProvider {
     }
 
     public void addModel(LanternMaterial material, LanternColor color){
-        this.withExistingParent(getModelLocation(material, color, false, false), getModelLocation(false))
+        this.model(getModelLocation(material, color, false, false))
+            .parent(getModelLocation(false))
             .texture("material", getMaterialTexture(material))
             .texture("color", getColorTexture(color, false));
-        this.withExistingParent(getModelLocation(material, color, false, true), getModelLocation(false))
+        this.model(getModelLocation(material, color, false, true))
+            .parent(getModelLocation(false))
             .texture("material", getMaterialTexture(material))
             .texture("color", getColorTexture(color, true));
-        this.withExistingParent(getModelLocation(material, color, true, false), getModelLocation(true))
+        this.model(getModelLocation(material, color, true, false))
+            .parent(getModelLocation(true))
             .texture("material", getMaterialTexture(material))
             .texture("color", getColorTexture(color, false));
-        this.withExistingParent(getModelLocation(material, color, true, true), getModelLocation(true))
+        this.model(getModelLocation(material, color, true, true))
+            .parent(getModelLocation(true))
             .texture("material", getMaterialTexture(material))
             .texture("color", getColorTexture(color, true));
     }
 
     public void addChainModel(LanternMaterial material){
-        this.withExistingParent(getChainModelLocation(material), getChainModelLocation())
+        this.model(getChainModelLocation(material))
+            .parent(getChainModelLocation())
             .texture("chain", getChainMaterialTexture(material));
     }
 

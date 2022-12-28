@@ -44,5 +44,4 @@ public enum LanternColor {
                 return lanternColor;
         return null;
     }
-
 }

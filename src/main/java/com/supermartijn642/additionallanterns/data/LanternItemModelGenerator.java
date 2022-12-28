@@ -2,21 +2,21 @@ package com.supermartijn642.additionallanterns.data;
 
 import com.supermartijn642.additionallanterns.LanternColor;
 import com.supermartijn642.additionallanterns.LanternMaterial;
+import com.supermartijn642.core.generator.ModelGenerator;
+import com.supermartijn642.core.generator.ResourceCache;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.model.generators.ItemModelProvider;
-import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
 
 /**
  * Created 7/5/2021 by SuperMartijn642
  */
-public class LanternItemModelProvider extends ItemModelProvider {
+public class LanternItemModelGenerator extends ModelGenerator {
 
-    public LanternItemModelProvider(GatherDataEvent e){
-        super(e.getGenerator(), "additionallanterns", e.getExistingFileHelper());
+    public LanternItemModelGenerator(ResourceCache cache){
+        super("additionallanterns", cache);
     }
 
     @Override
-    protected void registerModels(){
+    public void generate(){
         for(LanternMaterial material : LanternMaterial.values())
             this.addModels(material);
     }
@@ -32,19 +32,19 @@ public class LanternItemModelProvider extends ItemModelProvider {
     }
 
     public void addModel(LanternMaterial material, LanternColor color){
-        this.withExistingParent(getModelLocation(material, color), getParentModelLocation(material, color));
+        this.model(getModelLocation(material, color)).parent(getParentModelLocation(material, color));
     }
 
     public void addChainModel(LanternMaterial material){
-        this.withExistingParent(getChainModelLocation(material), getChainParentModelLocation(material));
+        this.model(getChainModelLocation(material)).parent(getChainParentModelLocation(material));
     }
 
-    public static String getModelLocation(LanternMaterial material, LanternColor color){
+    public static ResourceLocation getModelLocation(LanternMaterial material, LanternColor color){
         if(material == LanternMaterial.NORMAL && color == null)
-            return "minecraft:item/lantern";
-        return color == null ?
+            return new ResourceLocation("item/lantern");
+        return new ResourceLocation("additionallanterns", color == null ?
             "item/" + material.getSuffix() + "_lantern" :
-            "item/" + color.getSuffix() + "_" + material.getSuffix() + "_lantern";
+            "item/" + color.getSuffix() + "_" + material.getSuffix() + "_lantern");
     }
 
     public static ResourceLocation getParentModelLocation(LanternMaterial material, LanternColor color){
@@ -53,10 +53,10 @@ public class LanternItemModelProvider extends ItemModelProvider {
             new ResourceLocation("additionallanterns", "block/" + color.getSuffix() + "_" + material.getSuffix() + "_lantern");
     }
 
-    public static String getChainModelLocation(LanternMaterial material){
+    public static ResourceLocation getChainModelLocation(LanternMaterial material){
         if(material == LanternMaterial.NORMAL)
-            return "minecraft:item/chain";
-        return "item/" + material.getSuffix() + "_chain";
+            return new ResourceLocation("item/chain");
+        return new ResourceLocation("additionallanterns", "item/" + material.getSuffix() + "_chain");
     }
 
     public static ResourceLocation getChainParentModelLocation(LanternMaterial material){

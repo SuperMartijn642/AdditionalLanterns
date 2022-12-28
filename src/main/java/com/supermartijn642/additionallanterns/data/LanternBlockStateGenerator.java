@@ -4,24 +4,23 @@ package com.supermartijn642.additionallanterns.data;
 import com.supermartijn642.additionallanterns.LanternBlock;
 import com.supermartijn642.additionallanterns.LanternColor;
 import com.supermartijn642.additionallanterns.LanternMaterial;
+import com.supermartijn642.core.generator.BlockStateGenerator;
+import com.supermartijn642.core.generator.ResourceCache;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.util.Direction;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.model.generators.BlockStateProvider;
-import net.minecraftforge.client.model.generators.ConfiguredModel;
-import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
 
 /**
  * Created 7/5/2021 by SuperMartijn642
  */
-public class LanternBlockStateProvider extends BlockStateProvider {
+public class LanternBlockStateGenerator extends BlockStateGenerator {
 
-    public LanternBlockStateProvider(GatherDataEvent e){
-        super(e.getGenerator(), "additionallanterns", e.getExistingFileHelper());
+    public LanternBlockStateGenerator(ResourceCache cache){
+        super("additionallanterns", cache);
     }
 
     @Override
-    protected void registerStatesAndModels(){
+    public void generate(){
         for(LanternMaterial material : LanternMaterial.values())
             this.addStates(material);
     }
@@ -37,19 +36,17 @@ public class LanternBlockStateProvider extends BlockStateProvider {
     }
 
     public void addState(LanternMaterial material, LanternColor color){
-        this.getVariantBuilder(material.getLanternBlock(color)).forAllStatesExcept(
-            state -> new ConfiguredModel[]{new ConfiguredModel(this.models().getExistingFile(getModelLocation(material, color, state.getValue(BlockStateProperties.HANGING), state.getValue(LanternBlock.ON), state.getValue(LanternBlock.REDSTONE))))},
+        this.blockState(material.getLanternBlock(color)).variantsForAllExcept(
+            (state, variant) -> variant.model(getModelLocation(material, color, state.get(BlockStateProperties.HANGING), state.get(LanternBlock.ON), state.get(LanternBlock.REDSTONE))),
             BlockStateProperties.WATERLOGGED
         );
     }
 
     public void addChainState(LanternMaterial material){
-        this.getVariantBuilder(material.getChainBlock()).forAllStatesExcept(
-            state -> {
-                Direction.Axis axis = state.getValue(BlockStateProperties.AXIS);
-                ConfiguredModel model = new ConfiguredModel(this.models().getExistingFile(getChainModelLocation(material)),
-                    axis == Direction.Axis.X || axis == Direction.Axis.Z ? 90 : 0, axis == Direction.Axis.X ? 90 : 0, false);
-                return new ConfiguredModel[]{model};
+        this.blockState(material.getChainBlock()).variantsForAllExcept(
+            (state, variant) -> {
+                Direction.Axis axis = state.get(BlockStateProperties.AXIS);
+                variant.model(getChainModelLocation(material), axis == Direction.Axis.X || axis == Direction.Axis.Z ? 90 : 0, axis == Direction.Axis.X ? 90 : 0, false);
             },
             BlockStateProperties.WATERLOGGED
         );

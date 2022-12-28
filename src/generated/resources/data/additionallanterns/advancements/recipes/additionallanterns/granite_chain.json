@@ -1,12 +1,28 @@
 {
   "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "additionallanterns:granite_chain"
-    ]
+  "display": {
+    "icon": {
+      "item": "additionallanterns:granite_chain"
+    },
+    "title": {
+      "translate": "additionallanterns.advancement.recipes/additionallanterns/granite_chain.title"
+    },
+    "description": {
+      "translate": "additionallanterns.advancement.recipes/additionallanterns/granite_chain.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
   },
   "criteria": {
-    "has_primary": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "additionallanterns:granite_chain"
+      }
+    },
+    "recipe_condition": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -15,18 +31,17 @@
           }
         ]
       }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "additionallanterns:granite_chain"
-      }
     }
   },
   "requirements": [
     [
-      "has_primary",
-      "has_the_recipe"
+      "has_the_recipe",
+      "recipe_condition"
     ]
-  ]
+  ],
+  "rewards": {
+    "recipes": [
+      "additionallanterns:granite_chain"
+    ]
+  }
 }
