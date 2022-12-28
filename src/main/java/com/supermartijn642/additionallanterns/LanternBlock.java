@@ -29,7 +29,6 @@ public class LanternBlock extends net.minecraft.world.level.block.LanternBlock {
 
     public LanternBlock(LanternMaterial material, LanternColor color){
         super(material.getLanternBlockProperties());
-        this.setRegistryName(color == null ? material.getSuffix() + "_lantern" : color.getSuffix() + "_" + material.getSuffix() + "_lantern");
         this.material = material;
         this.color = color;
 

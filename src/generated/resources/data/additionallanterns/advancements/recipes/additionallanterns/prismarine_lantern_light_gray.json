@@ -1,12 +1,28 @@
 {
   "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "additionallanterns:prismarine_lantern_light_gray"
-    ]
+  "display": {
+    "icon": {
+      "item": "additionallanterns:light_gray_prismarine_lantern"
+    },
+    "title": {
+      "translate": "additionallanterns.advancement.recipes/additionallanterns/prismarine_lantern_light_gray.title"
+    },
+    "description": {
+      "translate": "additionallanterns.advancement.recipes/additionallanterns/prismarine_lantern_light_gray.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
   },
   "criteria": {
-    "has_lantern": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "additionallanterns:prismarine_lantern_light_gray"
+      }
+    },
+    "recipe_condition": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -15,18 +31,17 @@
           }
         ]
       }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "additionallanterns:prismarine_lantern_light_gray"
-      }
     }
   },
   "requirements": [
     [
-      "has_lantern",
-      "has_the_recipe"
+      "has_the_recipe",
+      "recipe_condition"
     ]
-  ]
+  ],
+  "rewards": {
+    "recipes": [
+      "additionallanterns:prismarine_lantern_light_gray"
+    ]
+  }
 }

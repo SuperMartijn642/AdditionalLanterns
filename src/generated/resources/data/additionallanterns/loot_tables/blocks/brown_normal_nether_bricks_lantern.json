@@ -3,19 +3,17 @@
   "pools": [
     {
       "rolls": 1.0,
-      "bonus_rolls": 0.0,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "additionallanterns:brown_normal_nether_bricks_lantern"
-        }
-      ],
       "conditions": [
         {
           "condition": "minecraft:survives_explosion"
         }
       ],
-      "functions": []
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "additionallanterns:brown_normal_nether_bricks_lantern"
+        }
+      ]
     }
   ]
 }

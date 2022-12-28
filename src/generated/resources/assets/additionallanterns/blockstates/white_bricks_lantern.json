@@ -1,28 +1,28 @@
 {
   "variants": {
-    "hanging=false,on=false,redstone=false": {
-      "model": "additionallanterns:block/white_bricks_lantern_off"
-    },
-    "hanging=true,on=false,redstone=false": {
-      "model": "additionallanterns:block/white_bricks_hanging_lantern_off"
-    },
-    "hanging=false,on=true,redstone=false": {
-      "model": "additionallanterns:block/white_bricks_lantern"
-    },
-    "hanging=true,on=true,redstone=false": {
+    "on=false,hanging=true,redstone=true": {
       "model": "additionallanterns:block/white_bricks_hanging_lantern"
     },
-    "hanging=false,on=false,redstone=true": {
+    "on=false,hanging=false,redstone=true": {
       "model": "additionallanterns:block/white_bricks_lantern"
     },
-    "hanging=true,on=false,redstone=true": {
-      "model": "additionallanterns:block/white_bricks_hanging_lantern"
-    },
-    "hanging=false,on=true,redstone=true": {
+    "on=true,hanging=false,redstone=true": {
       "model": "additionallanterns:block/white_bricks_lantern_off"
     },
-    "hanging=true,on=true,redstone=true": {
+    "on=true,hanging=true,redstone=false": {
+      "model": "additionallanterns:block/white_bricks_hanging_lantern"
+    },
+    "on=false,hanging=false,redstone=false": {
+      "model": "additionallanterns:block/white_bricks_lantern_off"
+    },
+    "on=false,hanging=true,redstone=false": {
       "model": "additionallanterns:block/white_bricks_hanging_lantern_off"
+    },
+    "on=true,hanging=true,redstone=true": {
+      "model": "additionallanterns:block/white_bricks_hanging_lantern_off"
+    },
+    "on=true,hanging=false,redstone=false": {
+      "model": "additionallanterns:block/white_bricks_lantern"
     }
   }
 }
