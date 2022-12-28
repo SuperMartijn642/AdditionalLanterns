@@ -1,12 +1,28 @@
 {
   "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "additionallanterns:andesite_lantern_green"
-    ]
+  "display": {
+    "icon": {
+      "item": "additionallanterns:green_andesite_lantern"
+    },
+    "title": {
+      "translate": "additionallanterns.advancement.recipes/additionallanterns/andesite_lantern_green.title"
+    },
+    "description": {
+      "translate": "additionallanterns.advancement.recipes/additionallanterns/andesite_lantern_green.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
   },
   "criteria": {
-    "has_lantern": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "additionallanterns:andesite_lantern_green"
+      }
+    },
+    "recipe_condition": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -15,18 +31,17 @@
           }
         ]
       }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "additionallanterns:andesite_lantern_green"
-      }
     }
   },
   "requirements": [
     [
-      "has_lantern",
-      "has_the_recipe"
+      "has_the_recipe",
+      "recipe_condition"
     ]
-  ]
+  ],
+  "rewards": {
+    "recipes": [
+      "additionallanterns:andesite_lantern_green"
+    ]
+  }
 }

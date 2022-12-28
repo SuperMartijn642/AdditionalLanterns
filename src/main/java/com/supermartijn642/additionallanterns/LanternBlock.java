@@ -36,7 +36,6 @@ public class LanternBlock extends net.minecraft.block.LanternBlock implements IW
 
     public LanternBlock(LanternMaterial material, LanternColor color){
         super(material.getLanternBlockProperties());
-        this.setRegistryName(color == null ? material.getSuffix() + "_lantern" : color.getSuffix() + "_" + material.getSuffix() + "_lantern");
         this.material = material;
         this.color = color;
 
@@ -44,7 +43,7 @@ public class LanternBlock extends net.minecraft.block.LanternBlock implements IW
     }
 
     @Override
-    public ActionResultType use(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockRayTraceResult rayTraceResult){
+    public ActionResultType use(BlockState state, World level, BlockPos pos, PlayerEntity player, Hand hand, BlockRayTraceResult rayTraceResult){
         ItemStack stack = player.getItemInHand(hand);
         if(this.material.canBeColored && stack.getItem() instanceof DyeItem){
             LanternColor color = LanternColor.fromDyeColor(((DyeItem)stack.getItem()).getDyeColor());
@@ -53,10 +52,10 @@ public class LanternBlock extends net.minecraft.block.LanternBlock implements IW
             newState = newState.setValue(HANGING, state.getValue(HANGING));
             newState = newState.setValue(ON, state.getValue(ON));
             newState = newState.setValue(REDSTONE, state.getValue(REDSTONE));
-            world.setBlock(pos, newState, 1 | 2);
+            level.setBlock(pos, newState, 1 | 2);
         }else
-            world.setBlock(pos, state.setValue(ON, !state.getValue(ON)), 1 | 2);
-        return world.isClientSide ? ActionResultType.SUCCESS : ActionResultType.CONSUME;
+            level.setBlock(pos, state.setValue(ON, !state.getValue(ON)), 1 | 2);
+        return level.isClientSide ? ActionResultType.SUCCESS : ActionResultType.CONSUME;
     }
 
     @Override
@@ -76,10 +75,10 @@ public class LanternBlock extends net.minecraft.block.LanternBlock implements IW
     }
 
     @Override
-    public BlockState updateShape(BlockState state, Direction direction, BlockState state2, IWorld world, BlockPos pos, BlockPos pos2){
+    public BlockState updateShape(BlockState state, Direction direction, BlockState state2, IWorld level, BlockPos pos, BlockPos pos2){
         if(state.getValue(WATERLOGGED))
-            world.getLiquidTicks().scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(world));
-        return super.updateShape(state, direction, state2, world, pos, pos2);
+            level.getLiquidTicks().scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
+        return super.updateShape(state, direction, state2, level, pos, pos2);
     }
 
     @Override
@@ -87,11 +86,11 @@ public class LanternBlock extends net.minecraft.block.LanternBlock implements IW
         return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }
 
-    public void neighborChanged(BlockState state, World world, BlockPos pos, Block block, BlockPos neighborPos, boolean p_220069_6_){
-        if(!world.isClientSide){
+    public void neighborChanged(BlockState state, World level, BlockPos pos, Block block, BlockPos neighborPos, boolean p_220069_6_){
+        if(!level.isClientSide){
             boolean redstone = state.getValue(REDSTONE);
-            if(redstone != world.hasNeighborSignal(pos))
-                world.setBlock(pos, state.setValue(REDSTONE, !redstone), 1 | 2 | 4);
+            if(redstone != level.hasNeighborSignal(pos))
+                level.setBlock(pos, state.setValue(REDSTONE, !redstone), 1 | 2 | 4);
         }
     }
 

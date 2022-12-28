@@ -1,16 +1,16 @@
 {
   "variants": {
-    "axis=x": {
+    "axis\u003dx": {
       "model": "additionallanterns:block/prismarine_chain",
       "x": 90,
       "y": 90
     },
-    "axis=y": {
-      "model": "additionallanterns:block/prismarine_chain"
-    },
-    "axis=z": {
+    "axis\u003dz": {
       "model": "additionallanterns:block/prismarine_chain",
       "x": 90
+    },
+    "axis\u003dy": {
+      "model": "additionallanterns:block/prismarine_chain"
     }
   }
 }
