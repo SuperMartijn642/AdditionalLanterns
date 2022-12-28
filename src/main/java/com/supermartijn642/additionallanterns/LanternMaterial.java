@@ -1,6 +1,6 @@
 package com.supermartijn642.additionallanterns;
 
-import net.minecraft.resources.ResourceLocation;
+import com.supermartijn642.core.registry.RegistrationHandler;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -8,7 +8,6 @@ import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraftforge.registries.IForgeRegistry;
 
 import java.util.EnumMap;
 import java.util.Locale;
@@ -90,27 +89,27 @@ public enum LanternMaterial {
         return BlockBehaviour.Properties.copy(Blocks.CHAIN);
     }
 
-    public void registerBlocks(IForgeRegistry<Block> registry){
+    public void registerBlocks(RegistrationHandler.Helper<Block> helper){
         if(this.lanternBlock != null)
             throw new IllegalStateException("Blocks have already been registered!");
 
         this.lanternBlock = new LanternBlock(this, null);
-        registry.register(this.getSuffix() + "_lantern", this.lanternBlock);
+        helper.register(this.getSuffix() + "_lantern", this.lanternBlock);
         if(this.canBeColored){
             for(LanternColor color : LanternColor.values()){
                 LanternBlock block = new LanternBlock(this, color);
                 this.coloredLanternBlocks.put(color, block);
-                registry.register(color.getSuffix() + "_" + this.getSuffix() + "_lantern", block);
+                helper.register(color.getSuffix() + "_" + this.getSuffix() + "_lantern", block);
             }
         }
 
         if(this.hasChains){
             this.chainBlock = new ChainBlock(this);
-            registry.register(this.getSuffix() + "_chain", this.chainBlock);
+            helper.register(this.getSuffix() + "_chain", this.chainBlock);
         }
     }
 
-    public void registerItems(IForgeRegistry<Item> registry){
+    public void registerItems(RegistrationHandler.Helper<Item> helper){
         if(this.lanternItem != null)
             throw new IllegalStateException("Items have already been registered!");
         if(this.lanternBlock == null)
@@ -118,24 +117,23 @@ public enum LanternMaterial {
 
         if(this == NORMAL){ // hide the uncolored normal one
             this.lanternItem = new BlockItem(this.lanternBlock, new Item.Properties().tab(AdditionalLanterns.GROUP));
-            registry.register(new ResourceLocation("minecraft", "lantern"), this.lanternItem);
+            helper.registerOverride("minecraft", "lantern", this.lanternItem);
         }else{
             this.lanternItem = new BlockItem(this.lanternBlock, new Item.Properties().tab(AdditionalLanterns.GROUP));
-            registry.register(this.getSuffix() + "_lantern", this.lanternItem);
+            helper.register(this.getSuffix() + "_lantern", this.lanternItem);
         }
         if(this.canBeColored){
             for(LanternColor color : LanternColor.values()){
                 LanternBlock block = this.coloredLanternBlocks.get(color);
                 BlockItem item = new BlockItem(block, new Item.Properties().tab(AdditionalLanterns.GROUP));
                 this.coloredLanternItems.put(color, item);
-                registry.register(color.getSuffix() + "_" + this.getSuffix() + "_lantern", item);
+                helper.register(color.getSuffix() + "_" + this.getSuffix() + "_lantern", item);
             }
         }
 
         if(this.hasChains){
             this.chainItem = new BlockItem(this.chainBlock, new Item.Properties().tab(AdditionalLanterns.GROUP));
-            registry.register(this.getSuffix() + "_chain", this.chainItem);
+            helper.register(this.getSuffix() + "_chain", this.chainItem);
         }
     }
-
 }

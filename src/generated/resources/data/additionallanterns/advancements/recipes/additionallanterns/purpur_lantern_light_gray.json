@@ -1,27 +1,42 @@
 {
   "parent": "minecraft:recipes/root",
+  "display": {
+    "icon": {
+      "item": "additionallanterns:light_gray_purpur_lantern"
+    },
+    "title": {
+      "translate": "additionallanterns.advancement.recipes/additionallanterns/purpur_lantern_light_gray.title"
+    },
+    "description": {
+      "translate": "additionallanterns.advancement.recipes/additionallanterns/purpur_lantern_light_gray.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
   "criteria": {
-    "has_lantern": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "additionallanterns:purpur_lantern_light_gray"
+      }
+    },
+    "recipe_condition": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "tag": "additionallanterns:purpur_lanterns"
           }
         ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "additionallanterns:purpur_lantern_light_gray"
-      },
-      "trigger": "minecraft:recipe_unlocked"
+      }
     }
   },
   "requirements": [
     [
-      "has_lantern",
-      "has_the_recipe"
+      "has_the_recipe",
+      "recipe_condition"
     ]
   ],
   "rewards": {

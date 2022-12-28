@@ -1,5 +1,10 @@
 {
   "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " A ",
+    "ACA",
+    " A "
+  ],
   "key": {
     "A": {
       "item": "minecraft:smooth_stone"
@@ -8,11 +13,6 @@
       "item": "minecraft:torch"
     }
   },
-  "pattern": [
-    " A ",
-    "ACA",
-    " A "
-  ],
   "result": {
     "item": "additionallanterns:smooth_stone_lantern"
   }

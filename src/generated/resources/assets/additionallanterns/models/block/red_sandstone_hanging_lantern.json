@@ -1,7 +1,7 @@
 {
   "parent": "additionallanterns:block/hanging_lantern",
   "textures": {
-    "color": "minecraft:block/lantern",
-    "material": "additionallanterns:block/materials/red_sandstone_lantern"
+    "material": "additionallanterns:block/materials/red_sandstone_lantern",
+    "color": "minecraft:block/lantern"
   }
 }

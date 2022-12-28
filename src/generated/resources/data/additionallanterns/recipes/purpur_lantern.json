@@ -1,5 +1,10 @@
 {
   "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BAB",
+    "ACA",
+    "BAB"
+  ],
   "key": {
     "A": {
       "item": "minecraft:popped_chorus_fruit"
@@ -11,11 +16,6 @@
       "item": "minecraft:torch"
     }
   },
-  "pattern": [
-    "BAB",
-    "ACA",
-    "BAB"
-  ],
   "result": {
     "item": "additionallanterns:purpur_lantern"
   }

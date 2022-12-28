@@ -1,5 +1,10 @@
 {
   "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "B",
+    "A",
+    "B"
+  ],
   "key": {
     "A": {
       "item": "minecraft:crimson_planks"
@@ -8,13 +13,8 @@
       "item": "minecraft:crimson_planks"
     }
   },
-  "pattern": [
-    "B",
-    "A",
-    "B"
-  ],
   "result": {
-    "count": 6,
-    "item": "additionallanterns:crimson_chain"
+    "item": "additionallanterns:crimson_chain",
+    "count": 6
   }
 }

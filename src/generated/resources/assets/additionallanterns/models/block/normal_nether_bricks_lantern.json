@@ -1,7 +1,7 @@
 {
   "parent": "additionallanterns:block/lantern",
   "textures": {
-    "color": "minecraft:block/lantern",
-    "material": "additionallanterns:block/materials/normal_nether_bricks_lantern"
+    "material": "additionallanterns:block/materials/normal_nether_bricks_lantern",
+    "color": "minecraft:block/lantern"
   }
 }

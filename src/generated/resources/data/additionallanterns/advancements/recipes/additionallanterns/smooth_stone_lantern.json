@@ -1,13 +1,29 @@
 {
   "parent": "minecraft:recipes/root",
+  "display": {
+    "icon": {
+      "item": "additionallanterns:smooth_stone_lantern"
+    },
+    "title": {
+      "translate": "additionallanterns.advancement.recipes/additionallanterns/smooth_stone_lantern.title"
+    },
+    "description": {
+      "translate": "additionallanterns.advancement.recipes/additionallanterns/smooth_stone_lantern.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
   "criteria": {
     "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
       "conditions": {
         "recipe": "additionallanterns:smooth_stone_lantern"
-      },
-      "trigger": "minecraft:recipe_unlocked"
+      }
     },
-    "has_torch": {
+    "recipe_condition": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -16,14 +32,13 @@
             ]
           }
         ]
-      },
-      "trigger": "minecraft:inventory_changed"
+      }
     }
   },
   "requirements": [
     [
-      "has_torch",
-      "has_the_recipe"
+      "has_the_recipe",
+      "recipe_condition"
     ]
   ],
   "rewards": {

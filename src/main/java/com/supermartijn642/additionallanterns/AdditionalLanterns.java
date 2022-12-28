@@ -1,18 +1,12 @@
 package com.supermartijn642.additionallanterns;
 
 import com.supermartijn642.additionallanterns.data.*;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.block.Block;
-import net.minecraftforge.data.event.GatherDataEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import com.supermartijn642.core.item.CreativeItemGroup;
+import com.supermartijn642.core.registry.GeneratorRegistrationHandler;
+import com.supermartijn642.core.registry.RegistrationHandler;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.IForgeRegistry;
-import net.minecraftforge.registries.RegisterEvent;
-
-import java.util.Objects;
 
 /**
  * Created 7/7/2020 by SuperMartijn642
@@ -20,48 +14,30 @@ import java.util.Objects;
 @Mod("additionallanterns")
 public class AdditionalLanterns {
 
-    public static final CreativeModeTab GROUP = new CreativeModeTab("additionallanterns") {
-        @Override
-        public ItemStack makeIcon(){
-            return new ItemStack(LanternMaterial.NORMAL.getLanternBlock());
-        }
-    };
+    public static final CreativeItemGroup GROUP = CreativeItemGroup.create("additionallanterns", () -> LanternMaterial.NORMAL.getLanternBlock().asItem());
 
     public AdditionalLanterns(){
+        register();
+        DistExecutor.safeRunWhenOn(Dist.CLIENT, () -> AdditionalLanternsClient::register);
+        registerGenerators();
     }
 
-    @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-    public static class ModEvents {
-
-        @SubscribeEvent
-        public static void onRegisterEvent(RegisterEvent e){
-            if(e.getRegistryKey().equals(ForgeRegistries.Keys.BLOCKS))
-                onBlockRegistry(Objects.requireNonNull(e.getForgeRegistry()));
-            else if(e.getRegistryKey().equals(ForgeRegistries.Keys.ITEMS))
-                onItemRegistry(Objects.requireNonNull(e.getForgeRegistry()));
-        }
-
-        public static void onBlockRegistry(IForgeRegistry<Block> registry){
-            for(LanternMaterial material : LanternMaterial.values())
-                material.registerBlocks(registry);
-        }
-
-        public static void onItemRegistry(IForgeRegistry<Item> registry){
-            for(LanternMaterial material : LanternMaterial.values())
-                material.registerItems(registry);
-        }
-
-        @SubscribeEvent
-        public static void onGatherData(GatherDataEvent e){
-            e.getGenerator().addProvider(e.includeClient(), new LanternBlockModelProvider(e));
-            e.getGenerator().addProvider(e.includeClient(), new LanternItemModelProvider(e));
-            e.getGenerator().addProvider(e.includeClient(), new LanternBlockStateProvider(e));
-            e.getGenerator().addProvider(e.includeClient(), new LanternLanguageProvider(e));
-            e.getGenerator().addProvider(e.includeServer(), new LanternLootTableProvider(e));
-            e.getGenerator().addProvider(e.includeServer(), new LanternTagsProvider(e));
-            e.getGenerator().addProvider(e.includeServer(), new LanternBlockTagsProvider(e));
-            e.getGenerator().addProvider(e.includeServer(), new LanternRecipeProvider(e));
+    private static void register(){
+        RegistrationHandler handler = RegistrationHandler.get("additionallanterns");
+        for(LanternMaterial material : LanternMaterial.values()){
+            handler.registerBlockCallback(material::registerBlocks);
+            handler.registerItemCallback(material::registerItems);
         }
     }
 
+    private static void registerGenerators(){
+        GeneratorRegistrationHandler handler = GeneratorRegistrationHandler.get("additionallanterns");
+        handler.addGenerator(LanternBlockModelGenerator::new);
+        handler.addGenerator(LanternItemModelGenerator::new);
+        handler.addGenerator(LanternBlockStateGenerator::new);
+        handler.addGenerator(LanternLanguageGenerator::new);
+        handler.addGenerator(LanternLootTableGenerator::new);
+        handler.addGenerator(LanternTagGenerator::new);
+        handler.addGenerator(LanternRecipeGenerator::new);
+    }
 }

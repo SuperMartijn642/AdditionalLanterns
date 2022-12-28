@@ -1,5 +1,10 @@
 {
   "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "B",
+    "A",
+    "B"
+  ],
   "key": {
     "A": {
       "item": "minecraft:dark_prismarine"
@@ -8,13 +13,8 @@
       "item": "minecraft:prismarine_shard"
     }
   },
-  "pattern": [
-    "B",
-    "A",
-    "B"
-  ],
   "result": {
-    "count": 6,
-    "item": "additionallanterns:dark_prismarine_chain"
+    "item": "additionallanterns:dark_prismarine_chain",
+    "count": 6
   }
 }
