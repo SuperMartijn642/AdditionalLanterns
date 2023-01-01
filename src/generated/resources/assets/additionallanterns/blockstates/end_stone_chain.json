@@ -1,13 +1,13 @@
 {
   "variants": {
-    "axis\u003dz": {
+    "axis=z": {
       "model": "additionallanterns:block/end_stone_chain",
       "x": 90
     },
-    "axis\u003dy": {
+    "axis=y": {
       "model": "additionallanterns:block/end_stone_chain"
     },
-    "axis\u003dx": {
+    "axis=x": {
       "model": "additionallanterns:block/end_stone_chain",
       "x": 90,
       "y": 90
