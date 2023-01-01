@@ -1,0 +1,45 @@
+{
+  "parent": "minecraft:recipes/root",
+  "display": {
+    "icon": {
+      "item": "additionallanterns:pink_red_nether_bricks_lantern"
+    },
+    "title": {
+      "translate": "additionallanterns.advancement.recipes/red_nether_bricks_lantern_pink.title"
+    },
+    "description": {
+      "translate": "additionallanterns.advancement.recipes/red_nether_bricks_lantern_pink.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "additionallanterns:red_nether_bricks_lantern_pink"
+      }
+    },
+    "recipe_condition": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          null
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "recipe_condition"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "additionallanterns:red_nether_bricks_lantern_pink"
+    ]
+  }
+}

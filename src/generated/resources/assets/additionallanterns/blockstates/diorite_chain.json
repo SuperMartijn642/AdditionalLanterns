@@ -5,12 +5,12 @@
       "x": 90,
       "y": 90
     },
+    "axis=y": {
+      "model": "additionallanterns:diorite_chain"
+    },
     "axis=z": {
       "model": "additionallanterns:diorite_chain",
       "x": 90
-    },
-    "axis=y": {
-      "model": "additionallanterns:diorite_chain"
     }
   }
 }

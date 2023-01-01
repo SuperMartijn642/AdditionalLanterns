@@ -1,11 +1,11 @@
 {
   "variants": {
-    "axis=y": {
-      "model": "additionallanterns:bricks_chain"
-    },
     "axis=z": {
       "model": "additionallanterns:bricks_chain",
       "x": 90
+    },
+    "axis=y": {
+      "model": "additionallanterns:bricks_chain"
     },
     "axis=x": {
       "model": "additionallanterns:bricks_chain",

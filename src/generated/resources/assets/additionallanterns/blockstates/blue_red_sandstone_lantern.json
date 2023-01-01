@@ -6,8 +6,8 @@
     "hanging=false,on=false,redstone=false": {
       "model": "additionallanterns:blue_red_sandstone_lantern_off"
     },
-    "hanging=true,on=true,redstone=false": {
-      "model": "additionallanterns:blue_red_sandstone_hanging_lantern"
+    "hanging=true,on=false,redstone=false": {
+      "model": "additionallanterns:blue_red_sandstone_hanging_lantern_off"
     },
     "hanging=false,on=true,redstone=false": {
       "model": "additionallanterns:blue_red_sandstone_lantern"
@@ -15,14 +15,14 @@
     "hanging=true,on=true,redstone=true": {
       "model": "additionallanterns:blue_red_sandstone_hanging_lantern_off"
     },
-    "hanging=false,on=false,redstone=true": {
-      "model": "additionallanterns:blue_red_sandstone_lantern"
+    "hanging=true,on=true,redstone=false": {
+      "model": "additionallanterns:blue_red_sandstone_hanging_lantern"
     },
     "hanging=false,on=true,redstone=true": {
       "model": "additionallanterns:blue_red_sandstone_lantern_off"
     },
-    "hanging=true,on=false,redstone=false": {
-      "model": "additionallanterns:blue_red_sandstone_hanging_lantern_off"
+    "hanging=false,on=false,redstone=true": {
+      "model": "additionallanterns:blue_red_sandstone_lantern"
     }
   }
 }

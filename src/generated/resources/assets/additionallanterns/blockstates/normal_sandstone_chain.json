@@ -1,9 +1,5 @@
 {
   "variants": {
-    "axis=z": {
-      "model": "additionallanterns:normal_sandstone_chain",
-      "x": 90
-    },
     "axis=y": {
       "model": "additionallanterns:normal_sandstone_chain"
     },
@@ -11,6 +7,10 @@
       "model": "additionallanterns:normal_sandstone_chain",
       "x": 90,
       "y": 90
+    },
+    "axis=z": {
+      "model": "additionallanterns:normal_sandstone_chain",
+      "x": 90
     }
   }
 }
