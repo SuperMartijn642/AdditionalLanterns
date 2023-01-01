@@ -1,16 +1,16 @@
 {
   "variants": {
-    "axis\u003dx": {
+    "axis=z": {
+      "model": "additionallanterns:block/smooth_stone_chain",
+      "x": 90
+    },
+    "axis=x": {
       "model": "additionallanterns:block/smooth_stone_chain",
       "x": 90,
       "y": 90
     },
-    "axis\u003dy": {
+    "axis=y": {
       "model": "additionallanterns:block/smooth_stone_chain"
-    },
-    "axis\u003dz": {
-      "model": "additionallanterns:block/smooth_stone_chain",
-      "x": 90
     }
   }
 }
