@@ -3,11 +3,14 @@
     "on=true,hanging=true,redstone=false": {
       "model": "additionallanterns:block/orange_warped_hanging_lantern"
     },
-    "on=false,hanging=false,redstone=true": {
-      "model": "additionallanterns:block/orange_warped_lantern"
-    },
     "on=true,hanging=false,redstone=true": {
       "model": "additionallanterns:block/orange_warped_lantern_off"
+    },
+    "on=true,hanging=true,redstone=true": {
+      "model": "additionallanterns:block/orange_warped_hanging_lantern_off"
+    },
+    "on=false,hanging=false,redstone=true": {
+      "model": "additionallanterns:block/orange_warped_lantern"
     },
     "on=false,hanging=true,redstone=true": {
       "model": "additionallanterns:block/orange_warped_hanging_lantern"
@@ -19,9 +22,6 @@
       "model": "additionallanterns:block/orange_warped_lantern"
     },
     "on=false,hanging=true,redstone=false": {
-      "model": "additionallanterns:block/orange_warped_hanging_lantern_off"
-    },
-    "on=true,hanging=true,redstone=true": {
       "model": "additionallanterns:block/orange_warped_hanging_lantern_off"
     }
   }
