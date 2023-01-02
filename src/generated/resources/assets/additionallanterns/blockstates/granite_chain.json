@@ -1,16 +1,16 @@
 {
   "variants": {
-    "axis=y": {
-      "model": "additionallanterns:block/granite_chain"
+    "axis=x": {
+      "model": "additionallanterns:block/granite_chain",
+      "x": 90,
+      "y": 90
     },
     "axis=z": {
       "model": "additionallanterns:block/granite_chain",
       "x": 90
     },
-    "axis=x": {
-      "model": "additionallanterns:block/granite_chain",
-      "x": 90,
-      "y": 90
+    "axis=y": {
+      "model": "additionallanterns:block/granite_chain"
     }
   }
 }

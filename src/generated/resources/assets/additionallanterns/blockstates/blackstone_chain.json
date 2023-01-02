@@ -1,5 +1,8 @@
 {
   "variants": {
+    "axis=y": {
+      "model": "additionallanterns:block/blackstone_chain"
+    },
     "axis=z": {
       "model": "additionallanterns:block/blackstone_chain",
       "x": 90
@@ -8,9 +11,6 @@
       "model": "additionallanterns:block/blackstone_chain",
       "x": 90,
       "y": 90
-    },
-    "axis=y": {
-      "model": "additionallanterns:block/blackstone_chain"
     }
   }
 }
