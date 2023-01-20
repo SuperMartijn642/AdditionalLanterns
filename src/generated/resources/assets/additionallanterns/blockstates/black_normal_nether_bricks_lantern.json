@@ -9,9 +9,6 @@
     "on=false,redstone=false,hanging=false": {
       "model": "additionallanterns:block/black_normal_nether_bricks_lantern_off"
     },
-    "on=false,redstone=false,hanging=true": {
-      "model": "additionallanterns:block/black_normal_nether_bricks_hanging_lantern_off"
-    },
     "on=false,redstone=true,hanging=true": {
       "model": "additionallanterns:block/black_normal_nether_bricks_hanging_lantern"
     },
@@ -22,6 +19,9 @@
       "model": "additionallanterns:block/black_normal_nether_bricks_lantern_off"
     },
     "on=true,redstone=true,hanging=true": {
+      "model": "additionallanterns:block/black_normal_nether_bricks_hanging_lantern_off"
+    },
+    "on=false,redstone=false,hanging=true": {
       "model": "additionallanterns:block/black_normal_nether_bricks_hanging_lantern_off"
     }
   }
