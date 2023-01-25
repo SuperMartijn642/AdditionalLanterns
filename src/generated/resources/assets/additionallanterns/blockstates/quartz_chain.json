@@ -3,14 +3,14 @@
     "axis=y": {
       "model": "additionallanterns:block/quartz_chain"
     },
-    "axis=z": {
-      "model": "additionallanterns:block/quartz_chain",
-      "x": 90
-    },
     "axis=x": {
       "model": "additionallanterns:block/quartz_chain",
       "x": 90,
       "y": 90
+    },
+    "axis=z": {
+      "model": "additionallanterns:block/quartz_chain",
+      "x": 90
     }
   }
 }

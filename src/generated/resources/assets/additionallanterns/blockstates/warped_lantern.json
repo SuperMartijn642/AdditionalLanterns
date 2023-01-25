@@ -1,19 +1,7 @@
 {
   "variants": {
-    "on=false,redstone=false,hanging=false": {
-      "model": "additionallanterns:block/warped_lantern_off"
-    },
     "on=true,redstone=true,hanging=true": {
       "model": "additionallanterns:block/warped_hanging_lantern_off"
-    },
-    "on=false,redstone=true,hanging=true": {
-      "model": "additionallanterns:block/warped_hanging_lantern"
-    },
-    "on=true,redstone=false,hanging=true": {
-      "model": "additionallanterns:block/warped_hanging_lantern"
-    },
-    "on=true,redstone=true,hanging=false": {
-      "model": "additionallanterns:block/warped_lantern_off"
     },
     "on=true,redstone=false,hanging=false": {
       "model": "additionallanterns:block/warped_lantern"
@@ -21,8 +9,20 @@
     "on=false,redstone=false,hanging=true": {
       "model": "additionallanterns:block/warped_hanging_lantern_off"
     },
+    "on=true,redstone=false,hanging=true": {
+      "model": "additionallanterns:block/warped_hanging_lantern"
+    },
+    "on=false,redstone=true,hanging=true": {
+      "model": "additionallanterns:block/warped_hanging_lantern"
+    },
     "on=false,redstone=true,hanging=false": {
       "model": "additionallanterns:block/warped_lantern"
+    },
+    "on=true,redstone=true,hanging=false": {
+      "model": "additionallanterns:block/warped_lantern_off"
+    },
+    "on=false,redstone=false,hanging=false": {
+      "model": "additionallanterns:block/warped_lantern_off"
     }
   }
 }

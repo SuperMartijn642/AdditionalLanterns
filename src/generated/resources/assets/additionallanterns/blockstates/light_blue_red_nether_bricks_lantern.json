@@ -1,5 +1,11 @@
 {
   "variants": {
+    "on=true,redstone=true,hanging=true": {
+      "model": "additionallanterns:block/light_blue_red_nether_bricks_hanging_lantern_off"
+    },
+    "on=true,redstone=true,hanging=false": {
+      "model": "additionallanterns:block/light_blue_red_nether_bricks_lantern_off"
+    },
     "on=false,redstone=true,hanging=true": {
       "model": "additionallanterns:block/light_blue_red_nether_bricks_hanging_lantern"
     },
@@ -9,9 +15,6 @@
     "on=false,redstone=true,hanging=false": {
       "model": "additionallanterns:block/light_blue_red_nether_bricks_lantern"
     },
-    "on=true,redstone=true,hanging=true": {
-      "model": "additionallanterns:block/light_blue_red_nether_bricks_hanging_lantern_off"
-    },
     "on=false,redstone=false,hanging=true": {
       "model": "additionallanterns:block/light_blue_red_nether_bricks_hanging_lantern_off"
     },
@@ -20,9 +23,6 @@
     },
     "on=true,redstone=false,hanging=false": {
       "model": "additionallanterns:block/light_blue_red_nether_bricks_lantern"
-    },
-    "on=true,redstone=true,hanging=false": {
-      "model": "additionallanterns:block/light_blue_red_nether_bricks_lantern_off"
     }
   }
 }

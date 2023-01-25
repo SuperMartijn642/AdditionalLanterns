@@ -1,8 +1,5 @@
 {
   "variants": {
-    "axis=y": {
-      "model": "additionallanterns:block/diorite_chain"
-    },
     "axis=z": {
       "model": "additionallanterns:block/diorite_chain",
       "x": 90
@@ -11,6 +8,9 @@
       "model": "additionallanterns:block/diorite_chain",
       "x": 90,
       "y": 90
+    },
+    "axis=y": {
+      "model": "additionallanterns:block/diorite_chain"
     }
   }
 }
