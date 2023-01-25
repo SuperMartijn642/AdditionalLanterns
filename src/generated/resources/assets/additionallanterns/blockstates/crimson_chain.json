@@ -1,13 +1,13 @@
 {
   "variants": {
+    "axis=z": {
+      "model": "additionallanterns:block/crimson_chain",
+      "x": 90
+    },
     "axis=x": {
       "model": "additionallanterns:block/crimson_chain",
       "x": 90,
       "y": 90
-    },
-    "axis=z": {
-      "model": "additionallanterns:block/crimson_chain",
-      "x": 90
     },
     "axis=y": {
       "model": "additionallanterns:block/crimson_chain"

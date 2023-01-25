@@ -4,13 +4,13 @@
       "model": "additionallanterns:block/prismarine_chain",
       "x": 90
     },
-    "axis=y": {
-      "model": "additionallanterns:block/prismarine_chain"
-    },
     "axis=x": {
       "model": "additionallanterns:block/prismarine_chain",
       "x": 90,
       "y": 90
+    },
+    "axis=y": {
+      "model": "additionallanterns:block/prismarine_chain"
     }
   }
 }

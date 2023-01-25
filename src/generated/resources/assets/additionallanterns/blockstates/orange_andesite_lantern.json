@@ -1,28 +1,28 @@
 {
   "variants": {
-    "on=false,hanging=false,redstone=false": {
-      "model": "additionallanterns:block/orange_andesite_lantern_off"
+    "on=true,hanging=true,redstone=true": {
+      "model": "additionallanterns:block/orange_andesite_hanging_lantern_off"
     },
     "on=false,hanging=true,redstone=true": {
       "model": "additionallanterns:block/orange_andesite_hanging_lantern"
     },
-    "on=true,hanging=true,redstone=false": {
-      "model": "additionallanterns:block/orange_andesite_hanging_lantern"
-    },
-    "on=false,hanging=true,redstone=false": {
-      "model": "additionallanterns:block/orange_andesite_hanging_lantern_off"
-    },
-    "on=true,hanging=true,redstone=true": {
-      "model": "additionallanterns:block/orange_andesite_hanging_lantern_off"
+    "on=false,hanging=false,redstone=true": {
+      "model": "additionallanterns:block/orange_andesite_lantern"
     },
     "on=true,hanging=false,redstone=false": {
       "model": "additionallanterns:block/orange_andesite_lantern"
     },
+    "on=false,hanging=false,redstone=false": {
+      "model": "additionallanterns:block/orange_andesite_lantern_off"
+    },
     "on=true,hanging=false,redstone=true": {
       "model": "additionallanterns:block/orange_andesite_lantern_off"
     },
-    "on=false,hanging=false,redstone=true": {
-      "model": "additionallanterns:block/orange_andesite_lantern"
+    "on=false,hanging=true,redstone=false": {
+      "model": "additionallanterns:block/orange_andesite_hanging_lantern_off"
+    },
+    "on=true,hanging=true,redstone=false": {
+      "model": "additionallanterns:block/orange_andesite_hanging_lantern"
     }
   }
 }
