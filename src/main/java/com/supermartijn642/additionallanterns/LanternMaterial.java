@@ -1,5 +1,7 @@
 package com.supermartijn642.additionallanterns;
 
+import com.supermartijn642.core.item.BaseBlockItem;
+import com.supermartijn642.core.item.ItemProperties;
 import com.supermartijn642.core.registry.RegistrationHandler;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -115,24 +117,22 @@ public enum LanternMaterial {
         if(this.lanternBlock == null)
             throw new IllegalStateException("Blocks must be registered before registering items!");
 
-        if(this == NORMAL){ // hide the uncolored normal one
-            this.lanternItem = new BlockItem(this.lanternBlock, new Item.Properties().tab(AdditionalLanterns.GROUP));
+        this.lanternItem = new BaseBlockItem(this.lanternBlock, ItemProperties.create().group(AdditionalLanterns.GROUP));
+        if(this == NORMAL)
             helper.registerOverride("minecraft", "lantern", this.lanternItem);
-        }else{
-            this.lanternItem = new BlockItem(this.lanternBlock, new Item.Properties().tab(AdditionalLanterns.GROUP));
+        else
             helper.register(this.getSuffix() + "_lantern", this.lanternItem);
-        }
         if(this.canBeColored){
             for(LanternColor color : LanternColor.values()){
                 LanternBlock block = this.coloredLanternBlocks.get(color);
-                BlockItem item = new BlockItem(block, new Item.Properties().tab(AdditionalLanterns.GROUP));
+                BlockItem item = new BaseBlockItem(block, ItemProperties.create().group(AdditionalLanterns.GROUP));
                 this.coloredLanternItems.put(color, item);
                 helper.register(color.getSuffix() + "_" + this.getSuffix() + "_lantern", item);
             }
         }
 
         if(this.hasChains){
-            this.chainItem = new BlockItem(this.chainBlock, new Item.Properties().tab(AdditionalLanterns.GROUP));
+            this.chainItem = new BaseBlockItem(this.chainBlock, ItemProperties.create().group(AdditionalLanterns.GROUP));
             helper.register(this.getSuffix() + "_chain", this.chainItem);
         }
     }

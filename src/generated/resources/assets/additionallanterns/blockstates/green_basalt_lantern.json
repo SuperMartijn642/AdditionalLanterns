@@ -1,19 +1,10 @@
 {
   "variants": {
-    "on=false,redstone=true,hanging=false": {
-      "model": "additionallanterns:block/green_basalt_lantern"
-    },
-    "on=true,redstone=false,hanging=true": {
-      "model": "additionallanterns:block/green_basalt_hanging_lantern"
+    "on=true,redstone=true,hanging=true": {
+      "model": "additionallanterns:block/green_basalt_hanging_lantern_off"
     },
     "on=true,redstone=false,hanging=false": {
       "model": "additionallanterns:block/green_basalt_lantern"
-    },
-    "on=false,redstone=true,hanging=true": {
-      "model": "additionallanterns:block/green_basalt_hanging_lantern"
-    },
-    "on=true,redstone=true,hanging=true": {
-      "model": "additionallanterns:block/green_basalt_hanging_lantern_off"
     },
     "on=true,redstone=true,hanging=false": {
       "model": "additionallanterns:block/green_basalt_lantern_off"
@@ -23,6 +14,15 @@
     },
     "on=false,redstone=false,hanging=true": {
       "model": "additionallanterns:block/green_basalt_hanging_lantern_off"
+    },
+    "on=true,redstone=false,hanging=true": {
+      "model": "additionallanterns:block/green_basalt_hanging_lantern"
+    },
+    "on=false,redstone=true,hanging=true": {
+      "model": "additionallanterns:block/green_basalt_hanging_lantern"
+    },
+    "on=false,redstone=true,hanging=false": {
+      "model": "additionallanterns:block/green_basalt_lantern"
     }
   }
 }
