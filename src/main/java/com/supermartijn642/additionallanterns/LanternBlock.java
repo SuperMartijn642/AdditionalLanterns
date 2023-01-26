@@ -2,12 +2,14 @@ package com.supermartijn642.additionallanterns;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.DyeItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.StateContainer;
+import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
@@ -46,7 +48,9 @@ public class LanternBlock extends net.minecraft.block.LanternBlock {
             newState = newState.setValue(ON, state.getValue(ON));
             newState = newState.setValue(REDSTONE, state.getValue(REDSTONE));
             world.setBlock(pos, newState, 1 | 2);
-        }else
+        }else if(this.material == LanternMaterial.NORMAL && this.color == null && !state.getValue(ON) && !state.getValue(REDSTONE))
+            world.setBlock(pos, Blocks.LANTERN.defaultBlockState().setValue(BlockStateProperties.HANGING, state.getValue(HANGING)).setValue(BlockStateProperties.WATERLOGGED, state.getValue(WATERLOGGED)), 1 | 2);
+        else
             world.setBlock(pos, state.setValue(ON, !state.getValue(ON)), 1 | 2);
         return ActionResultType.sidedSuccess(world.isClientSide);
     }
@@ -66,7 +70,9 @@ public class LanternBlock extends net.minecraft.block.LanternBlock {
     public void neighborChanged(BlockState state, World world, BlockPos pos, Block block, BlockPos neighborPos, boolean p_220069_6_){
         if(!world.isClientSide){
             boolean redstone = state.getValue(REDSTONE);
-            if(redstone != world.hasNeighborSignal(pos))
+            if(this.material == LanternMaterial.NORMAL && this.color == null && state.getValue(ON) && !redstone)
+                world.setBlock(pos, Blocks.LANTERN.defaultBlockState().setValue(BlockStateProperties.HANGING, state.getValue(HANGING)).setValue(BlockStateProperties.WATERLOGGED, state.getValue(WATERLOGGED)), 1 | 2 | 4);
+            else if(redstone != world.hasNeighborSignal(pos))
                 world.setBlock(pos, state.setValue(REDSTONE, !redstone), 1 | 2 | 4);
         }
     }
