@@ -1,9 +1,15 @@
 {
   "variants": {
+    "redstone=false,hanging=false,on=true": {
+      "model": "additionallanterns:block/orange_quartz_lantern"
+    },
     "redstone=false,hanging=true,on=true": {
       "model": "additionallanterns:block/orange_quartz_hanging_lantern"
     },
-    "redstone=false,hanging=false,on=false": {
+    "redstone=false,hanging=true,on=false": {
+      "model": "additionallanterns:block/orange_quartz_hanging_lantern_off"
+    },
+    "redstone=true,hanging=false,on=true": {
       "model": "additionallanterns:block/orange_quartz_lantern_off"
     },
     "redstone=true,hanging=true,on=false": {
@@ -12,14 +18,8 @@
     "redstone=true,hanging=false,on=false": {
       "model": "additionallanterns:block/orange_quartz_lantern"
     },
-    "redstone=true,hanging=false,on=true": {
+    "redstone=false,hanging=false,on=false": {
       "model": "additionallanterns:block/orange_quartz_lantern_off"
-    },
-    "redstone=false,hanging=false,on=true": {
-      "model": "additionallanterns:block/orange_quartz_lantern"
-    },
-    "redstone=false,hanging=true,on=false": {
-      "model": "additionallanterns:block/orange_quartz_hanging_lantern_off"
     },
     "redstone=true,hanging=true,on=true": {
       "model": "additionallanterns:block/orange_quartz_hanging_lantern_off"

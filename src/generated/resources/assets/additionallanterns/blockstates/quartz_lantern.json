@@ -1,28 +1,28 @@
 {
   "variants": {
-    "redstone=true,hanging=true,on=false": {
-      "model": "additionallanterns:block/quartz_hanging_lantern"
-    },
     "redstone=true,hanging=false,on=true": {
       "model": "additionallanterns:block/quartz_lantern_off"
     },
-    "redstone=false,hanging=false,on=true": {
-      "model": "additionallanterns:block/quartz_lantern"
-    },
     "redstone=true,hanging=true,on=true": {
       "model": "additionallanterns:block/quartz_hanging_lantern_off"
-    },
-    "redstone=false,hanging=true,on=false": {
-      "model": "additionallanterns:block/quartz_hanging_lantern_off"
-    },
-    "redstone=false,hanging=true,on=true": {
-      "model": "additionallanterns:block/quartz_hanging_lantern"
     },
     "redstone=true,hanging=false,on=false": {
       "model": "additionallanterns:block/quartz_lantern"
     },
     "redstone=false,hanging=false,on=false": {
       "model": "additionallanterns:block/quartz_lantern_off"
+    },
+    "redstone=false,hanging=true,on=true": {
+      "model": "additionallanterns:block/quartz_hanging_lantern"
+    },
+    "redstone=false,hanging=true,on=false": {
+      "model": "additionallanterns:block/quartz_hanging_lantern_off"
+    },
+    "redstone=false,hanging=false,on=true": {
+      "model": "additionallanterns:block/quartz_lantern"
+    },
+    "redstone=true,hanging=true,on=false": {
+      "model": "additionallanterns:block/quartz_hanging_lantern"
     }
   }
 }
