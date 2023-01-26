@@ -2,8 +2,10 @@ package com.supermartijn642.additionallanterns;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.IWaterLoggable;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.fluid.IFluidState;
 import net.minecraft.item.BlockItemUseContext;
@@ -52,7 +54,9 @@ public class LanternBlock extends net.minecraft.block.LanternBlock implements IW
             newState = newState.setValue(ON, state.getValue(ON));
             newState = newState.setValue(REDSTONE, state.getValue(REDSTONE));
             level.setBlock(pos, newState, 1 | 2);
-        }else
+        }else if(this.material == LanternMaterial.NORMAL && this.color == null && !state.getValue(ON) && !state.getValue(REDSTONE) && !state.getValue(WATERLOGGED))
+            level.setBlock(pos, Blocks.LANTERN.defaultBlockState().setValue(BlockStateProperties.HANGING, state.getValue(HANGING)), 1 | 2);
+        else
             level.setBlock(pos, state.setValue(ON, !state.getValue(ON)), 1 | 2);
         return true;
     }
@@ -88,7 +92,9 @@ public class LanternBlock extends net.minecraft.block.LanternBlock implements IW
     public void neighborChanged(BlockState state, World level, BlockPos pos, Block block, BlockPos neighborPos, boolean p_220069_6_){
         if(!level.isClientSide){
             boolean redstone = state.getValue(REDSTONE);
-            if(redstone != level.hasNeighborSignal(pos))
+            if(this.material == LanternMaterial.NORMAL && this.color == null && state.getValue(ON) && !redstone && !state.getValue(WATERLOGGED))
+                level.setBlock(pos, Blocks.LANTERN.defaultBlockState().setValue(BlockStateProperties.HANGING, state.getValue(HANGING)), 1 | 2 | 4);
+            else if(redstone != level.hasNeighborSignal(pos))
                 level.setBlock(pos, state.setValue(REDSTONE, !redstone), 1 | 2 | 4);
         }
     }
@@ -96,5 +102,14 @@ public class LanternBlock extends net.minecraft.block.LanternBlock implements IW
     @Override
     public int getLightEmission(BlockState state){
         return state.getValue(REDSTONE) != state.getValue(ON) ? 15 : 0;
+    }
+
+    @Override
+    public Fluid takeLiquid(IWorld level, BlockPos pos, BlockState state){
+        if(state.getValue(ON) && !state.getValue(REDSTONE) && state.getValue(WATERLOGGED)){
+            level.setBlock(pos, Blocks.LANTERN.defaultBlockState().setValue(BlockStateProperties.HANGING, state.getValue(HANGING)), 3);
+            return Fluids.WATER;
+        }
+        return IWaterLoggable.super.takeLiquid(level, pos, state);
     }
 }

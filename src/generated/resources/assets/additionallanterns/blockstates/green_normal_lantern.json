@@ -1,13 +1,19 @@
 {
   "variants": {
+    "redstone=false,hanging=false,on=true": {
+      "model": "additionallanterns:block/green_normal_lantern"
+    },
     "redstone=false,hanging=true,on=false": {
       "model": "additionallanterns:block/green_normal_hanging_lantern_off"
     },
     "redstone=false,hanging=false,on=false": {
       "model": "additionallanterns:block/green_normal_lantern_off"
     },
-    "redstone=false,hanging=false,on=true": {
-      "model": "additionallanterns:block/green_normal_lantern"
+    "redstone=true,hanging=false,on=true": {
+      "model": "additionallanterns:block/green_normal_lantern_off"
+    },
+    "redstone=true,hanging=true,on=false": {
+      "model": "additionallanterns:block/green_normal_hanging_lantern"
     },
     "redstone=true,hanging=true,on=true": {
       "model": "additionallanterns:block/green_normal_hanging_lantern_off"
@@ -16,12 +22,6 @@
       "model": "additionallanterns:block/green_normal_lantern"
     },
     "redstone=false,hanging=true,on=true": {
-      "model": "additionallanterns:block/green_normal_hanging_lantern"
-    },
-    "redstone=true,hanging=false,on=true": {
-      "model": "additionallanterns:block/green_normal_lantern_off"
-    },
-    "redstone=true,hanging=true,on=false": {
       "model": "additionallanterns:block/green_normal_hanging_lantern"
     }
   }

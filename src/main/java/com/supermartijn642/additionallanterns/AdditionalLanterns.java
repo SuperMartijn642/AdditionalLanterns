@@ -17,6 +17,8 @@ public class AdditionalLanterns {
     public static final CreativeItemGroup GROUP = CreativeItemGroup.create("additionallanterns", () -> LanternMaterial.NORMAL.getLanternBlock().asItem());
 
     public AdditionalLanterns(){
+        VanillaLanternEvents.registerEventHandlers();
+
         register();
         DistExecutor.runWhenOn(Dist.CLIENT, () -> AdditionalLanternsClient::register);
         registerGenerators();
