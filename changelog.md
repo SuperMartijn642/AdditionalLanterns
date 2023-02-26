@@ -1,3 +1,6 @@
+### Additional Lanterns 1.0.4a
+- Fixed missing recipe for the regular lantern
+
 ### Additional Lanterns 1.0.4
 - Added Italian translations (thanks to Draconix_Dust!)
 - Added Ukrainian translations (thanks to Nezila!)
