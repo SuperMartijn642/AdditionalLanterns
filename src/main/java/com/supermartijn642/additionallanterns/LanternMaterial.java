@@ -23,7 +23,7 @@ import java.util.function.Supplier;
  */
 public enum LanternMaterial {
 
-    NORMAL(true, true, "", null, null, () -> new ItemStack(Items.IRON_INGOT), () -> new ItemStack(Items.IRON_NUGGET), 1),
+    NORMAL(true, true, "", () -> new ItemStack(Items.IRON_NUGGET), () -> new ItemStack(Items.IRON_NUGGET), () -> new ItemStack(Items.IRON_INGOT), () -> new ItemStack(Items.IRON_NUGGET), 1),
     OBSIDIAN(true, true, "Obsidian", () -> new ItemStack(Blocks.OBSIDIAN), null, () -> new ItemStack(Blocks.OBSIDIAN), () -> new ItemStack(Blocks.OBSIDIAN), 8),
     //    BASALT(true, true, "Basalt", () -> Items.BASALT, null, () -> Items.BASALT, () -> Items.BASALT, 8),
     ANDESITE(true, true, "Andesite", () -> new ItemStack(Blocks.STONE, 5), null, () -> new ItemStack(Blocks.STONE, 5), () -> new ItemStack(Blocks.STONE, 5), 8),

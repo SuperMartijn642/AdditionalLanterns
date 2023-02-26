@@ -3,14 +3,14 @@
     "axis=y": {
       "model": "additionallanterns:normal_sandstone_chain"
     },
+    "axis=z": {
+      "model": "additionallanterns:normal_sandstone_chain",
+      "x": 90
+    },
     "axis=x": {
       "model": "additionallanterns:normal_sandstone_chain",
       "x": 90,
       "y": 90
-    },
-    "axis=z": {
-      "model": "additionallanterns:normal_sandstone_chain",
-      "x": 90
     }
   }
 }

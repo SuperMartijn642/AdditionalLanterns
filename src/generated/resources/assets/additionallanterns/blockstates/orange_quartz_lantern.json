@@ -1,13 +1,16 @@
 {
   "variants": {
-    "hanging=false,on=false,redstone=true": {
-      "model": "additionallanterns:orange_quartz_lantern"
+    "hanging=false,on=true,redstone=true": {
+      "model": "additionallanterns:orange_quartz_lantern_off"
     },
     "hanging=false,on=true,redstone=false": {
       "model": "additionallanterns:orange_quartz_lantern"
     },
     "hanging=false,on=false,redstone=false": {
       "model": "additionallanterns:orange_quartz_lantern_off"
+    },
+    "hanging=false,on=false,redstone=true": {
+      "model": "additionallanterns:orange_quartz_lantern"
     },
     "hanging=true,on=true,redstone=false": {
       "model": "additionallanterns:orange_quartz_hanging_lantern"
@@ -20,9 +23,6 @@
     },
     "hanging=true,on=false,redstone=false": {
       "model": "additionallanterns:orange_quartz_hanging_lantern_off"
-    },
-    "hanging=false,on=true,redstone=true": {
-      "model": "additionallanterns:orange_quartz_lantern_off"
     }
   }
 }

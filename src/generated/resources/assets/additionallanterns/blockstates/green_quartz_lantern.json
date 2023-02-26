@@ -3,13 +3,10 @@
     "hanging=false,on=true,redstone=true": {
       "model": "additionallanterns:green_quartz_lantern_off"
     },
-    "hanging=true,on=true,redstone=false": {
-      "model": "additionallanterns:green_quartz_hanging_lantern"
-    },
-    "hanging=true,on=false,redstone=false": {
+    "hanging=true,on=true,redstone=true": {
       "model": "additionallanterns:green_quartz_hanging_lantern_off"
     },
-    "hanging=true,on=true,redstone=true": {
+    "hanging=true,on=false,redstone=false": {
       "model": "additionallanterns:green_quartz_hanging_lantern_off"
     },
     "hanging=false,on=true,redstone=false": {
@@ -18,11 +15,14 @@
     "hanging=false,on=false,redstone=true": {
       "model": "additionallanterns:green_quartz_lantern"
     },
-    "hanging=true,on=false,redstone=true": {
+    "hanging=true,on=true,redstone=false": {
       "model": "additionallanterns:green_quartz_hanging_lantern"
     },
     "hanging=false,on=false,redstone=false": {
       "model": "additionallanterns:green_quartz_lantern_off"
+    },
+    "hanging=true,on=false,redstone=true": {
+      "model": "additionallanterns:green_quartz_hanging_lantern"
     }
   }
 }

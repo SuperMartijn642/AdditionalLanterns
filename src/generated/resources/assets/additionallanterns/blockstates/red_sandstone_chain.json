@@ -1,16 +1,16 @@
 {
   "variants": {
-    "axis=y": {
-      "model": "additionallanterns:red_sandstone_chain"
+    "axis=x": {
+      "model": "additionallanterns:red_sandstone_chain",
+      "x": 90,
+      "y": 90
     },
     "axis=z": {
       "model": "additionallanterns:red_sandstone_chain",
       "x": 90
     },
-    "axis=x": {
-      "model": "additionallanterns:red_sandstone_chain",
-      "x": 90,
-      "y": 90
+    "axis=y": {
+      "model": "additionallanterns:red_sandstone_chain"
     }
   }
 }
