@@ -4,8 +4,9 @@ import com.supermartijn642.additionallanterns.LanternColor;
 import com.supermartijn642.additionallanterns.LanternMaterial;
 import com.supermartijn642.core.generator.RecipeGenerator;
 import com.supermartijn642.core.generator.ResourceCache;
+import com.supermartijn642.core.registry.Registries;
+import net.fabricmc.fabric.api.tag.convention.v1.ConventionalItemTags;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -14,6 +15,26 @@ import net.minecraft.world.item.Items;
  * Created 7/6/2021 by SuperMartijn642
  */
 public class LanternRecipeGenerator extends RecipeGenerator {
+
+    @SuppressWarnings("unchecked")
+    private static final TagKey<Item>[] DYE_TAGS = new TagKey[]{
+        ConventionalItemTags.WHITE_DYES,
+        ConventionalItemTags.ORANGE_DYES,
+        ConventionalItemTags.MAGENTA_DYES,
+        ConventionalItemTags.LIGHT_BLUE_DYES,
+        ConventionalItemTags.YELLOW_DYES,
+        ConventionalItemTags.LIME_DYES,
+        ConventionalItemTags.PINK_DYES,
+        ConventionalItemTags.GRAY_DYES,
+        ConventionalItemTags.LIGHT_GRAY_DYES,
+        ConventionalItemTags.CYAN_DYES,
+        ConventionalItemTags.PURPLE_DYES,
+        ConventionalItemTags.BLUE_DYES,
+        ConventionalItemTags.BROWN_DYES,
+        ConventionalItemTags.GREEN_DYES,
+        ConventionalItemTags.RED_DYES,
+        ConventionalItemTags.BLACK_DYES
+    };
 
     public LanternRecipeGenerator(ResourceCache cache){
         super("additionallanterns", cache);
@@ -74,11 +95,11 @@ public class LanternRecipeGenerator extends RecipeGenerator {
     }
 
     private static TagKey<Item> getMaterialLanternTag(LanternMaterial material){
-        return ItemTags.create(new ResourceLocation("additionallanterns", material.getSuffix() + "_lanterns"));
+        return TagKey.create(Registries.ITEMS.getVanillaRegistry().key(), new ResourceLocation("additionallanterns", material.getSuffix() + "_lanterns"));
     }
 
     private static TagKey<Item> getColorDyeTag(LanternColor color){
-        return color.dyeColor.getTag();
+        return DYE_TAGS[color.dyeColor.ordinal()];
     }
 
     private void addChainRecipe(LanternMaterial material){

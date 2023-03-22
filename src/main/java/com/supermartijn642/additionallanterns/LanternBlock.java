@@ -15,8 +15,8 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
+import org.jetbrains.annotations.Nullable;
 
-import javax.annotation.Nullable;
 
 /**
  * Created 7/5/2021 by SuperMartijn642
@@ -64,6 +64,9 @@ public class LanternBlock extends net.minecraft.world.level.block.LanternBlock {
     @Nullable
     public BlockState getStateForPlacement(BlockPlaceContext context){
         BlockState state = super.getStateForPlacement(context);
+        boolean redstone = context.getLevel().hasNeighborSignal(context.getClickedPos());
+        if(!redstone && this.material == LanternMaterial.NORMAL && this.color == null)
+            return Blocks.LANTERN.defaultBlockState().setValue(BlockStateProperties.HANGING, state.getValue(HANGING)).setValue(BlockStateProperties.WATERLOGGED, state.getValue(WATERLOGGED));
         return state == null ? null : state.setValue(REDSTONE, context.getLevel().hasNeighborSignal(context.getClickedPos()));
     }
 

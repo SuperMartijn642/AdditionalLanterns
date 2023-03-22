@@ -4,23 +4,20 @@ import com.supermartijn642.additionallanterns.data.*;
 import com.supermartijn642.core.item.CreativeItemGroup;
 import com.supermartijn642.core.registry.GeneratorRegistrationHandler;
 import com.supermartijn642.core.registry.RegistrationHandler;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.fml.DistExecutor;
-import net.minecraftforge.fml.common.Mod;
+import net.fabricmc.api.ModInitializer;
 
 /**
  * Created 7/7/2020 by SuperMartijn642
  */
-@Mod("additionallanterns")
-public class AdditionalLanterns {
+public class AdditionalLanterns implements ModInitializer {
 
     public static final CreativeItemGroup GROUP = CreativeItemGroup.create("additionallanterns", () -> LanternMaterial.NORMAL.getLanternBlock().asItem());
 
-    public AdditionalLanterns(){
+    @Override
+    public void onInitialize(){
         VanillaLanternEvents.registerEventHandlers();
 
         register();
-        DistExecutor.safeRunWhenOn(Dist.CLIENT, () -> AdditionalLanternsClient::register);
         registerGenerators();
     }
 

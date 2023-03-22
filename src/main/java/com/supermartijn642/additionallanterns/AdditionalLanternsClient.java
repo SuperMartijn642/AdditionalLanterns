@@ -1,13 +1,15 @@
 package com.supermartijn642.additionallanterns;
 
 import com.supermartijn642.core.registry.ClientRegistrationHandler;
+import net.fabricmc.api.ClientModInitializer;
 
 /**
  * Created 7/1/2021 by SuperMartijn642
  */
-public class AdditionalLanternsClient {
+public class AdditionalLanternsClient implements ClientModInitializer {
 
-    public static void register(){
+    @Override
+    public void onInitializeClient(){
         ClientRegistrationHandler handler = ClientRegistrationHandler.get("additionallanterns");
         for(LanternMaterial material : LanternMaterial.values()){
             handler.registerBlockModelCutoutRenderType(material::getLanternBlock);

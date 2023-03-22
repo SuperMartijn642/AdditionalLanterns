@@ -1,16 +1,7 @@
 {
   "variants": {
-    "hanging=true,redstone=true,on=false": {
-      "model": "additionallanterns:block/light_gray_basalt_hanging_lantern"
-    },
-    "hanging=false,redstone=true,on=false": {
+    "hanging=false,redstone=false,on=true": {
       "model": "additionallanterns:block/light_gray_basalt_lantern"
-    },
-    "hanging=false,redstone=true,on=true": {
-      "model": "additionallanterns:block/light_gray_basalt_lantern_off"
-    },
-    "hanging=true,redstone=false,on=true": {
-      "model": "additionallanterns:block/light_gray_basalt_hanging_lantern"
     },
     "hanging=false,redstone=false,on=false": {
       "model": "additionallanterns:block/light_gray_basalt_lantern_off"
@@ -21,8 +12,17 @@
     "hanging=true,redstone=true,on=true": {
       "model": "additionallanterns:block/light_gray_basalt_hanging_lantern_off"
     },
-    "hanging=false,redstone=false,on=true": {
+    "hanging=true,redstone=false,on=true": {
+      "model": "additionallanterns:block/light_gray_basalt_hanging_lantern"
+    },
+    "hanging=false,redstone=true,on=true": {
+      "model": "additionallanterns:block/light_gray_basalt_lantern_off"
+    },
+    "hanging=false,redstone=true,on=false": {
       "model": "additionallanterns:block/light_gray_basalt_lantern"
+    },
+    "hanging=true,redstone=true,on=false": {
+      "model": "additionallanterns:block/light_gray_basalt_hanging_lantern"
     }
   }
 }

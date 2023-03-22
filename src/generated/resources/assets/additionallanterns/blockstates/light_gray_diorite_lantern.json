@@ -1,15 +1,15 @@
 {
   "variants": {
+    "hanging=false,redstone=false,on=true": {
+      "model": "additionallanterns:block/light_gray_diorite_lantern"
+    },
     "hanging=true,redstone=false,on=true": {
       "model": "additionallanterns:block/light_gray_diorite_hanging_lantern"
     },
-    "hanging=true,redstone=true,on=false": {
-      "model": "additionallanterns:block/light_gray_diorite_hanging_lantern"
+    "hanging=true,redstone=false,on=false": {
+      "model": "additionallanterns:block/light_gray_diorite_hanging_lantern_off"
     },
     "hanging=false,redstone=false,on=false": {
-      "model": "additionallanterns:block/light_gray_diorite_lantern_off"
-    },
-    "hanging=false,redstone=true,on=true": {
       "model": "additionallanterns:block/light_gray_diorite_lantern_off"
     },
     "hanging=true,redstone=true,on=true": {
@@ -18,11 +18,11 @@
     "hanging=false,redstone=true,on=false": {
       "model": "additionallanterns:block/light_gray_diorite_lantern"
     },
-    "hanging=true,redstone=false,on=false": {
-      "model": "additionallanterns:block/light_gray_diorite_hanging_lantern_off"
+    "hanging=true,redstone=true,on=false": {
+      "model": "additionallanterns:block/light_gray_diorite_hanging_lantern"
     },
-    "hanging=false,redstone=false,on=true": {
-      "model": "additionallanterns:block/light_gray_diorite_lantern"
+    "hanging=false,redstone=true,on=true": {
+      "model": "additionallanterns:block/light_gray_diorite_lantern_off"
     }
   }
 }

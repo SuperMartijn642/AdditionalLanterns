@@ -1,17 +1,15 @@
 package com.supermartijn642.additionallanterns;
 
+import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.event.world.BlockEvent;
-import net.minecraftforge.eventbus.api.EventPriority;
+import net.minecraft.world.phys.BlockHitResult;
 
 /**
  * Created 25/01/2023 by SuperMartijn642
@@ -19,19 +17,14 @@ import net.minecraftforge.eventbus.api.EventPriority;
 public class VanillaLanternEvents {
 
     public static void registerEventHandlers(){
-        MinecraftForge.EVENT_BUS.addListener(EventPriority.LOWEST, false, VanillaLanternEvents::handleInteractWithLantern);
-        MinecraftForge.EVENT_BUS.addListener(EventPriority.LOWEST, false, VanillaLanternEvents::handleLanternPlacement);
-        MinecraftForge.EVENT_BUS.addListener(EventPriority.LOWEST, false, VanillaLanternEvents::handleLanternRedstone);
+        UseBlockCallback.EVENT.register(VanillaLanternEvents::handleInteractWithLantern);
     }
 
-    private static void handleInteractWithLantern(PlayerInteractEvent.RightClickBlock e){
-        Level level = e.getWorld();
+    private static InteractionResult handleInteractWithLantern(Player player, Level level, InteractionHand hand, BlockHitResult hitResult){
         // Replace the vanilla lantern with Additional Lantern's lantern when right-clicked
-        BlockPos clickedPos = e.getPos();
+        BlockPos clickedPos = hitResult.getBlockPos();
         BlockState oldState = level.getBlockState(clickedPos);
         if(oldState.getBlock() == Blocks.LANTERN){
-            e.setCanceled(true);
-            e.setCancellationResult(level.isClientSide ? InteractionResult.SUCCESS : InteractionResult.CONSUME);
             if(!level.isClientSide){
                 BlockState newState = LanternMaterial.NORMAL.getLanternBlock().defaultBlockState()
                     .setValue(LanternBlock.ON, false)
@@ -40,37 +33,20 @@ public class VanillaLanternEvents {
                     .setValue(LanternBlock.WATERLOGGED, oldState.getValue(BlockStateProperties.WATERLOGGED));
                 level.setBlock(clickedPos, newState, 1 | 2);
             }
+            return level.isClientSide ? InteractionResult.SUCCESS : InteractionResult.CONSUME;
         }
+        return InteractionResult.PASS;
     }
 
-    private static void handleLanternPlacement(BlockEvent.EntityPlaceEvent e){
-        LevelAccessor level = e.getWorld();
-        // Replace Additional Lantern's lantern with the vanilla lantern when it's on and not powered
-        if(!level.isClientSide()){
-            BlockState oldState = e.getPlacedBlock();
-            if(oldState.getBlock() == LanternMaterial.NORMAL.getLanternBlock() && oldState.getValue(LanternBlock.ON) && !oldState.getValue(LanternBlock.REDSTONE)){
-                BlockState newState = Blocks.LANTERN.defaultBlockState()
-                    .setValue(BlockStateProperties.HANGING, oldState.getValue(LanternBlock.HANGING))
-                    .setValue(BlockStateProperties.WATERLOGGED, oldState.getValue(LanternBlock.WATERLOGGED));
-                level.setBlock(e.getPos(), newState, 1 | 2);
-            }
-        }
-    }
-
-    private static void handleLanternRedstone(BlockEvent.NeighborNotifyEvent e){
-        LevelAccessor level = e.getWorld();
-        BlockPos originatingPos = e.getPos();
-        for(Direction direction : e.getNotifiedSides()){
-            BlockPos pos = originatingPos.relative(direction);
-            BlockState oldState = level.getBlockState(pos);
-            // Replace the vanilla lantern with Additional Lantern's lantern when it's powered
-            if(oldState.getBlock() == Blocks.LANTERN && level instanceof Level && ((Level)level).hasNeighborSignal(pos)){
-                BlockState newState = LanternMaterial.NORMAL.getLanternBlock().defaultBlockState()
-                    .setValue(LanternBlock.REDSTONE, true)
-                    .setValue(LanternBlock.HANGING, oldState.getValue(BlockStateProperties.HANGING))
-                    .setValue(LanternBlock.WATERLOGGED, oldState.getValue(BlockStateProperties.WATERLOGGED));
-                level.setBlock(pos, newState, 1 | 2);
-            }
+    public static void handleLanternRedstone(Level level, BlockPos pos){
+        BlockState oldState = level.getBlockState(pos);
+        // Replace the vanilla lantern with Additional Lantern's lantern when it's powered
+        if(oldState.getBlock() == Blocks.LANTERN && level.hasNeighborSignal(pos)){
+            BlockState newState = LanternMaterial.NORMAL.getLanternBlock().defaultBlockState()
+                .setValue(LanternBlock.REDSTONE, true)
+                .setValue(LanternBlock.HANGING, oldState.getValue(BlockStateProperties.HANGING))
+                .setValue(LanternBlock.WATERLOGGED, oldState.getValue(BlockStateProperties.WATERLOGGED));
+            level.setBlock(pos, newState, 1 | 2);
         }
     }
 }
