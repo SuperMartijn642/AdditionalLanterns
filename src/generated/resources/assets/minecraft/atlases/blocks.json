@@ -1,0 +1,300 @@
+{
+  "sources": [
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/bricks_lantern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/colors/gray_lantern_off"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/colors/brown_lantern_off"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/crimson_chain"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/dark_prismarine_chain"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/normal_nether_bricks_lantern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/end_stone_lantern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/lantern_off"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/red_nether_bricks_lantern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/colors/white_lantern_off"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/normal_sandstone_lantern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/obsidian_chain"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/colors/pink_lantern_off"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/colors/black_lantern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/smooth_stone_chain"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/colors/purple_lantern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/dark_prismarine_lantern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/andesite_lantern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/crimson_lantern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/colors/magenta_lantern_off"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/andesite_chain"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:block/chain"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/diorite_chain"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/colors/yellow_lantern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/colors/green_lantern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/colors/magenta_lantern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/colors/light_gray_lantern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/colors/yellow_lantern_off"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/diorite_lantern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:block/lantern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/granite_chain"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/quartz_lantern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/colors/blue_lantern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/purpur_lantern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/colors/lime_lantern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/smooth_stone_lantern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/blackstone_lantern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/colors/lime_lantern_off"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/colors/gray_lantern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/warped_chain"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/colors/orange_lantern_off"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/basalt_lantern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/normal_lantern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/normal_nether_bricks_chain"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/granite_lantern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/end_stone_chain"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/obsidian_lantern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/colors/orange_lantern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/normal_sandstone_chain"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/colors/white_lantern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/colors/red_lantern_off"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/colors/light_blue_lantern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/blackstone_chain"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/colors/cyan_lantern_off"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/colors/light_gray_lantern_off"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/prismarine_chain"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/purpur_chain"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/colors/cyan_lantern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/colors/blue_lantern_off"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/colors/purple_lantern_off"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/red_sandstone_lantern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/basalt_chain"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/red_nether_bricks_chain"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/prismarine_lantern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/colors/light_blue_lantern_off"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/colors/green_lantern_off"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/colors/brown_lantern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/colors/black_lantern_off"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/colors/red_lantern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/warped_lantern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/bricks_chain"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/quartz_chain"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/colors/pink_lantern"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/red_sandstone_chain"
+    }
+  ]
+}

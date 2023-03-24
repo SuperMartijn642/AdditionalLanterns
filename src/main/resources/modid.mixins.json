@@ -4,7 +4,8 @@
   "package": "${mod_package}.${mixin_package}",
   "compatibilityLevel": "${mixin_compatibility_level}",
   "mixins": [
-    "LevelMixin"
+    "LevelMixin",
+    "ServerLevelMixin"
   ],
   "client": [],
   "server": [],
