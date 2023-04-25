@@ -64,10 +64,12 @@ public class LanternBlock extends net.minecraft.world.level.block.LanternBlock {
     @Nullable
     public BlockState getStateForPlacement(BlockPlaceContext context){
         BlockState state = super.getStateForPlacement(context);
+        if(state == null)
+            return null;
         boolean redstone = context.getLevel().hasNeighborSignal(context.getClickedPos());
         if(!redstone && this.material == LanternMaterial.NORMAL && this.color == null)
             return Blocks.LANTERN.defaultBlockState().setValue(BlockStateProperties.HANGING, state.getValue(HANGING)).setValue(BlockStateProperties.WATERLOGGED, state.getValue(WATERLOGGED));
-        return state == null ? null : state.setValue(REDSTONE, context.getLevel().hasNeighborSignal(context.getClickedPos()));
+        return state.setValue(REDSTONE, redstone);
     }
 
     public void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos neighborPos, boolean p_220069_6_){
