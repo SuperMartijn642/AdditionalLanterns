@@ -1,3 +1,6 @@
+### Additional Lanterns 1.0.5
+- Fixed normal lantern redstone interaction
+
 ### Additional Lanterns 1.0.4a
 - Fixed missing recipe for the regular lantern
 
