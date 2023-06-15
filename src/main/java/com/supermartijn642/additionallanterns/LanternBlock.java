@@ -92,11 +92,11 @@ public class LanternBlock extends net.minecraft.block.LanternBlock implements IW
 
     public void neighborChanged(BlockState state, World level, BlockPos pos, Block block, BlockPos neighborPos, boolean p_220069_6_){
         if(!level.isClientSide){
-            boolean redstone = state.getValue(REDSTONE);
+            boolean redstone = level.hasNeighborSignal(pos);
             if(this.material == LanternMaterial.NORMAL && this.color == null && state.getValue(ON) && !redstone && !state.getValue(WATERLOGGED))
                 level.setBlock(pos, Blocks.LANTERN.defaultBlockState().setValue(BlockStateProperties.HANGING, state.getValue(HANGING)), 1 | 2 | 4);
-            else if(redstone != level.hasNeighborSignal(pos))
-                level.setBlock(pos, state.setValue(REDSTONE, !redstone), 1 | 2 | 4);
+            else if(state.getValue(REDSTONE) != redstone)
+                level.setBlock(pos, state.setValue(REDSTONE, redstone), 1 | 2 | 4);
         }
     }
 
