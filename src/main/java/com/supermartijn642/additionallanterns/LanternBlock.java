@@ -69,11 +69,11 @@ public class LanternBlock extends net.minecraft.block.LanternBlock {
 
     public void neighborChanged(BlockState state, World world, BlockPos pos, Block block, BlockPos neighborPos, boolean p_220069_6_){
         if(!world.isClientSide){
-            boolean redstone = state.getValue(REDSTONE);
+            boolean redstone = world.hasNeighborSignal(pos);
             if(this.material == LanternMaterial.NORMAL && this.color == null && state.getValue(ON) && !redstone)
                 world.setBlock(pos, Blocks.LANTERN.defaultBlockState().setValue(BlockStateProperties.HANGING, state.getValue(HANGING)).setValue(BlockStateProperties.WATERLOGGED, state.getValue(WATERLOGGED)), 1 | 2 | 4);
-            else if(redstone != world.hasNeighborSignal(pos))
-                world.setBlock(pos, state.setValue(REDSTONE, !redstone), 1 | 2 | 4);
+            else if(state.getValue(REDSTONE) != redstone)
+                world.setBlock(pos, state.setValue(REDSTONE, redstone), 1 | 2 | 4);
         }
     }
 
