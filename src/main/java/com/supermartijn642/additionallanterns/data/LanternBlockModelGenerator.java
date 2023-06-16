@@ -107,4 +107,9 @@ public class LanternBlockModelGenerator extends ModelGenerator {
             return new ResourceLocation("minecraft", "block/chain");
         return new ResourceLocation("additionallanterns", "block/materials/" + material.getSuffix() + "_chain");
     }
+
+    @Override
+    public String getName(){
+        return this.modName + " Block Model Generator";
+    }
 }
