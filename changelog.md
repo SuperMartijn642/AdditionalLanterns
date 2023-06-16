@@ -1,3 +1,6 @@
+### Additional Lanterns 1.0.5
+- Fixed normal lantern redstone interaction
+
 ### Additional Lanterns 1.0.4
 - Added Italian translations (thanks to Draconix_Dust!)
 - Added Ukrainian translations (thanks to Nezila!)
