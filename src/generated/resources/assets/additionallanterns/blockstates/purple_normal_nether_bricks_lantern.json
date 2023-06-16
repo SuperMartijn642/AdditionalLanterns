@@ -1,28 +1,28 @@
 {
   "variants": {
-    "hanging=false,redstone=false,on=false": {
-      "model": "additionallanterns:block/purple_normal_nether_bricks_lantern_off"
-    },
-    "hanging=false,redstone=true,on=false": {
-      "model": "additionallanterns:block/purple_normal_nether_bricks_lantern"
-    },
-    "hanging=false,redstone=false,on=true": {
-      "model": "additionallanterns:block/purple_normal_nether_bricks_lantern"
-    },
-    "hanging=true,redstone=false,on=true": {
-      "model": "additionallanterns:block/purple_normal_nether_bricks_hanging_lantern"
-    },
-    "hanging=true,redstone=true,on=false": {
-      "model": "additionallanterns:block/purple_normal_nether_bricks_hanging_lantern"
-    },
-    "hanging=false,redstone=true,on=true": {
-      "model": "additionallanterns:block/purple_normal_nether_bricks_lantern_off"
-    },
-    "hanging=true,redstone=true,on=true": {
+    "on=true,redstone=true,hanging=true": {
       "model": "additionallanterns:block/purple_normal_nether_bricks_hanging_lantern_off"
     },
-    "hanging=true,redstone=false,on=false": {
+    "on=true,redstone=false,hanging=true": {
+      "model": "additionallanterns:block/purple_normal_nether_bricks_hanging_lantern"
+    },
+    "on=false,redstone=true,hanging=true": {
+      "model": "additionallanterns:block/purple_normal_nether_bricks_hanging_lantern"
+    },
+    "on=false,redstone=false,hanging=true": {
       "model": "additionallanterns:block/purple_normal_nether_bricks_hanging_lantern_off"
+    },
+    "on=true,redstone=true,hanging=false": {
+      "model": "additionallanterns:block/purple_normal_nether_bricks_lantern_off"
+    },
+    "on=true,redstone=false,hanging=false": {
+      "model": "additionallanterns:block/purple_normal_nether_bricks_lantern"
+    },
+    "on=false,redstone=true,hanging=false": {
+      "model": "additionallanterns:block/purple_normal_nether_bricks_lantern"
+    },
+    "on=false,redstone=false,hanging=false": {
+      "model": "additionallanterns:block/purple_normal_nether_bricks_lantern_off"
     }
   }
 }
