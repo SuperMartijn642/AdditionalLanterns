@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "additionallanterns:magenta_waxed_copper_lantern",
+    "additionallanterns:yellow_waxed_copper_lantern",
+    "additionallanterns:green_waxed_copper_lantern",
+    "additionallanterns:black_waxed_copper_lantern",
+    "additionallanterns:brown_waxed_copper_lantern",
+    "additionallanterns:waxed_copper_lantern",
+    "additionallanterns:white_waxed_copper_lantern",
+    "additionallanterns:lime_waxed_copper_lantern",
+    "additionallanterns:red_waxed_copper_lantern",
+    "additionallanterns:orange_waxed_copper_lantern",
+    "additionallanterns:light_gray_waxed_copper_lantern",
+    "additionallanterns:purple_waxed_copper_lantern",
+    "additionallanterns:light_blue_waxed_copper_lantern",
+    "additionallanterns:cyan_waxed_copper_lantern",
+    "additionallanterns:blue_waxed_copper_lantern",
+    "additionallanterns:pink_waxed_copper_lantern",
+    "additionallanterns:gray_waxed_copper_lantern"
+  ]
+}
