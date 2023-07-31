@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "additionallanterns:netherite_lanterns"
+    },
+    {
+      "tag": "c:gray_dyes"
+    }
+  ],
+  "result": {
+    "item": "additionallanterns:gray_netherite_lantern"
+  }
+}

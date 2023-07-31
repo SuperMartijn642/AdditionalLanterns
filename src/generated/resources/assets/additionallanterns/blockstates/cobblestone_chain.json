@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "additionallanterns:block/cobblestone_chain",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "additionallanterns:block/cobblestone_chain"
+    },
+    "axis=z": {
+      "model": "additionallanterns:block/cobblestone_chain",
+      "x": 90
+    }
+  }
+}

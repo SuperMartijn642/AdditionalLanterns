@@ -1,27 +1,27 @@
 {
   "variants": {
-    "redstone=true,on=true,hanging=true": {
+    "on=true,hanging=true,redstone=true": {
       "model": "additionallanterns:block/light_blue_smooth_stone_hanging_lantern_off"
     },
-    "redstone=false,on=true,hanging=true": {
+    "on=true,hanging=true,redstone=false": {
       "model": "additionallanterns:block/light_blue_smooth_stone_hanging_lantern"
     },
-    "redstone=true,on=false,hanging=true": {
+    "on=false,hanging=true,redstone=true": {
       "model": "additionallanterns:block/light_blue_smooth_stone_hanging_lantern"
     },
-    "redstone=false,on=false,hanging=true": {
+    "on=false,hanging=true,redstone=false": {
       "model": "additionallanterns:block/light_blue_smooth_stone_hanging_lantern_off"
     },
-    "redstone=true,on=true,hanging=false": {
+    "on=true,hanging=false,redstone=true": {
       "model": "additionallanterns:block/light_blue_smooth_stone_lantern_off"
     },
-    "redstone=false,on=true,hanging=false": {
+    "on=true,hanging=false,redstone=false": {
       "model": "additionallanterns:block/light_blue_smooth_stone_lantern"
     },
-    "redstone=true,on=false,hanging=false": {
+    "on=false,hanging=false,redstone=true": {
       "model": "additionallanterns:block/light_blue_smooth_stone_lantern"
     },
-    "redstone=false,on=false,hanging=false": {
+    "on=false,hanging=false,redstone=false": {
       "model": "additionallanterns:block/light_blue_smooth_stone_lantern_off"
     }
   }

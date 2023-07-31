@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "additionallanterns:emerald_lanterns"
+    },
+    {
+      "tag": "c:cyan_dyes"
+    }
+  ],
+  "result": {
+    "item": "additionallanterns:cyan_emerald_lantern"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "additionallanterns:stone_bricks_lanterns"
+    },
+    {
+      "tag": "c:white_dyes"
+    }
+  ],
+  "result": {
+    "item": "additionallanterns:white_stone_bricks_lantern"
+  }
+}

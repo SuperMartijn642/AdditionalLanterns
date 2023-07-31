@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "additionallanterns:bone_lanterns"
+    },
+    {
+      "tag": "c:white_dyes"
+    }
+  ],
+  "result": {
+    "item": "additionallanterns:white_bone_lantern"
+  }
+}
