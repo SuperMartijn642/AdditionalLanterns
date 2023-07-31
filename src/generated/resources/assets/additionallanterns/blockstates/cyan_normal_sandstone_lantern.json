@@ -1,27 +1,27 @@
 {
   "variants": {
-    "hanging=true,on=true,redstone=true": {
+    "redstone=true,hanging=true,on=true": {
       "model": "additionallanterns:block/cyan_normal_sandstone_hanging_lantern_off"
     },
-    "hanging=true,on=true,redstone=false": {
+    "redstone=false,hanging=true,on=true": {
       "model": "additionallanterns:block/cyan_normal_sandstone_hanging_lantern"
     },
-    "hanging=true,on=false,redstone=true": {
+    "redstone=true,hanging=true,on=false": {
       "model": "additionallanterns:block/cyan_normal_sandstone_hanging_lantern"
     },
-    "hanging=true,on=false,redstone=false": {
+    "redstone=false,hanging=true,on=false": {
       "model": "additionallanterns:block/cyan_normal_sandstone_hanging_lantern_off"
     },
-    "hanging=false,on=true,redstone=true": {
+    "redstone=true,hanging=false,on=true": {
       "model": "additionallanterns:block/cyan_normal_sandstone_lantern_off"
     },
-    "hanging=false,on=true,redstone=false": {
+    "redstone=false,hanging=false,on=true": {
       "model": "additionallanterns:block/cyan_normal_sandstone_lantern"
     },
-    "hanging=false,on=false,redstone=true": {
+    "redstone=true,hanging=false,on=false": {
       "model": "additionallanterns:block/cyan_normal_sandstone_lantern"
     },
-    "hanging=false,on=false,redstone=false": {
+    "redstone=false,hanging=false,on=false": {
       "model": "additionallanterns:block/cyan_normal_sandstone_lantern_off"
     }
   }

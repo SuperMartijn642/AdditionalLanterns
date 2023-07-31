@@ -1,0 +1,7 @@
+{
+  "parent": "additionallanterns:block/lantern",
+  "textures": {
+    "material": "additionallanterns:block/materials/gold_lantern",
+    "color": "additionallanterns:block/colors/brown_lantern"
+  }
+}
