@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " A ",
+    "ACA",
+    " A "
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:cobbled_deepslate"
+    },
+    "C": {
+      "item": "minecraft:torch"
+    }
+  },
+  "result": {
+    "item": "additionallanterns:cobbled_deepslate_lantern"
+  }
+}

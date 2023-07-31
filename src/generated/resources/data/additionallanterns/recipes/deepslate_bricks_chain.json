@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "B",
+    "A",
+    "B"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:deepslate_bricks"
+    },
+    "B": {
+      "item": "minecraft:deepslate_bricks"
+    }
+  },
+  "result": {
+    "item": "additionallanterns:deepslate_bricks_chain",
+    "count": 8
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "additionallanterns:block/waxed_exposed_copper_chain",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "additionallanterns:block/waxed_exposed_copper_chain"
+    },
+    "axis=z": {
+      "model": "additionallanterns:block/waxed_exposed_copper_chain",
+      "x": 90
+    }
+  }
+}

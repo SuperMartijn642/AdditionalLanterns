@@ -1,0 +1,47 @@
+{
+  "parent": "minecraft:recipes/root",
+  "display": {
+    "icon": {
+      "item": "additionallanterns:blue_bone_lantern"
+    },
+    "title": {
+      "translate": "additionallanterns.advancement.recipes/additionallanterns/bone_lantern_blue.title"
+    },
+    "description": {
+      "translate": "additionallanterns.advancement.recipes/additionallanterns/bone_lantern_blue.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "additionallanterns:bone_lantern_blue"
+      }
+    },
+    "recipe_condition": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "additionallanterns:bone_lanterns"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "recipe_condition"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "additionallanterns:bone_lantern_blue"
+    ]
+  }
+}

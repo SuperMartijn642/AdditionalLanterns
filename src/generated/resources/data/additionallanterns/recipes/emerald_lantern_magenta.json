@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "additionallanterns:emerald_lanterns"
+    },
+    {
+      "tag": "forge:dyes/magenta"
+    }
+  ],
+  "result": {
+    "item": "additionallanterns:magenta_emerald_lantern"
+  }
+}

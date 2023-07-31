@@ -1,0 +1,7 @@
+{
+  "parent": "additionallanterns:block/hanging_lantern",
+  "textures": {
+    "material": "additionallanterns:block/materials/oxidized_copper_lantern",
+    "color": "additionallanterns:block/colors/green_lantern_off"
+  }
+}
