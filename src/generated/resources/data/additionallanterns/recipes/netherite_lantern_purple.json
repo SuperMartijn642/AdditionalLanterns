@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "additionallanterns:netherite_lanterns"
+    },
+    {
+      "tag": "c:purple_dyes"
+    }
+  ],
+  "result": {
+    "item": "additionallanterns:purple_netherite_lantern"
+  }
+}

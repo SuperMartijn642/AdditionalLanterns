@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "additionallanterns:waxed_exposed_copper_lanterns"
+    }
+  ],
+  "result": {
+    "item": "additionallanterns:waxed_exposed_copper_lantern"
+  }
+}

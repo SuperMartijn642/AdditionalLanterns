@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "additionallanterns:stone_lanterns"
+    },
+    {
+      "tag": "c:red_dyes"
+    }
+  ],
+  "result": {
+    "item": "additionallanterns:red_stone_lantern"
+  }
+}

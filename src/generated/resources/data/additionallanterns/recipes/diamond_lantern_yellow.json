@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "additionallanterns:diamond_lanterns"
+    },
+    {
+      "tag": "c:yellow_dyes"
+    }
+  ],
+  "result": {
+    "item": "additionallanterns:yellow_diamond_lantern"
+  }
+}

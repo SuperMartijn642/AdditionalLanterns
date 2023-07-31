@@ -1,0 +1,6 @@
+{
+  "parent": "additionallanterns:block/chain",
+  "textures": {
+    "chain": "additionallanterns:block/materials/waxed_exposed_copper_chain"
+  }
+}

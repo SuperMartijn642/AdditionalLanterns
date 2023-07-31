@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "additionallanterns:cobblestone_lanterns"
+    },
+    {
+      "tag": "c:yellow_dyes"
+    }
+  ],
+  "result": {
+    "item": "additionallanterns:yellow_cobblestone_lantern"
+  }
+}
