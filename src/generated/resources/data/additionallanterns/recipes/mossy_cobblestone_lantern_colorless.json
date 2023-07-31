@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "additionallanterns:mossy_cobblestone_lanterns"
+    }
+  ],
+  "result": {
+    "item": "additionallanterns:mossy_cobblestone_lantern"
+  }
+}

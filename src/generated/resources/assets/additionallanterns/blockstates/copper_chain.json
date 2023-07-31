@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "additionallanterns:block/copper_chain",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "additionallanterns:block/copper_chain"
+    },
+    "axis=z": {
+      "model": "additionallanterns:block/copper_chain",
+      "x": 90
+    }
+  }
+}
