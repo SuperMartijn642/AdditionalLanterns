@@ -6,6 +6,7 @@ import com.supermartijn642.core.item.CreativeItemGroup;
 import com.supermartijn642.core.registry.GeneratorRegistrationHandler;
 import com.supermartijn642.core.registry.RegistrationHandler;
 import net.minecraftforge.fml.common.Mod;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Created 7/7/2020 by SuperMartijn642
@@ -14,6 +15,7 @@ import net.minecraftforge.fml.common.Mod;
 public class AdditionalLanterns {
 
     public static final CreativeItemGroup GROUP = CreativeItemGroup.create("additionallanterns", () -> LanternMaterial.NORMAL.getLanternBlock());
+    public static final Logger LOGGER = CommonUtils.getLogger("additionallanterns");
 
     public AdditionalLanterns(){
         register();
