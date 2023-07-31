@@ -62,4 +62,9 @@ public class LanternItemModelGenerator extends ModelGenerator {
     public static ResourceLocation getChainParentModelLocation(LanternMaterial material){
         return new ResourceLocation("additionallanterns", "block/" + material.getSuffix() + "_chain");
     }
+
+    @Override
+    public String getName(){
+        return this.modName + " Item Model Generator";
+    }
 }
