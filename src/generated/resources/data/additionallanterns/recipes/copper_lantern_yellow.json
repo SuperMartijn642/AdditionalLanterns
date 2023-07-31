@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "additionallanterns:copper_lanterns"
+    },
+    {
+      "tag": "c:yellow_dyes"
+    }
+  ],
+  "result": {
+    "item": "additionallanterns:yellow_copper_lantern"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "additionallanterns:gold_lanterns"
+    },
+    {
+      "tag": "c:blue_dyes"
+    }
+  ],
+  "result": {
+    "item": "additionallanterns:blue_gold_lantern"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "additionallanterns:deepslate_bricks_lanterns"
+    },
+    {
+      "tag": "c:pink_dyes"
+    }
+  ],
+  "result": {
+    "item": "additionallanterns:pink_deepslate_bricks_lantern"
+  }
+}

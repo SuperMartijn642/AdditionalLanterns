@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "additionallanterns:pink_deepslate_bricks_lantern",
+    "additionallanterns:light_blue_deepslate_bricks_lantern",
+    "additionallanterns:yellow_deepslate_bricks_lantern",
+    "additionallanterns:light_gray_deepslate_bricks_lantern",
+    "additionallanterns:white_deepslate_bricks_lantern",
+    "additionallanterns:blue_deepslate_bricks_lantern",
+    "additionallanterns:brown_deepslate_bricks_lantern",
+    "additionallanterns:lime_deepslate_bricks_lantern",
+    "additionallanterns:orange_deepslate_bricks_lantern",
+    "additionallanterns:black_deepslate_bricks_lantern",
+    "additionallanterns:deepslate_bricks_lantern",
+    "additionallanterns:green_deepslate_bricks_lantern",
+    "additionallanterns:red_deepslate_bricks_lantern",
+    "additionallanterns:gray_deepslate_bricks_lantern",
+    "additionallanterns:magenta_deepslate_bricks_lantern",
+    "additionallanterns:purple_deepslate_bricks_lantern",
+    "additionallanterns:cyan_deepslate_bricks_lantern"
+  ]
+}

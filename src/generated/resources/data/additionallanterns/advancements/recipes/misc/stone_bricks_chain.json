@@ -1,0 +1,49 @@
+{
+  "parent": "minecraft:recipes/root",
+  "display": {
+    "icon": {
+      "item": "additionallanterns:stone_bricks_chain"
+    },
+    "title": {
+      "translate": "additionallanterns.advancement.recipes/misc/stone_bricks_chain.title"
+    },
+    "description": {
+      "translate": "additionallanterns.advancement.recipes/misc/stone_bricks_chain.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "additionallanterns:stone_bricks_chain"
+      }
+    },
+    "recipe_condition": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:stone_bricks"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "recipe_condition"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "additionallanterns:stone_bricks_chain"
+    ]
+  }
+}
