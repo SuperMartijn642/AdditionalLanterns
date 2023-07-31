@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "additionallanterns:cobbled_deepslate_lanterns"
+    },
+    {
+      "tag": "c:magenta_dyes"
+    }
+  ],
+  "result": {
+    "item": "additionallanterns:magenta_cobbled_deepslate_lantern"
+  }
+}

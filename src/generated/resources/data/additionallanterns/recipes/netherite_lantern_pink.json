@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "additionallanterns:netherite_lanterns"
+    },
+    {
+      "tag": "c:pink_dyes"
+    }
+  ],
+  "result": {
+    "item": "additionallanterns:pink_netherite_lantern"
+  }
+}
