@@ -1,0 +1,25 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    " A ",
+    "ACA",
+    " A "
+  ],
+  "key": {
+    "A": [
+      {
+        "type": "minecraft:item",
+        "item": "minecraft:iron_ingot"
+      }
+    ],
+    "C": [
+      {
+        "type": "minecraft:item",
+        "item": "minecraft:torch"
+      }
+    ]
+  },
+  "result": {
+    "item": "additionallanterns:iron_lantern"
+  }
+}

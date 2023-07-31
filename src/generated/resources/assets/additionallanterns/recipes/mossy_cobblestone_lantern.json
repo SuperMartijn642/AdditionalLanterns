@@ -1,0 +1,25 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    " A ",
+    "ACA",
+    " A "
+  ],
+  "key": {
+    "A": [
+      {
+        "type": "minecraft:item",
+        "item": "minecraft:mossy_cobblestone"
+      }
+    ],
+    "C": [
+      {
+        "type": "minecraft:item",
+        "item": "minecraft:torch"
+      }
+    ]
+  },
+  "result": {
+    "item": "additionallanterns:mossy_cobblestone_lantern"
+  }
+}

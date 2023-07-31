@@ -1,0 +1,12 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "diamond_lanterns"
+    }
+  ],
+  "result": {
+    "item": "additionallanterns:diamond_lantern"
+  }
+}

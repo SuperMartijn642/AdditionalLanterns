@@ -1,0 +1,26 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "B",
+    "A",
+    "B"
+  ],
+  "key": {
+    "A": [
+      {
+        "type": "minecraft:item",
+        "item": "minecraft:emerald"
+      }
+    ],
+    "B": [
+      {
+        "type": "minecraft:item",
+        "item": "minecraft:emerald"
+      }
+    ]
+  },
+  "result": {
+    "item": "additionallanterns:emerald_chain",
+    "count": 4
+  }
+}

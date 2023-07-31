@@ -1,9 +1,18 @@
 {
   "variants": {
+    "hanging=true,on=true,redstone=true": {
+      "model": "additionallanterns:gray_prismarine_hanging_lantern_off"
+    },
+    "hanging=true,on=true,redstone=false": {
+      "model": "additionallanterns:gray_prismarine_hanging_lantern"
+    },
     "hanging=true,on=false,redstone=true": {
       "model": "additionallanterns:gray_prismarine_hanging_lantern"
     },
-    "hanging=false,on=false,redstone=false": {
+    "hanging=true,on=false,redstone=false": {
+      "model": "additionallanterns:gray_prismarine_hanging_lantern_off"
+    },
+    "hanging=false,on=true,redstone=true": {
       "model": "additionallanterns:gray_prismarine_lantern_off"
     },
     "hanging=false,on=true,redstone=false": {
@@ -12,17 +21,8 @@
     "hanging=false,on=false,redstone=true": {
       "model": "additionallanterns:gray_prismarine_lantern"
     },
-    "hanging=true,on=true,redstone=false": {
-      "model": "additionallanterns:gray_prismarine_hanging_lantern"
-    },
-    "hanging=false,on=true,redstone=true": {
+    "hanging=false,on=false,redstone=false": {
       "model": "additionallanterns:gray_prismarine_lantern_off"
-    },
-    "hanging=true,on=false,redstone=false": {
-      "model": "additionallanterns:gray_prismarine_hanging_lantern_off"
-    },
-    "hanging=true,on=true,redstone=true": {
-      "model": "additionallanterns:gray_prismarine_hanging_lantern_off"
     }
   }
 }

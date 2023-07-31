@@ -1,0 +1,45 @@
+{
+  "parent": "minecraft:recipes/root",
+  "display": {
+    "icon": {
+      "item": "additionallanterns:light_blue_diamond_lantern"
+    },
+    "title": {
+      "translate": "additionallanterns.advancement.recipes/diamond_lantern_light_blue.title"
+    },
+    "description": {
+      "translate": "additionallanterns.advancement.recipes/diamond_lantern_light_blue.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "additionallanterns:diamond_lantern_light_blue"
+      }
+    },
+    "recipe_condition": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          null
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "recipe_condition"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "additionallanterns:diamond_lantern_light_blue"
+    ]
+  }
+}

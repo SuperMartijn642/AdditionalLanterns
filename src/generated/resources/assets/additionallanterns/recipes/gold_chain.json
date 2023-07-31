@@ -1,0 +1,26 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "B",
+    "A",
+    "B"
+  ],
+  "key": {
+    "A": [
+      {
+        "type": "minecraft:item",
+        "item": "minecraft:gold_ingot"
+      }
+    ],
+    "B": [
+      {
+        "type": "minecraft:item",
+        "item": "minecraft:gold_nugget"
+      }
+    ]
+  },
+  "result": {
+    "item": "additionallanterns:gold_chain",
+    "count": 6
+  }
+}

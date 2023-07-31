@@ -1,10 +1,19 @@
 {
   "variants": {
-    "hanging=false,on=false,redstone=false": {
-      "model": "additionallanterns:pink_normal_lantern_off"
+    "hanging=true,on=true,redstone=true": {
+      "model": "additionallanterns:pink_normal_hanging_lantern_off"
     },
     "hanging=true,on=true,redstone=false": {
       "model": "additionallanterns:pink_normal_hanging_lantern"
+    },
+    "hanging=true,on=false,redstone=true": {
+      "model": "additionallanterns:pink_normal_hanging_lantern"
+    },
+    "hanging=true,on=false,redstone=false": {
+      "model": "additionallanterns:pink_normal_hanging_lantern_off"
+    },
+    "hanging=false,on=true,redstone=true": {
+      "model": "additionallanterns:pink_normal_lantern_off"
     },
     "hanging=false,on=true,redstone=false": {
       "model": "additionallanterns:pink_normal_lantern"
@@ -12,17 +21,8 @@
     "hanging=false,on=false,redstone=true": {
       "model": "additionallanterns:pink_normal_lantern"
     },
-    "hanging=true,on=true,redstone=true": {
-      "model": "additionallanterns:pink_normal_hanging_lantern_off"
-    },
-    "hanging=true,on=false,redstone=true": {
-      "model": "additionallanterns:pink_normal_hanging_lantern"
-    },
-    "hanging=false,on=true,redstone=true": {
+    "hanging=false,on=false,redstone=false": {
       "model": "additionallanterns:pink_normal_lantern_off"
-    },
-    "hanging=true,on=false,redstone=false": {
-      "model": "additionallanterns:pink_normal_hanging_lantern_off"
     }
   }
 }

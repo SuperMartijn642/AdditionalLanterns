@@ -1,28 +1,28 @@
 {
   "variants": {
-    "hanging=true,on=false,redstone=true": {
-      "model": "additionallanterns:red_andesite_hanging_lantern"
-    },
-    "hanging=false,on=true,redstone=true": {
-      "model": "additionallanterns:red_andesite_lantern_off"
+    "hanging=true,on=true,redstone=true": {
+      "model": "additionallanterns:red_andesite_hanging_lantern_off"
     },
     "hanging=true,on=true,redstone=false": {
       "model": "additionallanterns:red_andesite_hanging_lantern"
     },
-    "hanging=false,on=false,redstone=true": {
-      "model": "additionallanterns:red_andesite_lantern"
-    },
-    "hanging=true,on=true,redstone=true": {
-      "model": "additionallanterns:red_andesite_hanging_lantern_off"
+    "hanging=true,on=false,redstone=true": {
+      "model": "additionallanterns:red_andesite_hanging_lantern"
     },
     "hanging=true,on=false,redstone=false": {
       "model": "additionallanterns:red_andesite_hanging_lantern_off"
     },
-    "hanging=false,on=false,redstone=false": {
+    "hanging=false,on=true,redstone=true": {
       "model": "additionallanterns:red_andesite_lantern_off"
     },
     "hanging=false,on=true,redstone=false": {
       "model": "additionallanterns:red_andesite_lantern"
+    },
+    "hanging=false,on=false,redstone=true": {
+      "model": "additionallanterns:red_andesite_lantern"
+    },
+    "hanging=false,on=false,redstone=false": {
+      "model": "additionallanterns:red_andesite_lantern_off"
     }
   }
 }

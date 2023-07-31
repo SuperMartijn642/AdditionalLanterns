@@ -1,0 +1,16 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "cobblestone_lanterns"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "dyeYellow"
+    }
+  ],
+  "result": {
+    "item": "additionallanterns:yellow_cobblestone_lantern"
+  }
+}
