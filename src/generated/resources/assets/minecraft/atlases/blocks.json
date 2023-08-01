@@ -262,6 +262,10 @@
     },
     {
       "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/mossy_cobblestone_chain"
+    },
+    {
+      "type": "minecraft:single",
       "resource": "additionallanterns:block/colors/black_lantern"
     },
     {
@@ -347,6 +351,10 @@
     {
       "type": "minecraft:single",
       "resource": "additionallanterns:block/colors/orange_lantern_off"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "additionallanterns:block/materials/netherite_chain"
     },
     {
       "type": "minecraft:single",

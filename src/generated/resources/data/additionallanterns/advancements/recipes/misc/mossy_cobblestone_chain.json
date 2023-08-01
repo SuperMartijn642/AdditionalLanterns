@@ -2,13 +2,13 @@
   "parent": "minecraft:recipes/root",
   "display": {
     "icon": {
-      "item": "additionallanterns:copper_chain"
+      "item": "additionallanterns:mossy_cobblestone_chain"
     },
     "title": {
-      "translate": "additionallanterns.advancement.recipes/misc/copper_chain.title"
+      "translate": "additionallanterns.advancement.recipes/misc/mossy_cobblestone_chain.title"
     },
     "description": {
-      "translate": "additionallanterns.advancement.recipes/misc/copper_chain.description"
+      "translate": "additionallanterns.advancement.recipes/misc/mossy_cobblestone_chain.description"
     },
     "frame": "task",
     "show_toast": false,
@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "additionallanterns:copper_chain"
+        "recipe": "additionallanterns:mossy_cobblestone_chain"
       }
     },
     "recipe_condition": {
@@ -28,7 +28,7 @@
         "items": [
           {
             "items": [
-              "minecraft:copper_block"
+              "minecraft:mossy_cobblestone"
             ]
           }
         ]
@@ -43,7 +43,7 @@
   ],
   "rewards": {
     "recipes": [
-      "additionallanterns:copper_chain"
+      "additionallanterns:mossy_cobblestone_chain"
     ]
   }
 }
