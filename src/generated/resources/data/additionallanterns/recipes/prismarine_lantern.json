@@ -1,15 +1,12 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "BAB",
+    " A ",
     "ACA",
-    "BAB"
+    " A "
   ],
   "key": {
     "A": {
-      "item": "minecraft:prismarine_shard"
-    },
-    "B": {
       "item": "minecraft:prismarine_shard"
     },
     "C": {
@@ -17,6 +14,7 @@
     }
   },
   "result": {
-    "item": "additionallanterns:prismarine_lantern"
+    "item": "additionallanterns:prismarine_lantern",
+    "count": 4
   }
 }
