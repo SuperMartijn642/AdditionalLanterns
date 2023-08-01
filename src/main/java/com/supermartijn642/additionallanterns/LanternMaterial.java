@@ -22,47 +22,47 @@ import java.util.Map;
  */
 public enum LanternMaterial {
 
-    AMETHYST(true, true, "Amethyst", () -> Items.AMETHYST_SHARD, () -> Items.AMETHYST_SHARD, () -> Items.AMETHYST_BLOCK, () -> Items.AMETHYST_SHARD, 6),
-    ANDESITE(true, true, "Andesite", () -> Items.ANDESITE, null, () -> Items.ANDESITE, () -> Items.ANDESITE, 8),
-    BASALT(true, true, "Basalt", () -> Items.BASALT, null, () -> Items.BASALT, () -> Items.BASALT, 8),
-    BLACKSTONE(true, true, "Blackstone", () -> Items.BLACKSTONE, null, () -> Items.BLACKSTONE, () -> Items.BLACKSTONE, 4),
-    BONE(true, true, "Bone", () -> Items.BONE, () -> Items.BONE, () -> Items.BONE_BLOCK, () -> Items.BONE, 8),
-    BRICKS(true, true, "Brick", () -> Items.BRICK, () -> Items.BRICK, () -> Items.BRICKS, () -> Items.BRICK, 4),
-    COBBLESTONE(true, true, "Cobblestone", () -> Items.COBBLESTONE, null, () -> Items.COBBLESTONE, () -> Items.COBBLESTONE, 8),
-    COBBLED_DEEPSLATE(true, true, "Cobbled Deepslate", () -> Items.COBBLED_DEEPSLATE, null, () -> Items.COBBLED_DEEPSLATE, () -> Items.COBBLED_DEEPSLATE, 8),
-    COPPER(true, true, "Copper", () -> Items.COPPER_INGOT, null, () -> Items.COPPER_INGOT, () -> Items.COPPER_INGOT, 6),
-    CRIMSON(true, true, "Crimson", () -> Items.CRIMSON_PLANKS, null, () -> Items.CRIMSON_PLANKS, () -> Items.CRIMSON_PLANKS, 6),
-    DARK_PRISMARINE(true, true, "Dark Prismarine", () -> Items.DARK_PRISMARINE, null, () -> Items.DARK_PRISMARINE, () -> Items.PRISMARINE_SHARD, 6),
-    DEEPSLATE_BRICKS(true, true, "Deepslate Bricks", () -> Items.DEEPSLATE_BRICKS, null, () -> Items.DEEPSLATE_BRICKS, () -> Items.DEEPSLATE_BRICKS, 8),
-    DIAMOND(true, true, "Diamond", () -> Items.DIAMOND, null, () -> Items.DIAMOND, () -> Items.DIAMOND, 4),
-    DIORITE(true, true, "Diorite", () -> Items.DIORITE, null, () -> Items.DIORITE, () -> Items.DIORITE, 8),
-    EMERALD(true, true, "Emerald", () -> Items.EMERALD, null, () -> Items.EMERALD, () -> Items.EMERALD, 4),
-    END_STONE(true, true, "End Stone", () -> Items.END_STONE, null, () -> Items.END_STONE, () -> Items.END_STONE, 8),
-    EXPOSED_COPPER(true, true, "Exposed Copper", null, null, null, null, 0),
-    GOLD(true, true, "Gold", () -> Items.GOLD_NUGGET, Items.GOLD_NUGGET, () -> Items.GOLD_INGOT, () -> Items.GOLD_NUGGET, 6),
-    GRANITE(true, true, "Granite", () -> Items.GRANITE, null, () -> Items.GRANITE, () -> Items.GRANITE, 8),
-    IRON(true, false, "Iron", () -> Items.IRON_INGOT, null, null, null, 0),
-    MOSSY_COBBLESTONE(true, false, "Mossy Cobblestone", () -> Items.MOSSY_COBBLESTONE, null, () -> Items.MOSSY_COBBLESTONE, () -> Items.COBBLESTONE, 8),
-    NETHERITE(true, false, "Netherite", () -> Items.NETHERITE_INGOT, null, () -> Items.NETHERITE_INGOT, () -> Items.NETHERITE_INGOT, 8),
-    NORMAL(true, false, "", null, null, null, null, 0),
-    NORMAL_NETHER_BRICKS(true, true, "Nether Brick", () -> Items.NETHER_BRICK, null, () -> Items.NETHER_BRICKS, () -> Items.NETHER_BRICK, 4),
-    NORMAL_SANDSTONE(true, true, "Sandstone", () -> Items.SANDSTONE, null, () -> Items.SANDSTONE, () -> Items.SANDSTONE, 8),
-    OBSIDIAN(true, true, "Obsidian", () -> Items.OBSIDIAN, null, () -> Items.OBSIDIAN, () -> Items.OBSIDIAN, 8),
-    OXIDIZED_COPPER(true, true, "Oxidized Copper", null, null, null, null, 0),
-    PRISMARINE(true, true, "Prismarine", () -> Items.PRISMARINE_SHARD, () -> Items.PRISMARINE_SHARD, () -> Items.PRISMARINE_BRICKS, () -> Items.PRISMARINE_SHARD, 6),
-    PURPUR(true, true, "Purpur", () -> Items.POPPED_CHORUS_FRUIT, () -> Items.POPPED_CHORUS_FRUIT, () -> Items.PURPUR_BLOCK, () -> Items.POPPED_CHORUS_FRUIT, 4),
-    QUARTZ(true, true, "Quartz", () -> Items.QUARTZ, () -> Items.QUARTZ, () -> Items.QUARTZ_BLOCK, () -> Items.QUARTZ, 4),
-    RED_NETHER_BRICKS(true, true, "Red Nether Brick", () -> Items.RED_NETHER_BRICKS, null, () -> Items.RED_NETHER_BRICKS, () -> Items.NETHER_BRICK, 4),
-    RED_SANDSTONE(true, true, "Red Sandstone", () -> Items.RED_SANDSTONE, null, () -> Items.RED_SANDSTONE, () -> Items.RED_SANDSTONE, 8),
-    SMOOTH_STONE(true, true, "Smooth Stone", () -> Items.SMOOTH_STONE, null, () -> Items.SMOOTH_STONE, () -> Items.SMOOTH_STONE, 8),
-    STONE(true, true, "Stone", () -> Items.STONE, null, () -> Items.STONE, () -> Items.STONE, 8),
-    STONE_BRICKS(true, true, "Stone Bricks", () -> Items.STONE_BRICKS, null, () -> Items.STONE_BRICKS, () -> Items.STONE_BRICKS, 8),
-    WARPED(true, true, "Warped", () -> Items.WARPED_PLANKS, null, () -> Items.WARPED_PLANKS, () -> Items.WARPED_PLANKS, 6),
-    WAXED_COPPER(true, true, "Waxed Copper", null, null, null, null, 0),
-    WAXED_EXPOSED_COPPER(true, true, "Waxed Exposed Copper", null, null, null, null, 0),
-    WAXED_OXIDIZED_COPPER(true, true, "Waxed Oxidized Copper", null, null, null, null, 0),
-    WAXED_WEATHERED_COPPER(true, true, "Waxed Weathered Copper", null, null, null, null, 0),
-    WEATHERED_COPPER(true, true, "Weathered Copper", null, null, null, null, 0);
+    AMETHYST(true, true, "Amethyst", () -> Items.AMETHYST_SHARD, null, 4, () -> Items.AMETHYST_BLOCK, () -> Items.AMETHYST_SHARD, 8),
+    ANDESITE(true, true, "Andesite", () -> Items.ANDESITE, null, 12, () -> Items.ANDESITE, () -> Items.ANDESITE, 16),
+    BASALT(true, true, "Basalt", () -> Items.BASALT, null, 12, () -> Items.BASALT, () -> Items.BASALT, 16),
+    BLACKSTONE(true, true, "Blackstone", () -> Items.BLACKSTONE, null, 12, () -> Items.BLACKSTONE, () -> Items.BLACKSTONE, 16),
+    BONE(true, true, "Bone", () -> Items.BONE, () -> Items.BONE, 4, () -> Items.BONE_BLOCK, () -> Items.BONE, 8),
+    BRICKS(true, true, "Brick", () -> Items.BRICK, null, 2, () -> Items.BRICKS, () -> Items.BRICK, 8),
+    COBBLESTONE(true, true, "Cobblestone", () -> Items.COBBLESTONE, null, 12, () -> Items.COBBLESTONE, () -> Items.COBBLESTONE, 16),
+    COBBLED_DEEPSLATE(true, true, "Cobbled Deepslate", () -> Items.COBBLED_DEEPSLATE, null, 12, () -> Items.COBBLED_DEEPSLATE, () -> Items.COBBLED_DEEPSLATE, 16),
+    COPPER(true, true, "Copper", () -> Items.COPPER_INGOT, null, 4, () -> Items.COPPER_BLOCK, () -> Items.COPPER_INGOT, 16),
+    CRIMSON(true, true, "Crimson", () -> Items.CRIMSON_PLANKS, null, 8, () -> Items.CRIMSON_PLANKS, () -> Items.CRIMSON_PLANKS, 16),
+    DARK_PRISMARINE(true, true, "Dark Prismarine", () -> Items.DARK_PRISMARINE, null, 12, () -> Items.DARK_PRISMARINE, () -> Items.PRISMARINE_SHARD, 8),
+    DEEPSLATE_BRICKS(true, true, "Deepslate Bricks", () -> Items.DEEPSLATE_BRICKS, null, 12, () -> Items.DEEPSLATE_BRICKS, () -> Items.DEEPSLATE_BRICKS, 16),
+    DIAMOND(true, true, "Diamond", () -> Items.DIAMOND, null, 8, () -> Items.DIAMOND, () -> Items.DIAMOND, 4),
+    DIORITE(true, true, "Diorite", () -> Items.DIORITE, null, 12, () -> Items.DIORITE, () -> Items.DIORITE, 16),
+    EMERALD(true, true, "Emerald", () -> Items.EMERALD, null, 8, () -> Items.EMERALD, () -> Items.EMERALD, 4),
+    END_STONE(true, true, "End Stone", () -> Items.END_STONE, null, 12, () -> Items.END_STONE, () -> Items.END_STONE, 16),
+    EXPOSED_COPPER(true, true, "Exposed Copper", null, null, 0, null, null, 0),
+    GOLD(true, true, "Gold", () -> Items.GOLD_NUGGET, Items.GOLD_NUGGET, 1, () -> Items.GOLD_INGOT, () -> Items.GOLD_NUGGET, 1),
+    GRANITE(true, true, "Granite", () -> Items.GRANITE, null, 12, () -> Items.GRANITE, () -> Items.GRANITE, 16),
+    IRON(true, false, "Iron", () -> Items.IRON_INGOT, null, 4, null, null, 0),
+    MOSSY_COBBLESTONE(true, true, "Mossy Cobblestone", () -> Items.MOSSY_COBBLESTONE, null, 12, () -> Items.MOSSY_COBBLESTONE, () -> Items.COBBLESTONE, 16),
+    NETHERITE(true, true, "Netherite", () -> Items.NETHERITE_INGOT, null, 8, () -> Items.NETHERITE_INGOT, () -> Items.NETHERITE_INGOT, 4),
+    NORMAL(true, false, "", null, null, 0, null, null, 0),
+    NORMAL_NETHER_BRICKS(true, true, "Nether Brick", () -> Items.NETHER_BRICK, null, 4, () -> Items.NETHER_BRICKS, () -> Items.NETHER_BRICK, 16),
+    NORMAL_SANDSTONE(true, true, "Sandstone", () -> Items.SANDSTONE, null, 12, () -> Items.SANDSTONE, () -> Items.SANDSTONE, 16),
+    OBSIDIAN(true, true, "Obsidian", () -> Items.OBSIDIAN, null, 12, () -> Items.OBSIDIAN, () -> Items.OBSIDIAN, 16),
+    OXIDIZED_COPPER(true, true, "Oxidized Copper", null, null, 0, null, null, 0),
+    PRISMARINE(true, true, "Prismarine", () -> Items.PRISMARINE_SHARD, null, 4, () -> Items.PRISMARINE_BRICKS, () -> Items.PRISMARINE_SHARD, 8),
+    PURPUR(true, true, "Purpur", () -> Items.POPPED_CHORUS_FRUIT, null, 1, () -> Items.PURPUR_BLOCK, () -> Items.POPPED_CHORUS_FRUIT, 8),
+    QUARTZ(true, true, "Quartz", () -> Items.QUARTZ, () -> Items.QUARTZ, 4, () -> Items.QUARTZ_BLOCK, () -> Items.QUARTZ, 8),
+    RED_NETHER_BRICKS(true, true, "Red Nether Brick", () -> Items.RED_NETHER_BRICKS, null, 12, () -> Items.RED_NETHER_BRICKS, () -> Items.NETHER_BRICK, 8),
+    RED_SANDSTONE(true, true, "Red Sandstone", () -> Items.RED_SANDSTONE, null, 12, () -> Items.RED_SANDSTONE, () -> Items.RED_SANDSTONE, 16),
+    SMOOTH_STONE(true, true, "Smooth Stone", () -> Items.SMOOTH_STONE, null, 12, () -> Items.SMOOTH_STONE, () -> Items.SMOOTH_STONE, 16),
+    STONE(true, true, "Stone", () -> Items.STONE, null, 12, () -> Items.STONE, () -> Items.STONE, 16),
+    STONE_BRICKS(true, true, "Stone Bricks", () -> Items.STONE_BRICKS, null, 12, () -> Items.STONE_BRICKS, () -> Items.STONE_BRICKS, 16),
+    WARPED(true, true, "Warped", () -> Items.WARPED_PLANKS, null, 8, () -> Items.WARPED_PLANKS, () -> Items.WARPED_PLANKS, 16),
+    WAXED_COPPER(true, true, "Waxed Copper", null, null, 0, null, null, 0),
+    WAXED_EXPOSED_COPPER(true, true, "Waxed Exposed Copper", null, null, 0, null, null, 0),
+    WAXED_OXIDIZED_COPPER(true, true, "Waxed Oxidized Copper", null, null, 0, null, null, 0),
+    WAXED_WEATHERED_COPPER(true, true, "Waxed Weathered Copper", null, null, 0, null, null, 0),
+    WEATHERED_COPPER(true, true, "Weathered Copper", null, null, 0, null, null, 0);
 
     private static final Map<LanternMaterial,WeatheringCopper.WeatherState> WEATHERING_BLOCKS = ImmutableMap.<LanternMaterial,WeatheringCopper.WeatherState>builder()
         .put(COPPER, WeatheringCopper.WeatherState.UNAFFECTED)
@@ -81,15 +81,17 @@ public enum LanternMaterial {
     private Item chainItem;
     public final String englishTranslation;
     public final ItemLike primaryLanternIngredient, secondaryLanternIngredient;
+    public final int lanternRecipeCount;
     public final ItemLike primaryChainIngredient, secondaryChainIngredient;
     public final int chainRecipeCount;
 
-    LanternMaterial(boolean canBeColored, boolean hasChains, String englishTranslation, ItemLike primaryLanternIngredient, ItemLike secondaryLanternIngredient, ItemLike primaryChainIngredient, ItemLike secondaryChainIngredient, int chainRecipeCount){
+    LanternMaterial(boolean canBeColored, boolean hasChains, String englishTranslation, ItemLike primaryLanternIngredient, ItemLike secondaryLanternIngredient, int lanternRecipeCount, ItemLike primaryChainIngredient, ItemLike secondaryChainIngredient, int chainRecipeCount){
         this.canBeColored = canBeColored;
         this.hasChains = hasChains;
         this.englishTranslation = englishTranslation;
         this.primaryLanternIngredient = primaryLanternIngredient;
         this.secondaryLanternIngredient = secondaryLanternIngredient;
+        this.lanternRecipeCount = lanternRecipeCount;
         this.primaryChainIngredient = primaryChainIngredient;
         this.secondaryChainIngredient = secondaryChainIngredient;
         this.chainRecipeCount = chainRecipeCount;
