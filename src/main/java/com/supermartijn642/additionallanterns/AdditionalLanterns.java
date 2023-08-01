@@ -5,6 +5,7 @@ import com.supermartijn642.core.CommonUtils;
 import com.supermartijn642.core.item.CreativeItemGroup;
 import com.supermartijn642.core.registry.GeneratorRegistrationHandler;
 import com.supermartijn642.core.registry.RegistrationHandler;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import org.apache.logging.log4j.Logger;
 
@@ -14,7 +15,16 @@ import org.apache.logging.log4j.Logger;
 @Mod(modid = "@mod_id@", name = "@mod_name@", version = "@mod_version@", dependencies = "required-after:forge@@forge_dependency@;required-after:supermartijn642corelib@@core_library_dependency@")
 public class AdditionalLanterns {
 
-    public static final CreativeItemGroup GROUP = CreativeItemGroup.create("additionallanterns", () -> LanternMaterial.NORMAL.getLanternBlock());
+    public static final CreativeItemGroup GROUP = CreativeItemGroup.create("additionallanterns", () -> LanternMaterial.NORMAL.getLanternBlock())
+        .filler(items -> {
+            for(LanternMaterial material : LanternMaterial.values()){
+                items.accept(new ItemStack(material.getLanternBlock()));
+                for(LanternColor color : LanternColor.values())
+                    items.accept(new ItemStack(material.getLanternBlock(color)));
+                if(material.hasChains)
+                    items.accept(new ItemStack(material.getChainBlock()));
+            }
+        });
     public static final Logger LOGGER = CommonUtils.getLogger("additionallanterns");
 
     public AdditionalLanterns(){
