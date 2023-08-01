@@ -27,7 +27,16 @@ import java.util.function.Supplier;
 @Mod("additionallanterns")
 public class AdditionalLanterns {
 
-    public static final CreativeItemGroup GROUP = CreativeItemGroup.create("additionallanterns", () -> LanternMaterial.NORMAL.getLanternBlock().asItem());
+    public static final CreativeItemGroup GROUP = CreativeItemGroup.create("additionallanterns", () -> LanternMaterial.NORMAL.getLanternBlock().asItem())
+        .filler(items -> {
+            for(LanternMaterial material : LanternMaterial.values()){
+                items.accept(material.getLanternBlock().asItem().getDefaultInstance());
+                for(LanternColor color : LanternColor.values())
+                    items.accept(material.getLanternBlock(color).asItem().getDefaultInstance());
+                if(material.hasChains)
+                    items.accept(material.getChainBlock().asItem().getDefaultInstance());
+            }
+        });
     public static final Logger LOGGER = CommonUtils.getLogger("additionallanterns");
 
     public AdditionalLanterns(){
