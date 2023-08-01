@@ -7,7 +7,7 @@
   ],
   "key": {
     "A": {
-      "item": "minecraft:copper_ingot"
+      "item": "minecraft:copper_block"
     },
     "B": {
       "item": "minecraft:copper_ingot"
@@ -15,6 +15,6 @@
   },
   "result": {
     "item": "additionallanterns:copper_chain",
-    "count": 6
+    "count": 16
   }
 }
