@@ -1,15 +1,12 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "BAB",
+    " A ",
     "ACA",
-    "BAB"
+    " A "
   ],
   "key": {
     "A": {
-      "item": "minecraft:amethyst_shard"
-    },
-    "B": {
       "item": "minecraft:amethyst_shard"
     },
     "C": {
@@ -17,6 +14,7 @@
     }
   },
   "result": {
-    "item": "additionallanterns:amethyst_lantern"
+    "item": "additionallanterns:amethyst_lantern",
+    "count": 4
   }
 }

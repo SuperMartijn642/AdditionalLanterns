@@ -7,14 +7,14 @@
   ],
   "key": {
     "A": {
-      "item": "minecraft:basalt"
+      "item": "minecraft:mossy_cobblestone"
     },
     "B": {
-      "item": "minecraft:basalt"
+      "item": "minecraft:cobblestone"
     }
   },
   "result": {
-    "item": "additionallanterns:basalt_chain",
+    "item": "additionallanterns:mossy_cobblestone_chain",
     "count": 16
   }
 }
