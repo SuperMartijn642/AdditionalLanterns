@@ -7,13 +7,14 @@
   ],
   "key": {
     "A": {
-      "item": "minecraft:gold_ingot"
+      "item": "minecraft:mossy_cobblestone"
     },
     "B": {
-      "item": "minecraft:gold_nugget"
+      "item": "minecraft:cobblestone"
     }
   },
   "result": {
-    "item": "additionallanterns:gold_chain"
+    "item": "additionallanterns:mossy_cobblestone_chain",
+    "count": 16
   }
 }

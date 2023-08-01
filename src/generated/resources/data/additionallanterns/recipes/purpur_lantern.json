@@ -1,15 +1,12 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "BAB",
+    " A ",
     "ACA",
-    "BAB"
+    " A "
   ],
   "key": {
     "A": {
-      "item": "minecraft:popped_chorus_fruit"
-    },
-    "B": {
       "item": "minecraft:popped_chorus_fruit"
     },
     "C": {
