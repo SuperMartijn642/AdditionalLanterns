@@ -14,6 +14,7 @@
     }
   },
   "result": {
-    "item": "additionallanterns:blackstone_lantern"
+    "item": "additionallanterns:blackstone_lantern",
+    "count": 12
   }
 }

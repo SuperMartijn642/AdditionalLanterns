@@ -14,6 +14,7 @@
     }
   },
   "result": {
-    "item": "additionallanterns:smooth_stone_lantern"
+    "item": "additionallanterns:smooth_stone_lantern",
+    "count": 12
   }
 }
