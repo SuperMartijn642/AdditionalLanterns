@@ -39,19 +39,19 @@ public class LanternRecipeGenerator extends RecipeGenerator {
             return;
 
         if(material.primaryLanternIngredient == null)
-            this.shaped(Item.getItemFromBlock(material.getLanternBlock()))
+            this.shaped(Item.getItemFromBlock(material.getLanternBlock()), material.lanternRecipeCount)
                 .pattern("B B").pattern(" C ").pattern("B B")
                 .input('B', material.secondaryLanternIngredient.get())
                 .input('C', Item.getItemFromBlock(Blocks.TORCH))
                 .unlockedBy(Item.getItemFromBlock(Blocks.TORCH));
         else if(material.secondaryLanternIngredient == null)
-            this.shaped(Item.getItemFromBlock(material.getLanternBlock()))
+            this.shaped(Item.getItemFromBlock(material.getLanternBlock()), material.lanternRecipeCount)
                 .pattern(" A ").pattern("ACA").pattern(" A ")
                 .input('A', material.primaryLanternIngredient.get())
                 .input('C', Item.getItemFromBlock(Blocks.TORCH))
                 .unlockedBy(Item.getItemFromBlock(Blocks.TORCH));
         else
-            this.shaped(Item.getItemFromBlock(material.getLanternBlock()))
+            this.shaped(Item.getItemFromBlock(material.getLanternBlock()), material.lanternRecipeCount)
                 .pattern("BAB").pattern("ACA").pattern("BAB")
                 .input('A', material.primaryLanternIngredient.get())
                 .input('B', material.secondaryLanternIngredient.get())
