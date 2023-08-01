@@ -14,6 +14,7 @@
     }
   },
   "result": {
-    "item": "additionallanterns:end_stone_lantern"
+    "item": "additionallanterns:end_stone_lantern",
+    "count": 12
   }
 }
