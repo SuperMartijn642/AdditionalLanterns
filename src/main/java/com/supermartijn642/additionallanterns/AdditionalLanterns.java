@@ -65,9 +65,6 @@ public class AdditionalLanterns implements ModInitializer {
                 OxidizableBlocksRegistry.registerOxidizableBlockPair(LanternMaterial.COPPER.getLanternBlock(color), LanternMaterial.EXPOSED_COPPER.getLanternBlock(color));
                 OxidizableBlocksRegistry.registerOxidizableBlockPair(LanternMaterial.EXPOSED_COPPER.getLanternBlock(color), LanternMaterial.WEATHERED_COPPER.getLanternBlock(color));
                 OxidizableBlocksRegistry.registerOxidizableBlockPair(LanternMaterial.WEATHERED_COPPER.getLanternBlock(color), LanternMaterial.OXIDIZED_COPPER.getLanternBlock(color));
-                OxidizableBlocksRegistry.registerOxidizableBlockPair(LanternMaterial.COPPER.getChainBlock(), LanternMaterial.EXPOSED_COPPER.getChainBlock());
-                OxidizableBlocksRegistry.registerOxidizableBlockPair(LanternMaterial.EXPOSED_COPPER.getChainBlock(), LanternMaterial.WEATHERED_COPPER.getChainBlock());
-                OxidizableBlocksRegistry.registerOxidizableBlockPair(LanternMaterial.WEATHERED_COPPER.getChainBlock(), LanternMaterial.OXIDIZED_COPPER.getChainBlock());
             }
         });
     }
