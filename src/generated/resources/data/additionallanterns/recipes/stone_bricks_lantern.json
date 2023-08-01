@@ -14,6 +14,7 @@
     }
   },
   "result": {
-    "item": "additionallanterns:stone_bricks_lantern"
+    "item": "additionallanterns:stone_bricks_lantern",
+    "count": 12
   }
 }

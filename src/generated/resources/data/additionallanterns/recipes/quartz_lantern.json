@@ -17,6 +17,7 @@
     }
   },
   "result": {
-    "item": "additionallanterns:quartz_lantern"
+    "item": "additionallanterns:quartz_lantern",
+    "count": 4
   }
 }
