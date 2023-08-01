@@ -14,6 +14,7 @@
     }
   },
   "result": {
-    "item": "additionallanterns:diamond_lantern"
+    "item": "additionallanterns:diamond_lantern",
+    "count": 8
   }
 }
