@@ -19,36 +19,36 @@ import java.util.Map;
  */
 public enum LanternMaterial {
 
-    ANDESITE(true, true, "Andesite", () -> Items.ANDESITE, null, () -> Items.ANDESITE, () -> Items.ANDESITE, 8),
-    BASALT(true, true, "Basalt", () -> Items.BASALT, null, () -> Items.BASALT, () -> Items.BASALT, 8),
-    BLACKSTONE(true, true, "Blackstone", () -> Items.BLACKSTONE, null, () -> Items.BLACKSTONE, () -> Items.BLACKSTONE, 4),
-    BONE(true, true, "Bone", () -> Items.BONE, () -> Items.BONE, () -> Items.BONE_BLOCK, () -> Items.BONE, 8),
-    BRICKS(true, true, "Brick", () -> Items.BRICK, () -> Items.BRICK, () -> Items.BRICKS, () -> Items.BRICK, 4),
-    COBBLESTONE(true, true, "Cobblestone", () -> Items.COBBLESTONE, null, () -> Items.COBBLESTONE, () -> Items.COBBLESTONE, 8),
-    CRIMSON(true, true, "Crimson", () -> Items.CRIMSON_PLANKS, null, () -> Items.CRIMSON_PLANKS, () -> Items.CRIMSON_PLANKS, 6),
-    DARK_PRISMARINE(true, true, "Dark Prismarine", () -> Items.DARK_PRISMARINE, null, () -> Items.DARK_PRISMARINE, () -> Items.PRISMARINE_SHARD, 6),
-    DIAMOND(true, true, "Diamond", () -> Items.DIAMOND, null, () -> Items.DIAMOND, () -> Items.DIAMOND, 4),
-    DIORITE(true, true, "Diorite", () -> Items.DIORITE, null, () -> Items.DIORITE, () -> Items.DIORITE, 8),
-    EMERALD(true, true, "Emerald", () -> Items.EMERALD, null, () -> Items.EMERALD, () -> Items.EMERALD, 4),
-    END_STONE(true, true, "End Stone", () -> Items.END_STONE, null, () -> Items.END_STONE, () -> Items.END_STONE, 8),
-    GOLD(true, true, "Gold", () -> Items.GOLD_NUGGET, Items.GOLD_NUGGET, () -> Items.GOLD_INGOT, () -> Items.GOLD_NUGGET, 6),
-    GRANITE(true, true, "Granite", () -> Items.GRANITE, null, () -> Items.GRANITE, () -> Items.GRANITE, 8),
-    IRON(true, false, "Iron", () -> Items.IRON_INGOT, null, null, null, 0),
-    MOSSY_COBBLESTONE(true, false, "Mossy Cobblestone", () -> Items.MOSSY_COBBLESTONE, null, () -> Items.MOSSY_COBBLESTONE, () -> Items.COBBLESTONE, 8),
-    NETHERITE(true, false, "Netherite", () -> Items.NETHERITE_INGOT, null, () -> Items.NETHERITE_INGOT, () -> Items.NETHERITE_INGOT, 8),
-    NORMAL(true, false, "", null, null, null, null, 0),
-    NORMAL_NETHER_BRICKS(true, true, "Nether Brick", () -> Items.NETHER_BRICK, null, () -> Items.NETHER_BRICKS, () -> Items.NETHER_BRICK, 4),
-    NORMAL_SANDSTONE(true, true, "Sandstone", () -> Items.SANDSTONE, null, () -> Items.SANDSTONE, () -> Items.SANDSTONE, 8),
-    OBSIDIAN(true, true, "Obsidian", () -> Items.OBSIDIAN, null, () -> Items.OBSIDIAN, () -> Items.OBSIDIAN, 8),
-    PRISMARINE(true, true, "Prismarine", () -> Items.PRISMARINE_SHARD, () -> Items.PRISMARINE_SHARD, () -> Items.PRISMARINE_BRICKS, () -> Items.PRISMARINE_SHARD, 6),
-    PURPUR(true, true, "Purpur", () -> Items.POPPED_CHORUS_FRUIT, () -> Items.POPPED_CHORUS_FRUIT, () -> Items.PURPUR_BLOCK, () -> Items.POPPED_CHORUS_FRUIT, 4),
-    QUARTZ(true, true, "Quartz", () -> Items.QUARTZ, () -> Items.QUARTZ, () -> Items.QUARTZ_BLOCK, () -> Items.QUARTZ, 4),
-    RED_NETHER_BRICKS(true, true, "Red Nether Brick", () -> Items.RED_NETHER_BRICKS, null, () -> Items.RED_NETHER_BRICKS, () -> Items.NETHER_BRICK, 4),
-    RED_SANDSTONE(true, true, "Red Sandstone", () -> Items.RED_SANDSTONE, null, () -> Items.RED_SANDSTONE, () -> Items.RED_SANDSTONE, 8),
-    SMOOTH_STONE(true, true, "Smooth Stone", () -> Items.SMOOTH_STONE, null, () -> Items.SMOOTH_STONE, () -> Items.SMOOTH_STONE, 8),
-    STONE(true, true, "Stone", () -> Items.STONE, null, () -> Items.STONE, () -> Items.STONE, 8),
-    STONE_BRICKS(true, true, "Stone Bricks", () -> Items.STONE_BRICKS, null, () -> Items.STONE_BRICKS, () -> Items.STONE_BRICKS, 8),
-    WARPED(true, true, "Warped", () -> Items.WARPED_PLANKS, null, () -> Items.WARPED_PLANKS, () -> Items.WARPED_PLANKS, 6);
+    ANDESITE(true, true, "Andesite", () -> Items.ANDESITE, null, 12, () -> Items.ANDESITE, () -> Items.ANDESITE, 16),
+    BASALT(true, true, "Basalt", () -> Items.BASALT, null, 12, () -> Items.BASALT, () -> Items.BASALT, 16),
+    BLACKSTONE(true, true, "Blackstone", () -> Items.BLACKSTONE, null, 12, () -> Items.BLACKSTONE, () -> Items.BLACKSTONE, 16),
+    BONE(true, true, "Bone", () -> Items.BONE, () -> Items.BONE, 4, () -> Items.BONE_BLOCK, () -> Items.BONE, 8),
+    BRICKS(true, true, "Brick", () -> Items.BRICK, null, 2, () -> Items.BRICKS, () -> Items.BRICK, 8),
+    COBBLESTONE(true, true, "Cobblestone", () -> Items.COBBLESTONE, null, 12, () -> Items.COBBLESTONE, () -> Items.COBBLESTONE, 16),
+    CRIMSON(true, true, "Crimson", () -> Items.CRIMSON_PLANKS, null, 8, () -> Items.CRIMSON_PLANKS, () -> Items.CRIMSON_PLANKS, 16),
+    DARK_PRISMARINE(true, true, "Dark Prismarine", () -> Items.DARK_PRISMARINE, null, 12, () -> Items.DARK_PRISMARINE, () -> Items.PRISMARINE_SHARD, 8),
+    DIAMOND(true, true, "Diamond", () -> Items.DIAMOND, null, 8, () -> Items.DIAMOND, () -> Items.DIAMOND, 4),
+    DIORITE(true, true, "Diorite", () -> Items.DIORITE, null, 12, () -> Items.DIORITE, () -> Items.DIORITE, 16),
+    EMERALD(true, true, "Emerald", () -> Items.EMERALD, null, 8, () -> Items.EMERALD, () -> Items.EMERALD, 4),
+    END_STONE(true, true, "End Stone", () -> Items.END_STONE, null, 12, () -> Items.END_STONE, () -> Items.END_STONE, 16),
+    GOLD(true, true, "Gold", () -> Items.GOLD_NUGGET, Items.GOLD_NUGGET, 1, () -> Items.GOLD_INGOT, () -> Items.GOLD_NUGGET, 1),
+    GRANITE(true, true, "Granite", () -> Items.GRANITE, null, 12, () -> Items.GRANITE, () -> Items.GRANITE, 16),
+    IRON(true, false, "Iron", () -> Items.IRON_INGOT, null, 4, null, null, 0),
+    MOSSY_COBBLESTONE(true, true, "Mossy Cobblestone", () -> Items.MOSSY_COBBLESTONE, null, 12, () -> Items.MOSSY_COBBLESTONE, () -> Items.COBBLESTONE, 16),
+    NETHERITE(true, true, "Netherite", () -> Items.NETHERITE_INGOT, null, 8, () -> Items.NETHERITE_INGOT, () -> Items.NETHERITE_INGOT, 4),
+    NORMAL(true, false, "", null, null, 0, null, null, 0),
+    NORMAL_NETHER_BRICKS(true, true, "Nether Brick", () -> Items.NETHER_BRICK, null, 4, () -> Items.NETHER_BRICKS, () -> Items.NETHER_BRICK, 16),
+    NORMAL_SANDSTONE(true, true, "Sandstone", () -> Items.SANDSTONE, null, 12, () -> Items.SANDSTONE, () -> Items.SANDSTONE, 16),
+    OBSIDIAN(true, true, "Obsidian", () -> Items.OBSIDIAN, null, 12, () -> Items.OBSIDIAN, () -> Items.OBSIDIAN, 16),
+    PRISMARINE(true, true, "Prismarine", () -> Items.PRISMARINE_SHARD, null, 4, () -> Items.PRISMARINE_BRICKS, () -> Items.PRISMARINE_SHARD, 8),
+    PURPUR(true, true, "Purpur", () -> Items.POPPED_CHORUS_FRUIT, null, 1, () -> Items.PURPUR_BLOCK, () -> Items.POPPED_CHORUS_FRUIT, 8),
+    QUARTZ(true, true, "Quartz", () -> Items.QUARTZ, () -> Items.QUARTZ, 4, () -> Items.QUARTZ_BLOCK, () -> Items.QUARTZ, 8),
+    RED_NETHER_BRICKS(true, true, "Red Nether Brick", () -> Items.RED_NETHER_BRICKS, null, 12, () -> Items.RED_NETHER_BRICKS, () -> Items.NETHER_BRICK, 8),
+    RED_SANDSTONE(true, true, "Red Sandstone", () -> Items.RED_SANDSTONE, null, 12, () -> Items.RED_SANDSTONE, () -> Items.RED_SANDSTONE, 16),
+    SMOOTH_STONE(true, true, "Smooth Stone", () -> Items.SMOOTH_STONE, null, 12, () -> Items.SMOOTH_STONE, () -> Items.SMOOTH_STONE, 16),
+    STONE(true, true, "Stone", () -> Items.STONE, null, 12, () -> Items.STONE, () -> Items.STONE, 16),
+    STONE_BRICKS(true, true, "Stone Bricks", () -> Items.STONE_BRICKS, null, 12, () -> Items.STONE_BRICKS, () -> Items.STONE_BRICKS, 16),
+    WARPED(true, true, "Warped", () -> Items.WARPED_PLANKS, null, 8, () -> Items.WARPED_PLANKS, () -> Items.WARPED_PLANKS, 16);
 
     public final boolean canBeColored;
     public final boolean hasChains;
@@ -60,15 +60,17 @@ public enum LanternMaterial {
     private Item chainItem;
     public final String englishTranslation;
     public final IItemProvider primaryLanternIngredient, secondaryLanternIngredient;
+    public final int lanternRecipeCount;
     public final IItemProvider primaryChainIngredient, secondaryChainIngredient;
     public final int chainRecipeCount;
 
-    LanternMaterial(boolean canBeColored, boolean hasChains, String englishTranslation, IItemProvider primaryLanternIngredient, IItemProvider secondaryLanternIngredient, IItemProvider primaryChainIngredient, IItemProvider secondaryChainIngredient, int chainRecipeCount){
+    LanternMaterial(boolean canBeColored, boolean hasChains, String englishTranslation, IItemProvider primaryLanternIngredient, IItemProvider secondaryLanternIngredient, int lanternRecipeCount, IItemProvider primaryChainIngredient, IItemProvider secondaryChainIngredient, int chainRecipeCount){
         this.canBeColored = canBeColored;
         this.hasChains = hasChains;
         this.englishTranslation = englishTranslation;
         this.primaryLanternIngredient = primaryLanternIngredient;
         this.secondaryLanternIngredient = secondaryLanternIngredient;
+        this.lanternRecipeCount = lanternRecipeCount;
         this.primaryChainIngredient = primaryChainIngredient;
         this.secondaryChainIngredient = secondaryChainIngredient;
         this.chainRecipeCount = chainRecipeCount;
