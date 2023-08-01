@@ -20,6 +20,7 @@
     ]
   },
   "result": {
-    "item": "additionallanterns:cobblestone_lantern"
+    "item": "additionallanterns:cobblestone_lantern",
+    "count": 12
   }
 }

@@ -1,18 +1,12 @@
 {
   "type": "forge:ore_shaped",
   "pattern": [
-    "BAB",
+    " A ",
     "ACA",
-    "BAB"
+    " A "
   ],
   "key": {
     "A": [
-      {
-        "type": "minecraft:item",
-        "item": "minecraft:chorus_fruit_popped"
-      }
-    ],
-    "B": [
       {
         "type": "minecraft:item",
         "item": "minecraft:chorus_fruit_popped"

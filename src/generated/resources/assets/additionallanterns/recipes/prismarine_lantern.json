@@ -1,18 +1,12 @@
 {
   "type": "forge:ore_shaped",
   "pattern": [
-    "BAB",
+    " A ",
     "ACA",
-    "BAB"
+    " A "
   ],
   "key": {
     "A": [
-      {
-        "type": "minecraft:item",
-        "item": "minecraft:prismarine_shard"
-      }
-    ],
-    "B": [
       {
         "type": "minecraft:item",
         "item": "minecraft:prismarine_shard"
@@ -26,6 +20,7 @@
     ]
   },
   "result": {
-    "item": "additionallanterns:prismarine_lantern"
+    "item": "additionallanterns:prismarine_lantern",
+    "count": 4
   }
 }

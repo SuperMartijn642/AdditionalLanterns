@@ -1,18 +1,12 @@
 {
   "type": "forge:ore_shaped",
   "pattern": [
-    "BAB",
+    " A ",
     "ACA",
-    "BAB"
+    " A "
   ],
   "key": {
     "A": [
-      {
-        "type": "minecraft:item",
-        "item": "minecraft:brick"
-      }
-    ],
-    "B": [
       {
         "type": "minecraft:item",
         "item": "minecraft:brick"
@@ -26,6 +20,7 @@
     ]
   },
   "result": {
-    "item": "additionallanterns:bricks_lantern"
+    "item": "additionallanterns:bricks_lantern",
+    "count": 2
   }
 }
