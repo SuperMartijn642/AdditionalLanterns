@@ -10,7 +10,7 @@
       {
         "type": "minecraft:item",
         "item": "minecraft:stone",
-        "data": 0
+        "data": 1
       }
     ],
     "C": [

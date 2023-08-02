@@ -10,14 +10,14 @@
       {
         "type": "minecraft:item",
         "item": "minecraft:stone",
-        "data": 0
+        "data": 3
       }
     ],
     "B": [
       {
         "type": "minecraft:item",
         "item": "minecraft:stone",
-        "data": 0
+        "data": 3
       }
     ]
   },

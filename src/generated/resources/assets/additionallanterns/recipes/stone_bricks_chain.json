@@ -6,12 +6,20 @@
     "B"
   ],
   "key": {
-    "A": {
-      "type": "minecraft:empty"
-    },
-    "B": {
-      "type": "minecraft:empty"
-    }
+    "A": [
+      {
+        "type": "minecraft:item",
+        "item": "minecraft:stonebrick",
+        "data": 0
+      }
+    ],
+    "B": [
+      {
+        "type": "minecraft:item",
+        "item": "minecraft:stonebrick",
+        "data": 0
+      }
+    ]
   },
   "result": {
     "item": "additionallanterns:stone_bricks_chain",

@@ -6,9 +6,13 @@
     " A "
   ],
   "key": {
-    "A": {
-      "type": "minecraft:empty"
-    },
+    "A": [
+      {
+        "type": "minecraft:item",
+        "item": "minecraft:stonebrick",
+        "data": 0
+      }
+    ],
     "C": [
       {
         "type": "minecraft:item",

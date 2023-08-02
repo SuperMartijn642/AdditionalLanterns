@@ -23,31 +23,31 @@ import java.util.function.Supplier;
  */
 public enum LanternMaterial {
 
-    ANDESITE(true, true, "Andesite", () -> new ItemStack(Blocks.STONE, 5), null, 12, () -> new ItemStack(Blocks.STONE, 5), () -> new ItemStack(Blocks.STONE, 5), 16),
+    ANDESITE(true, true, "Andesite", () -> new ItemStack(Blocks.STONE, 1, 5), null, 12, () -> new ItemStack(Blocks.STONE, 1, 5), () -> new ItemStack(Blocks.STONE, 1, 5), 16),
     BONE(true, true, "Bone", () -> new ItemStack(Items.BONE), () -> new ItemStack(Items.BONE),4, () -> new ItemStack(Blocks.BONE_BLOCK), () -> new ItemStack(Items.BONE), 8),
     BRICKS(true, true, "Brick", () -> new ItemStack(Items.BRICK), null, 2, () -> new ItemStack(Blocks.BRICK_BLOCK), () -> new ItemStack(Items.BRICK), 8),
     COBBLESTONE(true, true, "Cobblestone", () -> new ItemStack(Blocks.COBBLESTONE), null, 12, () -> new ItemStack(Blocks.COBBLESTONE), () -> new ItemStack(Blocks.COBBLESTONE), 16),
-    DARK_PRISMARINE(true, true, "Dark Prismarine", () -> new ItemStack(Blocks.PRISMARINE, 2), null, 12, () -> new ItemStack(Blocks.PRISMARINE, 2), () -> new ItemStack(Blocks.PRISMARINE, 2), 8),
+    DARK_PRISMARINE(true, true, "Dark Prismarine", () -> new ItemStack(Blocks.PRISMARINE, 1, 2), null, 12, () -> new ItemStack(Blocks.PRISMARINE, 1, 2), () -> new ItemStack(Blocks.PRISMARINE, 1, 2), 8),
     DIAMOND(true, true, "Diamond", () -> new ItemStack(Items.DIAMOND), null, 8, () -> new ItemStack(Items.DIAMOND), () -> new ItemStack(Items.DIAMOND), 4),
-    DIORITE(true, true, "Diorite", () -> new ItemStack(Blocks.STONE, 3), null, 12, () -> new ItemStack(Blocks.STONE, 3), () -> new ItemStack(Blocks.STONE, 3), 16),
+    DIORITE(true, true, "Diorite", () -> new ItemStack(Blocks.STONE, 1, 3), null, 12, () -> new ItemStack(Blocks.STONE, 1, 3), () -> new ItemStack(Blocks.STONE, 1, 3), 16),
     EMERALD(true, true, "Emerald", () -> new ItemStack(Items.EMERALD), null, 8, () -> new ItemStack(Items.EMERALD), () -> new ItemStack(Items.EMERALD), 4),
     END_STONE(true, true, "End Stone", () -> new ItemStack(Blocks.END_STONE), null, 12, () -> new ItemStack(Blocks.END_STONE), () -> new ItemStack(Blocks.END_STONE), 16),
     GOLD(true, true, "Gold", () -> new ItemStack(Items.GOLD_NUGGET), () -> new ItemStack(Items.GOLD_NUGGET), 1, () -> new ItemStack(Items.GOLD_INGOT), () -> new ItemStack(Items.GOLD_NUGGET), 1),
-    GRANITE(true, true, "Granite", () -> new ItemStack(Blocks.STONE, 1), null, 12, () -> new ItemStack(Blocks.STONE, 1), () -> new ItemStack(Blocks.STONE, 1), 16),
+    GRANITE(true, true, "Granite", () -> new ItemStack(Blocks.STONE, 1, 1), null, 12, () -> new ItemStack(Blocks.STONE, 1, 1), () -> new ItemStack(Blocks.STONE, 1, 1), 16),
     IRON(true, false, "Iron", () -> new ItemStack(Items.IRON_INGOT), null, 4, null, null, 0),
     MOSSY_COBBLESTONE(true, true, "Mossy Cobblestone", () -> new ItemStack(Blocks.MOSSY_COBBLESTONE), null, 12, () -> new ItemStack(Blocks.MOSSY_COBBLESTONE), () -> new ItemStack(Blocks.COBBLESTONE), 16),
     NORMAL(true, true, "", () -> new ItemStack(Items.IRON_NUGGET), () -> new ItemStack(Items.IRON_NUGGET), 1, () -> new ItemStack(Items.IRON_INGOT), () -> new ItemStack(Items.IRON_NUGGET), 1),
     NORMAL_NETHER_BRICKS(true, true, "Nether Brick", () -> new ItemStack(Items.NETHERBRICK), null, 4, () -> new ItemStack(Blocks.NETHER_BRICK), () -> new ItemStack(Items.NETHERBRICK), 16),
     NORMAL_SANDSTONE(true, true, "Sandstone", () -> new ItemStack(Blocks.SANDSTONE), null, 12, () -> new ItemStack(Blocks.SANDSTONE), () -> new ItemStack(Blocks.SANDSTONE), 16),
     OBSIDIAN(true, true, "Obsidian", () -> new ItemStack(Blocks.OBSIDIAN), null, 12, () -> new ItemStack(Blocks.OBSIDIAN), () -> new ItemStack(Blocks.OBSIDIAN), 16),
-    PRISMARINE(true, true, "Prismarine", () -> new ItemStack(Items.PRISMARINE_SHARD), null, 4, () -> new ItemStack(Blocks.PRISMARINE, 1), () -> new ItemStack(Items.PRISMARINE_SHARD), 8),
+    PRISMARINE(true, true, "Prismarine", () -> new ItemStack(Items.PRISMARINE_SHARD), null, 4, () -> new ItemStack(Blocks.PRISMARINE, 1, 1), () -> new ItemStack(Items.PRISMARINE_SHARD), 8),
     PURPUR(true, true, "Purpur", () -> new ItemStack(Items.CHORUS_FRUIT_POPPED), null, 1, () -> new ItemStack(Blocks.PURPUR_BLOCK), () -> new ItemStack(Items.CHORUS_FRUIT_POPPED), 8),
     QUARTZ(true, true, "Quartz", () -> new ItemStack(Items.QUARTZ), () -> new ItemStack(Items.QUARTZ), 4, () -> new ItemStack(Blocks.QUARTZ_BLOCK), () -> new ItemStack(Items.QUARTZ), 8),
     RED_NETHER_BRICKS(true, true, "Red Nether Brick", () -> new ItemStack(Blocks.RED_NETHER_BRICK), null, 12, () -> new ItemStack(Blocks.RED_NETHER_BRICK), () -> new ItemStack(Items.NETHERBRICK), 8),
     RED_SANDSTONE(true, true, "Red Sandstone", () -> new ItemStack(Blocks.RED_SANDSTONE), null, 12, () -> new ItemStack(Blocks.RED_SANDSTONE), () -> new ItemStack(Blocks.RED_SANDSTONE), 16),
     SMOOTH_STONE(true, true, "Smooth Stone", () -> new ItemStack(Blocks.STONE), null, 12, () -> new ItemStack(Blocks.STONE), () -> new ItemStack(Blocks.STONE), 16),
-    STONE(true, true, "Stone", () -> new ItemStack(Blocks.STONE, 0), null, 12, () -> new ItemStack(Blocks.STONE, 0), () -> new ItemStack(Blocks.STONE, 0), 16),
-    STONE_BRICKS(true, true, "Stone Bricks", () -> new ItemStack(Blocks.STONEBRICK, 0), null, 12, () -> new ItemStack(Blocks.STONEBRICK, 0), () -> new ItemStack(Blocks.STONEBRICK, 0), 16);
+    STONE(true, true, "Stone", () -> new ItemStack(Blocks.STONE, 1, 0), null, 12, () -> new ItemStack(Blocks.STONE, 1, 0), () -> new ItemStack(Blocks.STONE, 1, 0), 16),
+    STONE_BRICKS(true, true, "Stone Bricks", () -> new ItemStack(Blocks.STONEBRICK, 1, 0), null, 12, () -> new ItemStack(Blocks.STONEBRICK, 1, 0), () -> new ItemStack(Blocks.STONEBRICK, 1, 0), 16);
 
     public final boolean canBeColored;
     public final boolean hasChains;

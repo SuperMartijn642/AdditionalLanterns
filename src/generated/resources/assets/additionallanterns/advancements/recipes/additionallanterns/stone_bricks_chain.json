@@ -27,7 +27,7 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:air",
+            "item": "minecraft:stonebrick",
             "data": 0
           }
         ]

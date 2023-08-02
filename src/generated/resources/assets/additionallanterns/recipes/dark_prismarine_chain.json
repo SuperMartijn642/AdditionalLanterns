@@ -10,14 +10,14 @@
       {
         "type": "minecraft:item",
         "item": "minecraft:prismarine",
-        "data": 0
+        "data": 2
       }
     ],
     "B": [
       {
         "type": "minecraft:item",
         "item": "minecraft:prismarine",
-        "data": 0
+        "data": 2
       }
     ]
   },
