@@ -1,3 +1,6 @@
+### Additional Lanterns 1.1.1b
+- Fixed names for all the chain blocks
+
 ### Additional Lanterns 1.1.1a
 - Fixed recipes which contain items with metadata
 
