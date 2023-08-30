@@ -7,6 +7,7 @@ import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.BlockFaceShape;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.pathfinding.PathNodeType;
 import net.minecraft.util.BlockRenderLayer;
@@ -61,18 +62,23 @@ public class ChainBlock extends BlockRotatedPillar {
     }
 
     @SideOnly(Side.CLIENT)
-    public BlockRenderLayer getBlockLayer()
-    {
+    public BlockRenderLayer getBlockLayer(){
         return BlockRenderLayer.CUTOUT;
     }
 
-    public boolean isOpaqueCube(IBlockState state)
-    {
+    public boolean isOpaqueCube(IBlockState state){
         return false;
     }
 
-    public boolean isFullCube(IBlockState state)
-    {
+    public boolean isFullCube(IBlockState state){
         return false;
+    }
+
+    public String getLocalizedName(){
+        return I18n.format(this.getUnlocalizedName()).trim();
+    }
+
+    public String getUnlocalizedName(){
+        return this.getRegistryName().getResourceDomain() + ".block." + this.getRegistryName().getResourcePath();
     }
 }
