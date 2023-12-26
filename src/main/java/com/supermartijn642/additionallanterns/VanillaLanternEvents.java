@@ -8,10 +8,10 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.event.level.BlockEvent;
-import net.minecraftforge.eventbus.api.EventPriority;
+import net.neoforged.bus.api.EventPriority;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+import net.neoforged.neoforge.event.level.BlockEvent;
 
 /**
  * Created 25/01/2023 by SuperMartijn642
@@ -19,9 +19,9 @@ import net.minecraftforge.eventbus.api.EventPriority;
 public class VanillaLanternEvents {
 
     public static void registerEventHandlers(){
-        MinecraftForge.EVENT_BUS.addListener(EventPriority.LOWEST, false, VanillaLanternEvents::handleInteractWithLantern);
-        MinecraftForge.EVENT_BUS.addListener(EventPriority.LOWEST, false, VanillaLanternEvents::handleLanternPlacement);
-        MinecraftForge.EVENT_BUS.addListener(EventPriority.LOWEST, false, VanillaLanternEvents::handleLanternRedstone);
+        NeoForge.EVENT_BUS.addListener(EventPriority.LOWEST, false, VanillaLanternEvents::handleInteractWithLantern);
+        NeoForge.EVENT_BUS.addListener(EventPriority.LOWEST, false, VanillaLanternEvents::handleLanternPlacement);
+        NeoForge.EVENT_BUS.addListener(EventPriority.LOWEST, false, VanillaLanternEvents::handleLanternRedstone);
     }
 
     private static void handleInteractWithLantern(PlayerInteractEvent.RightClickBlock e){

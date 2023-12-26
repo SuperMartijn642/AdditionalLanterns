@@ -116,12 +116,12 @@ public enum LanternMaterial {
     }
 
     public BlockBehaviour.Properties getLanternBlockProperties(){
-        BlockBehaviour.Properties properties = BlockBehaviour.Properties.copy(Blocks.LANTERN).lightLevel(state -> LanternBlock.emitsLight(state) ? 15 : 0);
+        BlockBehaviour.Properties properties = BlockBehaviour.Properties.ofFullCopy(Blocks.LANTERN).lightLevel(state -> LanternBlock.emitsLight(state) ? 15 : 0);
         return WEATHERING_BLOCKS.get(this) == null ? properties : properties.randomTicks();
     }
 
     public BlockBehaviour.Properties getChainBlockProperties(){
-        return BlockBehaviour.Properties.copy(Blocks.CHAIN);
+        return BlockBehaviour.Properties.ofFullCopy(Blocks.CHAIN);
     }
 
     public void registerBlocks(RegistrationHandler.Helper<Block> helper){

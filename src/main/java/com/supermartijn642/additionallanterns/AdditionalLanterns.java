@@ -11,11 +11,9 @@ import com.supermartijn642.core.registry.RegistrationHandler;
 import net.minecraft.world.item.HoneycombItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.WeatheringCopper;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.fml.DistExecutor;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import org.slf4j.Logger;
 
 import java.lang.reflect.Field;
@@ -39,12 +37,13 @@ public class AdditionalLanterns {
         });
     public static final Logger LOGGER = CommonUtils.getLogger("additionallanterns");
 
-    public AdditionalLanterns(){
+    public AdditionalLanterns(IEventBus eventBus){
         VanillaLanternEvents.registerEventHandlers();
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(AdditionalLanterns::init);
+        eventBus.addListener(AdditionalLanterns::init);
 
         register();
-        DistExecutor.safeRunWhenOn(Dist.CLIENT, () -> AdditionalLanternsClient::register);
+        if(CommonUtils.getEnvironmentSide().isClient())
+            AdditionalLanternsClient.register();
         registerGenerators();
     }
 
