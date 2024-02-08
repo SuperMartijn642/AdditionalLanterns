@@ -1,3 +1,6 @@
+### Additional Lanterns 1.1.1a
+- Fixed crash on startup on 1.20.4
+
 ### Additional Lanterns 1.1.1
 - Recipes for lanterns and chains are now far cheaper
 - Creative tab for Additional Lanterns is now nicely ordered instead or random
