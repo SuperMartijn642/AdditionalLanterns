@@ -20,8 +20,7 @@ public class WeatheringChainBlock extends ChainBlock implements WeatheringCopper
 
     @Override
     public void randomTick(BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, RandomSource randomSource){
-        if(randomSource.nextFloat() < 0.05688889f)
-            this.applyChangeOverTime(blockState, serverLevel, blockPos, randomSource);
+        this.changeOverTime(blockState, serverLevel, blockPos, randomSource);
     }
 
     @Override
