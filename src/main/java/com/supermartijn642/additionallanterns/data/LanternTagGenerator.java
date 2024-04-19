@@ -32,6 +32,15 @@ public class LanternTagGenerator extends TagGenerator {
         for(LanternMaterial material : LanternMaterial.values())
             if(material.canBeColored)
                 this.addMaterialTag(material);
+
+        // Compatibility tags for Dynamic Lights mod
+        for(LanternMaterial material : LanternMaterial.values()){
+            this.itemTag("dynamiclights", "light_level/15").add(material.getLanternBlock().asItem());
+            if(material.canBeColored){
+                for(LanternColor color : LanternColor.values())
+                    this.itemTag("dynamiclights", "light_level/15").add(material.getLanternBlock(color).asItem());
+            }
+        }
     }
 
     private void addMaterialTag(LanternMaterial material){
