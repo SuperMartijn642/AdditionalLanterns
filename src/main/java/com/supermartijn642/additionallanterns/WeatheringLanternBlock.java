@@ -1,8 +1,10 @@
 package com.supermartijn642.additionallanterns;
 
+import com.google.common.collect.BiMap;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.WeatheringCopper;
 import net.minecraft.world.level.block.state.BlockState;
 
@@ -10,6 +12,8 @@ import net.minecraft.world.level.block.state.BlockState;
  * Created 7/5/2021 by SuperMartijn642
  */
 public class WeatheringLanternBlock extends LanternBlock implements WeatheringCopper {
+
+    public static BiMap<Block,Block> WEATHERING_MAP;
 
     private final WeatherState weatherState;
 
