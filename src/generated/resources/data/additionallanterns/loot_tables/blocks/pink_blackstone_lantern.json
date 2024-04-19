@@ -10,8 +10,8 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "additionallanterns:pink_blackstone_lantern"
+          "name": "additionallanterns:pink_blackstone_lantern",
+          "type": "minecraft:item"
         }
       ]
     }

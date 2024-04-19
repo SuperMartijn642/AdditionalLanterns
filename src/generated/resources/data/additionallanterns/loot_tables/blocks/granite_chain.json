@@ -10,8 +10,8 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "additionallanterns:granite_chain"
+          "name": "additionallanterns:granite_chain",
+          "type": "minecraft:item"
         }
       ]
     }

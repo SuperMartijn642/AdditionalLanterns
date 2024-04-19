@@ -10,8 +10,8 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "additionallanterns:brown_quartz_lantern"
+          "name": "additionallanterns:brown_quartz_lantern",
+          "type": "minecraft:item"
         }
       ]
     }

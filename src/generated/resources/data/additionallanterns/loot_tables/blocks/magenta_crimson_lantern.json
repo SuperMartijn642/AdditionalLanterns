@@ -10,8 +10,8 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "additionallanterns:magenta_crimson_lantern"
+          "name": "additionallanterns:magenta_crimson_lantern",
+          "type": "minecraft:item"
         }
       ]
     }

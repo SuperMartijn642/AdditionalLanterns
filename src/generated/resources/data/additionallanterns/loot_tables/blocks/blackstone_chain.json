@@ -10,8 +10,8 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "additionallanterns:blackstone_chain"
+          "name": "additionallanterns:blackstone_chain",
+          "type": "minecraft:item"
         }
       ]
     }

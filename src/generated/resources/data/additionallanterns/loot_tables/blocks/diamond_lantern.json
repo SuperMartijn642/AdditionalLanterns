@@ -10,8 +10,8 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "additionallanterns:diamond_lantern"
+          "name": "additionallanterns:diamond_lantern",
+          "type": "minecraft:item"
         }
       ]
     }

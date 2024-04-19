@@ -10,8 +10,8 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "additionallanterns:yellow_basalt_lantern"
+          "name": "additionallanterns:yellow_basalt_lantern",
+          "type": "minecraft:item"
         }
       ]
     }

@@ -10,8 +10,8 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "additionallanterns:light_gray_mossy_cobblestone_lantern"
+          "name": "additionallanterns:light_gray_mossy_cobblestone_lantern",
+          "type": "minecraft:item"
         }
       ]
     }
