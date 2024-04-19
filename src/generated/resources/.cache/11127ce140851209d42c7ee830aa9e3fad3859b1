@@ -1,4 +1,4 @@
-// 1.20	2023-08-01T23:20:55.780054	Core Lib Generators
+// 1.20	2024-04-20T01:21:33.1036279	Core Lib Generators
 33285ac3889554a80f4647e7e631fadfd2830d94 assets/additionallanterns/blockstates/amethyst_chain.json
 41521c32bfba49406d7964df36fea43fd1225312 assets/additionallanterns/blockstates/amethyst_lantern.json
 d0214b6d507a49d57ce94b12e352c62d2a9a6c5b assets/additionallanterns/blockstates/andesite_chain.json
@@ -6603,4 +6603,5 @@ b328cf02fa16f586b4e504cc97cb93216a6d2c29 data/additionallanterns/tags/items/waxe
 f22e8cfe6b70bbeab4ccdb7c0850c096cd59be0d data/additionallanterns/tags/items/waxed_oxidized_copper_lanterns.json
 fd18d7916e60c7f9052a353af6f9fd96362f10a9 data/additionallanterns/tags/items/waxed_weathered_copper_lanterns.json
 fd92074e268ee7c10d2e0c032a36b5481cfb0fac data/additionallanterns/tags/items/weathered_copper_lanterns.json
+3bd58a0e7513e362cd35ef5840a4381750412f30 data/dynamiclights/tags/items/light_level/15.json
 7ffc25f9d8665b84f1c594798bb6a76028962ef4 data/minecraft/tags/blocks/mineable/pickaxe.json
