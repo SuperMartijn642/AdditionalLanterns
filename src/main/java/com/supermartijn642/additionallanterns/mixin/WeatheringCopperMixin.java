@@ -14,6 +14,7 @@ import java.util.Optional;
  * Created 19/04/2024 by SuperMartijn642
  */
 @Mixin(WeatheringCopper.class)
+@SuppressWarnings("unused")
 public interface WeatheringCopperMixin {
 
     @Inject(
