@@ -1,3 +1,6 @@
+### Additional Lanterns 1.1.1b
+- Added compatibility for Dynamic Lights mod
+
 ### Additional Lanterns 1.1.1a
 - Fixed crash on startup on 1.20.4
 
