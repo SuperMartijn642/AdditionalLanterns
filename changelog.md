@@ -1,3 +1,6 @@
+### Additional Lanterns 1.1.1a
+- Added compatibility for Dynamic Lights mod
+
 ### Additional Lanterns 1.1.1
 - Recipes for lanterns and chains are now far cheaper
 - Creative tab for Additional Lanterns is now nicely ordered instead or random
