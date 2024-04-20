@@ -1,22 +1,22 @@
 {
   "replace": false,
   "values": [
-    "additionallanterns:blue_end_stone_lantern",
+    "additionallanterns:orange_end_stone_lantern",
     "additionallanterns:black_end_stone_lantern",
+    "additionallanterns:end_stone_lantern",
+    "additionallanterns:light_blue_end_stone_lantern",
+    "additionallanterns:brown_end_stone_lantern",
     "additionallanterns:green_end_stone_lantern",
-    "additionallanterns:yellow_end_stone_lantern",
     "additionallanterns:white_end_stone_lantern",
     "additionallanterns:lime_end_stone_lantern",
-    "additionallanterns:light_gray_end_stone_lantern",
-    "additionallanterns:orange_end_stone_lantern",
     "additionallanterns:gray_end_stone_lantern",
-    "additionallanterns:purple_end_stone_lantern",
-    "additionallanterns:cyan_end_stone_lantern",
-    "additionallanterns:pink_end_stone_lantern",
-    "additionallanterns:end_stone_lantern",
-    "additionallanterns:brown_end_stone_lantern",
+    "additionallanterns:blue_end_stone_lantern",
     "additionallanterns:magenta_end_stone_lantern",
+    "additionallanterns:purple_end_stone_lantern",
     "additionallanterns:red_end_stone_lantern",
-    "additionallanterns:light_blue_end_stone_lantern"
+    "additionallanterns:yellow_end_stone_lantern",
+    "additionallanterns:cyan_end_stone_lantern",
+    "additionallanterns:light_gray_end_stone_lantern",
+    "additionallanterns:pink_end_stone_lantern"
   ]
 }

@@ -1,22 +1,22 @@
 {
   "replace": false,
   "values": [
-    "additionallanterns:light_blue_amethyst_lantern",
-    "additionallanterns:lime_amethyst_lantern",
-    "additionallanterns:pink_amethyst_lantern",
-    "additionallanterns:purple_amethyst_lantern",
-    "additionallanterns:black_amethyst_lantern",
-    "additionallanterns:yellow_amethyst_lantern",
-    "additionallanterns:light_gray_amethyst_lantern",
-    "additionallanterns:blue_amethyst_lantern",
-    "additionallanterns:orange_amethyst_lantern",
-    "additionallanterns:amethyst_lantern",
-    "additionallanterns:magenta_amethyst_lantern",
-    "additionallanterns:gray_amethyst_lantern",
-    "additionallanterns:brown_amethyst_lantern",
-    "additionallanterns:white_amethyst_lantern",
     "additionallanterns:cyan_amethyst_lantern",
-    "additionallanterns:green_amethyst_lantern",
-    "additionallanterns:red_amethyst_lantern"
+    "additionallanterns:amethyst_lantern",
+    "additionallanterns:blue_amethyst_lantern",
+    "additionallanterns:white_amethyst_lantern",
+    "additionallanterns:light_blue_amethyst_lantern",
+    "additionallanterns:red_amethyst_lantern",
+    "additionallanterns:lime_amethyst_lantern",
+    "additionallanterns:black_amethyst_lantern",
+    "additionallanterns:gray_amethyst_lantern",
+    "additionallanterns:orange_amethyst_lantern",
+    "additionallanterns:purple_amethyst_lantern",
+    "additionallanterns:magenta_amethyst_lantern",
+    "additionallanterns:light_gray_amethyst_lantern",
+    "additionallanterns:brown_amethyst_lantern",
+    "additionallanterns:pink_amethyst_lantern",
+    "additionallanterns:yellow_amethyst_lantern",
+    "additionallanterns:green_amethyst_lantern"
   ]
 }

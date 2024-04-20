@@ -10,8 +10,8 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "additionallanterns:waxed_weathered_copper_chain"
+          "name": "additionallanterns:waxed_weathered_copper_chain",
+          "type": "minecraft:item"
         }
       ]
     }

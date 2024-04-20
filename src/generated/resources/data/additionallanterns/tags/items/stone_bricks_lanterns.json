@@ -1,22 +1,22 @@
 {
   "replace": false,
   "values": [
-    "additionallanterns:gray_stone_bricks_lantern",
     "additionallanterns:light_gray_stone_bricks_lantern",
-    "additionallanterns:purple_stone_bricks_lantern",
-    "additionallanterns:red_stone_bricks_lantern",
-    "additionallanterns:magenta_stone_bricks_lantern",
-    "additionallanterns:black_stone_bricks_lantern",
-    "additionallanterns:blue_stone_bricks_lantern",
-    "additionallanterns:stone_bricks_lantern",
-    "additionallanterns:pink_stone_bricks_lantern",
     "additionallanterns:yellow_stone_bricks_lantern",
-    "additionallanterns:white_stone_bricks_lantern",
+    "additionallanterns:light_blue_stone_bricks_lantern",
     "additionallanterns:orange_stone_bricks_lantern",
     "additionallanterns:lime_stone_bricks_lantern",
-    "additionallanterns:green_stone_bricks_lantern",
-    "additionallanterns:light_blue_stone_bricks_lantern",
     "additionallanterns:brown_stone_bricks_lantern",
-    "additionallanterns:cyan_stone_bricks_lantern"
+    "additionallanterns:magenta_stone_bricks_lantern",
+    "additionallanterns:white_stone_bricks_lantern",
+    "additionallanterns:purple_stone_bricks_lantern",
+    "additionallanterns:green_stone_bricks_lantern",
+    "additionallanterns:stone_bricks_lantern",
+    "additionallanterns:red_stone_bricks_lantern",
+    "additionallanterns:black_stone_bricks_lantern",
+    "additionallanterns:cyan_stone_bricks_lantern",
+    "additionallanterns:pink_stone_bricks_lantern",
+    "additionallanterns:blue_stone_bricks_lantern",
+    "additionallanterns:gray_stone_bricks_lantern"
   ]
 }

@@ -10,8 +10,8 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "additionallanterns:netherite_chain"
+          "name": "additionallanterns:netherite_chain",
+          "type": "minecraft:item"
         }
       ]
     }
