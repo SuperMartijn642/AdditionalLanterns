@@ -5,10 +5,10 @@
       "tag": "additionallanterns:dark_prismarine_lanterns"
     },
     {
-      "tag": "forge:dyes/cyan"
+      "tag": "c:dyes/cyan"
     }
   ],
   "result": {
-    "item": "additionallanterns:cyan_dark_prismarine_lantern"
+    "id": "additionallanterns:cyan_dark_prismarine_lantern"
   }
 }

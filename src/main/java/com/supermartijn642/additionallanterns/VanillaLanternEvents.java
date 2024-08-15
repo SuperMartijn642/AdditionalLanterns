@@ -30,8 +30,6 @@ public class VanillaLanternEvents {
         BlockPos clickedPos = e.getPos();
         BlockState oldState = level.getBlockState(clickedPos);
         if(oldState.getBlock() == Blocks.LANTERN){
-            e.setCanceled(true);
-            e.setCancellationResult(level.isClientSide ? InteractionResult.SUCCESS : InteractionResult.CONSUME);
             if(!level.isClientSide){
                 BlockState newState = LanternMaterial.NORMAL.getLanternBlock().defaultBlockState()
                     .setValue(LanternBlock.ON, false)
@@ -40,6 +38,8 @@ public class VanillaLanternEvents {
                     .setValue(LanternBlock.WATERLOGGED, oldState.getValue(BlockStateProperties.WATERLOGGED));
                 level.setBlock(clickedPos, newState, 1 | 2);
             }
+            e.setCanceled(true);
+            e.setCancellationResult(level.isClientSide ? InteractionResult.SUCCESS : InteractionResult.CONSUME);
         }
     }
 

@@ -5,10 +5,10 @@
       "tag": "additionallanterns:emerald_lanterns"
     },
     {
-      "tag": "forge:dyes/lime"
+      "tag": "c:dyes/lime"
     }
   ],
   "result": {
-    "item": "additionallanterns:lime_emerald_lantern"
+    "id": "additionallanterns:lime_emerald_lantern"
   }
 }

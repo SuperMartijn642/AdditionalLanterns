@@ -5,10 +5,10 @@
       "tag": "additionallanterns:exposed_copper_lanterns"
     },
     {
-      "tag": "forge:dyes/white"
+      "tag": "c:dyes/white"
     }
   ],
   "result": {
-    "item": "additionallanterns:white_exposed_copper_lantern"
+    "id": "additionallanterns:white_exposed_copper_lantern"
   }
 }

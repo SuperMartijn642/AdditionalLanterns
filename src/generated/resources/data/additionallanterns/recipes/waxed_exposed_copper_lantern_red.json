@@ -5,10 +5,10 @@
       "tag": "additionallanterns:waxed_exposed_copper_lanterns"
     },
     {
-      "tag": "forge:dyes/red"
+      "tag": "c:dyes/red"
     }
   ],
   "result": {
-    "item": "additionallanterns:red_waxed_exposed_copper_lantern"
+    "id": "additionallanterns:red_waxed_exposed_copper_lantern"
   }
 }

@@ -5,10 +5,10 @@
       "tag": "additionallanterns:basalt_lanterns"
     },
     {
-      "tag": "forge:dyes/gray"
+      "tag": "c:dyes/gray"
     }
   ],
   "result": {
-    "item": "additionallanterns:gray_basalt_lantern"
+    "id": "additionallanterns:gray_basalt_lantern"
   }
 }

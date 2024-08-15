@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "display": {
     "icon": {
-      "item": "additionallanterns:white_emerald_lantern"
+      "id": "additionallanterns:white_emerald_lantern"
     },
     "title": {
       "translate": "additionallanterns.advancement.recipes/misc/emerald_lantern_white.title"
@@ -27,7 +27,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "additionallanterns:emerald_lanterns"
+            "items": "#additionallanterns:emerald_lanterns"
           }
         ]
       }

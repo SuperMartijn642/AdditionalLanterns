@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "display": {
     "icon": {
-      "item": "additionallanterns:light_blue_mossy_cobblestone_lantern"
+      "id": "additionallanterns:light_blue_mossy_cobblestone_lantern"
     },
     "title": {
       "translate": "additionallanterns.advancement.recipes/misc/mossy_cobblestone_lantern_light_blue.title"
@@ -27,7 +27,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "additionallanterns:mossy_cobblestone_lanterns"
+            "items": "#additionallanterns:mossy_cobblestone_lanterns"
           }
         ]
       }

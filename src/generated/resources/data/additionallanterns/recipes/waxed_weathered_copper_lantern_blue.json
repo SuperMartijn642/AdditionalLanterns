@@ -5,10 +5,10 @@
       "tag": "additionallanterns:waxed_weathered_copper_lanterns"
     },
     {
-      "tag": "forge:dyes/blue"
+      "tag": "c:dyes/blue"
     }
   ],
   "result": {
-    "item": "additionallanterns:blue_waxed_weathered_copper_lantern"
+    "id": "additionallanterns:blue_waxed_weathered_copper_lantern"
   }
 }

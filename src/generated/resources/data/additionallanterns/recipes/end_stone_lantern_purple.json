@@ -5,10 +5,10 @@
       "tag": "additionallanterns:end_stone_lanterns"
     },
     {
-      "tag": "forge:dyes/purple"
+      "tag": "c:dyes/purple"
     }
   ],
   "result": {
-    "item": "additionallanterns:purple_end_stone_lantern"
+    "id": "additionallanterns:purple_end_stone_lantern"
   }
 }

@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "display": {
     "icon": {
-      "item": "additionallanterns:light_gray_gold_lantern"
+      "id": "additionallanterns:light_gray_gold_lantern"
     },
     "title": {
       "translate": "additionallanterns.advancement.recipes/misc/gold_lantern_light_gray.title"
@@ -27,7 +27,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "additionallanterns:gold_lanterns"
+            "items": "#additionallanterns:gold_lanterns"
           }
         ]
       }

@@ -14,7 +14,7 @@
     }
   },
   "result": {
-    "item": "additionallanterns:warped_lantern",
+    "id": "additionallanterns:warped_lantern",
     "count": 8
   }
 }

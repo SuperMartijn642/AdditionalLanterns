@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "display": {
     "icon": {
-      "item": "additionallanterns:black_deepslate_bricks_lantern"
+      "id": "additionallanterns:black_deepslate_bricks_lantern"
     },
     "title": {
       "translate": "additionallanterns.advancement.recipes/misc/deepslate_bricks_lantern_black.title"
@@ -27,7 +27,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "additionallanterns:deepslate_bricks_lanterns"
+            "items": "#additionallanterns:deepslate_bricks_lanterns"
           }
         ]
       }

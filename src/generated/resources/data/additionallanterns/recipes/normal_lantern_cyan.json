@@ -5,10 +5,10 @@
       "tag": "additionallanterns:normal_lanterns"
     },
     {
-      "tag": "forge:dyes/cyan"
+      "tag": "c:dyes/cyan"
     }
   ],
   "result": {
-    "item": "additionallanterns:cyan_normal_lantern"
+    "id": "additionallanterns:cyan_normal_lantern"
   }
 }

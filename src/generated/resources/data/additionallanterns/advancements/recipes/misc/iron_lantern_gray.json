@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "display": {
     "icon": {
-      "item": "additionallanterns:gray_iron_lantern"
+      "id": "additionallanterns:gray_iron_lantern"
     },
     "title": {
       "translate": "additionallanterns.advancement.recipes/misc/iron_lantern_gray.title"
@@ -27,7 +27,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "additionallanterns:iron_lanterns"
+            "items": "#additionallanterns:iron_lanterns"
           }
         ]
       }

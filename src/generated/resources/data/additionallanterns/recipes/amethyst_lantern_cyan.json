@@ -5,10 +5,10 @@
       "tag": "additionallanterns:amethyst_lanterns"
     },
     {
-      "tag": "forge:dyes/cyan"
+      "tag": "c:dyes/cyan"
     }
   ],
   "result": {
-    "item": "additionallanterns:cyan_amethyst_lantern"
+    "id": "additionallanterns:cyan_amethyst_lantern"
   }
 }

@@ -5,10 +5,10 @@
       "tag": "additionallanterns:red_nether_bricks_lanterns"
     },
     {
-      "tag": "forge:dyes/green"
+      "tag": "c:dyes/green"
     }
   ],
   "result": {
-    "item": "additionallanterns:green_red_nether_bricks_lantern"
+    "id": "additionallanterns:green_red_nether_bricks_lantern"
   }
 }

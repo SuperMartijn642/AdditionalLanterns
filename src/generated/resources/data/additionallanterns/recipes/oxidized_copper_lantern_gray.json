@@ -5,10 +5,10 @@
       "tag": "additionallanterns:oxidized_copper_lanterns"
     },
     {
-      "tag": "forge:dyes/gray"
+      "tag": "c:dyes/gray"
     }
   ],
   "result": {
-    "item": "additionallanterns:gray_oxidized_copper_lantern"
+    "id": "additionallanterns:gray_oxidized_copper_lantern"
   }
 }

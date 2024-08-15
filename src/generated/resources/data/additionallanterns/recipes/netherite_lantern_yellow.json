@@ -5,10 +5,10 @@
       "tag": "additionallanterns:netherite_lanterns"
     },
     {
-      "tag": "forge:dyes/yellow"
+      "tag": "c:dyes/yellow"
     }
   ],
   "result": {
-    "item": "additionallanterns:yellow_netherite_lantern"
+    "id": "additionallanterns:yellow_netherite_lantern"
   }
 }

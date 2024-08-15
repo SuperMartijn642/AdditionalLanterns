@@ -5,10 +5,10 @@
       "tag": "additionallanterns:oxidized_copper_lanterns"
     },
     {
-      "tag": "forge:dyes/pink"
+      "tag": "c:dyes/pink"
     }
   ],
   "result": {
-    "item": "additionallanterns:pink_oxidized_copper_lantern"
+    "id": "additionallanterns:pink_oxidized_copper_lantern"
   }
 }

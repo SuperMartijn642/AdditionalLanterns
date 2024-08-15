@@ -5,10 +5,10 @@
       "tag": "additionallanterns:diorite_lanterns"
     },
     {
-      "tag": "forge:dyes/pink"
+      "tag": "c:dyes/pink"
     }
   ],
   "result": {
-    "item": "additionallanterns:pink_diorite_lantern"
+    "id": "additionallanterns:pink_diorite_lantern"
   }
 }

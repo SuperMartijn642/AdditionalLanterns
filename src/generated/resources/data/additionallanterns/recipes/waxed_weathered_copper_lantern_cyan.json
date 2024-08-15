@@ -5,10 +5,10 @@
       "tag": "additionallanterns:waxed_weathered_copper_lanterns"
     },
     {
-      "tag": "forge:dyes/cyan"
+      "tag": "c:dyes/cyan"
     }
   ],
   "result": {
-    "item": "additionallanterns:cyan_waxed_weathered_copper_lantern"
+    "id": "additionallanterns:cyan_waxed_weathered_copper_lantern"
   }
 }

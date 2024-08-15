@@ -5,10 +5,10 @@
       "tag": "additionallanterns:emerald_lanterns"
     },
     {
-      "tag": "forge:dyes/gray"
+      "tag": "c:dyes/gray"
     }
   ],
   "result": {
-    "item": "additionallanterns:gray_emerald_lantern"
+    "id": "additionallanterns:gray_emerald_lantern"
   }
 }

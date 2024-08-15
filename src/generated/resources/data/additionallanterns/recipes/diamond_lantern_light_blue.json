@@ -5,10 +5,10 @@
       "tag": "additionallanterns:diamond_lanterns"
     },
     {
-      "tag": "forge:dyes/light_blue"
+      "tag": "c:dyes/light_blue"
     }
   ],
   "result": {
-    "item": "additionallanterns:light_blue_diamond_lantern"
+    "id": "additionallanterns:light_blue_diamond_lantern"
   }
 }

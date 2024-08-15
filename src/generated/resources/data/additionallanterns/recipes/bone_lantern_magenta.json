@@ -5,10 +5,10 @@
       "tag": "additionallanterns:bone_lanterns"
     },
     {
-      "tag": "forge:dyes/magenta"
+      "tag": "c:dyes/magenta"
     }
   ],
   "result": {
-    "item": "additionallanterns:magenta_bone_lantern"
+    "id": "additionallanterns:magenta_bone_lantern"
   }
 }

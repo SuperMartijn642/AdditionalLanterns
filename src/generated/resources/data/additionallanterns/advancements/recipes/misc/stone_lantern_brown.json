@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "display": {
     "icon": {
-      "item": "additionallanterns:brown_stone_lantern"
+      "id": "additionallanterns:brown_stone_lantern"
     },
     "title": {
       "translate": "additionallanterns.advancement.recipes/misc/stone_lantern_brown.title"
@@ -27,7 +27,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "additionallanterns:stone_lanterns"
+            "items": "#additionallanterns:stone_lanterns"
           }
         ]
       }

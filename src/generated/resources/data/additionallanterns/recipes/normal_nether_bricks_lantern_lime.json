@@ -5,10 +5,10 @@
       "tag": "additionallanterns:normal_nether_bricks_lanterns"
     },
     {
-      "tag": "forge:dyes/lime"
+      "tag": "c:dyes/lime"
     }
   ],
   "result": {
-    "item": "additionallanterns:lime_normal_nether_bricks_lantern"
+    "id": "additionallanterns:lime_normal_nether_bricks_lantern"
   }
 }

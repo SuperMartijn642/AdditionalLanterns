@@ -5,10 +5,10 @@
       "tag": "additionallanterns:crimson_lanterns"
     },
     {
-      "tag": "forge:dyes/blue"
+      "tag": "c:dyes/blue"
     }
   ],
   "result": {
-    "item": "additionallanterns:blue_crimson_lantern"
+    "id": "additionallanterns:blue_crimson_lantern"
   }
 }

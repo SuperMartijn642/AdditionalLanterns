@@ -5,10 +5,10 @@
       "tag": "additionallanterns:obsidian_lanterns"
     },
     {
-      "tag": "forge:dyes/black"
+      "tag": "c:dyes/black"
     }
   ],
   "result": {
-    "item": "additionallanterns:black_obsidian_lantern"
+    "id": "additionallanterns:black_obsidian_lantern"
   }
 }

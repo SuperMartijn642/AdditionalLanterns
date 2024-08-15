@@ -5,10 +5,10 @@
       "tag": "additionallanterns:normal_nether_bricks_lanterns"
     },
     {
-      "tag": "forge:dyes/pink"
+      "tag": "c:dyes/pink"
     }
   ],
   "result": {
-    "item": "additionallanterns:pink_normal_nether_bricks_lantern"
+    "id": "additionallanterns:pink_normal_nether_bricks_lantern"
   }
 }

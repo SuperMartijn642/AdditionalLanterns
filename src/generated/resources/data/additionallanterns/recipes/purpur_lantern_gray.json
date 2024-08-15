@@ -5,10 +5,10 @@
       "tag": "additionallanterns:purpur_lanterns"
     },
     {
-      "tag": "forge:dyes/gray"
+      "tag": "c:dyes/gray"
     }
   ],
   "result": {
-    "item": "additionallanterns:gray_purpur_lantern"
+    "id": "additionallanterns:gray_purpur_lantern"
   }
 }

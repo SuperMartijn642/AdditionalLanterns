@@ -5,10 +5,10 @@
       "tag": "additionallanterns:deepslate_bricks_lanterns"
     },
     {
-      "tag": "forge:dyes/brown"
+      "tag": "c:dyes/brown"
     }
   ],
   "result": {
-    "item": "additionallanterns:brown_deepslate_bricks_lantern"
+    "id": "additionallanterns:brown_deepslate_bricks_lantern"
   }
 }

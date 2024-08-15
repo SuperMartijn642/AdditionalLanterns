@@ -5,10 +5,10 @@
       "tag": "additionallanterns:mossy_cobblestone_lanterns"
     },
     {
-      "tag": "forge:dyes/cyan"
+      "tag": "c:dyes/cyan"
     }
   ],
   "result": {
-    "item": "additionallanterns:cyan_mossy_cobblestone_lantern"
+    "id": "additionallanterns:cyan_mossy_cobblestone_lantern"
   }
 }

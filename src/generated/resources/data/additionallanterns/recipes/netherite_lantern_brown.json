@@ -5,10 +5,10 @@
       "tag": "additionallanterns:netherite_lanterns"
     },
     {
-      "tag": "forge:dyes/brown"
+      "tag": "c:dyes/brown"
     }
   ],
   "result": {
-    "item": "additionallanterns:brown_netherite_lantern"
+    "id": "additionallanterns:brown_netherite_lantern"
   }
 }

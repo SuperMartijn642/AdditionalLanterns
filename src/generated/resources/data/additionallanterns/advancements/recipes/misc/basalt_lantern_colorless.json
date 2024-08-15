@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "display": {
     "icon": {
-      "item": "additionallanterns:basalt_lantern"
+      "id": "additionallanterns:basalt_lantern"
     },
     "title": {
       "translate": "additionallanterns.advancement.recipes/misc/basalt_lantern_colorless.title"
@@ -27,7 +27,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "additionallanterns:basalt_lanterns"
+            "items": "#additionallanterns:basalt_lanterns"
           }
         ]
       }

@@ -5,10 +5,10 @@
       "tag": "additionallanterns:deepslate_bricks_lanterns"
     },
     {
-      "tag": "forge:dyes/lime"
+      "tag": "c:dyes/lime"
     }
   ],
   "result": {
-    "item": "additionallanterns:lime_deepslate_bricks_lantern"
+    "id": "additionallanterns:lime_deepslate_bricks_lantern"
   }
 }

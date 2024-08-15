@@ -5,10 +5,10 @@
       "tag": "additionallanterns:mossy_cobblestone_lanterns"
     },
     {
-      "tag": "forge:dyes/pink"
+      "tag": "c:dyes/pink"
     }
   ],
   "result": {
-    "item": "additionallanterns:pink_mossy_cobblestone_lantern"
+    "id": "additionallanterns:pink_mossy_cobblestone_lantern"
   }
 }

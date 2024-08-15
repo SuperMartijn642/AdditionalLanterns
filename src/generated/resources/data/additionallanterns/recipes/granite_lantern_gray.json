@@ -5,10 +5,10 @@
       "tag": "additionallanterns:granite_lanterns"
     },
     {
-      "tag": "forge:dyes/gray"
+      "tag": "c:dyes/gray"
     }
   ],
   "result": {
-    "item": "additionallanterns:gray_granite_lantern"
+    "id": "additionallanterns:gray_granite_lantern"
   }
 }

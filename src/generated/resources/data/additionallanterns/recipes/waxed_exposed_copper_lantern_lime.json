@@ -5,10 +5,10 @@
       "tag": "additionallanterns:waxed_exposed_copper_lanterns"
     },
     {
-      "tag": "forge:dyes/lime"
+      "tag": "c:dyes/lime"
     }
   ],
   "result": {
-    "item": "additionallanterns:lime_waxed_exposed_copper_lantern"
+    "id": "additionallanterns:lime_waxed_exposed_copper_lantern"
   }
 }

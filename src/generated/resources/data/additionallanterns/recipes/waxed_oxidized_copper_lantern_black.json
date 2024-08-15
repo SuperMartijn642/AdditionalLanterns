@@ -5,10 +5,10 @@
       "tag": "additionallanterns:waxed_oxidized_copper_lanterns"
     },
     {
-      "tag": "forge:dyes/black"
+      "tag": "c:dyes/black"
     }
   ],
   "result": {
-    "item": "additionallanterns:black_waxed_oxidized_copper_lantern"
+    "id": "additionallanterns:black_waxed_oxidized_copper_lantern"
   }
 }

@@ -5,10 +5,10 @@
       "tag": "additionallanterns:diamond_lanterns"
     },
     {
-      "tag": "forge:dyes/magenta"
+      "tag": "c:dyes/magenta"
     }
   ],
   "result": {
-    "item": "additionallanterns:magenta_diamond_lantern"
+    "id": "additionallanterns:magenta_diamond_lantern"
   }
 }

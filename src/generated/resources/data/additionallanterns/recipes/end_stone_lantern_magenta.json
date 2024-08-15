@@ -5,10 +5,10 @@
       "tag": "additionallanterns:end_stone_lanterns"
     },
     {
-      "tag": "forge:dyes/magenta"
+      "tag": "c:dyes/magenta"
     }
   ],
   "result": {
-    "item": "additionallanterns:magenta_end_stone_lantern"
+    "id": "additionallanterns:magenta_end_stone_lantern"
   }
 }

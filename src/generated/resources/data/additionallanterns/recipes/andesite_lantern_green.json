@@ -5,10 +5,10 @@
       "tag": "additionallanterns:andesite_lanterns"
     },
     {
-      "tag": "forge:dyes/green"
+      "tag": "c:dyes/green"
     }
   ],
   "result": {
-    "item": "additionallanterns:green_andesite_lantern"
+    "id": "additionallanterns:green_andesite_lantern"
   }
 }

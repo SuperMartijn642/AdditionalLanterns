@@ -5,10 +5,10 @@
       "tag": "additionallanterns:normal_sandstone_lanterns"
     },
     {
-      "tag": "forge:dyes/green"
+      "tag": "c:dyes/green"
     }
   ],
   "result": {
-    "item": "additionallanterns:green_normal_sandstone_lantern"
+    "id": "additionallanterns:green_normal_sandstone_lantern"
   }
 }

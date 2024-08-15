@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "display": {
     "icon": {
-      "item": "additionallanterns:white_end_stone_lantern"
+      "id": "additionallanterns:white_end_stone_lantern"
     },
     "title": {
       "translate": "additionallanterns.advancement.recipes/misc/end_stone_lantern_white.title"
@@ -27,7 +27,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "additionallanterns:end_stone_lanterns"
+            "items": "#additionallanterns:end_stone_lanterns"
           }
         ]
       }

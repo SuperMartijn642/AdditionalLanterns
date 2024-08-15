@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "display": {
     "icon": {
-      "item": "additionallanterns:obsidian_chain"
+      "id": "additionallanterns:obsidian_chain"
     },
     "title": {
       "translate": "additionallanterns.advancement.recipes/misc/obsidian_chain.title"
@@ -27,9 +27,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:obsidian"
-            ]
+            "items": "minecraft:obsidian"
           }
         ]
       }

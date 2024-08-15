@@ -14,7 +14,7 @@
     }
   },
   "result": {
-    "item": "additionallanterns:iron_lantern",
+    "id": "additionallanterns:iron_lantern",
     "count": 4
   }
 }

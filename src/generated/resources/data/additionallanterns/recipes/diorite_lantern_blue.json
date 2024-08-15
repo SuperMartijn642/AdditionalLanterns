@@ -5,10 +5,10 @@
       "tag": "additionallanterns:diorite_lanterns"
     },
     {
-      "tag": "forge:dyes/blue"
+      "tag": "c:dyes/blue"
     }
   ],
   "result": {
-    "item": "additionallanterns:blue_diorite_lantern"
+    "id": "additionallanterns:blue_diorite_lantern"
   }
 }

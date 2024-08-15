@@ -5,10 +5,10 @@
       "tag": "additionallanterns:quartz_lanterns"
     },
     {
-      "tag": "forge:dyes/black"
+      "tag": "c:dyes/black"
     }
   ],
   "result": {
-    "item": "additionallanterns:black_quartz_lantern"
+    "id": "additionallanterns:black_quartz_lantern"
   }
 }

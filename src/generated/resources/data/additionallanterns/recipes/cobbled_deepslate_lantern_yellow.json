@@ -5,10 +5,10 @@
       "tag": "additionallanterns:cobbled_deepslate_lanterns"
     },
     {
-      "tag": "forge:dyes/yellow"
+      "tag": "c:dyes/yellow"
     }
   ],
   "result": {
-    "item": "additionallanterns:yellow_cobbled_deepslate_lantern"
+    "id": "additionallanterns:yellow_cobbled_deepslate_lantern"
   }
 }

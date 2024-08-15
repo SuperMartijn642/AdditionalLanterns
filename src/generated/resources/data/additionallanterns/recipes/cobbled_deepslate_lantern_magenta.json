@@ -5,10 +5,10 @@
       "tag": "additionallanterns:cobbled_deepslate_lanterns"
     },
     {
-      "tag": "forge:dyes/magenta"
+      "tag": "c:dyes/magenta"
     }
   ],
   "result": {
-    "item": "additionallanterns:magenta_cobbled_deepslate_lantern"
+    "id": "additionallanterns:magenta_cobbled_deepslate_lantern"
   }
 }

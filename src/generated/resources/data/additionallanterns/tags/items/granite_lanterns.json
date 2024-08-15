@@ -1,22 +1,22 @@
 {
   "replace": false,
   "values": [
-    "additionallanterns:pink_granite_lantern",
-    "additionallanterns:blue_granite_lantern",
     "additionallanterns:granite_lantern",
-    "additionallanterns:gray_granite_lantern",
-    "additionallanterns:black_granite_lantern",
-    "additionallanterns:magenta_granite_lantern",
-    "additionallanterns:red_granite_lantern",
-    "additionallanterns:light_blue_granite_lantern",
-    "additionallanterns:purple_granite_lantern",
-    "additionallanterns:green_granite_lantern",
-    "additionallanterns:orange_granite_lantern",
-    "additionallanterns:lime_granite_lantern",
     "additionallanterns:cyan_granite_lantern",
+    "additionallanterns:purple_granite_lantern",
     "additionallanterns:yellow_granite_lantern",
-    "additionallanterns:white_granite_lantern",
+    "additionallanterns:orange_granite_lantern",
+    "additionallanterns:red_granite_lantern",
+    "additionallanterns:lime_granite_lantern",
+    "additionallanterns:black_granite_lantern",
+    "additionallanterns:light_blue_granite_lantern",
+    "additionallanterns:green_granite_lantern",
+    "additionallanterns:blue_granite_lantern",
     "additionallanterns:light_gray_granite_lantern",
-    "additionallanterns:brown_granite_lantern"
+    "additionallanterns:brown_granite_lantern",
+    "additionallanterns:pink_granite_lantern",
+    "additionallanterns:white_granite_lantern",
+    "additionallanterns:gray_granite_lantern",
+    "additionallanterns:magenta_granite_lantern"
   ]
 }

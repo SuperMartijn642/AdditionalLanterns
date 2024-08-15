@@ -5,10 +5,10 @@
       "tag": "additionallanterns:cobblestone_lanterns"
     },
     {
-      "tag": "forge:dyes/brown"
+      "tag": "c:dyes/brown"
     }
   ],
   "result": {
-    "item": "additionallanterns:brown_cobblestone_lantern"
+    "id": "additionallanterns:brown_cobblestone_lantern"
   }
 }

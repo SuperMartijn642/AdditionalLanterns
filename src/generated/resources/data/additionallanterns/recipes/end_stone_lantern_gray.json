@@ -5,10 +5,10 @@
       "tag": "additionallanterns:end_stone_lanterns"
     },
     {
-      "tag": "forge:dyes/gray"
+      "tag": "c:dyes/gray"
     }
   ],
   "result": {
-    "item": "additionallanterns:gray_end_stone_lantern"
+    "id": "additionallanterns:gray_end_stone_lantern"
   }
 }

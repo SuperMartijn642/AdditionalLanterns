@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "display": {
     "icon": {
-      "item": "additionallanterns:green_bone_lantern"
+      "id": "additionallanterns:green_bone_lantern"
     },
     "title": {
       "translate": "additionallanterns.advancement.recipes/misc/bone_lantern_green.title"
@@ -27,7 +27,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "additionallanterns:bone_lanterns"
+            "items": "#additionallanterns:bone_lanterns"
           }
         ]
       }
