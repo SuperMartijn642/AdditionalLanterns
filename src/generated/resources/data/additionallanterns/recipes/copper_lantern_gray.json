@@ -5,10 +5,10 @@
       "tag": "additionallanterns:copper_lanterns"
     },
     {
-      "tag": "c:gray_dyes"
+      "tag": "c:dyes/gray"
     }
   ],
   "result": {
-    "item": "additionallanterns:gray_copper_lantern"
+    "id": "additionallanterns:gray_copper_lantern"
   }
 }

@@ -5,10 +5,10 @@
       "tag": "additionallanterns:andesite_lanterns"
     },
     {
-      "tag": "c:brown_dyes"
+      "tag": "c:dyes/brown"
     }
   ],
   "result": {
-    "item": "additionallanterns:brown_andesite_lantern"
+    "id": "additionallanterns:brown_andesite_lantern"
   }
 }

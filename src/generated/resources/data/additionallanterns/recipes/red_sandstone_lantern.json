@@ -14,7 +14,7 @@
     }
   },
   "result": {
-    "item": "additionallanterns:red_sandstone_lantern",
+    "id": "additionallanterns:red_sandstone_lantern",
     "count": 12
   }
 }

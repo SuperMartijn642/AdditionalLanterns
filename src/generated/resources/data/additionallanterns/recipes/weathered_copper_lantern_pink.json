@@ -5,10 +5,10 @@
       "tag": "additionallanterns:weathered_copper_lanterns"
     },
     {
-      "tag": "c:pink_dyes"
+      "tag": "c:dyes/pink"
     }
   ],
   "result": {
-    "item": "additionallanterns:pink_weathered_copper_lantern"
+    "id": "additionallanterns:pink_weathered_copper_lantern"
   }
 }

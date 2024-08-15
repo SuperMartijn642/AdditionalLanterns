@@ -5,10 +5,10 @@
       "tag": "additionallanterns:exposed_copper_lanterns"
     },
     {
-      "tag": "c:magenta_dyes"
+      "tag": "c:dyes/magenta"
     }
   ],
   "result": {
-    "item": "additionallanterns:magenta_exposed_copper_lantern"
+    "id": "additionallanterns:magenta_exposed_copper_lantern"
   }
 }

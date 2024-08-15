@@ -5,10 +5,10 @@
       "tag": "additionallanterns:cobblestone_lanterns"
     },
     {
-      "tag": "c:gray_dyes"
+      "tag": "c:dyes/gray"
     }
   ],
   "result": {
-    "item": "additionallanterns:gray_cobblestone_lantern"
+    "id": "additionallanterns:gray_cobblestone_lantern"
   }
 }

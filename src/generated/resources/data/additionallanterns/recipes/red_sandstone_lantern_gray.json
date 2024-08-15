@@ -5,10 +5,10 @@
       "tag": "additionallanterns:red_sandstone_lanterns"
     },
     {
-      "tag": "c:gray_dyes"
+      "tag": "c:dyes/gray"
     }
   ],
   "result": {
-    "item": "additionallanterns:gray_red_sandstone_lantern"
+    "id": "additionallanterns:gray_red_sandstone_lantern"
   }
 }

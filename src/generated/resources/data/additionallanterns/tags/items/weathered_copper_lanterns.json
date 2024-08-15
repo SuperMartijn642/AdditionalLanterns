@@ -1,22 +1,22 @@
 {
   "replace": false,
   "values": [
+    "additionallanterns:white_weathered_copper_lantern",
     "additionallanterns:brown_weathered_copper_lantern",
-    "additionallanterns:gray_weathered_copper_lantern",
-    "additionallanterns:pink_weathered_copper_lantern",
-    "additionallanterns:blue_weathered_copper_lantern",
-    "additionallanterns:light_gray_weathered_copper_lantern",
-    "additionallanterns:orange_weathered_copper_lantern",
-    "additionallanterns:green_weathered_copper_lantern",
-    "additionallanterns:red_weathered_copper_lantern",
     "additionallanterns:light_blue_weathered_copper_lantern",
-    "additionallanterns:cyan_weathered_copper_lantern",
-    "additionallanterns:black_weathered_copper_lantern",
-    "additionallanterns:magenta_weathered_copper_lantern",
+    "additionallanterns:green_weathered_copper_lantern",
     "additionallanterns:weathered_copper_lantern",
+    "additionallanterns:black_weathered_copper_lantern",
+    "additionallanterns:orange_weathered_copper_lantern",
+    "additionallanterns:gray_weathered_copper_lantern",
+    "additionallanterns:light_gray_weathered_copper_lantern",
     "additionallanterns:yellow_weathered_copper_lantern",
+    "additionallanterns:pink_weathered_copper_lantern",
+    "additionallanterns:red_weathered_copper_lantern",
+    "additionallanterns:cyan_weathered_copper_lantern",
+    "additionallanterns:magenta_weathered_copper_lantern",
+    "additionallanterns:blue_weathered_copper_lantern",
     "additionallanterns:lime_weathered_copper_lantern",
-    "additionallanterns:purple_weathered_copper_lantern",
-    "additionallanterns:white_weathered_copper_lantern"
+    "additionallanterns:purple_weathered_copper_lantern"
   ]
 }

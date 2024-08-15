@@ -5,10 +5,10 @@
       "tag": "additionallanterns:netherite_lanterns"
     },
     {
-      "tag": "c:gray_dyes"
+      "tag": "c:dyes/gray"
     }
   ],
   "result": {
-    "item": "additionallanterns:gray_netherite_lantern"
+    "id": "additionallanterns:gray_netherite_lantern"
   }
 }

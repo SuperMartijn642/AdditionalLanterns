@@ -5,10 +5,10 @@
       "tag": "additionallanterns:obsidian_lanterns"
     },
     {
-      "tag": "c:gray_dyes"
+      "tag": "c:dyes/gray"
     }
   ],
   "result": {
-    "item": "additionallanterns:gray_obsidian_lantern"
+    "id": "additionallanterns:gray_obsidian_lantern"
   }
 }

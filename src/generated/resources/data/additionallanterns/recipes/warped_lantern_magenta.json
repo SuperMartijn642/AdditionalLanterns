@@ -5,10 +5,10 @@
       "tag": "additionallanterns:warped_lanterns"
     },
     {
-      "tag": "c:magenta_dyes"
+      "tag": "c:dyes/magenta"
     }
   ],
   "result": {
-    "item": "additionallanterns:magenta_warped_lantern"
+    "id": "additionallanterns:magenta_warped_lantern"
   }
 }

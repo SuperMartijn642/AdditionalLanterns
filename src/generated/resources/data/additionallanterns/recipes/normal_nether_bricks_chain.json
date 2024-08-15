@@ -14,7 +14,7 @@
     }
   },
   "result": {
-    "item": "additionallanterns:normal_nether_bricks_chain",
+    "id": "additionallanterns:normal_nether_bricks_chain",
     "count": 16
   }
 }

@@ -5,10 +5,10 @@
       "tag": "additionallanterns:mossy_cobblestone_lanterns"
     },
     {
-      "tag": "c:lime_dyes"
+      "tag": "c:dyes/lime"
     }
   ],
   "result": {
-    "item": "additionallanterns:lime_mossy_cobblestone_lantern"
+    "id": "additionallanterns:lime_mossy_cobblestone_lantern"
   }
 }

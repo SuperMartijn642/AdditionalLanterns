@@ -5,10 +5,10 @@
       "tag": "additionallanterns:diorite_lanterns"
     },
     {
-      "tag": "c:orange_dyes"
+      "tag": "c:dyes/orange"
     }
   ],
   "result": {
-    "item": "additionallanterns:orange_diorite_lantern"
+    "id": "additionallanterns:orange_diorite_lantern"
   }
 }

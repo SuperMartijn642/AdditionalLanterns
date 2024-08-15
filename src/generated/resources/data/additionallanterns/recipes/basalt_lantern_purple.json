@@ -5,10 +5,10 @@
       "tag": "additionallanterns:basalt_lanterns"
     },
     {
-      "tag": "c:purple_dyes"
+      "tag": "c:dyes/purple"
     }
   ],
   "result": {
-    "item": "additionallanterns:purple_basalt_lantern"
+    "id": "additionallanterns:purple_basalt_lantern"
   }
 }

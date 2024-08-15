@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "display": {
     "icon": {
-      "item": "additionallanterns:dark_prismarine_chain"
+      "id": "additionallanterns:dark_prismarine_chain"
     },
     "title": {
       "translate": "additionallanterns.advancement.recipes/misc/dark_prismarine_chain.title"
@@ -27,9 +27,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:dark_prismarine"
-            ]
+            "items": "minecraft:dark_prismarine"
           }
         ]
       }

@@ -5,10 +5,10 @@
       "tag": "additionallanterns:bone_lanterns"
     },
     {
-      "tag": "c:red_dyes"
+      "tag": "c:dyes/red"
     }
   ],
   "result": {
-    "item": "additionallanterns:red_bone_lantern"
+    "id": "additionallanterns:red_bone_lantern"
   }
 }

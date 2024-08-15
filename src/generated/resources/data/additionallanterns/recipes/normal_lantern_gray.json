@@ -5,10 +5,10 @@
       "tag": "additionallanterns:normal_lanterns"
     },
     {
-      "tag": "c:gray_dyes"
+      "tag": "c:dyes/gray"
     }
   ],
   "result": {
-    "item": "additionallanterns:gray_normal_lantern"
+    "id": "additionallanterns:gray_normal_lantern"
   }
 }

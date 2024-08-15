@@ -5,10 +5,10 @@
       "tag": "additionallanterns:waxed_oxidized_copper_lanterns"
     },
     {
-      "tag": "c:orange_dyes"
+      "tag": "c:dyes/orange"
     }
   ],
   "result": {
-    "item": "additionallanterns:orange_waxed_oxidized_copper_lantern"
+    "id": "additionallanterns:orange_waxed_oxidized_copper_lantern"
   }
 }

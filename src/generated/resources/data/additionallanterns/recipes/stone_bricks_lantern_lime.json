@@ -5,10 +5,10 @@
       "tag": "additionallanterns:stone_bricks_lanterns"
     },
     {
-      "tag": "c:lime_dyes"
+      "tag": "c:dyes/lime"
     }
   ],
   "result": {
-    "item": "additionallanterns:lime_stone_bricks_lantern"
+    "id": "additionallanterns:lime_stone_bricks_lantern"
   }
 }

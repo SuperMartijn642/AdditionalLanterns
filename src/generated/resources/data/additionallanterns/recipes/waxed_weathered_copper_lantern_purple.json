@@ -5,10 +5,10 @@
       "tag": "additionallanterns:waxed_weathered_copper_lanterns"
     },
     {
-      "tag": "c:purple_dyes"
+      "tag": "c:dyes/purple"
     }
   ],
   "result": {
-    "item": "additionallanterns:purple_waxed_weathered_copper_lantern"
+    "id": "additionallanterns:purple_waxed_weathered_copper_lantern"
   }
 }

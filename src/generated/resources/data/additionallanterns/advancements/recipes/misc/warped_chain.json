@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "display": {
     "icon": {
-      "item": "additionallanterns:warped_chain"
+      "id": "additionallanterns:warped_chain"
     },
     "title": {
       "translate": "additionallanterns.advancement.recipes/misc/warped_chain.title"
@@ -27,9 +27,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:warped_planks"
-            ]
+            "items": "minecraft:warped_planks"
           }
         ]
       }

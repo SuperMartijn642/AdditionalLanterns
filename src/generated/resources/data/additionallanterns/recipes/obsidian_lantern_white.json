@@ -5,10 +5,10 @@
       "tag": "additionallanterns:obsidian_lanterns"
     },
     {
-      "tag": "c:white_dyes"
+      "tag": "c:dyes/white"
     }
   ],
   "result": {
-    "item": "additionallanterns:white_obsidian_lantern"
+    "id": "additionallanterns:white_obsidian_lantern"
   }
 }

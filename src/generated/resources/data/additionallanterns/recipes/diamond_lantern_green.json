@@ -5,10 +5,10 @@
       "tag": "additionallanterns:diamond_lanterns"
     },
     {
-      "tag": "c:green_dyes"
+      "tag": "c:dyes/green"
     }
   ],
   "result": {
-    "item": "additionallanterns:green_diamond_lantern"
+    "id": "additionallanterns:green_diamond_lantern"
   }
 }

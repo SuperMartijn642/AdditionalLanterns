@@ -5,10 +5,10 @@
       "tag": "additionallanterns:end_stone_lanterns"
     },
     {
-      "tag": "c:black_dyes"
+      "tag": "c:dyes/black"
     }
   ],
   "result": {
-    "item": "additionallanterns:black_end_stone_lantern"
+    "id": "additionallanterns:black_end_stone_lantern"
   }
 }

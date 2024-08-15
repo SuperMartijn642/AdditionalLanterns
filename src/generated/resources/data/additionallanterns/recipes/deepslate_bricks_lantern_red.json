@@ -5,10 +5,10 @@
       "tag": "additionallanterns:deepslate_bricks_lanterns"
     },
     {
-      "tag": "c:red_dyes"
+      "tag": "c:dyes/red"
     }
   ],
   "result": {
-    "item": "additionallanterns:red_deepslate_bricks_lantern"
+    "id": "additionallanterns:red_deepslate_bricks_lantern"
   }
 }

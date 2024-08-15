@@ -5,10 +5,10 @@
       "tag": "additionallanterns:amethyst_lanterns"
     },
     {
-      "tag": "c:magenta_dyes"
+      "tag": "c:dyes/magenta"
     }
   ],
   "result": {
-    "item": "additionallanterns:magenta_amethyst_lantern"
+    "id": "additionallanterns:magenta_amethyst_lantern"
   }
 }

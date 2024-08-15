@@ -5,10 +5,10 @@
       "tag": "additionallanterns:granite_lanterns"
     },
     {
-      "tag": "c:brown_dyes"
+      "tag": "c:dyes/brown"
     }
   ],
   "result": {
-    "item": "additionallanterns:brown_granite_lantern"
+    "id": "additionallanterns:brown_granite_lantern"
   }
 }

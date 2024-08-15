@@ -5,10 +5,10 @@
       "tag": "additionallanterns:quartz_lanterns"
     },
     {
-      "tag": "c:green_dyes"
+      "tag": "c:dyes/green"
     }
   ],
   "result": {
-    "item": "additionallanterns:green_quartz_lantern"
+    "id": "additionallanterns:green_quartz_lantern"
   }
 }

@@ -5,10 +5,10 @@
       "tag": "additionallanterns:blackstone_lanterns"
     },
     {
-      "tag": "c:white_dyes"
+      "tag": "c:dyes/white"
     }
   ],
   "result": {
-    "item": "additionallanterns:white_blackstone_lantern"
+    "id": "additionallanterns:white_blackstone_lantern"
   }
 }

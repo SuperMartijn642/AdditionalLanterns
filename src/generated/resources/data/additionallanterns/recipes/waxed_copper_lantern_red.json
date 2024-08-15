@@ -5,10 +5,10 @@
       "tag": "additionallanterns:waxed_copper_lanterns"
     },
     {
-      "tag": "c:red_dyes"
+      "tag": "c:dyes/red"
     }
   ],
   "result": {
-    "item": "additionallanterns:red_waxed_copper_lantern"
+    "id": "additionallanterns:red_waxed_copper_lantern"
   }
 }

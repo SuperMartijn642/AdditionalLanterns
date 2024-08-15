@@ -5,10 +5,10 @@
       "tag": "additionallanterns:cobbled_deepslate_lanterns"
     },
     {
-      "tag": "c:black_dyes"
+      "tag": "c:dyes/black"
     }
   ],
   "result": {
-    "item": "additionallanterns:black_cobbled_deepslate_lantern"
+    "id": "additionallanterns:black_cobbled_deepslate_lantern"
   }
 }

@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "display": {
     "icon": {
-      "item": "additionallanterns:pink_prismarine_lantern"
+      "id": "additionallanterns:pink_prismarine_lantern"
     },
     "title": {
       "translate": "additionallanterns.advancement.recipes/misc/prismarine_lantern_pink.title"
@@ -27,7 +27,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "additionallanterns:prismarine_lanterns"
+            "items": "#additionallanterns:prismarine_lanterns"
           }
         ]
       }

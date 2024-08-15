@@ -5,10 +5,10 @@
       "tag": "additionallanterns:normal_nether_bricks_lanterns"
     },
     {
-      "tag": "c:red_dyes"
+      "tag": "c:dyes/red"
     }
   ],
   "result": {
-    "item": "additionallanterns:red_normal_nether_bricks_lantern"
+    "id": "additionallanterns:red_normal_nether_bricks_lantern"
   }
 }

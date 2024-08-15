@@ -5,10 +5,10 @@
       "tag": "additionallanterns:bricks_lanterns"
     },
     {
-      "tag": "c:white_dyes"
+      "tag": "c:dyes/white"
     }
   ],
   "result": {
-    "item": "additionallanterns:white_bricks_lantern"
+    "id": "additionallanterns:white_bricks_lantern"
   }
 }

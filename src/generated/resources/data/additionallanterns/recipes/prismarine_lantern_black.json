@@ -5,10 +5,10 @@
       "tag": "additionallanterns:prismarine_lanterns"
     },
     {
-      "tag": "c:black_dyes"
+      "tag": "c:dyes/black"
     }
   ],
   "result": {
-    "item": "additionallanterns:black_prismarine_lantern"
+    "id": "additionallanterns:black_prismarine_lantern"
   }
 }

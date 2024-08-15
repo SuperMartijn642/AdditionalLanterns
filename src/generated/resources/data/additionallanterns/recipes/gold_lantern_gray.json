@@ -5,10 +5,10 @@
       "tag": "additionallanterns:gold_lanterns"
     },
     {
-      "tag": "c:gray_dyes"
+      "tag": "c:dyes/gray"
     }
   ],
   "result": {
-    "item": "additionallanterns:gray_gold_lantern"
+    "id": "additionallanterns:gray_gold_lantern"
   }
 }

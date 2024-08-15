@@ -5,7 +5,7 @@ import com.supermartijn642.additionallanterns.LanternMaterial;
 import com.supermartijn642.core.generator.RecipeGenerator;
 import com.supermartijn642.core.generator.ResourceCache;
 import com.supermartijn642.core.registry.Registries;
-import net.fabricmc.fabric.api.tag.convention.v1.ConventionalItemTags;
+import net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
@@ -49,12 +49,12 @@ public class LanternRecipeGenerator extends RecipeGenerator {
     private void addMaterialRecipes(LanternMaterial material){
         this.addLanternRecipe(material);
         if(material.canBeColored){
-            addColorRecipe(material, null);
+            this.addColorRecipe(material, null);
             for(LanternColor color : LanternColor.values())
-                addColorRecipe(material, color);
+                this.addColorRecipe(material, color);
         }
         if(material.hasChains)
-            addChainRecipe(material);
+            this.addChainRecipe(material);
     }
 
     private void addLanternRecipe(LanternMaterial material){

@@ -5,10 +5,10 @@
       "tag": "additionallanterns:granite_lanterns"
     },
     {
-      "tag": "c:white_dyes"
+      "tag": "c:dyes/white"
     }
   ],
   "result": {
-    "item": "additionallanterns:white_granite_lantern"
+    "id": "additionallanterns:white_granite_lantern"
   }
 }

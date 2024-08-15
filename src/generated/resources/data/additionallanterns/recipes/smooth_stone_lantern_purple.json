@@ -5,10 +5,10 @@
       "tag": "additionallanterns:smooth_stone_lanterns"
     },
     {
-      "tag": "c:purple_dyes"
+      "tag": "c:dyes/purple"
     }
   ],
   "result": {
-    "item": "additionallanterns:purple_smooth_stone_lantern"
+    "id": "additionallanterns:purple_smooth_stone_lantern"
   }
 }

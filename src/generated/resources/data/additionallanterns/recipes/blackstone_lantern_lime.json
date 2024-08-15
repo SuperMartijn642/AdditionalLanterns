@@ -5,10 +5,10 @@
       "tag": "additionallanterns:blackstone_lanterns"
     },
     {
-      "tag": "c:lime_dyes"
+      "tag": "c:dyes/lime"
     }
   ],
   "result": {
-    "item": "additionallanterns:lime_blackstone_lantern"
+    "id": "additionallanterns:lime_blackstone_lantern"
   }
 }

@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "display": {
     "icon": {
-      "item": "additionallanterns:magenta_warped_lantern"
+      "id": "additionallanterns:magenta_warped_lantern"
     },
     "title": {
       "translate": "additionallanterns.advancement.recipes/misc/warped_lantern_magenta.title"
@@ -27,7 +27,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "additionallanterns:warped_lanterns"
+            "items": "#additionallanterns:warped_lanterns"
           }
         ]
       }

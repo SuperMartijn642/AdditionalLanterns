@@ -5,10 +5,10 @@
       "tag": "additionallanterns:blackstone_lanterns"
     },
     {
-      "tag": "c:brown_dyes"
+      "tag": "c:dyes/brown"
     }
   ],
   "result": {
-    "item": "additionallanterns:brown_blackstone_lantern"
+    "id": "additionallanterns:brown_blackstone_lantern"
   }
 }

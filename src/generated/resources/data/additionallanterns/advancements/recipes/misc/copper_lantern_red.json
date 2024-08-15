@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "display": {
     "icon": {
-      "item": "additionallanterns:red_copper_lantern"
+      "id": "additionallanterns:red_copper_lantern"
     },
     "title": {
       "translate": "additionallanterns.advancement.recipes/misc/copper_lantern_red.title"
@@ -27,7 +27,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "additionallanterns:copper_lanterns"
+            "items": "#additionallanterns:copper_lanterns"
           }
         ]
       }

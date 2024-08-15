@@ -5,10 +5,10 @@
       "tag": "additionallanterns:normal_lanterns"
     },
     {
-      "tag": "c:yellow_dyes"
+      "tag": "c:dyes/yellow"
     }
   ],
   "result": {
-    "item": "additionallanterns:yellow_normal_lantern"
+    "id": "additionallanterns:yellow_normal_lantern"
   }
 }

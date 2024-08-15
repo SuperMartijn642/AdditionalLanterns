@@ -5,10 +5,10 @@
       "tag": "additionallanterns:warped_lanterns"
     },
     {
-      "tag": "c:lime_dyes"
+      "tag": "c:dyes/lime"
     }
   ],
   "result": {
-    "item": "additionallanterns:lime_warped_lantern"
+    "id": "additionallanterns:lime_warped_lantern"
   }
 }

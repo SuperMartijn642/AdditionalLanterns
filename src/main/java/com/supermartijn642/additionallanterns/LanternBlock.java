@@ -2,7 +2,7 @@ package com.supermartijn642.additionallanterns;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.DyeItem;
 import net.minecraft.world.item.ItemStack;
@@ -38,8 +38,7 @@ public class LanternBlock extends net.minecraft.world.level.block.LanternBlock {
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult rayTraceResult){
-        ItemStack stack = player.getItemInHand(hand);
+    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult){
         if(this.material.canBeColored && stack.getItem() instanceof DyeItem){
             LanternColor color = LanternColor.fromDyeColor(((DyeItem)stack.getItem()).getDyeColor());
             BlockState newState = this.material.getLanternBlock(color).defaultBlockState();
@@ -47,12 +46,12 @@ public class LanternBlock extends net.minecraft.world.level.block.LanternBlock {
             newState = newState.setValue(HANGING, state.getValue(HANGING));
             newState = newState.setValue(ON, state.getValue(ON));
             newState = newState.setValue(REDSTONE, state.getValue(REDSTONE));
-            world.setBlock(pos, newState, 1 | 2);
+            level.setBlock(pos, newState, 1 | 2);
         }else if(this.material == LanternMaterial.NORMAL && this.color == null && !state.getValue(ON) && !state.getValue(REDSTONE))
-            world.setBlock(pos, Blocks.LANTERN.defaultBlockState().setValue(BlockStateProperties.HANGING, state.getValue(HANGING)).setValue(BlockStateProperties.WATERLOGGED, state.getValue(WATERLOGGED)), 1 | 2);
+            level.setBlock(pos, Blocks.LANTERN.defaultBlockState().setValue(BlockStateProperties.HANGING, state.getValue(HANGING)).setValue(BlockStateProperties.WATERLOGGED, state.getValue(WATERLOGGED)), 1 | 2);
         else
-            world.setBlock(pos, state.setValue(ON, !state.getValue(ON)), 1 | 2);
-        return InteractionResult.sidedSuccess(world.isClientSide);
+            level.setBlock(pos, state.setValue(ON, !state.getValue(ON)), 1 | 2);
+        return ItemInteractionResult.sidedSuccess(level.isClientSide);
     }
 
     @Override

@@ -5,10 +5,10 @@
       "tag": "additionallanterns:amethyst_lanterns"
     },
     {
-      "tag": "c:yellow_dyes"
+      "tag": "c:dyes/yellow"
     }
   ],
   "result": {
-    "item": "additionallanterns:yellow_amethyst_lantern"
+    "id": "additionallanterns:yellow_amethyst_lantern"
   }
 }

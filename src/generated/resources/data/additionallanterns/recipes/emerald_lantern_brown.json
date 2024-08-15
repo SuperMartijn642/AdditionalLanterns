@@ -5,10 +5,10 @@
       "tag": "additionallanterns:emerald_lanterns"
     },
     {
-      "tag": "c:brown_dyes"
+      "tag": "c:dyes/brown"
     }
   ],
   "result": {
-    "item": "additionallanterns:brown_emerald_lantern"
+    "id": "additionallanterns:brown_emerald_lantern"
   }
 }

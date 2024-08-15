@@ -5,10 +5,10 @@
       "tag": "additionallanterns:end_stone_lanterns"
     },
     {
-      "tag": "c:pink_dyes"
+      "tag": "c:dyes/pink"
     }
   ],
   "result": {
-    "item": "additionallanterns:pink_end_stone_lantern"
+    "id": "additionallanterns:pink_end_stone_lantern"
   }
 }

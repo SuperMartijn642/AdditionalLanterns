@@ -5,10 +5,10 @@
       "tag": "additionallanterns:waxed_exposed_copper_lanterns"
     },
     {
-      "tag": "c:black_dyes"
+      "tag": "c:dyes/black"
     }
   ],
   "result": {
-    "item": "additionallanterns:black_waxed_exposed_copper_lantern"
+    "id": "additionallanterns:black_waxed_exposed_copper_lantern"
   }
 }

@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "display": {
     "icon": {
-      "item": "additionallanterns:purple_granite_lantern"
+      "id": "additionallanterns:purple_granite_lantern"
     },
     "title": {
       "translate": "additionallanterns.advancement.recipes/misc/granite_lantern_purple.title"
@@ -27,7 +27,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "additionallanterns:granite_lanterns"
+            "items": "#additionallanterns:granite_lanterns"
           }
         ]
       }

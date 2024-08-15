@@ -5,10 +5,10 @@
       "tag": "additionallanterns:weathered_copper_lanterns"
     },
     {
-      "tag": "c:cyan_dyes"
+      "tag": "c:dyes/cyan"
     }
   ],
   "result": {
-    "item": "additionallanterns:cyan_weathered_copper_lantern"
+    "id": "additionallanterns:cyan_weathered_copper_lantern"
   }
 }

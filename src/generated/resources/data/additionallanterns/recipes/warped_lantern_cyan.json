@@ -5,10 +5,10 @@
       "tag": "additionallanterns:warped_lanterns"
     },
     {
-      "tag": "c:cyan_dyes"
+      "tag": "c:dyes/cyan"
     }
   ],
   "result": {
-    "item": "additionallanterns:cyan_warped_lantern"
+    "id": "additionallanterns:cyan_warped_lantern"
   }
 }

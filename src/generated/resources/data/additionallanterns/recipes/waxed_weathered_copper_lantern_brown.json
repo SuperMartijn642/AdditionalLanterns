@@ -5,10 +5,10 @@
       "tag": "additionallanterns:waxed_weathered_copper_lanterns"
     },
     {
-      "tag": "c:brown_dyes"
+      "tag": "c:dyes/brown"
     }
   ],
   "result": {
-    "item": "additionallanterns:brown_waxed_weathered_copper_lantern"
+    "id": "additionallanterns:brown_waxed_weathered_copper_lantern"
   }
 }

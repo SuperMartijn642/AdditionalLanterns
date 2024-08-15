@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "display": {
     "icon": {
-      "item": "additionallanterns:orange_normal_lantern"
+      "id": "additionallanterns:orange_normal_lantern"
     },
     "title": {
       "translate": "additionallanterns.advancement.recipes/misc/normal_lantern_orange.title"
@@ -27,7 +27,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "additionallanterns:normal_lanterns"
+            "items": "#additionallanterns:normal_lanterns"
           }
         ]
       }

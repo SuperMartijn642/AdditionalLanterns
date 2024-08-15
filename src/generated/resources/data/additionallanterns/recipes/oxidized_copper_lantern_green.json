@@ -5,10 +5,10 @@
       "tag": "additionallanterns:oxidized_copper_lanterns"
     },
     {
-      "tag": "c:green_dyes"
+      "tag": "c:dyes/green"
     }
   ],
   "result": {
-    "item": "additionallanterns:green_oxidized_copper_lantern"
+    "id": "additionallanterns:green_oxidized_copper_lantern"
   }
 }

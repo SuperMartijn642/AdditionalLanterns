@@ -1,22 +1,22 @@
 {
   "replace": false,
   "values": [
-    "additionallanterns:white_emerald_lantern",
-    "additionallanterns:yellow_emerald_lantern",
-    "additionallanterns:green_emerald_lantern",
-    "additionallanterns:blue_emerald_lantern",
-    "additionallanterns:black_emerald_lantern",
-    "additionallanterns:pink_emerald_lantern",
-    "additionallanterns:brown_emerald_lantern",
-    "additionallanterns:lime_emerald_lantern",
-    "additionallanterns:orange_emerald_lantern",
     "additionallanterns:purple_emerald_lantern",
-    "additionallanterns:emerald_lantern",
-    "additionallanterns:magenta_emerald_lantern",
     "additionallanterns:gray_emerald_lantern",
-    "additionallanterns:cyan_emerald_lantern",
-    "additionallanterns:red_emerald_lantern",
+    "additionallanterns:brown_emerald_lantern",
+    "additionallanterns:emerald_lantern",
+    "additionallanterns:pink_emerald_lantern",
     "additionallanterns:light_blue_emerald_lantern",
-    "additionallanterns:light_gray_emerald_lantern"
+    "additionallanterns:black_emerald_lantern",
+    "additionallanterns:magenta_emerald_lantern",
+    "additionallanterns:blue_emerald_lantern",
+    "additionallanterns:yellow_emerald_lantern",
+    "additionallanterns:orange_emerald_lantern",
+    "additionallanterns:green_emerald_lantern",
+    "additionallanterns:cyan_emerald_lantern",
+    "additionallanterns:white_emerald_lantern",
+    "additionallanterns:lime_emerald_lantern",
+    "additionallanterns:light_gray_emerald_lantern",
+    "additionallanterns:red_emerald_lantern"
   ]
 }

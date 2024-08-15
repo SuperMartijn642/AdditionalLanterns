@@ -5,10 +5,10 @@
       "tag": "additionallanterns:waxed_weathered_copper_lanterns"
     },
     {
-      "tag": "c:lime_dyes"
+      "tag": "c:dyes/lime"
     }
   ],
   "result": {
-    "item": "additionallanterns:lime_waxed_weathered_copper_lantern"
+    "id": "additionallanterns:lime_waxed_weathered_copper_lantern"
   }
 }
