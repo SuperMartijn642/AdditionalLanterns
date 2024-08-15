@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "additionallanterns:yellow_bone_lantern",
+    "additionallanterns:magenta_bone_lantern",
+    "additionallanterns:gray_bone_lantern",
+    "additionallanterns:green_bone_lantern",
+    "additionallanterns:cyan_bone_lantern",
+    "additionallanterns:white_bone_lantern",
+    "additionallanterns:brown_bone_lantern",
+    "additionallanterns:pink_bone_lantern",
+    "additionallanterns:light_gray_bone_lantern",
+    "additionallanterns:red_bone_lantern",
+    "additionallanterns:bone_lantern",
+    "additionallanterns:black_bone_lantern",
+    "additionallanterns:lime_bone_lantern",
+    "additionallanterns:purple_bone_lantern",
+    "additionallanterns:light_blue_bone_lantern",
+    "additionallanterns:orange_bone_lantern",
+    "additionallanterns:blue_bone_lantern"
+  ]
+}

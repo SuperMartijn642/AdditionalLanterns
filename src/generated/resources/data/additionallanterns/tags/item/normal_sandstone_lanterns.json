@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "additionallanterns:black_normal_sandstone_lantern",
+    "additionallanterns:lime_normal_sandstone_lantern",
+    "additionallanterns:yellow_normal_sandstone_lantern",
+    "additionallanterns:gray_normal_sandstone_lantern",
+    "additionallanterns:blue_normal_sandstone_lantern",
+    "additionallanterns:white_normal_sandstone_lantern",
+    "additionallanterns:green_normal_sandstone_lantern",
+    "additionallanterns:red_normal_sandstone_lantern",
+    "additionallanterns:purple_normal_sandstone_lantern",
+    "additionallanterns:light_blue_normal_sandstone_lantern",
+    "additionallanterns:pink_normal_sandstone_lantern",
+    "additionallanterns:normal_sandstone_lantern",
+    "additionallanterns:cyan_normal_sandstone_lantern",
+    "additionallanterns:magenta_normal_sandstone_lantern",
+    "additionallanterns:brown_normal_sandstone_lantern",
+    "additionallanterns:orange_normal_sandstone_lantern",
+    "additionallanterns:light_gray_normal_sandstone_lantern"
+  ]
+}
