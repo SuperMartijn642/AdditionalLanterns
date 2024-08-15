@@ -84,18 +84,18 @@ public class LanternRecipeGenerator extends RecipeGenerator {
 
     private void addColorRecipe(LanternMaterial material, LanternColor color){
         if(color == null)
-            this.shapeless(new ResourceLocation("additionallanterns", material.getSuffix() + "_lantern_colorless"), material.getLanternBlock())
+            this.shapeless(ResourceLocation.fromNamespaceAndPath("additionallanterns", material.getSuffix() + "_lantern_colorless"), material.getLanternBlock())
                 .input(getMaterialLanternTag(material))
                 .unlockedBy(getMaterialLanternTag(material));
         else
-            this.shapeless(new ResourceLocation("additionallanterns", material.getSuffix() + "_lantern_" + color.getSuffix()), material.getLanternBlock(color))
+            this.shapeless(ResourceLocation.fromNamespaceAndPath("additionallanterns", material.getSuffix() + "_lantern_" + color.getSuffix()), material.getLanternBlock(color))
                 .input(getMaterialLanternTag(material))
                 .input(getColorDyeTag(color))
                 .unlockedBy(getMaterialLanternTag(material));
     }
 
     private static TagKey<Item> getMaterialLanternTag(LanternMaterial material){
-        return TagKey.create(Registries.ITEMS.getVanillaRegistry().key(), new ResourceLocation("additionallanterns", material.getSuffix() + "_lanterns"));
+        return TagKey.create(Registries.ITEMS.getVanillaRegistry().key(), ResourceLocation.fromNamespaceAndPath("additionallanterns", material.getSuffix() + "_lanterns"));
     }
 
     private static TagKey<Item> getColorDyeTag(LanternColor color){

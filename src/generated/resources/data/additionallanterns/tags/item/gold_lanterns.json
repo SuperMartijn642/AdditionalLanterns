@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "additionallanterns:brown_gold_lantern",
+    "additionallanterns:pink_gold_lantern",
+    "additionallanterns:green_gold_lantern",
+    "additionallanterns:cyan_gold_lantern",
+    "additionallanterns:gray_gold_lantern",
+    "additionallanterns:orange_gold_lantern",
+    "additionallanterns:red_gold_lantern",
+    "additionallanterns:light_blue_gold_lantern",
+    "additionallanterns:blue_gold_lantern",
+    "additionallanterns:light_gray_gold_lantern",
+    "additionallanterns:purple_gold_lantern",
+    "additionallanterns:gold_lantern",
+    "additionallanterns:white_gold_lantern",
+    "additionallanterns:magenta_gold_lantern",
+    "additionallanterns:black_gold_lantern",
+    "additionallanterns:yellow_gold_lantern",
+    "additionallanterns:lime_gold_lantern"
+  ]
+}

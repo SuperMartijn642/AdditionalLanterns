@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "additionallanterns:yellow_cobbled_deepslate_lantern",
+    "additionallanterns:orange_cobbled_deepslate_lantern",
+    "additionallanterns:purple_cobbled_deepslate_lantern",
+    "additionallanterns:green_cobbled_deepslate_lantern",
+    "additionallanterns:cyan_cobbled_deepslate_lantern",
+    "additionallanterns:pink_cobbled_deepslate_lantern",
+    "additionallanterns:blue_cobbled_deepslate_lantern",
+    "additionallanterns:black_cobbled_deepslate_lantern",
+    "additionallanterns:light_blue_cobbled_deepslate_lantern",
+    "additionallanterns:white_cobbled_deepslate_lantern",
+    "additionallanterns:gray_cobbled_deepslate_lantern",
+    "additionallanterns:brown_cobbled_deepslate_lantern",
+    "additionallanterns:lime_cobbled_deepslate_lantern",
+    "additionallanterns:light_gray_cobbled_deepslate_lantern",
+    "additionallanterns:magenta_cobbled_deepslate_lantern",
+    "additionallanterns:red_cobbled_deepslate_lantern",
+    "additionallanterns:cobbled_deepslate_lantern"
+  ]
+}
