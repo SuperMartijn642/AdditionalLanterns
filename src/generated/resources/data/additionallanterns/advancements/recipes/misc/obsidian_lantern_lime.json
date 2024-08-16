@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "display": {
     "icon": {
-      "item": "additionallanterns:lime_obsidian_lantern"
+      "id": "additionallanterns:lime_obsidian_lantern"
     },
     "title": {
       "translate": "additionallanterns.advancement.recipes/misc/obsidian_lantern_lime.title"
@@ -27,7 +27,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "additionallanterns:obsidian_lanterns"
+            "items": "#additionallanterns:obsidian_lanterns"
           }
         ]
       }

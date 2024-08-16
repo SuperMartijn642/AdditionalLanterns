@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "display": {
     "icon": {
-      "item": "additionallanterns:mossy_cobblestone_chain"
+      "id": "additionallanterns:mossy_cobblestone_chain"
     },
     "title": {
       "translate": "additionallanterns.advancement.recipes/misc/mossy_cobblestone_chain.title"
@@ -27,9 +27,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:mossy_cobblestone"
-            ]
+            "items": "minecraft:mossy_cobblestone"
           }
         ]
       }

@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "display": {
     "icon": {
-      "item": "additionallanterns:light_blue_red_sandstone_lantern"
+      "id": "additionallanterns:light_blue_red_sandstone_lantern"
     },
     "title": {
       "translate": "additionallanterns.advancement.recipes/misc/red_sandstone_lantern_light_blue.title"
@@ -27,7 +27,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "additionallanterns:red_sandstone_lanterns"
+            "items": "#additionallanterns:red_sandstone_lanterns"
           }
         ]
       }

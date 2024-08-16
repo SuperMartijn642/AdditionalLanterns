@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "display": {
     "icon": {
-      "item": "additionallanterns:crimson_chain"
+      "id": "additionallanterns:crimson_chain"
     },
     "title": {
       "translate": "additionallanterns.advancement.recipes/misc/crimson_chain.title"
@@ -27,9 +27,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:crimson_planks"
-            ]
+            "items": "minecraft:crimson_planks"
           }
         ]
       }
