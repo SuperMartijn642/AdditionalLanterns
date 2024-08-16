@@ -41,26 +41,26 @@ public class LanternItemModelGenerator extends ModelGenerator {
 
     public static ResourceLocation getModelLocation(LanternMaterial material, LanternColor color){
         if(material == LanternMaterial.NORMAL && color == null)
-            return new ResourceLocation("item/lantern");
-        return new ResourceLocation("additionallanterns", color == null ?
+            return ResourceLocation.withDefaultNamespace("item/lantern");
+        return ResourceLocation.fromNamespaceAndPath("additionallanterns", color == null ?
             "item/" + material.getSuffix() + "_lantern" :
             "item/" + color.getSuffix() + "_" + material.getSuffix() + "_lantern");
     }
 
     public static ResourceLocation getParentModelLocation(LanternMaterial material, LanternColor color){
         return color == null ?
-            new ResourceLocation("additionallanterns", "block/" + material.getSuffix() + "_lantern") :
-            new ResourceLocation("additionallanterns", "block/" + color.getSuffix() + "_" + material.getSuffix() + "_lantern");
+            ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/" + material.getSuffix() + "_lantern") :
+            ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/" + color.getSuffix() + "_" + material.getSuffix() + "_lantern");
     }
 
     public static ResourceLocation getChainModelLocation(LanternMaterial material){
         if(material == LanternMaterial.NORMAL)
-            return new ResourceLocation("item/chain");
-        return new ResourceLocation("additionallanterns", "item/" + material.getSuffix() + "_chain");
+            return ResourceLocation.withDefaultNamespace("item/chain");
+        return ResourceLocation.fromNamespaceAndPath("additionallanterns", "item/" + material.getSuffix() + "_chain");
     }
 
     public static ResourceLocation getChainParentModelLocation(LanternMaterial material){
-        return new ResourceLocation("additionallanterns", "block/" + material.getSuffix() + "_chain");
+        return ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/" + material.getSuffix() + "_chain");
     }
 
     @Override

@@ -76,22 +76,22 @@ public class LanternBlockModelGenerator extends ModelGenerator {
 
     public static ResourceLocation getModelLocation(boolean hanging){
         return hanging ?
-            new ResourceLocation("additionallanterns", "block/hanging_lantern") :
-            new ResourceLocation("additionallanterns", "block/lantern");
+            ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/hanging_lantern") :
+            ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/lantern");
     }
 
     public static ResourceLocation getMaterialTexture(LanternMaterial material){
-        return new ResourceLocation("additionallanterns", "block/materials/" + material.getSuffix() + "_lantern");
+        return ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/materials/" + material.getSuffix() + "_lantern");
     }
 
     public static ResourceLocation getColorTexture(LanternColor color, boolean on){
         return color == null ?
             on ?
-                new ResourceLocation("minecraft", "block/lantern") :
-                new ResourceLocation("additionallanterns", "block/lantern_off") :
+                ResourceLocation.fromNamespaceAndPath("minecraft", "block/lantern") :
+                ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/lantern_off") :
             on ?
-                new ResourceLocation("additionallanterns", "block/colors/" + color.getSuffix() + "_lantern") :
-                new ResourceLocation("additionallanterns", "block/colors/" + color.getSuffix() + "_lantern_off");
+                ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/colors/" + color.getSuffix() + "_lantern") :
+                ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/colors/" + color.getSuffix() + "_lantern_off");
     }
 
     public static String getChainModelLocation(LanternMaterial material){
@@ -99,13 +99,13 @@ public class LanternBlockModelGenerator extends ModelGenerator {
     }
 
     public static ResourceLocation getChainModelLocation(){
-        return new ResourceLocation("additionallanterns", "block/chain");
+        return ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/chain");
     }
 
     public static ResourceLocation getChainMaterialTexture(LanternMaterial material){
         if(material == LanternMaterial.NORMAL)
-            return new ResourceLocation("minecraft", "block/chain");
-        return new ResourceLocation("additionallanterns", "block/materials/" + material.getSuffix() + "_chain");
+            return ResourceLocation.fromNamespaceAndPath("minecraft", "block/chain");
+        return ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/materials/" + material.getSuffix() + "_chain");
     }
 
     @Override

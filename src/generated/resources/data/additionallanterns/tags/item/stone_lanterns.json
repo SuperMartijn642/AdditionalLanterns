@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "additionallanterns:purple_stone_lantern",
+    "additionallanterns:light_blue_stone_lantern",
+    "additionallanterns:magenta_stone_lantern",
+    "additionallanterns:green_stone_lantern",
+    "additionallanterns:white_stone_lantern",
+    "additionallanterns:red_stone_lantern",
+    "additionallanterns:stone_lantern",
+    "additionallanterns:blue_stone_lantern",
+    "additionallanterns:black_stone_lantern",
+    "additionallanterns:orange_stone_lantern",
+    "additionallanterns:lime_stone_lantern",
+    "additionallanterns:cyan_stone_lantern",
+    "additionallanterns:gray_stone_lantern",
+    "additionallanterns:yellow_stone_lantern",
+    "additionallanterns:brown_stone_lantern",
+    "additionallanterns:light_gray_stone_lantern",
+    "additionallanterns:pink_stone_lantern"
+  ]
+}
