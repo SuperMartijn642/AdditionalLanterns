@@ -6,12 +6,8 @@
     "B"
   ],
   "key": {
-    "A": {
-      "item": "minecraft:blackstone"
-    },
-    "B": {
-      "item": "minecraft:blackstone"
-    }
+    "A": "minecraft:blackstone",
+    "B": "minecraft:blackstone"
   },
   "result": {
     "id": "additionallanterns:blackstone_chain",

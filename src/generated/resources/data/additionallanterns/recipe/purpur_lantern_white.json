@@ -1,12 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "additionallanterns:purpur_lanterns"
-    },
-    {
-      "tag": "c:dyes/white"
-    }
+    "#additionallanterns:purpur_lanterns",
+    "#c:dyes/white"
   ],
   "result": {
     "id": "additionallanterns:white_purpur_lantern"

@@ -1,12 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "additionallanterns:amethyst_lanterns"
-    },
-    {
-      "tag": "c:dyes/cyan"
-    }
+    "#additionallanterns:amethyst_lanterns",
+    "#c:dyes/cyan"
   ],
   "result": {
     "id": "additionallanterns:cyan_amethyst_lantern"

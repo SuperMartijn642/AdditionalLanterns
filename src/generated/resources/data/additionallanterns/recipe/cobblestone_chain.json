@@ -6,12 +6,8 @@
     "B"
   ],
   "key": {
-    "A": {
-      "item": "minecraft:cobblestone"
-    },
-    "B": {
-      "item": "minecraft:cobblestone"
-    }
+    "A": "minecraft:cobblestone",
+    "B": "minecraft:cobblestone"
   },
   "result": {
     "id": "additionallanterns:cobblestone_chain",

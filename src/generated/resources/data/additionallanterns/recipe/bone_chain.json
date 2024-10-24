@@ -6,12 +6,8 @@
     "B"
   ],
   "key": {
-    "A": {
-      "item": "minecraft:bone_block"
-    },
-    "B": {
-      "item": "minecraft:bone"
-    }
+    "A": "minecraft:bone_block",
+    "B": "minecraft:bone"
   },
   "result": {
     "id": "additionallanterns:bone_chain",

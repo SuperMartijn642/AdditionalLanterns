@@ -1,12 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "additionallanterns:smooth_stone_lanterns"
-    },
-    {
-      "tag": "c:dyes/yellow"
-    }
+    "#additionallanterns:smooth_stone_lanterns",
+    "#c:dyes/yellow"
   ],
   "result": {
     "id": "additionallanterns:yellow_smooth_stone_lantern"

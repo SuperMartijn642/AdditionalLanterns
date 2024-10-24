@@ -1,9 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "additionallanterns:red_sandstone_lanterns"
-    }
+    "#additionallanterns:red_sandstone_lanterns"
   ],
   "result": {
     "id": "additionallanterns:red_sandstone_lantern"

@@ -1,12 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "additionallanterns:oxidized_copper_lanterns"
-    },
-    {
-      "tag": "c:dyes/black"
-    }
+    "#additionallanterns:oxidized_copper_lanterns",
+    "#c:dyes/black"
   ],
   "result": {
     "id": "additionallanterns:black_oxidized_copper_lantern"

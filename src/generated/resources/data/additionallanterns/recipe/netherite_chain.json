@@ -6,12 +6,8 @@
     "B"
   ],
   "key": {
-    "A": {
-      "item": "minecraft:netherite_ingot"
-    },
-    "B": {
-      "item": "minecraft:netherite_ingot"
-    }
+    "A": "minecraft:netherite_ingot",
+    "B": "minecraft:netherite_ingot"
   },
   "result": {
     "id": "additionallanterns:netherite_chain",

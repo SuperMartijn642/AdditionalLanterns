@@ -1,12 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "additionallanterns:mossy_cobblestone_lanterns"
-    },
-    {
-      "tag": "c:dyes/black"
-    }
+    "#additionallanterns:mossy_cobblestone_lanterns",
+    "#c:dyes/black"
   ],
   "result": {
     "id": "additionallanterns:black_mossy_cobblestone_lantern"

@@ -1,12 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "additionallanterns:deepslate_bricks_lanterns"
-    },
-    {
-      "tag": "c:dyes/light_gray"
-    }
+    "#additionallanterns:deepslate_bricks_lanterns",
+    "#c:dyes/light_gray"
   ],
   "result": {
     "id": "additionallanterns:light_gray_deepslate_bricks_lantern"

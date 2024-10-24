@@ -6,12 +6,8 @@
     " A "
   ],
   "key": {
-    "A": {
-      "item": "minecraft:sandstone"
-    },
-    "C": {
-      "item": "minecraft:torch"
-    }
+    "A": "minecraft:sandstone",
+    "C": "minecraft:torch"
   },
   "result": {
     "id": "additionallanterns:normal_sandstone_lantern",

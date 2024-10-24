@@ -1,12 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "additionallanterns:red_sandstone_lanterns"
-    },
-    {
-      "tag": "c:dyes/white"
-    }
+    "#additionallanterns:red_sandstone_lanterns",
+    "#c:dyes/white"
   ],
   "result": {
     "id": "additionallanterns:white_red_sandstone_lantern"

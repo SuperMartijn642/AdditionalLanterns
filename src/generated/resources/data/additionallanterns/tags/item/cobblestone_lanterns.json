@@ -1,22 +1,22 @@
 {
   "replace": false,
   "values": [
-    "additionallanterns:orange_cobblestone_lantern",
-    "additionallanterns:pink_cobblestone_lantern",
+    "additionallanterns:purple_cobblestone_lantern",
     "additionallanterns:cyan_cobblestone_lantern",
+    "additionallanterns:pink_cobblestone_lantern",
+    "additionallanterns:blue_cobblestone_lantern",
+    "additionallanterns:magenta_cobblestone_lantern",
+    "additionallanterns:light_gray_cobblestone_lantern",
+    "additionallanterns:cobblestone_lantern",
+    "additionallanterns:orange_cobblestone_lantern",
+    "additionallanterns:black_cobblestone_lantern",
+    "additionallanterns:gray_cobblestone_lantern",
+    "additionallanterns:brown_cobblestone_lantern",
+    "additionallanterns:light_blue_cobblestone_lantern",
+    "additionallanterns:red_cobblestone_lantern",
     "additionallanterns:yellow_cobblestone_lantern",
     "additionallanterns:lime_cobblestone_lantern",
-    "additionallanterns:brown_cobblestone_lantern",
-    "additionallanterns:magenta_cobblestone_lantern",
-    "additionallanterns:blue_cobblestone_lantern",
-    "additionallanterns:black_cobblestone_lantern",
-    "additionallanterns:white_cobblestone_lantern",
-    "additionallanterns:gray_cobblestone_lantern",
-    "additionallanterns:light_gray_cobblestone_lantern",
-    "additionallanterns:light_blue_cobblestone_lantern",
     "additionallanterns:green_cobblestone_lantern",
-    "additionallanterns:cobblestone_lantern",
-    "additionallanterns:red_cobblestone_lantern",
-    "additionallanterns:purple_cobblestone_lantern"
+    "additionallanterns:white_cobblestone_lantern"
   ]
 }

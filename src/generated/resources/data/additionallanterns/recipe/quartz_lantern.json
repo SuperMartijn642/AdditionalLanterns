@@ -6,15 +6,9 @@
     "BAB"
   ],
   "key": {
-    "A": {
-      "item": "minecraft:quartz"
-    },
-    "B": {
-      "item": "minecraft:quartz"
-    },
-    "C": {
-      "item": "minecraft:torch"
-    }
+    "A": "minecraft:quartz",
+    "B": "minecraft:quartz",
+    "C": "minecraft:torch"
   },
   "result": {
     "id": "additionallanterns:quartz_lantern",
