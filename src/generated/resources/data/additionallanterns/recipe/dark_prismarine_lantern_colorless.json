@@ -1,9 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "additionallanterns:dark_prismarine_lanterns"
-    }
+    "#additionallanterns:dark_prismarine_lanterns"
   ],
   "result": {
     "id": "additionallanterns:dark_prismarine_lantern"

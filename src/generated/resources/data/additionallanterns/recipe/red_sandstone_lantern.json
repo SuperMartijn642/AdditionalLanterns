@@ -6,12 +6,8 @@
     " A "
   ],
   "key": {
-    "A": {
-      "item": "minecraft:red_sandstone"
-    },
-    "C": {
-      "item": "minecraft:torch"
-    }
+    "A": "minecraft:red_sandstone",
+    "C": "minecraft:torch"
   },
   "result": {
     "id": "additionallanterns:red_sandstone_lantern",

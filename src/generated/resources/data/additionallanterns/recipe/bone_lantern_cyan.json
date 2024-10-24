@@ -1,12 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "additionallanterns:bone_lanterns"
-    },
-    {
-      "tag": "c:dyes/cyan"
-    }
+    "#additionallanterns:bone_lanterns",
+    "#c:dyes/cyan"
   ],
   "result": {
     "id": "additionallanterns:cyan_bone_lantern"

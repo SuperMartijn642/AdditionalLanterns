@@ -1,12 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "additionallanterns:quartz_lanterns"
-    },
-    {
-      "tag": "c:dyes/brown"
-    }
+    "#additionallanterns:quartz_lanterns",
+    "#c:dyes/brown"
   ],
   "result": {
     "id": "additionallanterns:brown_quartz_lantern"

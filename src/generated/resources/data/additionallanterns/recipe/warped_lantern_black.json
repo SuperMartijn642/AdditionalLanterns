@@ -1,12 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "additionallanterns:warped_lanterns"
-    },
-    {
-      "tag": "c:dyes/black"
-    }
+    "#additionallanterns:warped_lanterns",
+    "#c:dyes/black"
   ],
   "result": {
     "id": "additionallanterns:black_warped_lantern"

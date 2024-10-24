@@ -1,12 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "additionallanterns:diamond_lanterns"
-    },
-    {
-      "tag": "c:dyes/blue"
-    }
+    "#additionallanterns:diamond_lanterns",
+    "#c:dyes/blue"
   ],
   "result": {
     "id": "additionallanterns:blue_diamond_lantern"

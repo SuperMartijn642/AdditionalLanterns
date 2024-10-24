@@ -6,12 +6,8 @@
     " A "
   ],
   "key": {
-    "A": {
-      "item": "minecraft:nether_brick"
-    },
-    "C": {
-      "item": "minecraft:torch"
-    }
+    "A": "minecraft:nether_brick",
+    "C": "minecraft:torch"
   },
   "result": {
     "id": "additionallanterns:normal_nether_bricks_lantern",

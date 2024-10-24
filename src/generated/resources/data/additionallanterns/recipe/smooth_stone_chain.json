@@ -6,12 +6,8 @@
     "B"
   ],
   "key": {
-    "A": {
-      "item": "minecraft:smooth_stone"
-    },
-    "B": {
-      "item": "minecraft:smooth_stone"
-    }
+    "A": "minecraft:smooth_stone",
+    "B": "minecraft:smooth_stone"
   },
   "result": {
     "id": "additionallanterns:smooth_stone_chain",

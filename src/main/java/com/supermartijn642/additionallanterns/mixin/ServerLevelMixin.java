@@ -5,6 +5,8 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.redstone.Orientation;
+import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -28,10 +30,10 @@ public class ServerLevelMixin {
     }
 
     @Inject(
-        method = "updateNeighborsAtExceptFromFacing(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Block;Lnet/minecraft/core/Direction;)V",
+        method = "updateNeighborsAtExceptFromFacing(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Block;Lnet/minecraft/core/Direction;Lnet/minecraft/world/level/redstone/Orientation;)V",
         at = @At("HEAD")
     )
-    private void updateNeighborsAtExceptFromFacing(BlockPos pos, Block block, Direction ignoredDirection, CallbackInfo ci){
+    private void updateNeighborsAtExceptFromFacing(BlockPos pos, Block block, Direction ignoredDirection, @Nullable Orientation orientation, CallbackInfo ci){
         //noinspection DataFlowIssue
         ServerLevel level = (ServerLevel)(Object)this;
         for(Direction direction : Direction.values())

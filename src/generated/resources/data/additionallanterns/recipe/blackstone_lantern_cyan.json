@@ -1,12 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "additionallanterns:blackstone_lanterns"
-    },
-    {
-      "tag": "c:dyes/cyan"
-    }
+    "#additionallanterns:blackstone_lanterns",
+    "#c:dyes/cyan"
   ],
   "result": {
     "id": "additionallanterns:cyan_blackstone_lantern"

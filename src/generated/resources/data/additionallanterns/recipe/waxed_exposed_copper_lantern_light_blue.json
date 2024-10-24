@@ -1,12 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "additionallanterns:waxed_exposed_copper_lanterns"
-    },
-    {
-      "tag": "c:dyes/light_blue"
-    }
+    "#additionallanterns:waxed_exposed_copper_lanterns",
+    "#c:dyes/light_blue"
   ],
   "result": {
     "id": "additionallanterns:light_blue_waxed_exposed_copper_lantern"

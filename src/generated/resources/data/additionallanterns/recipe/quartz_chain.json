@@ -6,12 +6,8 @@
     "B"
   ],
   "key": {
-    "A": {
-      "item": "minecraft:quartz_block"
-    },
-    "B": {
-      "item": "minecraft:quartz"
-    }
+    "A": "minecraft:quartz_block",
+    "B": "minecraft:quartz"
   },
   "result": {
     "id": "additionallanterns:quartz_chain",

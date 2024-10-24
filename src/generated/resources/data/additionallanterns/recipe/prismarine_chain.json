@@ -6,12 +6,8 @@
     "B"
   ],
   "key": {
-    "A": {
-      "item": "minecraft:prismarine_bricks"
-    },
-    "B": {
-      "item": "minecraft:prismarine_shard"
-    }
+    "A": "minecraft:prismarine_bricks",
+    "B": "minecraft:prismarine_shard"
   },
   "result": {
     "id": "additionallanterns:prismarine_chain",

@@ -1,22 +1,22 @@
 {
   "replace": false,
   "values": [
-    "additionallanterns:iron_lantern",
-    "additionallanterns:light_blue_iron_lantern",
-    "additionallanterns:red_iron_lantern",
     "additionallanterns:pink_iron_lantern",
-    "additionallanterns:gray_iron_lantern",
-    "additionallanterns:green_iron_lantern",
-    "additionallanterns:orange_iron_lantern",
-    "additionallanterns:white_iron_lantern",
-    "additionallanterns:cyan_iron_lantern",
-    "additionallanterns:purple_iron_lantern",
+    "additionallanterns:red_iron_lantern",
     "additionallanterns:magenta_iron_lantern",
-    "additionallanterns:lime_iron_lantern",
-    "additionallanterns:light_gray_iron_lantern",
-    "additionallanterns:blue_iron_lantern",
-    "additionallanterns:brown_iron_lantern",
+    "additionallanterns:gray_iron_lantern",
     "additionallanterns:black_iron_lantern",
-    "additionallanterns:yellow_iron_lantern"
+    "additionallanterns:cyan_iron_lantern",
+    "additionallanterns:light_gray_iron_lantern",
+    "additionallanterns:orange_iron_lantern",
+    "additionallanterns:iron_lantern",
+    "additionallanterns:white_iron_lantern",
+    "additionallanterns:green_iron_lantern",
+    "additionallanterns:yellow_iron_lantern",
+    "additionallanterns:purple_iron_lantern",
+    "additionallanterns:blue_iron_lantern",
+    "additionallanterns:light_blue_iron_lantern",
+    "additionallanterns:lime_iron_lantern",
+    "additionallanterns:brown_iron_lantern"
   ]
 }

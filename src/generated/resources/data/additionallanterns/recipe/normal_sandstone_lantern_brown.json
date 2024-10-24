@@ -1,12 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "additionallanterns:normal_sandstone_lanterns"
-    },
-    {
-      "tag": "c:dyes/brown"
-    }
+    "#additionallanterns:normal_sandstone_lanterns",
+    "#c:dyes/brown"
   ],
   "result": {
     "id": "additionallanterns:brown_normal_sandstone_lantern"

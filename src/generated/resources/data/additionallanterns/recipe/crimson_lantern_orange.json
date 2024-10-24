@@ -1,12 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "additionallanterns:crimson_lanterns"
-    },
-    {
-      "tag": "c:dyes/orange"
-    }
+    "#additionallanterns:crimson_lanterns",
+    "#c:dyes/orange"
   ],
   "result": {
     "id": "additionallanterns:orange_crimson_lantern"

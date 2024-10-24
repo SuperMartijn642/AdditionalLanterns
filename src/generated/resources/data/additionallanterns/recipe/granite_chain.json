@@ -6,12 +6,8 @@
     "B"
   ],
   "key": {
-    "A": {
-      "item": "minecraft:granite"
-    },
-    "B": {
-      "item": "minecraft:granite"
-    }
+    "A": "minecraft:granite",
+    "B": "minecraft:granite"
   },
   "result": {
     "id": "additionallanterns:granite_chain",

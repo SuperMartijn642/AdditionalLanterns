@@ -1,12 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "additionallanterns:granite_lanterns"
-    },
-    {
-      "tag": "c:dyes/gray"
-    }
+    "#additionallanterns:granite_lanterns",
+    "#c:dyes/gray"
   ],
   "result": {
     "id": "additionallanterns:gray_granite_lantern"

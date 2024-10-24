@@ -1,12 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "additionallanterns:red_nether_bricks_lanterns"
-    },
-    {
-      "tag": "c:dyes/cyan"
-    }
+    "#additionallanterns:red_nether_bricks_lanterns",
+    "#c:dyes/cyan"
   ],
   "result": {
     "id": "additionallanterns:cyan_red_nether_bricks_lantern"

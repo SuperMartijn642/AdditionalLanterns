@@ -1,12 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "additionallanterns:netherite_lanterns"
-    },
-    {
-      "tag": "c:dyes/red"
-    }
+    "#additionallanterns:netherite_lanterns",
+    "#c:dyes/red"
   ],
   "result": {
     "id": "additionallanterns:red_netherite_lantern"

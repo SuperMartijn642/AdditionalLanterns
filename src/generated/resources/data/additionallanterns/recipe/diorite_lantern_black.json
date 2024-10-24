@@ -1,12 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "additionallanterns:diorite_lanterns"
-    },
-    {
-      "tag": "c:dyes/black"
-    }
+    "#additionallanterns:diorite_lanterns",
+    "#c:dyes/black"
   ],
   "result": {
     "id": "additionallanterns:black_diorite_lantern"

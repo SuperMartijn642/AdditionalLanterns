@@ -1,9 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "additionallanterns:diamond_lanterns"
-    }
+    "#additionallanterns:diamond_lanterns"
   ],
   "result": {
     "id": "additionallanterns:diamond_lantern"

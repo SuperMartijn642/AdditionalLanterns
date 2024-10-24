@@ -6,12 +6,8 @@
     "B"
   ],
   "key": {
-    "A": {
-      "item": "minecraft:emerald"
-    },
-    "B": {
-      "item": "minecraft:emerald"
-    }
+    "A": "minecraft:emerald",
+    "B": "minecraft:emerald"
   },
   "result": {
     "id": "additionallanterns:emerald_chain",

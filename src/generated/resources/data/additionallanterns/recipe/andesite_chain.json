@@ -6,12 +6,8 @@
     "B"
   ],
   "key": {
-    "A": {
-      "item": "minecraft:andesite"
-    },
-    "B": {
-      "item": "minecraft:andesite"
-    }
+    "A": "minecraft:andesite",
+    "B": "minecraft:andesite"
   },
   "result": {
     "id": "additionallanterns:andesite_chain",

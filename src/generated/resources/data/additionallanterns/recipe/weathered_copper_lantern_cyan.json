@@ -1,12 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "additionallanterns:weathered_copper_lanterns"
-    },
-    {
-      "tag": "c:dyes/cyan"
-    }
+    "#additionallanterns:weathered_copper_lanterns",
+    "#c:dyes/cyan"
   ],
   "result": {
     "id": "additionallanterns:cyan_weathered_copper_lantern"

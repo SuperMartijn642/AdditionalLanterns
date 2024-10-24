@@ -2,21 +2,21 @@
   "replace": false,
   "values": [
     "additionallanterns:yellow_mossy_cobblestone_lantern",
-    "additionallanterns:gray_mossy_cobblestone_lantern",
-    "additionallanterns:lime_mossy_cobblestone_lantern",
-    "additionallanterns:light_gray_mossy_cobblestone_lantern",
-    "additionallanterns:cyan_mossy_cobblestone_lantern",
-    "additionallanterns:blue_mossy_cobblestone_lantern",
     "additionallanterns:white_mossy_cobblestone_lantern",
-    "additionallanterns:pink_mossy_cobblestone_lantern",
-    "additionallanterns:magenta_mossy_cobblestone_lantern",
     "additionallanterns:green_mossy_cobblestone_lantern",
-    "additionallanterns:orange_mossy_cobblestone_lantern",
-    "additionallanterns:red_mossy_cobblestone_lantern",
+    "additionallanterns:light_gray_mossy_cobblestone_lantern",
+    "additionallanterns:blue_mossy_cobblestone_lantern",
+    "additionallanterns:lime_mossy_cobblestone_lantern",
     "additionallanterns:black_mossy_cobblestone_lantern",
-    "additionallanterns:mossy_cobblestone_lantern",
     "additionallanterns:purple_mossy_cobblestone_lantern",
     "additionallanterns:brown_mossy_cobblestone_lantern",
-    "additionallanterns:light_blue_mossy_cobblestone_lantern"
+    "additionallanterns:mossy_cobblestone_lantern",
+    "additionallanterns:light_blue_mossy_cobblestone_lantern",
+    "additionallanterns:magenta_mossy_cobblestone_lantern",
+    "additionallanterns:red_mossy_cobblestone_lantern",
+    "additionallanterns:gray_mossy_cobblestone_lantern",
+    "additionallanterns:cyan_mossy_cobblestone_lantern",
+    "additionallanterns:pink_mossy_cobblestone_lantern",
+    "additionallanterns:orange_mossy_cobblestone_lantern"
   ]
 }
