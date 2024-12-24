@@ -1,12 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "additionallanterns:warped_lanterns"
-    },
-    {
-      "tag": "forge:dyes/red"
-    }
+    "#additionallanterns:warped_lanterns",
+    "#c:dyes/red"
   ],
   "result": {
     "id": "additionallanterns:red_warped_lantern"

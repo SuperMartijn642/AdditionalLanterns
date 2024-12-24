@@ -6,12 +6,8 @@
     "B"
   ],
   "key": {
-    "A": {
-      "item": "minecraft:diorite"
-    },
-    "B": {
-      "item": "minecraft:diorite"
-    }
+    "A": "minecraft:diorite",
+    "B": "minecraft:diorite"
   },
   "result": {
     "id": "additionallanterns:diorite_chain",

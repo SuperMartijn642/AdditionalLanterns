@@ -6,15 +6,9 @@
     "BAB"
   ],
   "key": {
-    "A": {
-      "item": "minecraft:bone"
-    },
-    "B": {
-      "item": "minecraft:bone"
-    },
-    "C": {
-      "item": "minecraft:torch"
-    }
+    "A": "minecraft:bone",
+    "B": "minecraft:bone",
+    "C": "minecraft:torch"
   },
   "result": {
     "id": "additionallanterns:bone_lantern",

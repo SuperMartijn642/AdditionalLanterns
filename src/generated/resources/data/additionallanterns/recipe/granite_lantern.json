@@ -6,12 +6,8 @@
     " A "
   ],
   "key": {
-    "A": {
-      "item": "minecraft:granite"
-    },
-    "C": {
-      "item": "minecraft:torch"
-    }
+    "A": "minecraft:granite",
+    "C": "minecraft:torch"
   },
   "result": {
     "id": "additionallanterns:granite_lantern",

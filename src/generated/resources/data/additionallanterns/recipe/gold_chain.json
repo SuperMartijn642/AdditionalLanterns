@@ -6,12 +6,8 @@
     "B"
   ],
   "key": {
-    "A": {
-      "item": "minecraft:gold_ingot"
-    },
-    "B": {
-      "item": "minecraft:gold_nugget"
-    }
+    "A": "minecraft:gold_ingot",
+    "B": "minecraft:gold_nugget"
   },
   "result": {
     "id": "additionallanterns:gold_chain"

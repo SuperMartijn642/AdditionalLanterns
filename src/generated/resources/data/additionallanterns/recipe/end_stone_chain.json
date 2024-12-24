@@ -6,12 +6,8 @@
     "B"
   ],
   "key": {
-    "A": {
-      "item": "minecraft:end_stone"
-    },
-    "B": {
-      "item": "minecraft:end_stone"
-    }
+    "A": "minecraft:end_stone",
+    "B": "minecraft:end_stone"
   },
   "result": {
     "id": "additionallanterns:end_stone_chain",

@@ -1,9 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "additionallanterns:quartz_lanterns"
-    }
+    "#additionallanterns:quartz_lanterns"
   ],
   "result": {
     "id": "additionallanterns:quartz_lantern"

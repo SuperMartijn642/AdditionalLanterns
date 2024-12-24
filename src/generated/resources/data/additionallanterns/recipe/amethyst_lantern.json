@@ -6,12 +6,8 @@
     " A "
   ],
   "key": {
-    "A": {
-      "item": "minecraft:amethyst_shard"
-    },
-    "C": {
-      "item": "minecraft:torch"
-    }
+    "A": "minecraft:amethyst_shard",
+    "C": "minecraft:torch"
   },
   "result": {
     "id": "additionallanterns:amethyst_lantern",

@@ -6,15 +6,9 @@
     "BAB"
   ],
   "key": {
-    "A": {
-      "item": "minecraft:gold_nugget"
-    },
-    "B": {
-      "item": "minecraft:gold_nugget"
-    },
-    "C": {
-      "item": "minecraft:torch"
-    }
+    "A": "minecraft:gold_nugget",
+    "B": "minecraft:gold_nugget",
+    "C": "minecraft:torch"
   },
   "result": {
     "id": "additionallanterns:gold_lantern"

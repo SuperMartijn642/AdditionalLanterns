@@ -6,12 +6,8 @@
     "B"
   ],
   "key": {
-    "A": {
-      "item": "minecraft:warped_planks"
-    },
-    "B": {
-      "item": "minecraft:warped_planks"
-    }
+    "A": "minecraft:warped_planks",
+    "B": "minecraft:warped_planks"
   },
   "result": {
     "id": "additionallanterns:warped_chain",

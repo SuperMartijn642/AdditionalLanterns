@@ -6,12 +6,8 @@
     " A "
   ],
   "key": {
-    "A": {
-      "item": "minecraft:cobbled_deepslate"
-    },
-    "C": {
-      "item": "minecraft:torch"
-    }
+    "A": "minecraft:cobbled_deepslate",
+    "C": "minecraft:torch"
   },
   "result": {
     "id": "additionallanterns:cobbled_deepslate_lantern",

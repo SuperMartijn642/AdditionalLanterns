@@ -6,12 +6,8 @@
     " A "
   ],
   "key": {
-    "A": {
-      "item": "minecraft:popped_chorus_fruit"
-    },
-    "C": {
-      "item": "minecraft:torch"
-    }
+    "A": "minecraft:popped_chorus_fruit",
+    "C": "minecraft:torch"
   },
   "result": {
     "id": "additionallanterns:purpur_lantern"

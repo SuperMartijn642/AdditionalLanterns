@@ -1,9 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "additionallanterns:copper_lanterns"
-    }
+    "#additionallanterns:copper_lanterns"
   ],
   "result": {
     "id": "additionallanterns:copper_lantern"

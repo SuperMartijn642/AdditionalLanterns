@@ -6,12 +6,8 @@
     " A "
   ],
   "key": {
-    "A": {
-      "item": "minecraft:smooth_stone"
-    },
-    "C": {
-      "item": "minecraft:torch"
-    }
+    "A": "minecraft:smooth_stone",
+    "C": "minecraft:torch"
   },
   "result": {
     "id": "additionallanterns:smooth_stone_lantern",

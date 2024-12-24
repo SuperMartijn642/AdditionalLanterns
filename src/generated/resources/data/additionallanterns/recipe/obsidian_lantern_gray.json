@@ -1,12 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "additionallanterns:obsidian_lanterns"
-    },
-    {
-      "tag": "forge:dyes/gray"
-    }
+    "#additionallanterns:obsidian_lanterns",
+    "#c:dyes/gray"
   ],
   "result": {
     "id": "additionallanterns:gray_obsidian_lantern"
