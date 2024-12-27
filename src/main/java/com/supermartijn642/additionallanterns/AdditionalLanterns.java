@@ -11,8 +11,6 @@ import com.supermartijn642.core.registry.RegistrationHandler;
 import net.minecraft.world.item.HoneycombItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.WeatheringCopper;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -44,7 +42,8 @@ public class AdditionalLanterns {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(AdditionalLanterns::init);
 
         register();
-        DistExecutor.safeRunWhenOn(Dist.CLIENT, () -> AdditionalLanternsClient::register);
+        if(CommonUtils.getEnvironmentSide().isClient())
+            AdditionalLanternsClient.register();
         registerGenerators();
     }
 
@@ -115,6 +114,7 @@ public class AdditionalLanterns {
     private static void registerGenerators(){
         GeneratorRegistrationHandler handler = GeneratorRegistrationHandler.get("additionallanterns");
         handler.addGenerator(LanternBlockModelGenerator::new);
+        handler.addGenerator(LanternItemInfoGenerator::new);
         handler.addGenerator(LanternItemModelGenerator::new);
         handler.addGenerator(LanternBlockStateGenerator::new);
         handler.addGenerator(LanternLanguageGenerator::new);
