@@ -102,6 +102,7 @@ public class AdditionalLanterns {
     private static void registerGenerators(){
         GeneratorRegistrationHandler handler = GeneratorRegistrationHandler.get("additionallanterns");
         handler.addGenerator(LanternBlockModelGenerator::new);
+        handler.addGenerator(LanternItemInfoGenerator::new);
         handler.addGenerator(LanternItemModelGenerator::new);
         handler.addGenerator(LanternBlockStateGenerator::new);
         handler.addGenerator(LanternLanguageGenerator::new);
