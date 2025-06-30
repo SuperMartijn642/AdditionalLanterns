@@ -37,9 +37,9 @@ public class AdditionalLanterns {
         });
     public static final Logger LOGGER = CommonUtils.getLogger("additionallanterns");
 
-    public AdditionalLanterns(){
+    public AdditionalLanterns(FMLJavaModLoadingContext context){
         VanillaLanternEvents.registerEventHandlers();
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(AdditionalLanterns::init);
+        FMLCommonSetupEvent.getBus(context.getModBusGroup()).addListener(AdditionalLanterns::init);
 
         register();
         if(CommonUtils.getEnvironmentSide().isClient())

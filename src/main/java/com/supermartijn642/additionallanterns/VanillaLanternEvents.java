@@ -8,10 +8,9 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.level.BlockEvent;
-import net.minecraftforge.eventbus.api.EventPriority;
+import net.minecraftforge.eventbus.api.listener.Priority;
 
 /**
  * Created 25/01/2023 by SuperMartijn642
@@ -19,18 +18,17 @@ import net.minecraftforge.eventbus.api.EventPriority;
 public class VanillaLanternEvents {
 
     public static void registerEventHandlers(){
-        MinecraftForge.EVENT_BUS.addListener(EventPriority.LOWEST, false, VanillaLanternEvents::handleInteractWithLantern);
-        MinecraftForge.EVENT_BUS.addListener(EventPriority.LOWEST, false, VanillaLanternEvents::handleLanternPlacement);
-        MinecraftForge.EVENT_BUS.addListener(EventPriority.LOWEST, false, VanillaLanternEvents::handleLanternRedstone);
+        PlayerInteractEvent.RightClickBlock.BUS.addListener(Priority.LOWEST, VanillaLanternEvents::handleInteractWithLantern);
+        BlockEvent.EntityPlaceEvent.BUS.addListener(Priority.LOWEST, VanillaLanternEvents::handleLanternPlacement);
+        BlockEvent.NeighborNotifyEvent.BUS.addListener(Priority.LOWEST, VanillaLanternEvents::handleLanternRedstone);
     }
 
-    private static void handleInteractWithLantern(PlayerInteractEvent.RightClickBlock e){
+    private static boolean handleInteractWithLantern(PlayerInteractEvent.RightClickBlock e){
         Level level = e.getLevel();
         // Replace the vanilla lantern with Additional Lantern's lantern when right-clicked
         BlockPos clickedPos = e.getPos();
         BlockState oldState = level.getBlockState(clickedPos);
         if(oldState.getBlock() == Blocks.LANTERN){
-            e.setCanceled(true);
             e.setCancellationResult(level.isClientSide ? InteractionResult.SUCCESS : InteractionResult.CONSUME);
             if(!level.isClientSide){
                 BlockState newState = LanternMaterial.NORMAL.getLanternBlock().defaultBlockState()
@@ -40,7 +38,9 @@ public class VanillaLanternEvents {
                     .setValue(LanternBlock.WATERLOGGED, oldState.getValue(BlockStateProperties.WATERLOGGED));
                 level.setBlock(clickedPos, newState, 1 | 2);
             }
+            return true;
         }
+        return false;
     }
 
     private static void handleLanternPlacement(BlockEvent.EntityPlaceEvent e){
