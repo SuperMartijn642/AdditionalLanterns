@@ -1,2 +1,2 @@
 ### Additional Lanterns 1.1.1
-- Initial release of Additional Lanterns for Minecraft 1.21.6
+- Initial release of Additional Lanterns for Minecraft 1.21.6 & 1.21.7
