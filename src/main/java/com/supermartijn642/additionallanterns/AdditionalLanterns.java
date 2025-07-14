@@ -5,9 +5,12 @@ import com.supermartijn642.core.CommonUtils;
 import com.supermartijn642.core.item.CreativeItemGroup;
 import com.supermartijn642.core.registry.GeneratorRegistrationHandler;
 import com.supermartijn642.core.registry.RegistrationHandler;
+import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import org.apache.logging.log4j.Logger;
+
+import java.util.Random;
 
 /**
  * Created 7/7/2020 by SuperMartijn642
@@ -15,7 +18,7 @@ import org.apache.logging.log4j.Logger;
 @Mod(modid = "@mod_id@", name = "@mod_name@", version = "@mod_version@", dependencies = "required-after:forge@@forge_dependency@;required-after:supermartijn642corelib@@core_library_dependency@")
 public class AdditionalLanterns {
 
-    public static final CreativeItemGroup GROUP = CreativeItemGroup.create("additionallanterns", () -> LanternMaterial.NORMAL.getLanternBlock())
+    public static final CreativeItemGroup GROUP = CreativeItemGroup.create("additionallanterns", AdditionalLanterns::randomLantern)
         .filler(items -> {
             for(LanternMaterial material : LanternMaterial.values()){
                 items.accept(new ItemStack(material.getLanternBlock()));
@@ -26,6 +29,15 @@ public class AdditionalLanterns {
             }
         });
     public static final Logger LOGGER = CommonUtils.getLogger("additionallanterns");
+
+    private static final Random RANDOM = new Random();
+
+    private static Block randomLantern(){
+        LanternMaterial material = LanternMaterial.values()[RANDOM.nextInt(LanternMaterial.values().length)];
+        int colorIndex = RANDOM.nextInt(LanternColor.values().length + 1);
+        LanternColor color = colorIndex < LanternColor.values().length ? LanternColor.values()[colorIndex] : null;
+        return material.getLanternBlock(color);
+    }
 
     public AdditionalLanterns(){
         register();
