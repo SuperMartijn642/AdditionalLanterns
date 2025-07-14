@@ -114,6 +114,16 @@ public enum LanternMaterial {
         return this.name().toLowerCase(Locale.ROOT);
     }
 
+    private String getLanternIdentifier(LanternColor color){
+        if(color == null)
+            return this.getSuffix() + "_lantern";
+        return color.getSuffix() + "_" + this.getSuffix() + "_lantern";
+    }
+
+    private String getChainIdentifier(){
+        return this.getSuffix() + "_chain";
+    }
+
     public BlockBehaviour.Properties getLanternBlockProperties(){
         BlockBehaviour.Properties properties = BlockBehaviour.Properties.copy(Blocks.LANTERN).lightLevel(state -> LanternBlock.emitsLight(state) ? 15 : 0);
         return WEATHERING_BLOCKS.get(this) == null ? properties : properties.randomTicks();
@@ -129,18 +139,18 @@ public enum LanternMaterial {
 
         WeatheringCopper.WeatherState weathering = WEATHERING_BLOCKS.get(this);
         this.lanternBlock = weathering == null ? new LanternBlock(this, null) : new WeatheringLanternBlock(this, null, weathering);
-        helper.register(this.getSuffix() + "_lantern", this.lanternBlock);
+        helper.register(this.getLanternIdentifier(null), this.lanternBlock);
         if(this.canBeColored){
             for(LanternColor color : LanternColor.values()){
                 LanternBlock block = weathering == null ? new LanternBlock(this, color) : new WeatheringLanternBlock(this, color, weathering);
                 this.coloredLanternBlocks.put(color, block);
-                helper.register(color.getSuffix() + "_" + this.getSuffix() + "_lantern", block);
+                helper.register(this.getLanternIdentifier(color), block);
             }
         }
 
         if(this.hasChains){
             this.chainBlock = weathering == null ? new ChainBlock(this) : new WeatheringChainBlock(this, weathering);
-            helper.register(this.getSuffix() + "_chain", this.chainBlock);
+            helper.register(this.getChainIdentifier(), this.chainBlock);
         }
     }
 
@@ -150,23 +160,22 @@ public enum LanternMaterial {
         if(this.lanternBlock == null)
             throw new IllegalStateException("Blocks must be registered before registering items!");
 
-        this.lanternItem = new BaseBlockItem(this.lanternBlock, ItemProperties.create().group(AdditionalLanterns.GROUP));
-        if(this == NORMAL)
-            helper.registerOverride("minecraft", "lantern", this.lanternItem);
-        else
-            helper.register(this.getSuffix() + "_lantern", this.lanternItem);
+        if(this != NORMAL){
+            this.lanternItem = new BaseBlockItem(this.lanternBlock, ItemProperties.create().group(AdditionalLanterns.GROUP));
+            helper.register(this.getLanternIdentifier(null), this.lanternItem);
+        }
         if(this.canBeColored){
             for(LanternColor color : LanternColor.values()){
                 LanternBlock block = this.coloredLanternBlocks.get(color);
                 BaseBlockItem item = new BaseBlockItem(block, ItemProperties.create().group(AdditionalLanterns.GROUP));
                 this.coloredLanternItems.put(color, item);
-                helper.register(color.getSuffix() + "_" + this.getSuffix() + "_lantern", item);
+                helper.register(this.getLanternIdentifier(color), item);
             }
         }
 
         if(this.hasChains){
             this.chainItem = new BaseBlockItem(this.chainBlock, ItemProperties.create().group(AdditionalLanterns.GROUP));
-            helper.register(this.getSuffix() + "_chain", this.chainItem);
+            helper.register(this.getChainIdentifier(), this.chainItem);
         }
     }
 }
