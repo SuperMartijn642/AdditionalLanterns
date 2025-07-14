@@ -5,6 +5,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
@@ -36,6 +37,18 @@ public class VanillaLanternEvents {
             return level.isClientSide ? InteractionResult.SUCCESS : InteractionResult.CONSUME;
         }
         return InteractionResult.PASS;
+    }
+
+    public static BlockState getLanternPlacement(BlockPlaceContext context){
+        Level level = context.getLevel();
+        // Place Additional Lantern's lantern instead of vanilla lantern when the block position is powered
+        if(!level.isClientSide()){
+            if(context.getLevel().hasNeighborSignal(context.getClickedPos())){
+                return LanternMaterial.NORMAL.getLanternBlock().defaultBlockState()
+                    .setValue(LanternBlock.REDSTONE, true);
+            }
+        }
+        return null;
     }
 
     public static void handleLanternRedstone(Level level, BlockPos pos){
