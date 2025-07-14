@@ -5,10 +5,10 @@
       "item": "minecraft:lantern"
     },
     "title": {
-      "translate": "additionallanterns.advancement.recipes/additionallanterns/normal_lantern_colorless.title"
+      "translate": "additionallanterns.advancement.recipes/decorations/normal_lantern_colorless.title"
     },
     "description": {
-      "translate": "additionallanterns.advancement.recipes/additionallanterns/normal_lantern_colorless.description"
+      "translate": "additionallanterns.advancement.recipes/decorations/normal_lantern_colorless.description"
     },
     "frame": "task",
     "show_toast": false,
