@@ -40,8 +40,6 @@ public class LanternItemModelGenerator extends ModelGenerator {
     }
 
     public static ResourceLocation getModelLocation(LanternMaterial material, LanternColor color){
-        if(material == LanternMaterial.NORMAL && color == null)
-            return ResourceLocation.withDefaultNamespace("item/lantern");
         return ResourceLocation.fromNamespaceAndPath("additionallanterns", color == null ?
             "item/" + material.getSuffix() + "_lantern" :
             "item/" + color.getSuffix() + "_" + material.getSuffix() + "_lantern");
@@ -54,8 +52,6 @@ public class LanternItemModelGenerator extends ModelGenerator {
     }
 
     public static ResourceLocation getChainModelLocation(LanternMaterial material){
-        if(material == LanternMaterial.NORMAL)
-            return ResourceLocation.withDefaultNamespace("item/chain");
         return ResourceLocation.fromNamespaceAndPath("additionallanterns", "item/" + material.getSuffix() + "_chain");
     }
 
