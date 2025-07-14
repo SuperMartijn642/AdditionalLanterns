@@ -9,6 +9,9 @@ import com.supermartijn642.core.item.CreativeItemGroup;
 import com.supermartijn642.core.registry.GeneratorRegistrationHandler;
 import com.supermartijn642.core.registry.RegistrationHandler;
 import net.minecraft.world.item.HoneycombItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.WeatheringCopper;
 import net.minecraftforge.fml.common.Mod;
@@ -17,6 +20,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
 import java.lang.reflect.Field;
+import java.util.Random;
 import java.util.function.Supplier;
 
 /**
@@ -25,10 +29,13 @@ import java.util.function.Supplier;
 @Mod("additionallanterns")
 public class AdditionalLanterns {
 
-    public static final CreativeItemGroup GROUP = CreativeItemGroup.create("additionallanterns", () -> LanternMaterial.NORMAL.getLanternBlock().asItem())
+    public static final CreativeItemGroup GROUP = CreativeItemGroup.create("additionallanterns", AdditionalLanterns::randomLantern)
         .filler(items -> {
             for(LanternMaterial material : LanternMaterial.values()){
-                items.accept(material.getLanternBlock().asItem().getDefaultInstance());
+                if(material == LanternMaterial.NORMAL)
+                    items.accept(Items.LANTERN.getDefaultInstance());
+                else
+                    items.accept(material.getLanternBlock().asItem().getDefaultInstance());
                 for(LanternColor color : LanternColor.values())
                     items.accept(material.getLanternBlock(color).asItem().getDefaultInstance());
                 if(material.hasChains)
@@ -36,6 +43,16 @@ public class AdditionalLanterns {
             }
         });
     public static final Logger LOGGER = CommonUtils.getLogger("additionallanterns");
+
+    private static final Random RANDOM = new Random();
+
+    private static ItemStack randomLantern(){
+        LanternMaterial material = LanternMaterial.values()[RANDOM.nextInt(LanternMaterial.values().length)];
+        int colorIndex = RANDOM.nextInt(LanternColor.values().length + 1);
+        LanternColor color = colorIndex < LanternColor.values().length ? LanternColor.values()[colorIndex] : null;
+        Item item = material == LanternMaterial.NORMAL && color == null ? Items.LANTERN : material.getLanternBlock(color).asItem();
+        return item.getDefaultInstance();
+    }
 
     public AdditionalLanterns(FMLJavaModLoadingContext context){
         VanillaLanternEvents.registerEventHandlers();
