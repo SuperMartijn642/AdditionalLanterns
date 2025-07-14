@@ -165,11 +165,10 @@ public enum LanternMaterial {
         if(this.lanternBlock == null)
             throw new IllegalStateException("Blocks must be registered before registering items!");
 
-        this.lanternItem = new BaseBlockItem(this.lanternBlock, ItemProperties.create().group(AdditionalLanterns.GROUP));
-        if(this == NORMAL)
-            helper.registerOverride("minecraft", "lantern", this.lanternItem);
-        else
+        if(this != NORMAL){
+            this.lanternItem = new BaseBlockItem(this.lanternBlock, ItemProperties.create().group(AdditionalLanterns.GROUP));
             helper.register(this.getLanternIdentifier(null), this.lanternItem);
+        }
         if(this.canBeColored){
             for(LanternColor color : LanternColor.values()){
                 LanternBlock block = this.coloredLanternBlocks.get(color);
