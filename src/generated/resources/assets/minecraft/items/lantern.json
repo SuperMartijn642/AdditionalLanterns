@@ -1,6 +1,6 @@
 {
   "model": {
-    "model": "minecraft:item/lantern",
+    "model": "additionallanterns:item/normal_lantern",
     "type": "minecraft:model"
   }
 }
