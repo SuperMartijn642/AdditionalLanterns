@@ -54,6 +54,13 @@ public class VanillaLanternEvents {
                     .setValue(BlockStateProperties.WATERLOGGED, oldState.getValue(LanternBlock.WATERLOGGED));
                 level.setBlock(e.getPos(), newState, 1 | 2);
             }
+            if(oldState.getBlock() == Blocks.LANTERN && level instanceof Level && ((Level)level).hasNeighborSignal(e.getPos())){
+                BlockState newState = LanternMaterial.NORMAL.getLanternBlock().defaultBlockState()
+                    .setValue(BlockStateProperties.HANGING, oldState.getValue(LanternBlock.HANGING))
+                    .setValue(BlockStateProperties.WATERLOGGED, oldState.getValue(LanternBlock.WATERLOGGED))
+                    .setValue(LanternBlock.REDSTONE, true);
+                level.setBlock(e.getPos(), newState, 1 | 2);
+            }
         }
     }
 
