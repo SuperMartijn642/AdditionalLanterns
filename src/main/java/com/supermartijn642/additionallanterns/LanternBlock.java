@@ -14,6 +14,7 @@ import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
+import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
@@ -79,5 +80,12 @@ public class LanternBlock extends net.minecraft.block.LanternBlock {
 
     public static boolean emitsLight(BlockState state){
         return state.getValue(REDSTONE) != state.getValue(ON);
+    }
+
+    @Override
+    public ItemStack getCloneItemStack(IBlockReader level, BlockPos pos, BlockState state){
+        if(this.material == LanternMaterial.NORMAL && this.color == null)
+            return new ItemStack(Blocks.LANTERN);
+        return super.getCloneItemStack(level, pos, state);
     }
 }
