@@ -84,7 +84,7 @@ public class LanternRecipeGenerator extends RecipeGenerator {
 
     private void addColorRecipe(LanternMaterial material, LanternColor color){
         if(color == null)
-            this.shapeless(new ResourceLocation("additionallanterns", material.getSuffix() + "_lantern_colorless"), material.getLanternBlock())
+            this.shapeless(new ResourceLocation("additionallanterns", material.getSuffix() + "_lantern_colorless"), material == LanternMaterial.NORMAL ? Items.LANTERN : material.getLanternBlock())
                 .input(getMaterialLanternTag(material))
                 .unlockedBy(getMaterialLanternTag(material));
         else

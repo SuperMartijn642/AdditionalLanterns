@@ -6,22 +6,40 @@ import com.supermartijn642.core.registry.GeneratorRegistrationHandler;
 import com.supermartijn642.core.registry.RegistrationHandler;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+
+import java.util.Random;
 
 /**
  * Created 7/7/2020 by SuperMartijn642
  */
 public class AdditionalLanterns implements ModInitializer {
 
-    public static final CreativeItemGroup GROUP = CreativeItemGroup.create("additionallanterns", () -> LanternMaterial.NORMAL.getLanternBlock().asItem())
+    public static final CreativeItemGroup GROUP = CreativeItemGroup.create("additionallanterns", AdditionalLanterns::randomLantern)
         .filler(items -> {
             for(LanternMaterial material : LanternMaterial.values()){
-                items.accept(material.getLanternBlock().asItem().getDefaultInstance());
+                if(material == LanternMaterial.NORMAL)
+                    items.accept(Items.LANTERN.getDefaultInstance());
+                else
+                    items.accept(material.getLanternBlock().asItem().getDefaultInstance());
                 for(LanternColor color : LanternColor.values())
                     items.accept(material.getLanternBlock(color).asItem().getDefaultInstance());
                 if(material.hasChains)
                     items.accept(material.getChainBlock().asItem().getDefaultInstance());
             }
         });
+
+    private static final Random RANDOM = new Random();
+
+    private static ItemStack randomLantern(){
+        LanternMaterial material = LanternMaterial.values()[RANDOM.nextInt(LanternMaterial.values().length)];
+        int colorIndex = RANDOM.nextInt(LanternColor.values().length + 1);
+        LanternColor color = colorIndex < LanternColor.values().length ? LanternColor.values()[colorIndex] : null;
+        Item item = material == LanternMaterial.NORMAL && color == null ? Items.LANTERN : material.getLanternBlock(color).asItem();
+        return item.getDefaultInstance();
+    }
 
     @Override
     public void onInitialize(){
