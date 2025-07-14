@@ -24,7 +24,7 @@ import java.util.function.Supplier;
 public enum LanternMaterial {
 
     ANDESITE(true, true, "Andesite", () -> new ItemStack(Blocks.STONE, 1, 5), null, 12, () -> new ItemStack(Blocks.STONE, 1, 5), () -> new ItemStack(Blocks.STONE, 1, 5), 16),
-    BONE(true, true, "Bone", () -> new ItemStack(Items.BONE), () -> new ItemStack(Items.BONE),4, () -> new ItemStack(Blocks.BONE_BLOCK), () -> new ItemStack(Items.BONE), 8),
+    BONE(true, true, "Bone", () -> new ItemStack(Items.BONE), () -> new ItemStack(Items.BONE), 4, () -> new ItemStack(Blocks.BONE_BLOCK), () -> new ItemStack(Items.BONE), 8),
     BRICKS(true, true, "Brick", () -> new ItemStack(Items.BRICK), null, 2, () -> new ItemStack(Blocks.BRICK_BLOCK), () -> new ItemStack(Items.BRICK), 8),
     COBBLESTONE(true, true, "Cobblestone", () -> new ItemStack(Blocks.COBBLESTONE), null, 12, () -> new ItemStack(Blocks.COBBLESTONE), () -> new ItemStack(Blocks.COBBLESTONE), 16),
     DARK_PRISMARINE(true, true, "Dark Prismarine", () -> new ItemStack(Blocks.PRISMARINE, 1, 2), null, 12, () -> new ItemStack(Blocks.PRISMARINE, 1, 2), () -> new ItemStack(Blocks.PRISMARINE, 1, 2), 8),
@@ -93,6 +93,16 @@ public enum LanternMaterial {
         return this.name().toLowerCase(Locale.ROOT);
     }
 
+    private String getLanternIdentifier(LanternColor color){
+        if(color == null)
+            return this.getSuffix() + "_lantern";
+        return color.getSuffix() + "_" + this.getSuffix() + "_lantern";
+    }
+
+    private String getChainIdentifier(){
+        return this.getSuffix() + "_chain";
+    }
+
     public BlockProperties getLanternBlockProperties(){
         return BlockProperties.create(Material.IRON).requiresCorrectTool().destroyTime(5).explosionResistance(6).sound(SoundType.METAL).lightLevel(state -> LanternBlock.emitsLight(state) ? 15 : 0);
     }
@@ -102,18 +112,18 @@ public enum LanternMaterial {
             throw new IllegalStateException("Blocks have already been registered!");
 
         this.lanternBlock = new LanternBlock(this, null);
-        helper.register(this.getSuffix() + "_lantern", this.lanternBlock);
+        helper.register(this.getLanternIdentifier(null), this.lanternBlock);
         if(this.canBeColored){
             for(LanternColor color : LanternColor.values()){
                 LanternBlock block = new LanternBlock(this, color);
                 this.coloredLanternBlocks.put(color, block);
-                helper.register(color.getSuffix() + "_" + this.getSuffix() + "_lantern", block);
+                helper.register(this.getLanternIdentifier(color), block);
             }
         }
 
         if(this.hasChains){
             this.chainBlock = new ChainBlock(this);
-            helper.register(this.getSuffix() + "_chain", this.chainBlock);
+            helper.register(this.getChainIdentifier(), this.chainBlock);
         }
     }
 
@@ -124,21 +134,21 @@ public enum LanternMaterial {
             throw new IllegalStateException("Blocks must be registered before registering items!");
 
         this.lanternItem = new BaseBlockItem(this.lanternBlock, ItemProperties.create().group(AdditionalLanterns.GROUP));
-        helper.register(this.getSuffix() + "_lantern", this.lanternItem);
+        helper.register(this.getLanternIdentifier(null), this.lanternItem);
         OreDictionary.registerOre(this.getSuffix() + "_lanterns", this.lanternItem);
         if(this.canBeColored){
             for(LanternColor color : LanternColor.values()){
                 LanternBlock block = this.coloredLanternBlocks.get(color);
                 BaseBlockItem item = new BaseBlockItem(block, ItemProperties.create().group(AdditionalLanterns.GROUP));
                 this.coloredLanternItems.put(color, item);
-                helper.register(color.getSuffix() + "_" + this.getSuffix() + "_lantern", item);
+                helper.register(this.getLanternIdentifier(color), item);
                 OreDictionary.registerOre(this.getSuffix() + "_lanterns", item);
             }
         }
 
         if(this.hasChains){
             this.chainItem = new BaseBlockItem(this.chainBlock, ItemProperties.create().group(AdditionalLanterns.GROUP));
-            helper.register(this.getSuffix() + "_chain", this.chainItem);
+            helper.register(this.getChainIdentifier(), this.chainItem);
         }
     }
 }
