@@ -8,6 +8,7 @@ import net.minecraft.world.item.DyeItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
@@ -15,6 +16,7 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.HitResult;
 import org.jetbrains.annotations.Nullable;
 
 
@@ -83,5 +85,12 @@ public class LanternBlock extends net.minecraft.world.level.block.LanternBlock {
 
     public static boolean emitsLight(BlockState state){
         return state.getValue(REDSTONE) != state.getValue(ON);
+    }
+
+    @Override
+    public ItemStack getCloneItemStack(BlockState state, HitResult target, LevelReader level, BlockPos pos, Player player){
+        if(this.material == LanternMaterial.NORMAL && this.color == null)
+            return new ItemStack(Blocks.LANTERN);
+        return super.getCloneItemStack(state, target, level, pos, player);
     }
 }
