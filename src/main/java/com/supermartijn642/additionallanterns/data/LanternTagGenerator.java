@@ -5,6 +5,7 @@ import com.supermartijn642.additionallanterns.LanternMaterial;
 import com.supermartijn642.core.generator.ResourceCache;
 import com.supermartijn642.core.generator.TagGenerator;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 
 /**
  * Created 8/5/2021 by SuperMartijn642
@@ -35,7 +36,8 @@ public class LanternTagGenerator extends TagGenerator {
 
         // Compatibility tags for Dynamic Lights mod
         for(LanternMaterial material : LanternMaterial.values()){
-            this.itemTag("dynamiclights", "light_level/15").add(material.getLanternBlock().asItem());
+            if(material != LanternMaterial.NORMAL)
+                this.itemTag("dynamiclights", "light_level/15").add(material.getLanternBlock().asItem());
             if(material.canBeColored){
                 for(LanternColor color : LanternColor.values())
                     this.itemTag("dynamiclights", "light_level/15").add(material.getLanternBlock(color).asItem());
@@ -45,7 +47,10 @@ public class LanternTagGenerator extends TagGenerator {
 
     private void addMaterialTag(LanternMaterial material){
         TagBuilder<Item> tag = this.itemTag(material.getSuffix() + "_lanterns");
-        tag.add(material.getLanternBlock().asItem());
+        if(material == LanternMaterial.NORMAL)
+            tag.add(Items.LANTERN);
+        else
+            tag.add(material.getLanternBlock().asItem());
         if(material.canBeColored){
             for(LanternColor color : LanternColor.values())
                 tag.add(material.getLanternBlock(color).asItem());
