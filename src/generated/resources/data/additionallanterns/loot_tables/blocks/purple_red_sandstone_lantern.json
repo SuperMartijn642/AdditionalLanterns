@@ -10,8 +10,8 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "additionallanterns:purple_red_sandstone_lantern"
+          "name": "additionallanterns:purple_red_sandstone_lantern",
+          "type": "minecraft:item"
         }
       ]
     }

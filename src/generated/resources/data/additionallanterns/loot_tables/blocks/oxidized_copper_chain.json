@@ -10,8 +10,8 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "additionallanterns:oxidized_copper_chain"
+          "name": "additionallanterns:oxidized_copper_chain",
+          "type": "minecraft:item"
         }
       ]
     }

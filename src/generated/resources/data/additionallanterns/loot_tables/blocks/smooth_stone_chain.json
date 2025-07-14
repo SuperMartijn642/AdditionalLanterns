@@ -10,8 +10,8 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "additionallanterns:smooth_stone_chain"
+          "name": "additionallanterns:smooth_stone_chain",
+          "type": "minecraft:item"
         }
       ]
     }

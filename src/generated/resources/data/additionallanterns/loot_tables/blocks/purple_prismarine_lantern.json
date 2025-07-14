@@ -10,8 +10,8 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "additionallanterns:purple_prismarine_lantern"
+          "name": "additionallanterns:purple_prismarine_lantern",
+          "type": "minecraft:item"
         }
       ]
     }

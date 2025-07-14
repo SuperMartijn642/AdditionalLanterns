@@ -10,8 +10,8 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "additionallanterns:lime_red_nether_bricks_lantern"
+          "name": "additionallanterns:lime_red_nether_bricks_lantern",
+          "type": "minecraft:item"
         }
       ]
     }

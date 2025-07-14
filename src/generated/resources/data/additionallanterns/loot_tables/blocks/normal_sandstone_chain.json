@@ -10,8 +10,8 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "additionallanterns:normal_sandstone_chain"
+          "name": "additionallanterns:normal_sandstone_chain",
+          "type": "minecraft:item"
         }
       ]
     }

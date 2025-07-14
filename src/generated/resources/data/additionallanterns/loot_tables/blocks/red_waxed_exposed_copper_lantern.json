@@ -10,8 +10,8 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "additionallanterns:red_waxed_exposed_copper_lantern"
+          "name": "additionallanterns:red_waxed_exposed_copper_lantern",
+          "type": "minecraft:item"
         }
       ]
     }

@@ -10,8 +10,8 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "additionallanterns:copper_chain"
+          "name": "additionallanterns:copper_chain",
+          "type": "minecraft:item"
         }
       ]
     }

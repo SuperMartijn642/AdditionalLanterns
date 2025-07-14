@@ -10,8 +10,8 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "additionallanterns:lime_end_stone_lantern"
+          "name": "additionallanterns:lime_end_stone_lantern",
+          "type": "minecraft:item"
         }
       ]
     }
