@@ -11,7 +11,6 @@
     "C": "minecraft:torch"
   },
   "result": {
-    "id": "additionallanterns:bone_lantern",
-    "count": 4
+    "id": "additionallanterns:bone_lantern"
   }
 }

@@ -10,7 +10,6 @@
     "C": "minecraft:torch"
   },
   "result": {
-    "id": "additionallanterns:dark_prismarine_lantern",
-    "count": 12
+    "id": "additionallanterns:dark_prismarine_lantern"
   }
 }
