@@ -10,7 +10,6 @@
     "C": "minecraft:torch"
   },
   "result": {
-    "id": "additionallanterns:diamond_lantern",
-    "count": 8
+    "id": "additionallanterns:diamond_lantern"
   }
 }
