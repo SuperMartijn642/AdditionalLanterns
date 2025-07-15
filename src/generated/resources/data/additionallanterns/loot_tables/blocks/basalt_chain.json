@@ -10,8 +10,8 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "additionallanterns:basalt_chain"
+          "name": "additionallanterns:basalt_chain",
+          "type": "minecraft:item"
         }
       ]
     }

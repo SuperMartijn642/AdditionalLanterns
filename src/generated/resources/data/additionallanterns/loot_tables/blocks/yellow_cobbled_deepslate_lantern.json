@@ -10,8 +10,8 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "additionallanterns:yellow_cobbled_deepslate_lantern"
+          "name": "additionallanterns:yellow_cobbled_deepslate_lantern",
+          "type": "minecraft:item"
         }
       ]
     }

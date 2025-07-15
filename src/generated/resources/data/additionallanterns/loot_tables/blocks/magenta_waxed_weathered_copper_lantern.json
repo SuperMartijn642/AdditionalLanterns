@@ -10,8 +10,8 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "additionallanterns:magenta_waxed_weathered_copper_lantern"
+          "name": "additionallanterns:magenta_waxed_weathered_copper_lantern",
+          "type": "minecraft:item"
         }
       ]
     }
