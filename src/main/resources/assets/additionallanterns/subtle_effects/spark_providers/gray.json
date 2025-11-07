@@ -1,0 +1,582 @@
+{
+    "states": [
+        {
+            "name": "additionallanterns:gray_amethyst_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_amethyst_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_andesite_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_andesite_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_basalt_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_basalt_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_blackstone_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_blackstone_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_bone_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_bone_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_bricks_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_bricks_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_cobblestone_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_cobblestone_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_cobbled_deepslate_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_cobbled_deepslate_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_copper_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_copper_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_crimson_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_crimson_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_dark_prismarine_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_dark_prismarine_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_deepslate_bricks_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_deepslate_bricks_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_diamond_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_diamond_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_diorite_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_diorite_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_emerald_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_emerald_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_end_stone_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_end_stone_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_exposed_copper_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_exposed_copper_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_gold_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_gold_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_granite_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_granite_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_iron_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_iron_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_mossy_cobblestone_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_mossy_cobblestone_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_netherite_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_netherite_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_normal_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_normal_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_normal_nether_bricks_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_normal_nether_bricks_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_normal_sandstone_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_normal_sandstone_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_obsidian_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_obsidian_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_oxidized_copper_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_oxidized_copper_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_prismarine_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_prismarine_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_purpur_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_purpur_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_quartz_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_quartz_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_red_nether_bricks_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_red_nether_bricks_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_red_sandstone_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_red_sandstone_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_smooth_stone_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_smooth_stone_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_stone_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_stone_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_stone_bricks_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_stone_bricks_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_warped_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_warped_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_waxed_copper_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_waxed_copper_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_waxed_exposed_copper_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_waxed_exposed_copper_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_waxed_oxidized_copper_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_waxed_oxidized_copper_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_waxed_weathered_copper_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_waxed_weathered_copper_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		},
+        {
+            "name": "additionallanterns:gray_weathered_copper_lantern",
+			"properties": {
+				"on": "true",
+				"redstone": "false"
+			}
+		},
+		{
+            "name": "additionallanterns:gray_weathered_copper_lantern",
+			"properties": {
+				"on": "false",
+				"redstone": "true"
+			}
+		}
+    ],
+    "options": {
+        "preset": "lantern",
+        "colors": [5987163, 5987163, 5987163]
+    }
+}
