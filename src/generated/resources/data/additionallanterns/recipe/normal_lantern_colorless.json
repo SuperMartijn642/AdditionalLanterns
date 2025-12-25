@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    "#additionallanterns:normal_lanterns"
-  ],
-  "result": {
-    "id": "minecraft:lantern"
-  }
-}

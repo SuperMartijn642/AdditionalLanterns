@@ -21,7 +21,7 @@ public class LanternBlockStateGenerator extends BlockStateGenerator {
 
     @Override
     public void generate(){
-        for(LanternMaterial material : LanternMaterial.values())
+        for(LanternMaterial material : LanternMaterial.MATERIALS)
             this.addStates(material);
     }
 

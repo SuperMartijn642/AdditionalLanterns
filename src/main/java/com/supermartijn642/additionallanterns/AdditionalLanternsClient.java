@@ -11,7 +11,7 @@ public class AdditionalLanternsClient implements ClientModInitializer {
     @Override
     public void onInitializeClient(){
         ClientRegistrationHandler handler = ClientRegistrationHandler.get("additionallanterns");
-        for(LanternMaterial material : LanternMaterial.values()){
+        for(LanternMaterial material : LanternMaterial.MATERIALS){
             handler.registerBlockModelCutoutRenderType(material::getLanternBlock);
             if(material.canBeColored){
                 for(LanternColor color : LanternColor.values())

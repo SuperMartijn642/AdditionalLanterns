@@ -2,6 +2,9 @@ package com.supermartijn642.additionallanterns;
 
 import net.minecraft.world.item.DyeColor;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import java.util.Locale;
 
 /**
@@ -25,6 +28,13 @@ public enum LanternColor {
     GREEN(DyeColor.GREEN, "Green"),
     RED(DyeColor.RED, "Red"),
     BLACK(DyeColor.BLACK, "Black");
+
+    @SuppressWarnings("Java9CollectionFactory")
+    private static final List<LanternColor> VALUES_AND_NULL = Collections.unmodifiableList(Arrays.asList(Arrays.copyOf(values(), values().length + 1)));
+
+    public static List<LanternColor> colorsAndNull(){
+        return VALUES_AND_NULL;
+    }
 
     public final DyeColor dyeColor;
     public final String englishTranslation;

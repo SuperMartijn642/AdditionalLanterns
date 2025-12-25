@@ -1,10 +1,11 @@
 package com.supermartijn642.additionallanterns.mixin;
 
+import com.supermartijn642.additionallanterns.LanternMaterial;
 import com.supermartijn642.additionallanterns.VanillaLanternEvents;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.LanternBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -33,7 +34,7 @@ public class BlockItemMixin {
         at = @At("TAIL")
     )
     private void init(CallbackInfo ci){
-        this.isLantern = this.block == Blocks.LANTERN;
+        this.isLantern = this.block instanceof LanternBlock && LanternMaterial.VANILLA_LANTERN_MAPPINGS.containsKey(this.block);
     }
 
     @Inject(
@@ -43,9 +44,12 @@ public class BlockItemMixin {
     )
     private void getPlacementState(BlockPlaceContext context, CallbackInfoReturnable<BlockState> ci){
         if(this.isLantern){
-            BlockState state = VanillaLanternEvents.getLanternPlacement(context);
-            if(state != null)
-                ci.setReturnValue(state);
+            LanternMaterial material = LanternMaterial.VANILLA_LANTERN_MAPPINGS.get(this.block);
+            if(material != null){
+                BlockState state = VanillaLanternEvents.getLanternPlacement(material, context);
+                if(state != null)
+                    ci.setReturnValue(state);
+            }
         }
     }
 }

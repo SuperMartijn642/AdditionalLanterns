@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "additionallanterns:green_vanilla_iron_lantern",
+    "additionallanterns:brown_vanilla_iron_lantern",
+    "additionallanterns:light_gray_vanilla_iron_lantern",
+    "additionallanterns:light_blue_vanilla_iron_lantern",
+    "additionallanterns:pink_vanilla_iron_lantern",
+    "additionallanterns:gray_vanilla_iron_lantern",
+    "additionallanterns:purple_vanilla_iron_lantern",
+    "additionallanterns:blue_vanilla_iron_lantern",
+    "additionallanterns:lime_vanilla_iron_lantern",
+    "additionallanterns:black_vanilla_iron_lantern",
+    "minecraft:lantern",
+    "additionallanterns:red_vanilla_iron_lantern",
+    "additionallanterns:orange_vanilla_iron_lantern",
+    "additionallanterns:magenta_vanilla_iron_lantern",
+    "additionallanterns:yellow_vanilla_iron_lantern",
+    "additionallanterns:cyan_vanilla_iron_lantern",
+    "additionallanterns:white_vanilla_iron_lantern"
+  ]
+}

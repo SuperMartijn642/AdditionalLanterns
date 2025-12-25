@@ -1,0 +1,7 @@
+{
+  "parent": "additionallanterns:block/hanging_lantern",
+  "textures": {
+    "material": "minecraft:block/oxidized_copper_lantern",
+    "color": "additionallanterns:block/oxidized_copper_lantern_off"
+  }
+}
