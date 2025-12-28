@@ -17,15 +17,22 @@ public class LanternLanguageGenerator extends LanguageGenerator {
 
     @Override
     public void generate(){
+        // Item group
         this.itemGroup(AdditionalLanterns.GROUP, "Additional Lanterns");
-        for(LanternMaterial material : LanternMaterial.values()){
-            this.block(material.getLanternBlock(), material == LanternMaterial.NORMAL ? "Lantern" : material.englishTranslation + " Lantern");
+        // Blocks
+        for(LanternMaterial material : LanternMaterial.MATERIALS){
+            this.block(material.getLanternBlock(), material == LanternMaterial.VANILLA_IRON ? "Lantern" : material.englishTranslation + " Lantern");
             if(material.canBeColored){
                 for(LanternColor color : LanternColor.values())
-                    this.block(material.getLanternBlock(color), material == LanternMaterial.NORMAL ? color.englishTranslation + " Lantern" : color.englishTranslation + " " + material.englishTranslation + " Lantern");
+                    this.block(material.getLanternBlock(color), material == LanternMaterial.VANILLA_IRON ? color.englishTranslation + " Lantern" : color.englishTranslation + " " + material.englishTranslation + " Lantern");
             }
             if(material.hasChains)
                 this.block(material.getChainBlock(), material.englishTranslation + " Chain");
+        }
+        // Tags
+        for(LanternMaterial material : LanternMaterial.MATERIALS){
+            if(material.canBeColored)
+                this.translation("tag.item.additionallanterns." + material.getSuffix() + "_lanterns", material.englishTranslation + " Lanterns");
         }
     }
 }

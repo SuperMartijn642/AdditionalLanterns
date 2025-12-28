@@ -1,0 +1,7 @@
+{
+  "parent": "additionallanterns:block/lantern",
+  "textures": {
+    "material": "minecraft:block/lantern",
+    "color": "additionallanterns:block/colors/white_lantern"
+  }
+}

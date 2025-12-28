@@ -1,0 +1,310 @@
+{
+  "values": {
+    "additionallanterns:black_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:black_exposed_copper_lantern"
+    },
+    "additionallanterns:black_exposed_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:black_weathered_copper_lantern"
+    },
+    "additionallanterns:black_vanilla_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:black_vanilla_exposed_copper_lantern"
+    },
+    "additionallanterns:black_vanilla_exposed_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:black_vanilla_weathered_copper_lantern"
+    },
+    "additionallanterns:black_vanilla_weathered_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:black_vanilla_oxidized_copper_lantern"
+    },
+    "additionallanterns:black_weathered_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:black_oxidized_copper_lantern"
+    },
+    "additionallanterns:blue_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:blue_exposed_copper_lantern"
+    },
+    "additionallanterns:blue_exposed_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:blue_weathered_copper_lantern"
+    },
+    "additionallanterns:blue_vanilla_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:blue_vanilla_exposed_copper_lantern"
+    },
+    "additionallanterns:blue_vanilla_exposed_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:blue_vanilla_weathered_copper_lantern"
+    },
+    "additionallanterns:blue_vanilla_weathered_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:blue_vanilla_oxidized_copper_lantern"
+    },
+    "additionallanterns:blue_weathered_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:blue_oxidized_copper_lantern"
+    },
+    "additionallanterns:brown_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:brown_exposed_copper_lantern"
+    },
+    "additionallanterns:brown_exposed_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:brown_weathered_copper_lantern"
+    },
+    "additionallanterns:brown_vanilla_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:brown_vanilla_exposed_copper_lantern"
+    },
+    "additionallanterns:brown_vanilla_exposed_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:brown_vanilla_weathered_copper_lantern"
+    },
+    "additionallanterns:brown_vanilla_weathered_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:brown_vanilla_oxidized_copper_lantern"
+    },
+    "additionallanterns:brown_weathered_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:brown_oxidized_copper_lantern"
+    },
+    "additionallanterns:copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:exposed_copper_lantern"
+    },
+    "additionallanterns:cyan_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:cyan_exposed_copper_lantern"
+    },
+    "additionallanterns:cyan_exposed_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:cyan_weathered_copper_lantern"
+    },
+    "additionallanterns:cyan_vanilla_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:cyan_vanilla_exposed_copper_lantern"
+    },
+    "additionallanterns:cyan_vanilla_exposed_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:cyan_vanilla_weathered_copper_lantern"
+    },
+    "additionallanterns:cyan_vanilla_weathered_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:cyan_vanilla_oxidized_copper_lantern"
+    },
+    "additionallanterns:cyan_weathered_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:cyan_oxidized_copper_lantern"
+    },
+    "additionallanterns:exposed_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:weathered_copper_lantern"
+    },
+    "additionallanterns:gray_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:gray_exposed_copper_lantern"
+    },
+    "additionallanterns:gray_exposed_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:gray_weathered_copper_lantern"
+    },
+    "additionallanterns:gray_vanilla_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:gray_vanilla_exposed_copper_lantern"
+    },
+    "additionallanterns:gray_vanilla_exposed_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:gray_vanilla_weathered_copper_lantern"
+    },
+    "additionallanterns:gray_vanilla_weathered_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:gray_vanilla_oxidized_copper_lantern"
+    },
+    "additionallanterns:gray_weathered_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:gray_oxidized_copper_lantern"
+    },
+    "additionallanterns:green_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:green_exposed_copper_lantern"
+    },
+    "additionallanterns:green_exposed_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:green_weathered_copper_lantern"
+    },
+    "additionallanterns:green_vanilla_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:green_vanilla_exposed_copper_lantern"
+    },
+    "additionallanterns:green_vanilla_exposed_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:green_vanilla_weathered_copper_lantern"
+    },
+    "additionallanterns:green_vanilla_weathered_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:green_vanilla_oxidized_copper_lantern"
+    },
+    "additionallanterns:green_weathered_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:green_oxidized_copper_lantern"
+    },
+    "additionallanterns:light_blue_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:light_blue_exposed_copper_lantern"
+    },
+    "additionallanterns:light_blue_exposed_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:light_blue_weathered_copper_lantern"
+    },
+    "additionallanterns:light_blue_vanilla_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:light_blue_vanilla_exposed_copper_lantern"
+    },
+    "additionallanterns:light_blue_vanilla_exposed_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:light_blue_vanilla_weathered_copper_lantern"
+    },
+    "additionallanterns:light_blue_vanilla_weathered_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:light_blue_vanilla_oxidized_copper_lantern"
+    },
+    "additionallanterns:light_blue_weathered_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:light_blue_oxidized_copper_lantern"
+    },
+    "additionallanterns:light_gray_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:light_gray_exposed_copper_lantern"
+    },
+    "additionallanterns:light_gray_exposed_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:light_gray_weathered_copper_lantern"
+    },
+    "additionallanterns:light_gray_vanilla_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:light_gray_vanilla_exposed_copper_lantern"
+    },
+    "additionallanterns:light_gray_vanilla_exposed_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:light_gray_vanilla_weathered_copper_lantern"
+    },
+    "additionallanterns:light_gray_vanilla_weathered_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:light_gray_vanilla_oxidized_copper_lantern"
+    },
+    "additionallanterns:light_gray_weathered_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:light_gray_oxidized_copper_lantern"
+    },
+    "additionallanterns:lime_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:lime_exposed_copper_lantern"
+    },
+    "additionallanterns:lime_exposed_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:lime_weathered_copper_lantern"
+    },
+    "additionallanterns:lime_vanilla_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:lime_vanilla_exposed_copper_lantern"
+    },
+    "additionallanterns:lime_vanilla_exposed_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:lime_vanilla_weathered_copper_lantern"
+    },
+    "additionallanterns:lime_vanilla_weathered_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:lime_vanilla_oxidized_copper_lantern"
+    },
+    "additionallanterns:lime_weathered_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:lime_oxidized_copper_lantern"
+    },
+    "additionallanterns:magenta_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:magenta_exposed_copper_lantern"
+    },
+    "additionallanterns:magenta_exposed_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:magenta_weathered_copper_lantern"
+    },
+    "additionallanterns:magenta_vanilla_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:magenta_vanilla_exposed_copper_lantern"
+    },
+    "additionallanterns:magenta_vanilla_exposed_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:magenta_vanilla_weathered_copper_lantern"
+    },
+    "additionallanterns:magenta_vanilla_weathered_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:magenta_vanilla_oxidized_copper_lantern"
+    },
+    "additionallanterns:magenta_weathered_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:magenta_oxidized_copper_lantern"
+    },
+    "additionallanterns:orange_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:orange_exposed_copper_lantern"
+    },
+    "additionallanterns:orange_exposed_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:orange_weathered_copper_lantern"
+    },
+    "additionallanterns:orange_vanilla_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:orange_vanilla_exposed_copper_lantern"
+    },
+    "additionallanterns:orange_vanilla_exposed_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:orange_vanilla_weathered_copper_lantern"
+    },
+    "additionallanterns:orange_vanilla_weathered_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:orange_vanilla_oxidized_copper_lantern"
+    },
+    "additionallanterns:orange_weathered_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:orange_oxidized_copper_lantern"
+    },
+    "additionallanterns:pink_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:pink_exposed_copper_lantern"
+    },
+    "additionallanterns:pink_exposed_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:pink_weathered_copper_lantern"
+    },
+    "additionallanterns:pink_vanilla_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:pink_vanilla_exposed_copper_lantern"
+    },
+    "additionallanterns:pink_vanilla_exposed_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:pink_vanilla_weathered_copper_lantern"
+    },
+    "additionallanterns:pink_vanilla_weathered_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:pink_vanilla_oxidized_copper_lantern"
+    },
+    "additionallanterns:pink_weathered_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:pink_oxidized_copper_lantern"
+    },
+    "additionallanterns:purple_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:purple_exposed_copper_lantern"
+    },
+    "additionallanterns:purple_exposed_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:purple_weathered_copper_lantern"
+    },
+    "additionallanterns:purple_vanilla_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:purple_vanilla_exposed_copper_lantern"
+    },
+    "additionallanterns:purple_vanilla_exposed_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:purple_vanilla_weathered_copper_lantern"
+    },
+    "additionallanterns:purple_vanilla_weathered_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:purple_vanilla_oxidized_copper_lantern"
+    },
+    "additionallanterns:purple_weathered_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:purple_oxidized_copper_lantern"
+    },
+    "additionallanterns:red_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:red_exposed_copper_lantern"
+    },
+    "additionallanterns:red_exposed_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:red_weathered_copper_lantern"
+    },
+    "additionallanterns:red_vanilla_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:red_vanilla_exposed_copper_lantern"
+    },
+    "additionallanterns:red_vanilla_exposed_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:red_vanilla_weathered_copper_lantern"
+    },
+    "additionallanterns:red_vanilla_weathered_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:red_vanilla_oxidized_copper_lantern"
+    },
+    "additionallanterns:red_weathered_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:red_oxidized_copper_lantern"
+    },
+    "additionallanterns:vanilla_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:vanilla_exposed_copper_lantern"
+    },
+    "additionallanterns:vanilla_exposed_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:vanilla_weathered_copper_lantern"
+    },
+    "additionallanterns:vanilla_weathered_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:vanilla_oxidized_copper_lantern"
+    },
+    "additionallanterns:weathered_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:oxidized_copper_lantern"
+    },
+    "additionallanterns:white_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:white_exposed_copper_lantern"
+    },
+    "additionallanterns:white_exposed_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:white_weathered_copper_lantern"
+    },
+    "additionallanterns:white_vanilla_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:white_vanilla_exposed_copper_lantern"
+    },
+    "additionallanterns:white_vanilla_exposed_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:white_vanilla_weathered_copper_lantern"
+    },
+    "additionallanterns:white_vanilla_weathered_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:white_vanilla_oxidized_copper_lantern"
+    },
+    "additionallanterns:white_weathered_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:white_oxidized_copper_lantern"
+    },
+    "additionallanterns:yellow_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:yellow_exposed_copper_lantern"
+    },
+    "additionallanterns:yellow_exposed_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:yellow_weathered_copper_lantern"
+    },
+    "additionallanterns:yellow_vanilla_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:yellow_vanilla_exposed_copper_lantern"
+    },
+    "additionallanterns:yellow_vanilla_exposed_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:yellow_vanilla_weathered_copper_lantern"
+    },
+    "additionallanterns:yellow_vanilla_weathered_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:yellow_vanilla_oxidized_copper_lantern"
+    },
+    "additionallanterns:yellow_weathered_copper_lantern": {
+      "next_oxidation_stage": "additionallanterns:yellow_oxidized_copper_lantern"
+    }
+  }
+}

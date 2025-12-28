@@ -5,7 +5,6 @@ import com.supermartijn642.additionallanterns.LanternMaterial;
 import com.supermartijn642.core.generator.ResourceCache;
 import com.supermartijn642.core.generator.TagGenerator;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 
 /**
  * Created 8/5/2021 by SuperMartijn642
@@ -19,7 +18,7 @@ public class LanternTagGenerator extends TagGenerator {
     @Override
     public void generate(){
         // Mineable tags
-        for(LanternMaterial material : LanternMaterial.values()){
+        for(LanternMaterial material : LanternMaterial.MATERIALS){
             this.blockMineableWithPickaxe().add(material.getLanternBlock());
             if(material.canBeColored){
                 for(LanternColor color : LanternColor.values())
@@ -30,13 +29,13 @@ public class LanternTagGenerator extends TagGenerator {
         }
 
         // Tags for recipes
-        for(LanternMaterial material : LanternMaterial.values())
+        for(LanternMaterial material : LanternMaterial.MATERIALS)
             if(material.canBeColored)
                 this.addMaterialTag(material);
 
         // Compatibility tags for Dynamic Lights mod
-        for(LanternMaterial material : LanternMaterial.values()){
-            if(material != LanternMaterial.NORMAL)
+        for(LanternMaterial material : LanternMaterial.MATERIALS){
+            if(material.isVanilla)
                 this.itemTag("dynamiclights", "light_level/15").add(material.getLanternBlock().asItem());
             if(material.canBeColored){
                 for(LanternColor color : LanternColor.values())
@@ -47,10 +46,7 @@ public class LanternTagGenerator extends TagGenerator {
 
     private void addMaterialTag(LanternMaterial material){
         TagBuilder<Item> tag = this.itemTag(material.getSuffix() + "_lanterns");
-        if(material == LanternMaterial.NORMAL)
-            tag.add(Items.LANTERN);
-        else
-            tag.add(material.getLanternBlock().asItem());
+        tag.add(material.getLanternBlock().asItem());
         if(material.canBeColored){
             for(LanternColor color : LanternColor.values())
                 tag.add(material.getLanternBlock(color).asItem());

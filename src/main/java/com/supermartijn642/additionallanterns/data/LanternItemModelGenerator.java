@@ -17,7 +17,7 @@ public class LanternItemModelGenerator extends ModelGenerator {
 
     @Override
     public void generate(){
-        for(LanternMaterial material : LanternMaterial.values())
+        for(LanternMaterial material : LanternMaterial.MATERIALS)
             this.addModels(material);
     }
 
@@ -27,7 +27,7 @@ public class LanternItemModelGenerator extends ModelGenerator {
             for(LanternColor color : LanternColor.values())
                 this.addModel(material, color);
         }
-        if(material == LanternMaterial.NORMAL || material.hasChains)
+        if(material.hasChains)
             this.addChainModel(material);
     }
 

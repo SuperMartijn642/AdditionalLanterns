@@ -21,19 +21,21 @@ public class LanternRecipeGenerator extends RecipeGenerator {
 
     @Override
     public void generate(){
-        for(LanternMaterial material : LanternMaterial.values())
-            this.addMaterialRecipes(material);
+        for(LanternMaterial material : LanternMaterial.MATERIALS){
+            if(!material.isVanilla)
+                this.addMaterialRecipes(material);
+        }
     }
 
     private void addMaterialRecipes(LanternMaterial material){
         this.addLanternRecipe(material);
         if(material.canBeColored){
-            addColorRecipe(material, null);
+            this.addColorRecipe(material, null);
             for(LanternColor color : LanternColor.values())
-                addColorRecipe(material, color);
+                this.addColorRecipe(material, color);
         }
         if(material.hasChains)
-            addChainRecipe(material);
+            this.addChainRecipe(material);
     }
 
     private void addLanternRecipe(LanternMaterial material){
@@ -63,7 +65,7 @@ public class LanternRecipeGenerator extends RecipeGenerator {
 
     private void addColorRecipe(LanternMaterial material, LanternColor color){
         if(color == null)
-            this.shapeless(ResourceLocation.fromNamespaceAndPath("additionallanterns", material.getSuffix() + "_lantern_colorless"), material == LanternMaterial.NORMAL ? Items.LANTERN : material.getLanternBlock())
+            this.shapeless(ResourceLocation.fromNamespaceAndPath("additionallanterns", material.getSuffix() + "_lantern_colorless"), material == LanternMaterial.VANILLA_IRON ? Items.LANTERN : material.getLanternBlock())
                 .input(getMaterialLanternTag(material))
                 .unlockedBy(getMaterialLanternTag(material));
         else
