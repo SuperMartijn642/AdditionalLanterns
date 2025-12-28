@@ -4,7 +4,6 @@ import com.supermartijn642.additionallanterns.LanternColor;
 import com.supermartijn642.additionallanterns.LanternMaterial;
 import com.supermartijn642.core.generator.ItemInfoGenerator;
 import com.supermartijn642.core.generator.ResourceCache;
-import net.minecraft.world.item.Items;
 
 /**
  * Created 26/12/2024 by SuperMartijn642
@@ -17,11 +16,8 @@ public class LanternItemInfoGenerator extends ItemInfoGenerator {
 
     @Override
     public void generate(){
-        for(LanternMaterial material : LanternMaterial.values()){
-            if(material == LanternMaterial.NORMAL)
-                this.info(Items.LANTERN).model(this.model(LanternItemModelGenerator.getModelLocation(material, null)));
-            else
-                this.info(material.getLanternBlock()).model(this.model(LanternItemModelGenerator.getModelLocation(material, null)));
+        for(LanternMaterial material : LanternMaterial.MATERIALS){
+            this.info(material.getLanternBlock()).model(this.model(LanternItemModelGenerator.getModelLocation(material, null)));
             if(material.canBeColored){
                 for(LanternColor color : LanternColor.values())
                     this.info(material.getLanternBlock(color)).model(this.model(LanternItemModelGenerator.getModelLocation(material, color)));

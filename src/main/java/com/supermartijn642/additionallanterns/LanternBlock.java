@@ -8,9 +8,7 @@ import net.minecraft.world.item.DyeItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -43,14 +41,14 @@ public class LanternBlock extends net.minecraft.world.level.block.LanternBlock {
     protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult){
         if(this.material.canBeColored && stack.getItem() instanceof DyeItem){
             LanternColor color = LanternColor.fromDyeColor(((DyeItem)stack.getItem()).getDyeColor());
-            BlockState newState = this.material.getLanternBlock(color).defaultBlockState();
-            newState = newState.setValue(WATERLOGGED, state.getValue(WATERLOGGED));
-            newState = newState.setValue(HANGING, state.getValue(HANGING));
-            newState = newState.setValue(ON, state.getValue(ON));
-            newState = newState.setValue(REDSTONE, state.getValue(REDSTONE));
+            BlockState newState = this.material.getLanternBlock(color).defaultBlockState()
+                .setValue(WATERLOGGED, state.getValue(WATERLOGGED))
+                .setValue(HANGING, state.getValue(HANGING))
+                .setValue(ON, state.getValue(ON))
+                .setValue(REDSTONE, state.getValue(REDSTONE));
             level.setBlock(pos, newState, 1 | 2);
-        }else if(this.material == LanternMaterial.NORMAL && this.color == null && !state.getValue(ON) && !state.getValue(REDSTONE))
-            level.setBlock(pos, Blocks.LANTERN.defaultBlockState().setValue(BlockStateProperties.HANGING, state.getValue(HANGING)).setValue(BlockStateProperties.WATERLOGGED, state.getValue(WATERLOGGED)), 1 | 2);
+        }else if(this.material.isVanilla && this.color == null && !state.getValue(ON) && !state.getValue(REDSTONE))
+            level.setBlock(pos, this.material.vanillaLanternBlock.defaultBlockState().setValue(BlockStateProperties.HANGING, state.getValue(HANGING)).setValue(BlockStateProperties.WATERLOGGED, state.getValue(WATERLOGGED)), 1 | 2);
         else
             level.setBlock(pos, state.setValue(ON, !state.getValue(ON)), 1 | 2);
         return InteractionResult.SUCCESS;
@@ -68,17 +66,17 @@ public class LanternBlock extends net.minecraft.world.level.block.LanternBlock {
         if(state == null)
             return null;
         boolean redstone = context.getLevel().hasNeighborSignal(context.getClickedPos());
-        if(!redstone && this.material == LanternMaterial.NORMAL && this.color == null)
-            return Blocks.LANTERN.defaultBlockState().setValue(BlockStateProperties.HANGING, state.getValue(HANGING)).setValue(BlockStateProperties.WATERLOGGED, state.getValue(WATERLOGGED));
+        if(!redstone && this.material.isVanilla && this.color == null)
+            return this.material.vanillaLanternBlock.defaultBlockState().setValue(BlockStateProperties.HANGING, state.getValue(HANGING)).setValue(BlockStateProperties.WATERLOGGED, state.getValue(WATERLOGGED));
         return state.setValue(REDSTONE, redstone);
     }
 
     @Override
     protected void neighborChanged(BlockState state, Level level, BlockPos pos, Block block, @Nullable Orientation orientation, boolean isMoving){
-        if(!level.isClientSide){
+        if(!level.isClientSide()){
             boolean redstone = level.hasNeighborSignal(pos);
-            if(this.material == LanternMaterial.NORMAL && this.color == null && state.getValue(ON) && !redstone)
-                level.setBlock(pos, Blocks.LANTERN.defaultBlockState().setValue(BlockStateProperties.HANGING, state.getValue(HANGING)).setValue(BlockStateProperties.WATERLOGGED, state.getValue(WATERLOGGED)), 1 | 2 | 4);
+            if(this.material.isVanilla && this.color == null && state.getValue(ON) && !redstone)
+                level.setBlock(pos, this.material.vanillaLanternBlock.defaultBlockState().setValue(BlockStateProperties.HANGING, state.getValue(HANGING)).setValue(BlockStateProperties.WATERLOGGED, state.getValue(WATERLOGGED)), 1 | 2 | 4);
             else if(state.getValue(REDSTONE) != redstone)
                 level.setBlock(pos, state.setValue(REDSTONE, redstone), 1 | 2 | 4);
         }
@@ -86,12 +84,5 @@ public class LanternBlock extends net.minecraft.world.level.block.LanternBlock {
 
     public static boolean emitsLight(BlockState state){
         return state.getValue(REDSTONE) != state.getValue(ON);
-    }
-
-    @Override
-    public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData){
-        if(this.material == LanternMaterial.NORMAL && this.color == null)
-            return new ItemStack(Blocks.LANTERN);
-        return super.getCloneItemStack(level, pos, state, includeData);
     }
 }

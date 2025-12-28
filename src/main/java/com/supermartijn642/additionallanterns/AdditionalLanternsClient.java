@@ -9,7 +9,7 @@ public class AdditionalLanternsClient {
 
     public static void register(){
         ClientRegistrationHandler handler = ClientRegistrationHandler.get("additionallanterns");
-        for(LanternMaterial material : LanternMaterial.values()){
+        for(LanternMaterial material : LanternMaterial.MATERIALS){
             handler.registerBlockModelCutoutRenderType(material::getLanternBlock);
             if(material.canBeColored){
                 for(LanternColor color : LanternColor.values())

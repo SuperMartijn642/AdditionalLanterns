@@ -9,9 +9,7 @@ import com.supermartijn642.core.item.CreativeItemGroup;
 import com.supermartijn642.core.registry.GeneratorRegistrationHandler;
 import com.supermartijn642.core.registry.RegistrationHandler;
 import net.minecraft.world.item.HoneycombItem;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.WeatheringCopper;
 import net.minecraftforge.fml.common.Mod;
@@ -20,6 +18,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
 import java.lang.reflect.Field;
+import java.util.Map;
 import java.util.Random;
 import java.util.function.Supplier;
 
@@ -31,13 +30,12 @@ public class AdditionalLanterns {
 
     public static final CreativeItemGroup GROUP = CreativeItemGroup.create("additionallanterns", AdditionalLanterns::randomLantern)
         .filler(items -> {
-            for(LanternMaterial material : LanternMaterial.values()){
-                if(material == LanternMaterial.NORMAL)
-                    items.accept(Items.LANTERN.getDefaultInstance());
-                else
-                    items.accept(material.getLanternBlock().asItem().getDefaultInstance());
-                for(LanternColor color : LanternColor.values())
-                    items.accept(material.getLanternBlock(color).asItem().getDefaultInstance());
+            for(LanternMaterial material : LanternMaterial.MATERIALS){
+                items.accept(material.getLanternBlock().asItem().getDefaultInstance());
+                if(material.canBeColored){
+                    for(LanternColor color : LanternColor.values())
+                        items.accept(material.getLanternBlock(color).asItem().getDefaultInstance());
+                }
                 if(material.hasChains)
                     items.accept(material.getChainBlock().asItem().getDefaultInstance());
             }
@@ -47,11 +45,12 @@ public class AdditionalLanterns {
     private static final Random RANDOM = new Random();
 
     private static ItemStack randomLantern(){
-        LanternMaterial material = LanternMaterial.values()[RANDOM.nextInt(LanternMaterial.values().length)];
+        LanternMaterial material = LanternMaterial.MATERIALS.get(RANDOM.nextInt(LanternMaterial.MATERIALS.size()));
+        if(!material.canBeColored)
+            return material.getLanternBlock().asItem().getDefaultInstance();
         int colorIndex = RANDOM.nextInt(LanternColor.values().length + 1);
-        LanternColor color = colorIndex < LanternColor.values().length ? LanternColor.values()[colorIndex] : null;
-        Item item = material == LanternMaterial.NORMAL && color == null ? Items.LANTERN : material.getLanternBlock(color).asItem();
-        return item.getDefaultInstance();
+        LanternColor color = LanternColor.colorsAndNull().get(colorIndex);
+        return material.getLanternBlock(color).asItem().getDefaultInstance();
     }
 
     public AdditionalLanterns(FMLJavaModLoadingContext context){
@@ -66,7 +65,7 @@ public class AdditionalLanterns {
 
     private static void register(){
         RegistrationHandler handler = RegistrationHandler.get("additionallanterns");
-        for(LanternMaterial material : LanternMaterial.values()){
+        for(LanternMaterial material : LanternMaterial.MATERIALS){
             handler.registerBlockCallback(material::registerBlocks);
             handler.registerItemCallback(material::registerItems);
         }
@@ -76,26 +75,16 @@ public class AdditionalLanterns {
         e.enqueueWork(() -> {
             try{
                 // Waxing
-                System.out.println("Class: " + HoneycombItem.WAXABLES.getClass());
                 Field delegateField = HoneycombItem.WAXABLES.getClass().getDeclaredField("delegate");
                 delegateField.setAccessible(true);
                 //noinspection unchecked
                 Supplier<BiMap<Block,Block>> oldWaxables = (Supplier<BiMap<Block,Block>>)delegateField.get(HoneycombItem.WAXABLES);
                 delegateField.set(HoneycombItem.WAXABLES, Suppliers.memoize(() -> {
                     ImmutableBiMap.Builder<Block,Block> builder = ImmutableBiMap.builder();
-                    builder.put(LanternMaterial.COPPER.getLanternBlock(), LanternMaterial.WAXED_COPPER.getLanternBlock());
-                    builder.put(LanternMaterial.COPPER.getChainBlock(), LanternMaterial.WAXED_COPPER.getChainBlock());
-                    builder.put(LanternMaterial.EXPOSED_COPPER.getLanternBlock(), LanternMaterial.WAXED_EXPOSED_COPPER.getLanternBlock());
-                    builder.put(LanternMaterial.EXPOSED_COPPER.getChainBlock(), LanternMaterial.WAXED_EXPOSED_COPPER.getChainBlock());
-                    builder.put(LanternMaterial.WEATHERED_COPPER.getLanternBlock(), LanternMaterial.WAXED_WEATHERED_COPPER.getLanternBlock());
-                    builder.put(LanternMaterial.WEATHERED_COPPER.getChainBlock(), LanternMaterial.WAXED_WEATHERED_COPPER.getChainBlock());
-                    builder.put(LanternMaterial.OXIDIZED_COPPER.getLanternBlock(), LanternMaterial.WAXED_OXIDIZED_COPPER.getLanternBlock());
-                    builder.put(LanternMaterial.OXIDIZED_COPPER.getChainBlock(), LanternMaterial.WAXED_OXIDIZED_COPPER.getChainBlock());
-                    for(LanternColor color : LanternColor.values()){
-                        builder.put(LanternMaterial.COPPER.getLanternBlock(color), LanternMaterial.WAXED_COPPER.getLanternBlock(color));
-                        builder.put(LanternMaterial.EXPOSED_COPPER.getLanternBlock(color), LanternMaterial.WAXED_EXPOSED_COPPER.getLanternBlock(color));
-                        builder.put(LanternMaterial.WEATHERED_COPPER.getLanternBlock(color), LanternMaterial.WAXED_WEATHERED_COPPER.getLanternBlock(color));
-                        builder.put(LanternMaterial.OXIDIZED_COPPER.getLanternBlock(color), LanternMaterial.WAXED_OXIDIZED_COPPER.getLanternBlock(color));
+                    for(Map.Entry<LanternMaterial,LanternMaterial> entry : LanternMaterial.WAXING_MAPPINGS.entrySet()){
+                        for(LanternColor color : LanternColor.colorsAndNull()){
+                            builder.put(entry.getKey().getLanternBlock(color), entry.getValue().getLanternBlock(color));
+                        }
                     }
                     builder.putAll(oldWaxables.get());
                     return builder.build();
@@ -108,16 +97,10 @@ public class AdditionalLanterns {
                 Supplier<BiMap<Block,Block>> oldWeathering = (Supplier<BiMap<Block,Block>>)delegateField.get(WeatheringCopper.NEXT_BY_BLOCK);
                 delegateField.set(WeatheringCopper.NEXT_BY_BLOCK, Suppliers.memoize(() -> {
                     ImmutableBiMap.Builder<Block,Block> builder = ImmutableBiMap.builder();
-                    builder.put(LanternMaterial.COPPER.getLanternBlock(), LanternMaterial.EXPOSED_COPPER.getLanternBlock());
-                    builder.put(LanternMaterial.EXPOSED_COPPER.getLanternBlock(), LanternMaterial.WEATHERED_COPPER.getLanternBlock());
-                    builder.put(LanternMaterial.WEATHERED_COPPER.getLanternBlock(), LanternMaterial.OXIDIZED_COPPER.getLanternBlock());
-                    builder.put(LanternMaterial.COPPER.getChainBlock(), LanternMaterial.EXPOSED_COPPER.getChainBlock());
-                    builder.put(LanternMaterial.EXPOSED_COPPER.getChainBlock(), LanternMaterial.WEATHERED_COPPER.getChainBlock());
-                    builder.put(LanternMaterial.WEATHERED_COPPER.getChainBlock(), LanternMaterial.OXIDIZED_COPPER.getChainBlock());
-                    for(LanternColor color : LanternColor.values()){
-                        builder.put(LanternMaterial.COPPER.getLanternBlock(color), LanternMaterial.EXPOSED_COPPER.getLanternBlock(color));
-                        builder.put(LanternMaterial.EXPOSED_COPPER.getLanternBlock(color), LanternMaterial.WEATHERED_COPPER.getLanternBlock(color));
-                        builder.put(LanternMaterial.WEATHERED_COPPER.getLanternBlock(color), LanternMaterial.OXIDIZED_COPPER.getLanternBlock(color));
+                    for(Map.Entry<LanternMaterial,LanternMaterial> entry : LanternMaterial.OXIDATION_MAPPINGS.entrySet()){
+                        for(LanternColor color : LanternColor.colorsAndNull()){
+                            builder.put(entry.getKey().getLanternBlock(color), entry.getValue().getLanternBlock(color));
+                        }
                     }
                     builder.putAll(oldWeathering.get());
                     return builder.build();

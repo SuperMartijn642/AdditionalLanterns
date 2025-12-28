@@ -17,7 +17,7 @@ public class LanternBlockModelGenerator extends ModelGenerator {
 
     @Override
     public void generate(){
-        for(LanternMaterial material : LanternMaterial.values())
+        for(LanternMaterial material : LanternMaterial.MATERIALS)
             this.addModels(material);
     }
 
@@ -27,7 +27,7 @@ public class LanternBlockModelGenerator extends ModelGenerator {
             for(LanternColor color : LanternColor.values())
                 this.addModel(material, color);
         }
-        if(material == LanternMaterial.NORMAL || material.hasChains)
+        if(material.isVanilla || material.hasChains)
             this.addChainModel(material);
     }
 
@@ -35,19 +35,19 @@ public class LanternBlockModelGenerator extends ModelGenerator {
         this.model(getModelLocation(material, color, false, false))
             .parent(getModelLocation(false))
             .texture("material", getMaterialTexture(material))
-            .texture("color", getColorTexture(color, false));
+            .texture("color", getColorTexture(material, color, false));
         this.model(getModelLocation(material, color, false, true))
             .parent(getModelLocation(false))
             .texture("material", getMaterialTexture(material))
-            .texture("color", getColorTexture(color, true));
+            .texture("color", getColorTexture(material, color, true));
         this.model(getModelLocation(material, color, true, false))
             .parent(getModelLocation(true))
             .texture("material", getMaterialTexture(material))
-            .texture("color", getColorTexture(color, false));
+            .texture("color", getColorTexture(material, color, false));
         this.model(getModelLocation(material, color, true, true))
             .parent(getModelLocation(true))
             .texture("material", getMaterialTexture(material))
-            .texture("color", getColorTexture(color, true));
+            .texture("color", getColorTexture(material, color, true));
     }
 
     public void addChainModel(LanternMaterial material){
@@ -81,14 +81,16 @@ public class LanternBlockModelGenerator extends ModelGenerator {
     }
 
     public static ResourceLocation getMaterialTexture(LanternMaterial material){
+        if(material.lanternTexture != null)
+            return material.lanternTexture;
         return ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/materials/" + material.getSuffix() + "_lantern");
     }
 
-    public static ResourceLocation getColorTexture(LanternColor color, boolean on){
+    public static ResourceLocation getColorTexture(LanternMaterial material, LanternColor color, boolean on){
         return color == null ?
             on ?
-                ResourceLocation.fromNamespaceAndPath("minecraft", "block/lantern") :
-                ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/lantern_off") :
+                material.lanternTexture == null ? ResourceLocation.fromNamespaceAndPath("minecraft", "block/lantern") : material.lanternTexture :
+                material.lanternOffTexture == null ? ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/lantern_off") : material.lanternOffTexture :
             on ?
                 ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/colors/" + color.getSuffix() + "_lantern") :
                 ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/colors/" + color.getSuffix() + "_lantern_off");
@@ -103,8 +105,8 @@ public class LanternBlockModelGenerator extends ModelGenerator {
     }
 
     public static ResourceLocation getChainMaterialTexture(LanternMaterial material){
-        if(material == LanternMaterial.NORMAL)
-            return ResourceLocation.fromNamespaceAndPath("minecraft", "block/chain");
+        if(material.chainTexture != null)
+            return material.chainTexture;
         return ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/materials/" + material.getSuffix() + "_chain");
     }
 
