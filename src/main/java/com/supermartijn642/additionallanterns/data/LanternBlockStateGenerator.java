@@ -7,7 +7,7 @@ import com.supermartijn642.additionallanterns.LanternMaterial;
 import com.supermartijn642.core.generator.BlockStateGenerator;
 import com.supermartijn642.core.generator.ResourceCache;
 import net.minecraft.core.Direction;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 
 /**
@@ -52,26 +52,26 @@ public class LanternBlockStateGenerator extends BlockStateGenerator {
         );
     }
 
-    public static ResourceLocation getModelLocation(LanternMaterial material, LanternColor color, boolean hanging, boolean on, boolean redstone){
+    public static Identifier getModelLocation(LanternMaterial material, LanternColor color, boolean hanging, boolean on, boolean redstone){
         boolean lit = on != redstone;
         return color == null ?
             hanging ?
                 lit ?
-                    ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/" + material.getSuffix() + "_hanging_lantern") :
-                    ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/" + material.getSuffix() + "_hanging_lantern_off") :
+                    Identifier.fromNamespaceAndPath("additionallanterns", "block/" + material.getSuffix() + "_hanging_lantern") :
+                    Identifier.fromNamespaceAndPath("additionallanterns", "block/" + material.getSuffix() + "_hanging_lantern_off") :
                 lit ?
-                    ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/" + material.getSuffix() + "_lantern") :
-                    ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/" + material.getSuffix() + "_lantern_off") :
+                    Identifier.fromNamespaceAndPath("additionallanterns", "block/" + material.getSuffix() + "_lantern") :
+                    Identifier.fromNamespaceAndPath("additionallanterns", "block/" + material.getSuffix() + "_lantern_off") :
             hanging ?
                 lit ?
-                    ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/" + color.getSuffix() + "_" + material.getSuffix() + "_hanging_lantern") :
-                    ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/" + color.getSuffix() + "_" + material.getSuffix() + "_hanging_lantern_off") :
+                    Identifier.fromNamespaceAndPath("additionallanterns", "block/" + color.getSuffix() + "_" + material.getSuffix() + "_hanging_lantern") :
+                    Identifier.fromNamespaceAndPath("additionallanterns", "block/" + color.getSuffix() + "_" + material.getSuffix() + "_hanging_lantern_off") :
                 lit ?
-                    ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/" + color.getSuffix() + "_" + material.getSuffix() + "_lantern") :
-                    ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/" + color.getSuffix() + "_" + material.getSuffix() + "_lantern_off");
+                    Identifier.fromNamespaceAndPath("additionallanterns", "block/" + color.getSuffix() + "_" + material.getSuffix() + "_lantern") :
+                    Identifier.fromNamespaceAndPath("additionallanterns", "block/" + color.getSuffix() + "_" + material.getSuffix() + "_lantern_off");
     }
 
-    public static ResourceLocation getChainModelLocation(LanternMaterial material){
-        return ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/" + material.getSuffix() + "_chain");
+    public static Identifier getChainModelLocation(LanternMaterial material){
+        return Identifier.fromNamespaceAndPath("additionallanterns", "block/" + material.getSuffix() + "_chain");
     }
 }
