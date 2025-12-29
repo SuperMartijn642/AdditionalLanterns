@@ -4,7 +4,7 @@ import com.supermartijn642.additionallanterns.LanternColor;
 import com.supermartijn642.additionallanterns.LanternMaterial;
 import com.supermartijn642.core.generator.ModelGenerator;
 import com.supermartijn642.core.generator.ResourceCache;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 
 /**
  * Created 7/5/2021 by SuperMartijn642
@@ -74,40 +74,40 @@ public class LanternBlockModelGenerator extends ModelGenerator {
                     "block/" + color.getSuffix() + "_" + material.getSuffix() + "_lantern_off";
     }
 
-    public static ResourceLocation getModelLocation(boolean hanging){
+    public static Identifier getModelLocation(boolean hanging){
         return hanging ?
-            ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/hanging_lantern") :
-            ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/lantern");
+            Identifier.fromNamespaceAndPath("additionallanterns", "block/hanging_lantern") :
+            Identifier.fromNamespaceAndPath("additionallanterns", "block/lantern");
     }
 
-    public static ResourceLocation getMaterialTexture(LanternMaterial material){
+    public static Identifier getMaterialTexture(LanternMaterial material){
         if(material.lanternTexture != null)
             return material.lanternTexture;
-        return ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/materials/" + material.getSuffix() + "_lantern");
+        return Identifier.fromNamespaceAndPath("additionallanterns", "block/materials/" + material.getSuffix() + "_lantern");
     }
 
-    public static ResourceLocation getColorTexture(LanternMaterial material, LanternColor color, boolean on){
+    public static Identifier getColorTexture(LanternMaterial material, LanternColor color, boolean on){
         return color == null ?
             on ?
-                material.lanternTexture == null ? ResourceLocation.fromNamespaceAndPath("minecraft", "block/lantern") : material.lanternTexture :
-                material.lanternOffTexture == null ? ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/lantern_off") : material.lanternOffTexture :
+                material.lanternTexture == null ? Identifier.fromNamespaceAndPath("minecraft", "block/lantern") : material.lanternTexture :
+                material.lanternOffTexture == null ? Identifier.fromNamespaceAndPath("additionallanterns", "block/lantern_off") : material.lanternOffTexture :
             on ?
-                ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/colors/" + color.getSuffix() + "_lantern") :
-                ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/colors/" + color.getSuffix() + "_lantern_off");
+                Identifier.fromNamespaceAndPath("additionallanterns", "block/colors/" + color.getSuffix() + "_lantern") :
+                Identifier.fromNamespaceAndPath("additionallanterns", "block/colors/" + color.getSuffix() + "_lantern_off");
     }
 
     public static String getChainModelLocation(LanternMaterial material){
         return "block/" + material.getSuffix() + "_chain";
     }
 
-    public static ResourceLocation getChainModelLocation(){
-        return ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/chain");
+    public static Identifier getChainModelLocation(){
+        return Identifier.fromNamespaceAndPath("additionallanterns", "block/chain");
     }
 
-    public static ResourceLocation getChainMaterialTexture(LanternMaterial material){
+    public static Identifier getChainMaterialTexture(LanternMaterial material){
         if(material.chainTexture != null)
             return material.chainTexture;
-        return ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/materials/" + material.getSuffix() + "_chain");
+        return Identifier.fromNamespaceAndPath("additionallanterns", "block/materials/" + material.getSuffix() + "_chain");
     }
 
     @Override

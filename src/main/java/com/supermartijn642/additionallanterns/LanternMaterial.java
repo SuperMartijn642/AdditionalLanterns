@@ -5,8 +5,8 @@ import com.supermartijn642.core.item.BaseBlockItem;
 import com.supermartijn642.core.item.ItemProperties;
 import com.supermartijn642.core.registry.RegistrationHandler;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -62,15 +62,15 @@ public class LanternMaterial {
     public static final LanternMaterial SMOOTH_STONE = createWithChain("smooth_stone", "Smooth Stone", () -> Items.SMOOTH_STONE, null, 4, () -> Items.SMOOTH_STONE, () -> Items.SMOOTH_STONE, 8);
     public static final LanternMaterial STONE = createWithChain("stone", "Stone", () -> Items.STONE, null, 4, () -> Items.STONE, () -> Items.STONE, 8);
     public static final LanternMaterial STONE_BRICKS = createWithChain("stone_bricks", "Stone Bricks", () -> Items.STONE_BRICKS, null, 4, () -> Items.STONE_BRICKS, () -> Items.STONE_BRICKS, 8);
-    public static final LanternMaterial VANILLA_IRON = createVanilla("vanilla_iron", "Iron", Blocks.LANTERN, Blocks.IRON_CHAIN, ResourceLocation.withDefaultNamespace("block/lantern"), null, ResourceLocation.withDefaultNamespace("block/iron_chain"));
-    public static final LanternMaterial VANILLA_COPPER = createVanilla("vanilla_copper", "Copper", Blocks.COPPER_LANTERN.unaffected(), Blocks.COPPER_CHAIN.unaffected(), ResourceLocation.withDefaultNamespace("block/copper_lantern"), ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/copper_lantern_off"), ResourceLocation.withDefaultNamespace("block/copper_chain"));
-    public static final LanternMaterial VANILLA_EXPOSED_COPPER = createVanilla("vanilla_exposed_copper", "Exposed Copper", Blocks.COPPER_LANTERN.exposed(), Blocks.COPPER_CHAIN.exposed(), ResourceLocation.withDefaultNamespace("block/exposed_copper_lantern"), ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/exposed_copper_lantern_off"), ResourceLocation.withDefaultNamespace("block/exposed_copper_chain"));
-    public static final LanternMaterial VANILLA_OXIDIZED_COPPER = createVanilla("vanilla_oxidized_copper", "Oxidized Copper", Blocks.COPPER_LANTERN.oxidized(), Blocks.COPPER_CHAIN.oxidized(), ResourceLocation.withDefaultNamespace("block/oxidized_copper_lantern"), ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/oxidized_copper_lantern_off"), ResourceLocation.withDefaultNamespace("block/oxidized_copper_chain"));
-    public static final LanternMaterial VANILLA_WEATHERED_COPPER = createVanilla("vanilla_weathered_copper", "Weathered Copper", Blocks.COPPER_LANTERN.weathered(), Blocks.COPPER_CHAIN.weathered(), ResourceLocation.withDefaultNamespace("block/weathered_copper_lantern"), ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/weathered_copper_lantern_off"), ResourceLocation.withDefaultNamespace("block/weathered_copper_chain"));
-    public static final LanternMaterial VANILLA_WAXED_COPPER = createVanilla("vanilla_waxed_copper", "Waxed Copper", Blocks.COPPER_LANTERN.waxed(), Blocks.COPPER_CHAIN.waxed(), ResourceLocation.withDefaultNamespace("block/copper_lantern"), ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/copper_lantern_off"), ResourceLocation.withDefaultNamespace("block/copper_chain"));
-    public static final LanternMaterial VANILLA_WAXED_EXPOSED_COPPER = createVanilla("vanilla_waxed_exposed_copper", "Waxed Exposed Copper", Blocks.COPPER_LANTERN.waxedExposed(), Blocks.COPPER_CHAIN.waxedExposed(), ResourceLocation.withDefaultNamespace("block/exposed_copper_lantern"), ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/exposed_copper_lantern_off"), ResourceLocation.withDefaultNamespace("block/exposed_copper_chain"));
-    public static final LanternMaterial VANILLA_WAXED_OXIDIZED_COPPER = createVanilla("vanilla_waxed_oxidized_copper", "Waxed Oxidized Copper", Blocks.COPPER_LANTERN.waxedOxidized(), Blocks.COPPER_CHAIN.waxedOxidized(), ResourceLocation.withDefaultNamespace("block/oxidized_copper_lantern"), ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/oxidized_copper_lantern_off"), ResourceLocation.withDefaultNamespace("block/oxidized_copper_chain"));
-    public static final LanternMaterial VANILLA_WAXED_WEATHERED_COPPER = createVanilla("vanilla_waxed_weathered_copper", "Waxed Weathered Copper", Blocks.COPPER_LANTERN.waxedWeathered(), Blocks.COPPER_CHAIN.waxedWeathered(), ResourceLocation.withDefaultNamespace("block/weathered_copper_lantern"), ResourceLocation.fromNamespaceAndPath("additionallanterns", "block/weathered_copper_lantern_off"), ResourceLocation.withDefaultNamespace("block/weathered_copper_chain"));
+    public static final LanternMaterial VANILLA_IRON = createVanilla("vanilla_iron", "Iron", Blocks.LANTERN, Blocks.IRON_CHAIN, Identifier.withDefaultNamespace("block/lantern"), null, Identifier.withDefaultNamespace("block/iron_chain"));
+    public static final LanternMaterial VANILLA_COPPER = createVanilla("vanilla_copper", "Copper", Blocks.COPPER_LANTERN.unaffected(), Blocks.COPPER_CHAIN.unaffected(), Identifier.withDefaultNamespace("block/copper_lantern"), Identifier.fromNamespaceAndPath("additionallanterns", "block/copper_lantern_off"), Identifier.withDefaultNamespace("block/copper_chain"));
+    public static final LanternMaterial VANILLA_EXPOSED_COPPER = createVanilla("vanilla_exposed_copper", "Exposed Copper", Blocks.COPPER_LANTERN.exposed(), Blocks.COPPER_CHAIN.exposed(), Identifier.withDefaultNamespace("block/exposed_copper_lantern"), Identifier.fromNamespaceAndPath("additionallanterns", "block/exposed_copper_lantern_off"), Identifier.withDefaultNamespace("block/exposed_copper_chain"));
+    public static final LanternMaterial VANILLA_OXIDIZED_COPPER = createVanilla("vanilla_oxidized_copper", "Oxidized Copper", Blocks.COPPER_LANTERN.oxidized(), Blocks.COPPER_CHAIN.oxidized(), Identifier.withDefaultNamespace("block/oxidized_copper_lantern"), Identifier.fromNamespaceAndPath("additionallanterns", "block/oxidized_copper_lantern_off"), Identifier.withDefaultNamespace("block/oxidized_copper_chain"));
+    public static final LanternMaterial VANILLA_WEATHERED_COPPER = createVanilla("vanilla_weathered_copper", "Weathered Copper", Blocks.COPPER_LANTERN.weathered(), Blocks.COPPER_CHAIN.weathered(), Identifier.withDefaultNamespace("block/weathered_copper_lantern"), Identifier.fromNamespaceAndPath("additionallanterns", "block/weathered_copper_lantern_off"), Identifier.withDefaultNamespace("block/weathered_copper_chain"));
+    public static final LanternMaterial VANILLA_WAXED_COPPER = createVanilla("vanilla_waxed_copper", "Waxed Copper", Blocks.COPPER_LANTERN.waxed(), Blocks.COPPER_CHAIN.waxed(), Identifier.withDefaultNamespace("block/copper_lantern"), Identifier.fromNamespaceAndPath("additionallanterns", "block/copper_lantern_off"), Identifier.withDefaultNamespace("block/copper_chain"));
+    public static final LanternMaterial VANILLA_WAXED_EXPOSED_COPPER = createVanilla("vanilla_waxed_exposed_copper", "Waxed Exposed Copper", Blocks.COPPER_LANTERN.waxedExposed(), Blocks.COPPER_CHAIN.waxedExposed(), Identifier.withDefaultNamespace("block/exposed_copper_lantern"), Identifier.fromNamespaceAndPath("additionallanterns", "block/exposed_copper_lantern_off"), Identifier.withDefaultNamespace("block/exposed_copper_chain"));
+    public static final LanternMaterial VANILLA_WAXED_OXIDIZED_COPPER = createVanilla("vanilla_waxed_oxidized_copper", "Waxed Oxidized Copper", Blocks.COPPER_LANTERN.waxedOxidized(), Blocks.COPPER_CHAIN.waxedOxidized(), Identifier.withDefaultNamespace("block/oxidized_copper_lantern"), Identifier.fromNamespaceAndPath("additionallanterns", "block/oxidized_copper_lantern_off"), Identifier.withDefaultNamespace("block/oxidized_copper_chain"));
+    public static final LanternMaterial VANILLA_WAXED_WEATHERED_COPPER = createVanilla("vanilla_waxed_weathered_copper", "Waxed Weathered Copper", Blocks.COPPER_LANTERN.waxedWeathered(), Blocks.COPPER_CHAIN.waxedWeathered(), Identifier.withDefaultNamespace("block/weathered_copper_lantern"), Identifier.fromNamespaceAndPath("additionallanterns", "block/weathered_copper_lantern_off"), Identifier.withDefaultNamespace("block/weathered_copper_chain"));
     public static final LanternMaterial WARPED = createWithChain("warped", "Warped", () -> Items.WARPED_PLANKS, null, 4, () -> Items.WARPED_PLANKS, () -> Items.WARPED_PLANKS, 8);
     public static final LanternMaterial WAXED_COPPER = createWithoutChain("waxed_copper", "Waxed Ordinary Copper", null, null, 0);
     public static final LanternMaterial WAXED_EXPOSED_COPPER = createWithoutChain("waxed_exposed_copper", "Waxed Exposed Ordinary Copper", null, null, 0);
@@ -130,7 +130,7 @@ public class LanternMaterial {
         return material;
     }
 
-    private static LanternMaterial createVanilla(String identifier, String englishTranslation, Block vanillaLanternBlock, Block vanillaChainBlock, ResourceLocation lanternTexture, ResourceLocation lanternOffTexture, ResourceLocation vanillaChainTexture){
+    private static LanternMaterial createVanilla(String identifier, String englishTranslation, Block vanillaLanternBlock, Block vanillaChainBlock, Identifier lanternTexture, Identifier lanternOffTexture, Identifier vanillaChainTexture){
         LanternMaterial material = new LanternMaterial(identifier, true, vanillaLanternBlock, vanillaChainBlock, true, false, englishTranslation, null, null, 0, null, null, 0, lanternTexture, lanternOffTexture, vanillaChainTexture);
         MATERIALS.add(material);
         return material;
@@ -152,10 +152,10 @@ public class LanternMaterial {
     public final int lanternRecipeCount;
     public final ItemLike primaryChainIngredient, secondaryChainIngredient;
     public final int chainRecipeCount;
-    public final ResourceLocation lanternTexture, lanternOffTexture;
-    public final ResourceLocation chainTexture;
+    public final Identifier lanternTexture, lanternOffTexture;
+    public final Identifier chainTexture;
 
-    LanternMaterial(String identifier, boolean isVanilla, Block vanillaLanternBlock, Block vanillaChainBlock, boolean canBeColored, boolean hasChains, String englishTranslation, ItemLike primaryLanternIngredient, ItemLike secondaryLanternIngredient, int lanternRecipeCount, ItemLike primaryChainIngredient, ItemLike secondaryChainIngredient, int chainRecipeCount, ResourceLocation lanternTexture, ResourceLocation lanternOffTexture, ResourceLocation chainTexture){
+    LanternMaterial(String identifier, boolean isVanilla, Block vanillaLanternBlock, Block vanillaChainBlock, boolean canBeColored, boolean hasChains, String englishTranslation, ItemLike primaryLanternIngredient, ItemLike secondaryLanternIngredient, int lanternRecipeCount, ItemLike primaryChainIngredient, ItemLike secondaryChainIngredient, int chainRecipeCount, Identifier lanternTexture, Identifier lanternOffTexture, Identifier chainTexture){
         this.identifier = identifier;
         this.isVanilla = isVanilla;
         this.vanillaLanternBlock = vanillaLanternBlock;
@@ -207,12 +207,12 @@ public class LanternMaterial {
             BlockBehaviour.Properties.ofFullCopy(this.vanillaLanternBlock) :
             BlockBehaviour.Properties.ofFullCopy(Blocks.LANTERN);
         properties.lightLevel(state -> LanternBlock.emitsLight(state) ? 15 : 0)
-            .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("additionallanterns", this.getLanternIdentifier(color))));
+            .setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath("additionallanterns", this.getLanternIdentifier(color))));
         return WEATHERING_BLOCKS.get(this) == null ? properties : properties.randomTicks();
     }
 
     public BlockBehaviour.Properties getChainBlockProperties(){
-        return BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_CHAIN).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("additionallanterns", this.getChainIdentifier())));
+        return BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_CHAIN).setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath("additionallanterns", this.getChainIdentifier())));
     }
 
     public void registerBlocks(RegistrationHandler.Helper<Block> helper){

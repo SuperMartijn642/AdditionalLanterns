@@ -4,7 +4,7 @@ import com.supermartijn642.additionallanterns.LanternColor;
 import com.supermartijn642.additionallanterns.LanternMaterial;
 import com.supermartijn642.core.generator.RecipeGenerator;
 import com.supermartijn642.core.generator.ResourceCache;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
@@ -65,18 +65,18 @@ public class LanternRecipeGenerator extends RecipeGenerator {
 
     private void addColorRecipe(LanternMaterial material, LanternColor color){
         if(color == null)
-            this.shapeless(ResourceLocation.fromNamespaceAndPath("additionallanterns", material.getSuffix() + "_lantern_colorless"), material == LanternMaterial.VANILLA_IRON ? Items.LANTERN : material.getLanternBlock())
+            this.shapeless(Identifier.fromNamespaceAndPath("additionallanterns", material.getSuffix() + "_lantern_colorless"), material == LanternMaterial.VANILLA_IRON ? Items.LANTERN : material.getLanternBlock())
                 .input(getMaterialLanternTag(material))
                 .unlockedBy(getMaterialLanternTag(material));
         else
-            this.shapeless(ResourceLocation.fromNamespaceAndPath("additionallanterns", material.getSuffix() + "_lantern_" + color.getSuffix()), material.getLanternBlock(color))
+            this.shapeless(Identifier.fromNamespaceAndPath("additionallanterns", material.getSuffix() + "_lantern_" + color.getSuffix()), material.getLanternBlock(color))
                 .input(getMaterialLanternTag(material))
                 .input(getColorDyeTag(color))
                 .unlockedBy(getMaterialLanternTag(material));
     }
 
     private static TagKey<Item> getMaterialLanternTag(LanternMaterial material){
-        return ItemTags.create(ResourceLocation.fromNamespaceAndPath("additionallanterns", material.getSuffix() + "_lanterns"));
+        return ItemTags.create(Identifier.fromNamespaceAndPath("additionallanterns", material.getSuffix() + "_lanterns"));
     }
 
     private static TagKey<Item> getColorDyeTag(LanternColor color){
