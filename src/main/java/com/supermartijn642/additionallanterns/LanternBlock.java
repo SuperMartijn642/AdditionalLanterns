@@ -5,6 +5,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.DyeItem;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
@@ -84,5 +85,12 @@ public class LanternBlock extends net.minecraft.world.level.block.LanternBlock {
 
     public static boolean emitsLight(BlockState state){
         return state.getValue(REDSTONE) != state.getValue(ON);
+    }
+
+    @Override
+    public Item asItem(){
+        if(this.material.isVanilla && this.color == null)
+            return this.material.vanillaLanternBlock.asItem();
+        return super.asItem();
     }
 }
