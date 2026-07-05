@@ -58,13 +58,13 @@ public class AdditionalLanterns implements ModInitializer {
             // Waxing
             for(Map.Entry<LanternMaterial,LanternMaterial> entry : LanternMaterial.WAXING_MAPPINGS.entrySet()){
                 for(LanternColor color : LanternColor.colorsAndNull()){
-                    OxidizableBlocksRegistry.registerWaxableBlockPair(entry.getKey().getLanternBlock(color), entry.getValue().getLanternBlock(color));
+                    OxidizableBlocksRegistry.registerWaxable(entry.getKey().getLanternBlock(color), entry.getValue().getLanternBlock(color));
                 }
             }
             // Weathering
             for(Map.Entry<LanternMaterial,LanternMaterial> entry : LanternMaterial.OXIDATION_MAPPINGS.entrySet()){
                 for(LanternColor color : LanternColor.colorsAndNull()){
-                    OxidizableBlocksRegistry.registerOxidizableBlockPair(entry.getKey().getLanternBlock(color), entry.getValue().getLanternBlock(color));
+                    OxidizableBlocksRegistry.registerNextStage(entry.getKey().getLanternBlock(color), entry.getValue().getLanternBlock(color));
                 }
             }
         });
