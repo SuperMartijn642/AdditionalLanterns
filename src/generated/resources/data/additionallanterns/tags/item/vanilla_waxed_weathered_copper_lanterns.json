@@ -1,22 +1,22 @@
 {
   "replace": false,
   "values": [
-    "additionallanterns:gray_vanilla_waxed_weathered_copper_lantern",
-    "additionallanterns:light_gray_vanilla_waxed_weathered_copper_lantern",
-    "additionallanterns:cyan_vanilla_waxed_weathered_copper_lantern",
-    "additionallanterns:yellow_vanilla_waxed_weathered_copper_lantern",
-    "additionallanterns:purple_vanilla_waxed_weathered_copper_lantern",
+    "additionallanterns:black_vanilla_waxed_weathered_copper_lantern",
     "additionallanterns:blue_vanilla_waxed_weathered_copper_lantern",
-    "additionallanterns:pink_vanilla_waxed_weathered_copper_lantern",
-    "additionallanterns:green_vanilla_waxed_weathered_copper_lantern",
-    "minecraft:waxed_weathered_copper_lantern",
-    "additionallanterns:red_vanilla_waxed_weathered_copper_lantern",
-    "additionallanterns:light_blue_vanilla_waxed_weathered_copper_lantern",
-    "additionallanterns:lime_vanilla_waxed_weathered_copper_lantern",
-    "additionallanterns:orange_vanilla_waxed_weathered_copper_lantern",
-    "additionallanterns:magenta_vanilla_waxed_weathered_copper_lantern",
-    "additionallanterns:white_vanilla_waxed_weathered_copper_lantern",
     "additionallanterns:brown_vanilla_waxed_weathered_copper_lantern",
-    "additionallanterns:black_vanilla_waxed_weathered_copper_lantern"
+    "additionallanterns:cyan_vanilla_waxed_weathered_copper_lantern",
+    "additionallanterns:gray_vanilla_waxed_weathered_copper_lantern",
+    "additionallanterns:green_vanilla_waxed_weathered_copper_lantern",
+    "additionallanterns:light_blue_vanilla_waxed_weathered_copper_lantern",
+    "additionallanterns:light_gray_vanilla_waxed_weathered_copper_lantern",
+    "additionallanterns:lime_vanilla_waxed_weathered_copper_lantern",
+    "additionallanterns:magenta_vanilla_waxed_weathered_copper_lantern",
+    "additionallanterns:orange_vanilla_waxed_weathered_copper_lantern",
+    "additionallanterns:pink_vanilla_waxed_weathered_copper_lantern",
+    "additionallanterns:purple_vanilla_waxed_weathered_copper_lantern",
+    "additionallanterns:red_vanilla_waxed_weathered_copper_lantern",
+    "additionallanterns:white_vanilla_waxed_weathered_copper_lantern",
+    "additionallanterns:yellow_vanilla_waxed_weathered_copper_lantern",
+    "minecraft:waxed_weathered_copper_lantern"
   ]
 }
