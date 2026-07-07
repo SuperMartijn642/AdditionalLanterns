@@ -1,11 +1,11 @@
 package com.supermartijn642.additionallanterns;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.DyeItem;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
@@ -40,8 +40,9 @@ public class LanternBlock extends net.minecraft.world.level.block.LanternBlock {
 
     @Override
     protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult){
-        if(this.material.canBeColored && stack.getItem() instanceof DyeItem){
-            LanternColor color = LanternColor.fromDyeColor(((DyeItem)stack.getItem()).getDyeColor());
+        DyeColor dye = stack.get(DataComponents.DYE);
+        if(this.material.canBeColored && dye != null){
+            LanternColor color = LanternColor.fromDyeColor(dye);
             BlockState newState = this.material.getLanternBlock(color).defaultBlockState()
                 .setValue(WATERLOGGED, state.getValue(WATERLOGGED))
                 .setValue(HANGING, state.getValue(HANGING))
@@ -85,12 +86,5 @@ public class LanternBlock extends net.minecraft.world.level.block.LanternBlock {
 
     public static boolean emitsLight(BlockState state){
         return state.getValue(REDSTONE) != state.getValue(ON);
-    }
-
-    @Override
-    public Item asItem(){
-        if(this.material.isVanilla && this.color == null)
-            return this.material.vanillaLanternBlock.asItem();
-        return super.asItem();
     }
 }

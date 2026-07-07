@@ -2,8 +2,9 @@ package com.supermartijn642.additionallanterns;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.item.DyeItem;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
@@ -35,7 +36,8 @@ public class VanillaLanternEvents {
             if(material != null){
                 if(!level.isClientSide()){
                     ItemStack stack = e.getItemStack();
-                    LanternColor color = material.canBeColored && stack.getItem() instanceof DyeItem ? LanternColor.fromDyeColor(((DyeItem)stack.getItem()).getDyeColor()) : null;
+                    DyeColor dye = stack.get(DataComponents.DYE);
+                    LanternColor color = material.canBeColored && dye != null ? LanternColor.fromDyeColor(dye) : null;
                     BlockState newState = material.getLanternBlock(color).defaultBlockState()
                         .setValue(LanternBlock.WATERLOGGED, oldState.getValue(LanternBlock.WATERLOGGED))
                         .setValue(LanternBlock.HANGING, oldState.getValue(LanternBlock.HANGING))

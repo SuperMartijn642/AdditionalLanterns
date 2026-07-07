@@ -1,3 +1,5 @@
+## Update to Minecraft 26.1
+
 ### Additional Lanterns 1.1.2a
 - Fixed crash when opening creative inventory
 
