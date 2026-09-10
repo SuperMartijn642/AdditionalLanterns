@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "additionallanterns:warped_chain"
+        "recipes": "additionallanterns:warped_chain"
       }
     },
     "recipe_condition": {

@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "additionallanterns:basalt_chain"
+        "recipes": "additionallanterns:basalt_chain"
       }
     },
     "recipe_condition": {

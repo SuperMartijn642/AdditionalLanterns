@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "additionallanterns:warped_lantern_gray"
+        "recipes": "additionallanterns:warped_lantern_gray"
       }
     },
     "recipe_condition": {

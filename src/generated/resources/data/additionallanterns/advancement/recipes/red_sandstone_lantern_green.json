@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "additionallanterns:red_sandstone_lantern_green"
+        "recipes": "additionallanterns:red_sandstone_lantern_green"
       }
     },
     "recipe_condition": {

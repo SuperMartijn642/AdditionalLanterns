@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "additionallanterns:mossy_cobblestone_lantern_white"
+        "recipes": "additionallanterns:mossy_cobblestone_lantern_white"
       }
     },
     "recipe_condition": {

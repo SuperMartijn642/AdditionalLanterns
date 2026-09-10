@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "additionallanterns:smooth_stone_lantern_red"
+        "recipes": "additionallanterns:smooth_stone_lantern_red"
       }
     },
     "recipe_condition": {

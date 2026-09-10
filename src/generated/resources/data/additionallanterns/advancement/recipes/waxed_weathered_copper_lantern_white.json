@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "additionallanterns:waxed_weathered_copper_lantern_white"
+        "recipes": "additionallanterns:waxed_weathered_copper_lantern_white"
       }
     },
     "recipe_condition": {

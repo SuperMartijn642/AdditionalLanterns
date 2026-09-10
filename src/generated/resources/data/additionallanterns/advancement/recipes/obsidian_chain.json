@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "additionallanterns:obsidian_chain"
+        "recipes": "additionallanterns:obsidian_chain"
       }
     },
     "recipe_condition": {

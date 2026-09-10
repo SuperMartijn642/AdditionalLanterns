@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "additionallanterns:quartz_chain"
+        "recipes": "additionallanterns:quartz_chain"
       }
     },
     "recipe_condition": {

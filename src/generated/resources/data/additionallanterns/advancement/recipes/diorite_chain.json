@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "additionallanterns:diorite_chain"
+        "recipes": "additionallanterns:diorite_chain"
       }
     },
     "recipe_condition": {

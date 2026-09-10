@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "additionallanterns:netherite_chain"
+        "recipes": "additionallanterns:netherite_chain"
       }
     },
     "recipe_condition": {

@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "additionallanterns:smooth_stone_chain"
+        "recipes": "additionallanterns:smooth_stone_chain"
       }
     },
     "recipe_condition": {

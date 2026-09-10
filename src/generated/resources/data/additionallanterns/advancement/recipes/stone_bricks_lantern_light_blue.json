@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "additionallanterns:stone_bricks_lantern_light_blue"
+        "recipes": "additionallanterns:stone_bricks_lantern_light_blue"
       }
     },
     "recipe_condition": {
