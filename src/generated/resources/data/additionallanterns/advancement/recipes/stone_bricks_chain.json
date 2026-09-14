@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "additionallanterns:stone_bricks_chain"
+        "recipes": "additionallanterns:stone_bricks_chain"
       }
     },
     "recipe_condition": {

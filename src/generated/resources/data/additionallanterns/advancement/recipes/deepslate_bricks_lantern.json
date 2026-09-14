@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "additionallanterns:deepslate_bricks_lantern"
+        "recipes": "additionallanterns:deepslate_bricks_lantern"
       }
     },
     "recipe_condition": {

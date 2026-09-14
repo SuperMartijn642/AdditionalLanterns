@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "additionallanterns:emerald_lantern_yellow"
+        "recipes": "additionallanterns:emerald_lantern_yellow"
       }
     },
     "recipe_condition": {

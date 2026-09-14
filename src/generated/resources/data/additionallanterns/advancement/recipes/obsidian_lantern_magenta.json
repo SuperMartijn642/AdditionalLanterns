@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "additionallanterns:obsidian_lantern_magenta"
+        "recipes": "additionallanterns:obsidian_lantern_magenta"
       }
     },
     "recipe_condition": {

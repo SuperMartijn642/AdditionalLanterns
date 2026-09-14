@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "additionallanterns:cobblestone_chain"
+        "recipes": "additionallanterns:cobblestone_chain"
       }
     },
     "recipe_condition": {

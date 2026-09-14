@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "additionallanterns:red_nether_bricks_lantern_colorless"
+        "recipes": "additionallanterns:red_nether_bricks_lantern_colorless"
       }
     },
     "recipe_condition": {

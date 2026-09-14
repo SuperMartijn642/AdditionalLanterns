@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "additionallanterns:prismarine_lantern_blue"
+        "recipes": "additionallanterns:prismarine_lantern_blue"
       }
     },
     "recipe_condition": {

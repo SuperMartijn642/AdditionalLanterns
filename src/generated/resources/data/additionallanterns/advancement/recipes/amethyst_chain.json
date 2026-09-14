@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "additionallanterns:amethyst_chain"
+        "recipes": "additionallanterns:amethyst_chain"
       }
     },
     "recipe_condition": {

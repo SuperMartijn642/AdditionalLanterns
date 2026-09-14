@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "additionallanterns:exposed_copper_lantern_brown"
+        "recipes": "additionallanterns:exposed_copper_lantern_brown"
       }
     },
     "recipe_condition": {

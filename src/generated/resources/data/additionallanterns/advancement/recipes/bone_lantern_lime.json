@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "additionallanterns:bone_lantern_lime"
+        "recipes": "additionallanterns:bone_lantern_lime"
       }
     },
     "recipe_condition": {
